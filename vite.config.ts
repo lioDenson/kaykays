@@ -13,11 +13,10 @@ export default defineConfig({
         }),
         react(),
         tailwindcss(),
-        process.env.NODE_ENV !== 'production' &&
         wayfinder({
             formVariants: true,
         }),
-    ].filter(Boolean),
+    ],
     esbuild: {
         jsx: 'automatic',
     },
