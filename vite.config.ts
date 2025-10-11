@@ -9,15 +9,14 @@ export default defineConfig({
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.tsx'],
             ssr: 'resources/js/ssr.tsx',
-            refresh: true,
+            refresh: true
         }),
         react(),
         tailwindcss(),
-        wayfinder({
-            formVariants: true,
-        }),
+        // ✅ Disable wayfinder in production builds to avoid DB errors
+        ...(process.env.NODE_ENV === 'production' ? [] : [wayfinder({ formVariants: true })])
     ],
     esbuild: {
-        jsx: 'automatic',
-    },
+        jsx: 'automatic'
+    }
 });
