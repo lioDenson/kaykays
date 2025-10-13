@@ -1,45 +1,51 @@
-# ---- Base PHP image ----
+# Use official PHP 8.4 image with CLI and FPM
 FROM php:8.4-fpm
 
-# ---- System dependencies ----
+# Arguments for permissions
+ARG WWWUSER=1000
+ARG WWWGROUP=1000
+
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
-    libzip-dev \
-    unzip \
     git \
     curl \
+    zip \
+    unzip \
+    libzip-dev \
     libonig-dev \
+    libxml2-dev \
     libpng-dev \
     libjpeg-dev \
     libfreetype6-dev \
-    libxml2-dev \
-    nodejs \
+    libpq-dev \
+    libcurl4-openssl-dev \
+    mysql-client \
     npm \
-    && docker-php-ext-configure gd --with-freetype --with-jpeg \
-    && docker-php-ext-install pdo_mysql mbstring zip exif pcntl bcmath gd
+    && docker-php-ext-install pdo pdo_mysql mbstring zip exif pcntl bcmath gd \
+    && docker-php-ext-enable pdo_mysql
 
-# ---- Set working directory ----
-WORKDIR /app
+# Install Composer
+COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
-# ---- Copy composer.json & install dependencies ----
-COPY composer.json composer.lock ./
-RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
-    && php composer-setup.php --install-dir=/usr/local/bin --filename=composer \
-    && composer install --no-dev --optimize-autoloader \
-    && rm -f composer-setup.php
+# Set working directory
+WORKDIR /var/www/html
 
-# ---- Copy app source ----
+# Copy app files
 COPY . .
 
-# ---- Install Node dependencies & build assets ----
+# Set permissions
+RUN chown -R $WWWUSER:$WWWGROUP /var/www/html/storage /var/www/html/bootstrap/cache \
+    && chmod -R 775 /var/www/html/storage /var/www/html/bootstrap/cache
+
+# Install PHP dependencies
+RUN composer install --no-dev --optimize-autoloader
+
+# Install JS dependencies and build
 RUN npm install
 RUN npm run build
 
-# ---- Permissions for storage & cache ----
-RUN chown -R www-data:www-data storage bootstrap/cache \
-    && chmod -R 775 storage bootstrap/cache
-
-# ---- Expose port 8000 ----
+# Expose port
 EXPOSE 8000
 
-# ---- Start PHP built-in server (or you can run artisan serve in Railway) ----
-CMD php artisan serve --host=0.0.0.0 --port=8000
+# Start PHP-FPM
+CMD ["php-fpm"]

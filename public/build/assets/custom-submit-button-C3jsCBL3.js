@@ -1,1 +1,0 @@
-import{j as s}from"./app-PccVoXma.js";import{B as i,a as n}from"./createLucideIcon-BBMH4QBs.js";import{L as u}from"./loader-_qUP40tW.js";const f=({label:t,children:a,type:m="submit",className:o,isLoading:r=!1,onClick:e})=>s.jsxs(i,{type:m,className:n("",o),onClick:e,children:[r&&s.jsx(u,{className:"mr-2 h-4 w-4 animate-spin"}),t,a]});export{f as C};
