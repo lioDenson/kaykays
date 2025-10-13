@@ -30,31 +30,31 @@ class TestDataSeeder extends Seeder
     {
         // create initial user
 
-            
-        
 
-        $this->call([
-            AccountSeeder::class,
-            UserSeeder::class,
-            SupplierSeeder::class,
-            ProductSeeder::class,
-            BatchSeeder::class,
-            TransactionSeeder::class,
-            CustomerSeeder::class,
-            RiderSeeder::class,
-            DeliverySeeder::class,
-            SaleSeeder::class,
-            PaymentSeeder::class,
-            CreditSeeder::class,
-            SaleItemSeeder::class,
-            ScheduleSeeder::class,
-        ]);
+
+
+        // $this->call([
+        //     AccountSeeder::class,
+        //     UserSeeder::class,
+        //     SupplierSeeder::class,
+        //     ProductSeeder::class,
+        //     BatchSeeder::class,
+        //     TransactionSeeder::class,
+        //     CustomerSeeder::class,
+        //     RiderSeeder::class,
+        //     DeliverySeeder::class,
+        //     SaleSeeder::class,
+        //     PaymentSeeder::class,
+        //     CreditSeeder::class,
+        //     SaleItemSeeder::class,
+        //     ScheduleSeeder::class,
+        // ]);
 
         $superAdmin = User::factory()->create([
-            'name' => 'super-admin',
+            'name' => 'super admin',
             'email' => 'superadmin@test.com',
             'phone' => '0712345675',
-            'password' => bcrypt('super-admin')
+            'password' => bcrypt('superadmin')
         ]);
 
         $superAdmin->assignRole('super-admin');

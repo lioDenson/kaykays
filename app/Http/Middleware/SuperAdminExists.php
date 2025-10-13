@@ -17,7 +17,7 @@ class SuperAdminExists
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (env('APP_INSTALLED') && Setting::latest()->first()->installed) {
+        if (Setting::latest()->first()->installed) {
             // abort(403, 'Super Admin Already Exists');
             return redirect()->back();
         }
