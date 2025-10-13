@@ -2,13 +2,14 @@
 
 namespace App\Providers;
 
+use Inertia\Inertia;
 use App\Models\Product;
 use App\Models\SaleItem;
 use App\Observers\ProductObserver;
 use App\Observers\SaleItemObserver;
+use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
-use Inertia\Inertia;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -26,6 +27,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
 
+        if(app()->environment('production')){
+            URL::forceScheme('https');
+        }
         Product::observe(ProductObserver::class);
         SaleItem::observe(SaleItemObserver::class);
         Inertia::share(
