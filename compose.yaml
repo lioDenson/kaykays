@@ -1,48 +1,45 @@
-# Use official PHP 8.4 FPM image
+# ---- Base PHP image ----
 FROM php:8.4-fpm
 
-# Install system dependencies
+# ---- System dependencies ----
 RUN apt-get update && apt-get install -y \
+    libzip-dev \
+    unzip \
     git \
     curl \
     libonig-dev \
-    libzip-dev \
-    zip \
-    unzip \
+    libpng-dev \
+    libjpeg-dev \
+    libfreetype6-dev \
+    libxml2-dev \
     nodejs \
     npm \
-    && docker-php-ext-install pdo_mysql mbstring zip
+    && docker-php-ext-configure gd --with-freetype --with-jpeg \
+    && docker-php-ext-install pdo_mysql mbstring zip exif pcntl bcmath gd
 
-# Install Composer
-COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
+# ---- Set working directory ----
+WORKDIR /app
 
-# Set working directory
-WORKDIR /var/www/html
-
-# Copy composer files first (for caching)
+# ---- Copy composer.json & install dependencies ----
 COPY composer.json composer.lock ./
+RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
+    && php composer-setup.php --install-dir=/usr/local/bin --filename=composer \
+    && composer install --no-dev --optimize-autoloader \
+    && rm -f composer-setup.php
 
-# Install PHP dependencies
-RUN composer install --no-interaction --optimize-autoloader
-
-# Copy project files
+# ---- Copy app source ----
 COPY . .
 
-# Copy .env.example to .env if .env not exists
-RUN if [ ! -f .env ]; then cp .env.example .env; fi
-
-# Generate APP_KEY if not exists
-RUN php artisan key:generate
-
-# Install Node dependencies & build frontend
+# ---- Install Node dependencies & build assets ----
 RUN npm install
 RUN npm run build
 
-# Set permissions for storage & bootstrap/cache
-RUN chmod -R 777 storage bootstrap/cache
+# ---- Permissions for storage & cache ----
+RUN chown -R www-data:www-data storage bootstrap/cache \
+    && chmod -R 775 storage bootstrap/cache
 
-# Expose port 8000
+# ---- Expose port 8000 ----
 EXPOSE 8000
 
-# Start Laravel server
+# ---- Start PHP built-in server (or you can run artisan serve in Railway) ----
 CMD php artisan serve --host=0.0.0.0 --port=8000
