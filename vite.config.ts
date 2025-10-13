@@ -13,8 +13,7 @@ export default defineConfig({
         }),
         react(),
         tailwindcss(),
-        // ✅ Disable wayfinder in production builds to avoid DB errors
-        ...(process.env.NODE_ENV === 'production' ? [] : [wayfinder({ formVariants: true })])
+        wayfinder({ formVariants: true })
     ],
     esbuild: {
         jsx: 'automatic'
