@@ -1,11 +1,10 @@
+import { wayfinder } from '@laravel/vite-plugin-wayfinder';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import laravel from 'laravel-vite-plugin';
-import { defineConfig, UserConfig } from 'vite';
+import { defineConfig } from 'vite';
 
-const isProduction = process.env.NODE_ENV === 'production';
-
-const config: UserConfig = {
+export default defineConfig({
     plugins: [
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.tsx'],
@@ -13,29 +12,11 @@ const config: UserConfig = {
             refresh: true
         }),
         react(),
-        tailwindcss()
+        tailwindcss(),
+        // ✅ Disable wayfinder in production builds to avoid DB errors
+        ...(process.env.NODE_ENV === 'production' ? [] : [wayfinder({ formVariants: true })])
     ],
-    base: isProduction ? 'https://kaykay-app-production.up.railway.app/build/' : '/',
-    server: isProduction
-        ? undefined // production doesn’t use dev server
-        : {
-              host: true // dev on LAN
-              // remove https entirely
-          },
     esbuild: {
         jsx: 'automatic'
-    },
-    build: {
-        manifest: true,
-        outDir: 'public/build',
-        rollupOptions: {
-            output: {
-                entryFileNames: '[name].js',
-                chunkFileNames: '[name].js',
-                assetFileNames: '[name].[ext]'
-            }
-        }
     }
-};
-
-export default defineConfig(config);
+});
