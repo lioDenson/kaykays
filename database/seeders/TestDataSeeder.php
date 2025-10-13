@@ -56,26 +56,25 @@ class TestDataSeeder extends Seeder
             'phone' => '0712345675',
             'password' => bcrypt('superadmin')
         ]);
-
         $superAdmin->assignRole('super-admin');
 
-        $admin = User::factory()->create([
-            'name' => 'admin',
-            'email' => 'admin@test.com',
-            'phone' => '0712345678',
-            'password' => bcrypt('admin')
-        ]);
+        // $admin = User::factory()->create([
+        //     'name' => 'admin',
+        //     'email' => 'admin@test.com',
+        //     'phone' => '0712345678',
+        //     'password' => bcrypt('admin')
+        // ]);
 
-        $admin->assignRole('admin');
+        // $admin->assignRole('admin');
 
-        $cashier = User::factory()->create([
-            'name' => 'cashier',
-            'email' => 'cashier@test.com',
-            'phone' => '0712345671',
-            'password' => bcrypt('cashier'),
-            'account_id' => Account::pluck('id')->random(),
-        ]);
+        // $cashier = User::factory()->create([
+        //     'name' => 'cashier',
+        //     'email' => 'cashier@test.com',
+        //     'phone' => '0712345671',
+        //     'password' => bcrypt('cashier'),
+        //     'account_id' => Account::pluck('id')->random(),
+        // ]);
 
-        $cashier->assignRole('cashier');
+        // $cashier->assignRole('cashier');
     }
 }
