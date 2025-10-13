@@ -1,11 +1,10 @@
-import { wayfinder } from '@laravel/vite-plugin-wayfinder';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import laravel from 'laravel-vite-plugin';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-    base:'',
+    base: '/build/',
     plugins: [
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.tsx'],
@@ -13,7 +12,7 @@ export default defineConfig({
             refresh: true
         }),
         react(),
-        tailwindcss(),
+        tailwindcss()
         // wayfinder({ formVariants: true })
     ],
     esbuild: {
