@@ -19,7 +19,7 @@ return new class extends Migration
         });
 
         DB::table('settings')->insert([
-            'installed' => false
+            'installed' => true
         ]);
     }
 
