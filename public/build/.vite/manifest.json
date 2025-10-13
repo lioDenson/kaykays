@@ -1,0 +1,953 @@
+{
+  "_app-layout.js": {
+    "file": "app-layout.js",
+    "name": "app-layout",
+    "imports": [
+      "resources/js/app.tsx",
+      "_createLucideIcon.js",
+      "_index2.js",
+      "_index.js"
+    ]
+  },
+  "_auth-layout.js": {
+    "file": "auth-layout.js",
+    "name": "auth-layout",
+    "imports": [
+      "resources/js/app.tsx",
+      "_index3.js"
+    ]
+  },
+  "_badge.js": {
+    "file": "badge.js",
+    "name": "badge",
+    "imports": [
+      "resources/js/app.tsx",
+      "_createLucideIcon.js"
+    ]
+  },
+  "_card.js": {
+    "file": "card.js",
+    "name": "card",
+    "imports": [
+      "resources/js/app.tsx",
+      "_createLucideIcon.js"
+    ]
+  },
+  "_createLucideIcon.js": {
+    "file": "createLucideIcon.js",
+    "name": "createLucideIcon",
+    "imports": [
+      "resources/js/app.tsx"
+    ]
+  },
+  "_custom-icon-button.js": {
+    "file": "custom-icon-button.js",
+    "name": "custom-icon-button",
+    "imports": [
+      "_createLucideIcon.js",
+      "resources/js/app.tsx",
+      "_loader.js"
+    ]
+  },
+  "_custom-index-page.js": {
+    "file": "custom-index-page.js",
+    "name": "custom-index-page",
+    "imports": [
+      "resources/js/app.tsx",
+      "_createLucideIcon.js",
+      "_app-layout.js",
+      "_custom-searchbar.js",
+      "_custom-icon-button.js",
+      "_info.js",
+      "_custom-toaster.js"
+    ]
+  },
+  "_custom-input.js": {
+    "file": "custom-input.js",
+    "name": "custom-input",
+    "imports": [
+      "resources/js/app.tsx",
+      "_label.js",
+      "_input.js"
+    ]
+  },
+  "_custom-searchbar.js": {
+    "file": "custom-searchbar.js",
+    "name": "custom-searchbar",
+    "imports": [
+      "resources/js/app.tsx",
+      "_index.js",
+      "_index2.js",
+      "_createLucideIcon.js",
+      "_app-layout.js",
+      "_input.js",
+      "_search.js",
+      "_loader-circle.js"
+    ]
+  },
+  "_custom-selection.js": {
+    "file": "custom-selection.js",
+    "name": "custom-selection",
+    "imports": [
+      "resources/js/app.tsx",
+      "_app-layout.js",
+      "_index.js",
+      "_createLucideIcon.js",
+      "_search.js",
+      "_index2.js",
+      "_label.js"
+    ]
+  },
+  "_custom-submit-button.js": {
+    "file": "custom-submit-button.js",
+    "name": "custom-submit-button",
+    "imports": [
+      "resources/js/app.tsx",
+      "_createLucideIcon.js",
+      "_loader.js"
+    ]
+  },
+  "_custom-text-area.js": {
+    "file": "custom-text-area.js",
+    "name": "custom-text-area",
+    "imports": [
+      "resources/js/app.tsx",
+      "_label.js",
+      "_createLucideIcon.js"
+    ]
+  },
+  "_custom-toaster.js": {
+    "file": "custom-toaster.js",
+    "name": "custom-toaster",
+    "imports": [
+      "resources/js/app.tsx",
+      "_index.js"
+    ]
+  },
+  "_index.js": {
+    "file": "index.js",
+    "name": "index",
+    "imports": [
+      "resources/js/app.tsx",
+      "_createLucideIcon.js"
+    ]
+  },
+  "_index14.js": {
+    "file": "index14.js",
+    "name": "index",
+    "imports": [
+      "resources/js/app.tsx"
+    ]
+  },
+  "_index15.js": {
+    "file": "index15.js",
+    "name": "index"
+  },
+  "_index16.js": {
+    "file": "index16.js",
+    "name": "index",
+    "imports": [
+      "_index15.js"
+    ]
+  },
+  "_index17.js": {
+    "file": "index17.js",
+    "name": "index",
+    "imports": [
+      "_index15.js"
+    ]
+  },
+  "_index2.js": {
+    "file": "index2.js",
+    "name": "index",
+    "imports": [
+      "_createLucideIcon.js",
+      "resources/js/app.tsx"
+    ]
+  },
+  "_index3.js": {
+    "file": "index3.js",
+    "name": "index"
+  },
+  "_info.js": {
+    "file": "info.js",
+    "name": "info",
+    "imports": [
+      "_createLucideIcon.js"
+    ]
+  },
+  "_input.js": {
+    "file": "input.js",
+    "name": "input",
+    "imports": [
+      "resources/js/app.tsx",
+      "_createLucideIcon.js"
+    ]
+  },
+  "_label.js": {
+    "file": "label.js",
+    "name": "label",
+    "imports": [
+      "resources/js/app.tsx",
+      "_createLucideIcon.js",
+      "_index.js"
+    ]
+  },
+  "_layout.js": {
+    "file": "layout.js",
+    "name": "layout",
+    "imports": [
+      "resources/js/app.tsx",
+      "_createLucideIcon.js",
+      "_app-layout.js",
+      "_index16.js",
+      "_index17.js",
+      "_index15.js"
+    ]
+  },
+  "_loader-circle.js": {
+    "file": "loader-circle.js",
+    "name": "loader-circle",
+    "imports": [
+      "_createLucideIcon.js"
+    ]
+  },
+  "_loader.js": {
+    "file": "loader.js",
+    "name": "loader",
+    "imports": [
+      "_createLucideIcon.js"
+    ]
+  },
+  "_plus.js": {
+    "file": "plus.js",
+    "name": "plus",
+    "imports": [
+      "_createLucideIcon.js"
+    ]
+  },
+  "_search.js": {
+    "file": "search.js",
+    "name": "search",
+    "imports": [
+      "_createLucideIcon.js"
+    ]
+  },
+  "_text-link.js": {
+    "file": "text-link.js",
+    "name": "text-link",
+    "imports": [
+      "resources/js/app.tsx",
+      "_createLucideIcon.js"
+    ]
+  },
+  "_transition.js": {
+    "file": "transition.js",
+    "name": "transition",
+    "imports": [
+      "resources/js/app.tsx"
+    ]
+  },
+  "_user-plus.js": {
+    "file": "user-plus.js",
+    "name": "user-plus",
+    "imports": [
+      "_createLucideIcon.js"
+    ]
+  },
+  "resources/css/app.css": {
+    "file": "app2.js",
+    "name": "app",
+    "src": "resources/css/app.css",
+    "isEntry": true,
+    "isDynamicEntry": true,
+    "css": [
+      "app.css"
+    ]
+  },
+  "resources/js/app.tsx": {
+    "file": "app.js",
+    "name": "app",
+    "src": "resources/js/app.tsx",
+    "isEntry": true,
+    "imports": [
+      "resources/css/app.css"
+    ],
+    "dynamicImports": [
+      "resources/js/pages/Account/Create.tsx",
+      "resources/js/pages/Account/Index.tsx",
+      "resources/js/pages/Delivery/Index.tsx",
+      "resources/js/pages/Inventory/Product/Create.tsx",
+      "resources/js/pages/Inventory/Product/Index.tsx",
+      "resources/js/pages/Inventory/Stock/Create.tsx",
+      "resources/js/pages/Inventory/Stock/Index.tsx",
+      "resources/js/pages/People/Customers/Create.tsx",
+      "resources/js/pages/People/Customers/Index.tsx",
+      "resources/js/pages/People/Riders/Create.tsx",
+      "resources/js/pages/People/Riders/Index.tsx",
+      "resources/js/pages/People/Users/Create.tsx",
+      "resources/js/pages/People/Users/Index.tsx",
+      "resources/js/pages/Transactions/Credits/Index.tsx",
+      "resources/js/pages/Transactions/Payments/Index.tsx",
+      "resources/js/pages/Transactions/Sales/Create.tsx",
+      "resources/js/pages/Transactions/Sales/Index.tsx",
+      "resources/css/app.css",
+      "resources/js/pages/app/setting/admin-register.tsx",
+      "resources/js/pages/app/setting/super-admin.tsx",
+      "resources/js/pages/auth/confirm-password.tsx",
+      "resources/js/pages/auth/forgot-password.tsx",
+      "resources/js/pages/auth/login.tsx",
+      "resources/js/pages/auth/register.tsx",
+      "resources/js/pages/auth/reset-password.tsx",
+      "resources/js/pages/auth/verify-email.tsx",
+      "resources/js/pages/dashboard.tsx",
+      "resources/css/app.css",
+      "resources/js/pages/settings/appearance.tsx",
+      "resources/js/pages/settings/password.tsx",
+      "resources/js/pages/settings/profile.tsx",
+      "resources/js/pages/welcome.tsx"
+    ]
+  },
+  "resources/js/pages/Account/Create.tsx": {
+    "file": "Create.js",
+    "name": "Create",
+    "src": "resources/js/pages/Account/Create.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_custom-submit-button.js",
+      "_label.js",
+      "_input.js",
+      "_app-layout.js",
+      "_auth-layout.js",
+      "resources/css/app.css",
+      "_createLucideIcon.js",
+      "_loader.js",
+      "_index.js",
+      "_index2.js",
+      "_index3.js"
+    ]
+  },
+  "resources/js/pages/Account/Index.tsx": {
+    "file": "Index4.js",
+    "name": "Index",
+    "src": "resources/js/pages/Account/Index.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_custom-index-page.js",
+      "_app-layout.js",
+      "_index3.js",
+      "resources/css/app.css",
+      "_createLucideIcon.js",
+      "_custom-searchbar.js",
+      "_index.js",
+      "_index2.js",
+      "_input.js",
+      "_search.js",
+      "_loader-circle.js",
+      "_custom-icon-button.js",
+      "_loader.js",
+      "_info.js",
+      "_custom-toaster.js"
+    ]
+  },
+  "resources/js/pages/Delivery/Index.tsx": {
+    "file": "Index5.js",
+    "name": "Index",
+    "src": "resources/js/pages/Delivery/Index.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_custom-index-page.js",
+      "_badge.js",
+      "_app-layout.js",
+      "resources/css/app.css",
+      "_createLucideIcon.js",
+      "_custom-searchbar.js",
+      "_index.js",
+      "_index2.js",
+      "_input.js",
+      "_search.js",
+      "_loader-circle.js",
+      "_custom-icon-button.js",
+      "_loader.js",
+      "_info.js",
+      "_custom-toaster.js"
+    ]
+  },
+  "resources/js/pages/Inventory/Product/Create.tsx": {
+    "file": "Create2.js",
+    "name": "Create",
+    "src": "resources/js/pages/Inventory/Product/Create.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_custom-submit-button.js",
+      "_label.js",
+      "_input.js",
+      "_app-layout.js",
+      "_auth-layout.js",
+      "resources/css/app.css",
+      "_createLucideIcon.js",
+      "_loader.js",
+      "_index.js",
+      "_index2.js",
+      "_index3.js"
+    ]
+  },
+  "resources/js/pages/Inventory/Product/Index.tsx": {
+    "file": "Index6.js",
+    "name": "Index",
+    "src": "resources/js/pages/Inventory/Product/Index.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_custom-index-page.js",
+      "_app-layout.js",
+      "_index3.js",
+      "_plus.js",
+      "resources/css/app.css",
+      "_createLucideIcon.js",
+      "_custom-searchbar.js",
+      "_index.js",
+      "_index2.js",
+      "_input.js",
+      "_search.js",
+      "_loader-circle.js",
+      "_custom-icon-button.js",
+      "_loader.js",
+      "_info.js",
+      "_custom-toaster.js"
+    ]
+  },
+  "resources/js/pages/Inventory/Stock/Create.tsx": {
+    "file": "Create3.js",
+    "name": "Create",
+    "src": "resources/js/pages/Inventory/Stock/Create.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_custom-input.js",
+      "_custom-selection.js",
+      "_custom-submit-button.js",
+      "_app-layout.js",
+      "_auth-layout.js",
+      "_index3.js",
+      "resources/css/app.css",
+      "_label.js",
+      "_createLucideIcon.js",
+      "_index.js",
+      "_input.js",
+      "_search.js",
+      "_index2.js",
+      "_loader.js"
+    ]
+  },
+  "resources/js/pages/Inventory/Stock/Index.tsx": {
+    "file": "Index7.js",
+    "name": "Index",
+    "src": "resources/js/pages/Inventory/Stock/Index.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_custom-index-page.js",
+      "_app-layout.js",
+      "_index3.js",
+      "_plus.js",
+      "resources/css/app.css",
+      "_createLucideIcon.js",
+      "_custom-searchbar.js",
+      "_index.js",
+      "_index2.js",
+      "_input.js",
+      "_search.js",
+      "_loader-circle.js",
+      "_custom-icon-button.js",
+      "_loader.js",
+      "_info.js",
+      "_custom-toaster.js"
+    ]
+  },
+  "resources/js/pages/People/Customers/Create.tsx": {
+    "file": "Create6.js",
+    "name": "Create",
+    "src": "resources/js/pages/People/Customers/Create.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_app-layout.js",
+      "_label.js",
+      "_custom-input.js",
+      "_custom-searchbar.js",
+      "_custom-submit-button.js",
+      "_custom-text-area.js",
+      "_auth-layout.js",
+      "_index3.js",
+      "resources/css/app.css",
+      "_createLucideIcon.js",
+      "_index2.js",
+      "_index.js",
+      "_input.js",
+      "_search.js",
+      "_loader-circle.js",
+      "_loader.js"
+    ]
+  },
+  "resources/js/pages/People/Customers/Index.tsx": {
+    "file": "Index8.js",
+    "name": "Index",
+    "src": "resources/js/pages/People/Customers/Index.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_custom-index-page.js",
+      "_app-layout.js",
+      "_index3.js",
+      "_user-plus.js",
+      "resources/css/app.css",
+      "_createLucideIcon.js",
+      "_custom-searchbar.js",
+      "_index.js",
+      "_index2.js",
+      "_input.js",
+      "_search.js",
+      "_loader-circle.js",
+      "_custom-icon-button.js",
+      "_loader.js",
+      "_info.js",
+      "_custom-toaster.js"
+    ]
+  },
+  "resources/js/pages/People/Riders/Create.tsx": {
+    "file": "Create4.js",
+    "name": "Create",
+    "src": "resources/js/pages/People/Riders/Create.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_custom-submit-button.js",
+      "_label.js",
+      "_input.js",
+      "_app-layout.js",
+      "_auth-layout.js",
+      "_index3.js",
+      "_search.js",
+      "_loader-circle.js",
+      "resources/css/app.css",
+      "_createLucideIcon.js",
+      "_loader.js",
+      "_index.js",
+      "_index2.js"
+    ]
+  },
+  "resources/js/pages/People/Riders/Index.tsx": {
+    "file": "Index9.js",
+    "name": "Index",
+    "src": "resources/js/pages/People/Riders/Index.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_custom-index-page.js",
+      "_app-layout.js",
+      "_index3.js",
+      "_plus.js",
+      "resources/css/app.css",
+      "_createLucideIcon.js",
+      "_custom-searchbar.js",
+      "_index.js",
+      "_index2.js",
+      "_input.js",
+      "_search.js",
+      "_loader-circle.js",
+      "_custom-icon-button.js",
+      "_loader.js",
+      "_info.js",
+      "_custom-toaster.js"
+    ]
+  },
+  "resources/js/pages/People/Users/Create.tsx": {
+    "file": "Create5.js",
+    "name": "Create",
+    "src": "resources/js/pages/People/Users/Create.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_custom-selection.js",
+      "_custom-submit-button.js",
+      "_label.js",
+      "_input.js",
+      "_app-layout.js",
+      "_auth-layout.js",
+      "_index3.js",
+      "_createLucideIcon.js",
+      "resources/css/app.css",
+      "_index.js",
+      "_search.js",
+      "_index2.js",
+      "_loader.js"
+    ]
+  },
+  "resources/js/pages/People/Users/Index.tsx": {
+    "file": "Index10.js",
+    "name": "Index",
+    "src": "resources/js/pages/People/Users/Index.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_custom-index-page.js",
+      "_app-layout.js",
+      "_index3.js",
+      "_user-plus.js",
+      "resources/css/app.css",
+      "_createLucideIcon.js",
+      "_custom-searchbar.js",
+      "_index.js",
+      "_index2.js",
+      "_input.js",
+      "_search.js",
+      "_loader-circle.js",
+      "_custom-icon-button.js",
+      "_loader.js",
+      "_info.js",
+      "_custom-toaster.js"
+    ]
+  },
+  "resources/js/pages/Transactions/Credits/Index.tsx": {
+    "file": "Index11.js",
+    "name": "Index",
+    "src": "resources/js/pages/Transactions/Credits/Index.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_custom-index-page.js",
+      "_badge.js",
+      "_app-layout.js",
+      "resources/css/app.css",
+      "_createLucideIcon.js",
+      "_custom-searchbar.js",
+      "_index.js",
+      "_index2.js",
+      "_input.js",
+      "_search.js",
+      "_loader-circle.js",
+      "_custom-icon-button.js",
+      "_loader.js",
+      "_info.js",
+      "_custom-toaster.js"
+    ]
+  },
+  "resources/js/pages/Transactions/Payments/Index.tsx": {
+    "file": "Index12.js",
+    "name": "Index",
+    "src": "resources/js/pages/Transactions/Payments/Index.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_custom-index-page.js",
+      "_badge.js",
+      "_app-layout.js",
+      "resources/css/app.css",
+      "_createLucideIcon.js",
+      "_custom-searchbar.js",
+      "_index.js",
+      "_index2.js",
+      "_input.js",
+      "_search.js",
+      "_loader-circle.js",
+      "_custom-icon-button.js",
+      "_loader.js",
+      "_info.js",
+      "_custom-toaster.js"
+    ]
+  },
+  "resources/js/pages/Transactions/Sales/Create.tsx": {
+    "file": "Create7.js",
+    "name": "Create",
+    "src": "resources/js/pages/Transactions/Sales/Create.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_app-layout.js",
+      "_createLucideIcon.js",
+      "_custom-icon-button.js",
+      "_custom-input.js",
+      "_custom-selection.js",
+      "_custom-submit-button.js",
+      "_label.js",
+      "_index2.js",
+      "_index14.js",
+      "_index.js",
+      "_custom-text-area.js",
+      "_custom-toaster.js",
+      "_index3.js",
+      "_plus.js",
+      "resources/css/app.css",
+      "_loader.js",
+      "_input.js",
+      "_search.js"
+    ]
+  },
+  "resources/js/pages/Transactions/Sales/Index.tsx": {
+    "file": "Index13.js",
+    "name": "Index",
+    "src": "resources/js/pages/Transactions/Sales/Index.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_custom-index-page.js",
+      "_custom-toaster.js",
+      "_app-layout.js",
+      "_index3.js",
+      "_badge.js",
+      "resources/css/app.css",
+      "_createLucideIcon.js",
+      "_custom-searchbar.js",
+      "_index.js",
+      "_index2.js",
+      "_input.js",
+      "_search.js",
+      "_loader-circle.js",
+      "_custom-icon-button.js",
+      "_loader.js",
+      "_info.js"
+    ]
+  },
+  "resources/js/pages/app/setting/admin-register.tsx": {
+    "file": "admin-register.js",
+    "name": "admin-register",
+    "src": "resources/js/pages/app/setting/admin-register.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_custom-submit-button.js",
+      "_label.js",
+      "_card.js",
+      "_input.js",
+      "_auth-layout.js",
+      "resources/css/app.css",
+      "_createLucideIcon.js",
+      "_loader.js",
+      "_index.js",
+      "_index3.js"
+    ]
+  },
+  "resources/js/pages/app/setting/super-admin.tsx": {
+    "file": "super-admin.js",
+    "name": "super-admin",
+    "src": "resources/js/pages/app/setting/super-admin.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_custom-submit-button.js",
+      "_card.js",
+      "_info.js",
+      "_createLucideIcon.js",
+      "resources/css/app.css",
+      "_loader.js"
+    ]
+  },
+  "resources/js/pages/auth/confirm-password.tsx": {
+    "file": "confirm-password.js",
+    "name": "confirm-password",
+    "src": "resources/js/pages/auth/confirm-password.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_index15.js",
+      "_label.js",
+      "_createLucideIcon.js",
+      "_input.js",
+      "_auth-layout.js",
+      "_loader-circle.js",
+      "resources/css/app.css",
+      "_index.js",
+      "_index3.js"
+    ]
+  },
+  "resources/js/pages/auth/forgot-password.tsx": {
+    "file": "forgot-password.js",
+    "name": "forgot-password",
+    "src": "resources/js/pages/auth/forgot-password.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_index15.js",
+      "_index16.js",
+      "_label.js",
+      "_text-link.js",
+      "_createLucideIcon.js",
+      "_input.js",
+      "_auth-layout.js",
+      "_loader-circle.js",
+      "resources/css/app.css",
+      "_index.js",
+      "_index3.js"
+    ]
+  },
+  "resources/js/pages/auth/login.tsx": {
+    "file": "login.js",
+    "name": "login",
+    "src": "resources/js/pages/auth/login.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_index15.js",
+      "_label.js",
+      "_text-link.js",
+      "_createLucideIcon.js",
+      "_index2.js",
+      "_index14.js",
+      "_index.js",
+      "_input.js",
+      "_auth-layout.js",
+      "_index16.js",
+      "_index17.js",
+      "_loader-circle.js",
+      "resources/css/app.css",
+      "_index3.js"
+    ]
+  },
+  "resources/js/pages/auth/register.tsx": {
+    "file": "register.js",
+    "name": "register",
+    "src": "resources/js/pages/auth/register.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_index15.js",
+      "_index16.js",
+      "_label.js",
+      "_text-link.js",
+      "_createLucideIcon.js",
+      "_input.js",
+      "_auth-layout.js",
+      "_loader-circle.js",
+      "resources/css/app.css",
+      "_index.js",
+      "_index3.js"
+    ]
+  },
+  "resources/js/pages/auth/reset-password.tsx": {
+    "file": "reset-password.js",
+    "name": "reset-password",
+    "src": "resources/js/pages/auth/reset-password.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_index15.js",
+      "_label.js",
+      "_createLucideIcon.js",
+      "_input.js",
+      "_auth-layout.js",
+      "_loader-circle.js",
+      "resources/css/app.css",
+      "_index.js",
+      "_index3.js"
+    ]
+  },
+  "resources/js/pages/auth/verify-email.tsx": {
+    "file": "verify-email.js",
+    "name": "verify-email",
+    "src": "resources/js/pages/auth/verify-email.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_index15.js",
+      "_index16.js",
+      "_text-link.js",
+      "_createLucideIcon.js",
+      "_auth-layout.js",
+      "_loader-circle.js",
+      "resources/css/app.css",
+      "_index3.js"
+    ]
+  },
+  "resources/js/pages/dashboard.tsx": {
+    "file": "dashboard.js",
+    "name": "dashboard",
+    "src": "resources/js/pages/dashboard.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_custom-toaster.js",
+      "_app-layout.js",
+      "resources/css/app.css",
+      "_index.js",
+      "_createLucideIcon.js",
+      "_index2.js"
+    ]
+  },
+  "resources/js/pages/settings/appearance.tsx": {
+    "file": "appearance.js",
+    "name": "appearance",
+    "src": "resources/js/pages/settings/appearance.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_createLucideIcon.js",
+      "_app-layout.js",
+      "_layout.js",
+      "_index16.js",
+      "resources/css/app.css",
+      "_index2.js",
+      "_index.js",
+      "_index17.js",
+      "_index15.js"
+    ]
+  },
+  "resources/js/pages/settings/password.tsx": {
+    "file": "password.js",
+    "name": "password",
+    "src": "resources/js/pages/settings/password.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_index15.js",
+      "_label.js",
+      "_app-layout.js",
+      "_layout.js",
+      "_createLucideIcon.js",
+      "_input.js",
+      "_index17.js",
+      "_transition.js",
+      "resources/css/app.css",
+      "_index.js",
+      "_index2.js",
+      "_index16.js"
+    ]
+  },
+  "resources/js/pages/settings/profile.tsx": {
+    "file": "profile.js",
+    "name": "profile",
+    "src": "resources/js/pages/settings/profile.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_index15.js",
+      "_layout.js",
+      "_label.js",
+      "_createLucideIcon.js",
+      "_app-layout.js",
+      "_input.js",
+      "_transition.js",
+      "resources/css/app.css",
+      "_index16.js",
+      "_index17.js",
+      "_index.js",
+      "_index2.js"
+    ]
+  },
+  "resources/js/pages/welcome.tsx": {
+    "file": "welcome.js",
+    "name": "welcome",
+    "src": "resources/js/pages/welcome.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "resources/js/app.tsx",
+      "_index16.js",
+      "resources/css/app.css",
+      "_index15.js"
+    ]
+  }
+}

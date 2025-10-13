@@ -1,0 +1,1 @@
+import{j as s}from"./app.js";import{L as e,I as p}from"./label.js";import{I as n}from"./input.js";const l=({label:m,name:a,id:r,error:t,...o})=>s.jsxs("div",{className:"grid gap-2",children:[s.jsx(e,{htmlFor:r,children:m}),s.jsx(n,{id:r,name:a,...o}),t&&s.jsx(p,{message:t||"",className:"mt-2"})]});export{l as C};
