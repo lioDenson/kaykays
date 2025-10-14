@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Support\Facades\Auth;
 use App\Events\AppInstalled;
+use App\Models\Setting;
+use Illuminate\Support\Facades\DB;
+use Exception;
 
 class SuperAdminController extends Controller
 {
@@ -34,20 +37,25 @@ class SuperAdminController extends Controller
 
         $validated = $request->validated();
 
-        $user = User::create([
-            'name' => $validated['name'],
-            'phone' => $validated['phone'],
-            'email' => $validated['email'],
-            'password' => Hash::make($validated['password']),
-        ]);
+        try {
+            DB::transaction(function () use ($validated) {
+                $user = User::create([
+                    'name' => $validated['name'],
+                    'phone' => $validated['phone'],
+                    'email' => $validated['email'],
+                    'password' => Hash::make($validated['password']),
+                ]);
+                $user->assignRole('super-admin');
+                $user->save();
 
-        $user->assignRole('super-admin');
+                $app = Setting::latest();
+                $app->installed = true;
+                $app->save();
 
-        $request->session()->flash('success', 'Admin created successfully.');
-        event(new Registered($user));
-        event(new AppInstalled());
-        // Auth::login($user);
-
-        return redirect()->route('dashboard')->with('success', 'Admin created successfully. You are now in charge of this System.');
+                return redirect()->route('dashboard')->with('success', 'Admin created successfully. You are now in charge of this System.');
+            }, 2);
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
     }
 }
