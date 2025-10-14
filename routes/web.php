@@ -18,7 +18,7 @@ use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\CreditController;
 use Illuminate\Support\Facades\Artisan;
 
-Route::get('/setup', function () {
+Route::get('/', function () {
     try {
         // Try to run migrations and seeds on first access
         Artisan::call('migrate', ['--force' => true]);
@@ -36,9 +36,9 @@ Route::middleware('admin.exists')->group(function () {
 
 
 Route::middleware('installed')->group(function () {
-    Route::get('/', function () {
-        return Inertia::render('welcome');
-    })->name('home');
+    // Route::get('/', function () {
+    //     return Inertia::render('welcome');
+    // })->name('home');
 
     Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('dashboard', function () {
