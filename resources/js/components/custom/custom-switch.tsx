@@ -13,10 +13,10 @@ interface CustomSwitchProps {
 }
 const CustomSwitch = ({ checked, onChange, label, hideLabel = false, className, error }: CustomSwitchProps) => {
     return (
-        <div className="gri">
+        <div className={cn('grid gap-2', className)}>
             <Label className="grid cursor-pointer gap-2">
                 {!hideLabel && <span className="">{label}</span>}
-                <Switch className={cn('', className)} checked={checked} onCheckedChange={onChange} />
+                <Switch  checked={checked} onCheckedChange={onChange} />
             </Label>
             <InputError message={error} className='mt-2' />
         </div>

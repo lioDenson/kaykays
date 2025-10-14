@@ -48,9 +48,7 @@ class SuperAdminController extends Controller
                 $user->assignRole('super-admin');
                 $user->save();
 
-                $app = Setting::latest();
-                $app->installed = true;
-                $app->save();
+                $app = Setting::latest()->update(['installed' => true]);
 
                 return redirect()->route('dashboard')->with('success', 'Admin created successfully. You are now in charge of this System.');
             }, 2);
