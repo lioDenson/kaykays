@@ -18,9 +18,8 @@ class CheckSuperAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        // dd(Setting::latest()->first()->installed);
-        
-        if (!env('APP_INSTALLED') || !Setting::latest()->first()->installed) {
+       
+        if (!Setting::latest()->first()->installed) {
             return redirect()->route('super-admin.index');
         } 
         return $next($request);
