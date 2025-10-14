@@ -293,7 +293,7 @@ export default function Sale({
                                     </Skeleton>
                                 ) : (
                                     <div
-                                        className={`flex ${deliveriesAvailable ? 'flex-col gap-2' : 'w-full items-center justify-around'} ${errors.deliveryData || errors.deliveryFee ? 'border border-red-500/80' : ''} rounded-2xl p-2`}
+                                        className={`md:flex ${deliveriesAvailable ? 'flex-col gap-2' : 'w-fit items-center justify-around'} ${errors.deliveryData || errors.deliveryFee ? 'border border-red-500/80' : ''} rounded-2xl p-2`}
                                     >
                                         <CustomSelection
                                             data={riders.map((r) => ({ id: r.id, name: r.user.name }))}
