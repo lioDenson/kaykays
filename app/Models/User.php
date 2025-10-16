@@ -75,6 +75,12 @@ class User extends Authenticatable implements Searchable
         );
     }
 
+    public function account()
+    {
+        return $this->belongsTo(Account::class);
+    }
+
+
     public function accounts()
     {
         return $this->belongsToMany(Account::class, 'account_users', 'user_id', 'account_id')->withTimestamps();

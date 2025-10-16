@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Account;
 use Inertia\Inertia;
 use App\Models\Product;
 use App\Models\SaleItem;
@@ -9,6 +10,7 @@ use App\Observers\ProductObserver;
 use App\Observers\SaleItemObserver;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -41,7 +43,8 @@ class AppServiceProvider extends ServiceProvider
                 ],
                 'auth' => [
                     'user' => Auth::user(),
-                ],
+                ]
+               
             ]
         );
     }

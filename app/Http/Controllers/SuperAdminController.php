@@ -2,17 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreAdminRequest;
-use Illuminate\Http\Request;
-use Inertia\Inertia;
+use Exception;
 use App\Models\User;
+use Inertia\Inertia;
+use App\Models\Account;
+use App\Models\Setting;
+use App\Events\AppInstalled;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Events\Registered;
-use Illuminate\Support\Facades\Auth;
-use App\Events\AppInstalled;
-use App\Models\Setting;
-use Illuminate\Support\Facades\DB;
-use Exception;
+use App\Http\Requests\StoreAdminRequest;
 
 class SuperAdminController extends Controller
 {
@@ -38,11 +39,15 @@ class SuperAdminController extends Controller
         $validated = $request->validated();
 
         try {
+
             DB::transaction(function () use ($validated) {
+
+                $account = Account::firstOrFail();
                 $user = User::create([
                     'name' => $validated['name'],
                     'phone' => $validated['phone'],
                     'email' => $validated['email'],
+                    'account_id' => $account->id,
                     'password' => Hash::make($validated['password']),
                 ]);
                 $user->assignRole('super-admin');

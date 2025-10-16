@@ -52,12 +52,8 @@ class LoginRequest extends FormRequest
         Auth::logoutOtherDevices($this->password);
         RateLimiter::clear($this->throttleKey());
 
-        $this->user()->hasAnyRole(['super-admin', 'admin']) ?
-            $account_id = Account::pluck('id')->first()
-            :
-            $account_id = Auth::user()->account_id;
-
-        session('account_id', $account_id);
+        $account = Account::find(Auth::user()->account_id);
+        session(['account_id' => $account->id]);
     }
 
     /**

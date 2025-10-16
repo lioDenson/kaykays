@@ -33,8 +33,17 @@ class ProductRequest extends FormRequest
                     ->ignore($this->route('product'))->whereNull('deleted_at'),
             ],
             'description' => 'nullable|string|max:255',
-            'price' => 'required|numeric',
-            'unit' => 'required|string|max:50',
+            'price' => 'required|numeric|min:1',
+            'unit' => 'required|string|max:20',
+            'account_id' => 'required|integer|exists:accounts,id'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'name.unique' => 'Product already exists.',
+            'price.min:1' => 'Price must be at least 1Ksh',
         ];
     }
 }
