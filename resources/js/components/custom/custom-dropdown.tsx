@@ -34,7 +34,7 @@ const CustomDropdown = ({ trigger, label, items, error, onChange }: CustomDropdo
             <Label>{label}</Label>
             <DropdownMenu >
                 <DropdownMenuTrigger asChild>
-                    <div className='border rounded flex items-center px-4' >{selected ? items.find((i) => i.value === selected)?.label : trigger}</div>
+                    <div className='border rounded flex items-center px-4 h-15' >{selected ? items.find((i) => i.value === selected)?.label : trigger}</div>
                 </DropdownMenuTrigger>
                 <DropdownMenuContent className="w-56">
                     <DropdownMenuLabel>{label}</DropdownMenuLabel>

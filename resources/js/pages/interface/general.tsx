@@ -1,5 +1,4 @@
-import { LucideIcon } from "lucide-react";
-
+import { LucideIcon } from 'lucide-react';
 
 export type BillCycle = 'weekly' | 'monthly' | 'yearly';
 // Account interface
@@ -11,8 +10,7 @@ export interface AccountInterface {
     [key: string]: string | number | boolean | File | null | undefined;
 }
 
-export interface ProductInterface  {
-
+export interface ProductInterface {
     id: number;
     code: string;
     name: string;
@@ -38,28 +36,38 @@ export interface UserInterface {
     account_id: number;
     role: RoleInterface;
     created_at?: string;
-    [key: string]: string | number | boolean | File | null | undefined | RoleInterface ;
+    [key: string]: string | number | boolean | File | null | undefined | RoleInterface;
 }
 
 export interface Links {
     label: string;
     href: string;
-    icon ?: LucideIcon;
+    icon?: LucideIcon;
 }
 
-export interface RiderInterface{
+export interface RiderInterface {
     user: UserInterface;
     vehicle_number: string;
-    status:'active' | 'inactive' | 'suspended';
+    status: 'active' | 'inactive' | 'suspended';
     created_at?: string;
-    [key: string]: string | number | boolean  | null | undefined   | UserInterface;
+    [key: string]: string | number | boolean | null | undefined | UserInterface;
 }
 
-export interface CustomerInterface{
+export interface CustomerInterface {
     user: UserInterface;
     street: string;
     house_number: string;
     bill_cycle: BillCycle;
-    estate: string,
-    [key: string]: string | number | boolean  | null | undefined   | UserInterface | BillCycle;
+    estate: string;
+    [key: string]: string | number | boolean | null | undefined | UserInterface | BillCycle;
+}
+
+export interface SupplierInterface {
+    id: number;
+    company_name: string;
+    contact_person: string;
+    phone: string;
+    email: string;
+    address: string;
+    description: string;
 }

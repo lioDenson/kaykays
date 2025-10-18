@@ -1,8 +1,9 @@
-import { wayfinder } from '@laravel/vite-plugin-wayfinder';
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import laravel from 'laravel-vite-plugin';
 import { defineConfig } from 'vite';
+// import wayfinder from 'wayfinder'
+
 
 export default defineConfig({
     plugins: [
@@ -12,11 +13,20 @@ export default defineConfig({
             refresh: true
         }),
         react(),
-        tailwindcss(),
-        // ✅ Disable wayfinder in production builds to avoid DB errors
-        ...(process.env.NODE_ENV === 'production' ? [] : [wayfinder({ formVariants: true })])
+        tailwindcss()
+        // ...(process.env.NODE_ENV === 'production' ? [] : [wayfinder({ formVariants: true })])
     ],
     esbuild: {
         jsx: 'automatic'
+    },
+    server: {
+        host: '0.0.0.0',
+        port: 5173,
+        hmr: {
+            
+            host: 'localhost',
+            port: 5173
+        },
+        
     }
 });

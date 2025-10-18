@@ -16,7 +16,7 @@ export default function AppSidebarLayout({ children, breadcrumbs = [] , links}: 
             <AppContent variant="sidebar" className="max-h-screen overflow-x-hidden">
                 <AppSidebarHeader breadcrumbs={breadcrumbs} />
                 {children}
-                {links && <CustomQuickLinks links={links} />}
+                {/* {links && <CustomQuickLinks links={links} />} */}
             </AppContent>
         </AppShell>
     );

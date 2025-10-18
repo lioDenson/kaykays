@@ -6,8 +6,10 @@ import CustomSubmitButton from '@/components/custom/custom-submit-button';
 import CustomSwitch from '@/components/custom/custom-switch';
 import CustomTextArea from '@/components/custom/custom-text-area';
 import CustomToaster from '@/components/custom/custom-toaster';
+import { Badge } from '@/components/ui/badge';
 import { Skeleton } from '@/components/ui/skeleton';
 import { sanitizeOnBlur, sanitizeOnChange } from '@/helpers/numberSanitizer';
+import { useIsMobile } from '@/hooks/use-mobile';
 import AppLayout from '@/layouts/app-layout';
 import { ProductInterface, RiderInterface } from '@/pages/interface/general';
 import { Head, router, usePage } from '@inertiajs/react';
@@ -230,6 +232,7 @@ export default function Sale({
         );
     };
 
+    const isMobile = useIsMobile();
     return (
         <AppLayout>
             <Head title="Sales" />
@@ -248,8 +251,8 @@ export default function Sale({
 
                 <div className="flex w-full flex-col items-center">
                     {/* Customer and Delivery Section */}
-                    <div className="m-2 flex w-11/12 flex-col justify-center gap-4 rounded border-2 p-4 md:w-10/12">
-                        <div className="font-bolder">Customer</div>
+                    <div className="m-2 flex w-11/12 flex-col justify-center gap-4 rounded border-2 border-black p-4 md:w-10/12">
+                        <div className="font-bold uppercase">Customer & Delivery</div>
 
                         <div className={`flex w-full justify-between gap-4`}>
                             <CustomSelection
@@ -272,13 +275,17 @@ export default function Sale({
                                     setDeliveryFee({ raw: '', numeric: 0 });
                                 }}
                                 label="Set as Delivery?"
-                                className="bg-pink-300"
+                                className="text-xs md:text-base"
                                 error={errors.isDelivery || errors.deliveryData}
                             />
                         </div>
+
+                        {/* check  if delivery switch is on or off  */}
                         {isDelivery && (
-                            <div className="flex items-center justify-between gap-4 border-0 border-t-2 pt-2 md:justify-around">
-                                {isNewDelivery == null || isNewDelivery == false ? (
+                            <div className="flex items-center justify-center gap-4 border-0 pt-2 md:justify-around">
+                                {/* show this skeleton if its a delivery and if delivery is not set otherwise, show the delivery creation form */}
+
+                                {isNewDelivery == null ? (
                                     <Skeleton
                                         onClick={() => {
                                             setIsNewDelivery(true);
@@ -287,14 +294,12 @@ export default function Sale({
                                             setDeliveryData(emptyDelivery);
                                             setDeliveryFee({ raw: '', numeric: 0 });
                                         }}
-                                        className="flex h-[100px] w-1/2 cursor-pointer items-center justify-center gap-2 overflow-hidden p-2 hover:border-2 hover:bg-primary/70 hover:shadow-2xs md:w-1/4"
+                                        className="flex flex-col h-[100px] w-1/2 cursor-pointer items-center text-center text-xs md:text-base justify-center gap-2 overflow-hidden p-2 hover:border-2 hover:bg-primary/70 hover:shadow-2xs md:w-1/4"
                                     >
-                                        <PlusCircle /> <span>Create New Delivery</span>
+                                        <PlusCircle /> Create new delivery
                                     </Skeleton>
-                                ) : (
-                                    <div
-                                        className={`flex ${deliveriesAvailable ? 'flex-col gap-2' : 'w-full items-center justify-around'} ${errors.deliveryData || errors.deliveryFee ? 'border border-red-500/80' : ''} rounded-2xl p-2`}
-                                    >
+                                ) : isNewDelivery === true ? (
+                                    <div className={'flex w-full flex-col gap-6 md:items-center'}>
                                         <CustomSelection
                                             data={riders.map((r) => ({ id: r.id, name: r.user.name }))}
                                             onSelect={(selectedRider) => {
@@ -316,14 +321,7 @@ export default function Sale({
                                             placeholder="Select a rider to create delivery"
                                             error={errors.rider_id}
                                         />
-                                        <CustomTextArea
-                                            id="description"
-                                            label="Delivery description"
-                                            value={deliveryData.description || ''}
-                                            onChange={(e) => {
-                                                setDeliveryData({ ...deliveryData, description: e.target.value || '' });
-                                            }}
-                                        />
+
                                         <CustomInput
                                             id="delivery_fee"
                                             name="deliver_fee"
@@ -347,21 +345,30 @@ export default function Sale({
                                             }}
                                             error={errors.deliveryFee}
                                         />
+
+                                        <CustomTextArea
+                                            id="description"
+                                            label="Delivery description"
+                                            value={deliveryData.description || ''}
+                                            onChange={(e) => {
+                                                setDeliveryData({ ...deliveryData, description: e.target.value || '' });
+                                            }}
+                                        />
                                     </div>
+                                ) : (
+                                    <></>
                                 )}
-                                {isNewDelivery == null || isNewDelivery == true ? (
+                                {isNewDelivery == null ? (
                                     deliveriesAvailable && (
                                         <Skeleton
                                             onClick={() => setIsNewDelivery(false)}
-                                            className="flex h-[100px] w-1/2 cursor-pointer items-center justify-center gap-2 overflow-hidden hover:border-2 hover:bg-primary/70 hover:shadow-2xs md:w-1/4"
+                                            className="flex flex-col h-[100px] w-1/2 cursor-pointer items-center text-center text-xs md:text-base justify-center gap-2 overflow-hidden px-2 hover:border-2 hover:bg-primary/70 hover:shadow-2xs md:w-1/4"
                                         >
-                                            <TagsIcon /> <span>Attach to Delivery</span>
+                                            <TagsIcon /> Attach to a delivery
                                         </Skeleton>
                                     )
-                                ) : (
-                                    <div
-                                        className={`flex ${deliveriesAvailable ? 'flex-col gap-2' : 'w-full items-center justify-around'} ${errors.deliveryData || errors.deliveryFee ? 'border border-red-500/80' : ''} rounded-2xl p-2`}
-                                    >
+                                ) : isNewDelivery === false ? (
+                                    <div className={`flex w-full flex-col gap-6 md:items-center`}>
                                         <CustomSelection
                                             data={
                                                 deliveries?.map((d) => ({
@@ -426,23 +433,26 @@ export default function Sale({
                                             error={errors.deliveryFee}
                                         />
                                     </div>
+                                ) : (
+                                    <></>
                                 )}
                             </div>
                         )}
                     </div>
                     {/* Sales Products Section */}
-                    <div className="m-2 flex w-11/12 flex-col justify-center gap-4 rounded border-2 p-4 md:w-10/12">
-                        <div className="text-bol">Sales Products</div>
+                    <div className="m-2 flex w-11/12 flex-col justify-center gap-4 rounded border-2 border-black p-4 md:w-10/12">
+                        <div className="font-bold uppercase">Sales Products</div>
                         {productList.map((item, idx) => (
-                            <div key={item.index} className="flex w-full items-center justify-between">
-                                <span className="relative left-4 z-10 flex h-6 w-8 items-center justify-center rounded bg-primary p-1 text-xs text-secondary">
-                                    {idx + 1}
-                                </span>
-
-                                <div className="md grid min-w-10/12 grid-cols-2 gap-6 rounded-2xl border p-4 md:flex md:justify-around">
+                            <div key={item.index} className="flex w-full flex-col items-center justify-between">
+                                <div className="md grid w-full items-center gap-6 rounded-2xl border md:flex md:justify-around">
+                                    {isMobile ? (
+                                        <div className="ms-4 mt-4 font-bold">Product No: {idx + 1}</div>
+                                    ) : (
+                                        <Badge className="ms-4 mt-3 h-6 w-6"> {idx + 1}</Badge>
+                                    )}
                                     <CustomSelection
                                         data={products}
-                                        label="Product"
+                                        label="select"
                                         placeholder="Select Product"
                                         onSelect={(selected: { value: number } | null) => {
                                             handleSelectedProduct(selected!, idx);
@@ -450,11 +460,12 @@ export default function Sale({
                                         selectedOption={
                                             productList[idx].id ? { value: productList[idx].id, label: productList[idx].display_name } : null
                                         }
+                                        className="mx-4"
                                         error={errors[`products.${idx}.id`] || errors['products']}
                                     />
 
                                     <CustomInput
-                                        className="flex-1"
+                                        className="flex-1 px-4"
                                         id={`quantity-${idx}`}
                                         name="quantity"
                                         label="Quantity"
@@ -490,26 +501,45 @@ export default function Sale({
                                         error={errors[`products.${idx}.quantity`]}
                                     />
 
-                                    {item.price != 0 ? (
-                                        <div className="mt-4 flex flex-3 items-center justify-center gap-3 font-bold">
-                                            <span>@</span> <span>{item.price} </span>{' '}
-                                            <span>
-                                                {item.name && '/'} {item.unit}{' '}
-                                            </span>
+                                    {isMobile && (
+                                        <div className="mx-4 flex items-center justify-between">
+                                            {item.price != 0 ? <div className="text-xs">{`@ ${item.price} / ${item.unit}`}</div> : <div></div>}
+                                            <div className="text-xs font-bold text-green-400 md:mt-5 md:border-b-2">
+                                                <span>{`Cost ${item.subTotal.toFixed(0)} Ksh`}</span>
+                                            </div>
                                         </div>
+                                    )}
+
+                                    {!isMobile && item.price != 0 ? (
+                                        <div className="mt-4 flex items-center justify-center gap-3 font-bold">{`@ ${item.price}/ ${item.unit}`}</div>
                                     ) : (
                                         <div></div>
                                     )}
-                                    <div className="mt-5 flex flex-2 items-center justify-end gap-2 p-2 px-6 font-bold text-green-400 md:border-b-2">
-                                        <span>{item.subTotal.toFixed(0)}</span> <span>ksh</span>
-                                    </div>
+                                    {!isMobile && (
+                                        <div className="mt-5 flex items-center justify-end gap-2 p-2 px-6 text-green-400 md:border-b-2 md:font-bold">
+                                            <span>Cost: {item.subTotal.toFixed(0)}</span> <span>ksh</span>
+                                        </div>
+                                    )}
+                                    {/* Delete Icon Implementation */}
+                                    {isMobile ? (
+                                        <div
+                                            onClick={() => handleRemoveItem(idx)}
+                                            className="rounded-0 w-full rounded-b-2xl bg-red-900 p-2 text-center font-bold text-red-100 active:bg-red-700"
+                                        >
+                                            Remove
+                                        </div>
+                                    ) : (
+                                        // <div  className=' bg-red-900 h-12/12' ><Trash2/> </div>
+                                        <div
+                                            onClick={() => handleRemoveItem(idx)}
+                                            className="rounded-s-0 flex h-22 w-8 items-center justify-center rounded-e-2xl bg-red-900 hover:cursor-pointer hover:bg-red-700"
+                                        >
+                                            <Trash2 className="h-6 w-5" />
+                                        </div>
+                                    )}
                                 </div>
+                                {/* handleRemoveItem(idx) */}
                                 {/* Delete Icon Implementation */}
-                                <CustomIconButton
-                                    icon={Trash2}
-                                    onClick={() => handleRemoveItem(idx)}
-                                    className="relative right-2 flex h-8 w-8 items-center justify-center rounded bg-red-50 p-1 text-xs text-red-900 hover:bg-red-200"
-                                />
                             </div>
                         ))}
 
@@ -526,15 +556,15 @@ export default function Sale({
                         </div>
                     </div>
                     {/* Payment Details Section */}
-                    <div className="m-2 mx-5 flex w-11/12 flex-col justify-center gap-4 rounded border-2 p-4 md:w-10/12">
-                        <div className="font-bolder">Payment Details</div>
+                    <div className="m-2 mx-5 flex w-11/12 flex-col justify-center gap-4 rounded border-2 border-black p-4 md:w-10/12">
+                        <div className="font-bold uppercase">Payment Details</div>
                         <div className="grid grid-cols-2 items-center justify-center gap-4 md:flex">
                             <CustomInput
                                 id="mpesa"
                                 name="mpesa"
                                 label="Mpesa Amount"
                                 type="text"
-                                placeholder="Enter Amount paid "
+                                placeholder="0 ksh "
                                 value={!isNaN(mpesa) && mpesa !== 0 ? mpesa : ''}
                                 onChange={(e) => {
                                     const { numeric } = sanitizeOnChange(e.target.value);
@@ -546,7 +576,7 @@ export default function Sale({
                                 name="cash"
                                 label="Cash Amount"
                                 type="text"
-                                placeholder="Enter Amount paid "
+                                placeholder="0 ksh "
                                 value={!isNaN(cash) && cash !== 0 ? cash : ''}
                                 onChange={(e) => {
                                     const { numeric } = sanitizeOnChange(e.target.value);
@@ -558,7 +588,8 @@ export default function Sale({
                                 name="total"
                                 readOnly
                                 label="Total Paid"
-                                className="w-3/5 bg-white text-center font-bold text-green-500 md:w-1/2"
+                                inputClassName="bg-green-100"
+                                className="text-start font-bold text-green-800 md:w-1/2"
                                 value={`${totalPaid} ksh`}
                                 error={errors.totalPaid}
                             />
@@ -567,12 +598,13 @@ export default function Sale({
                                 name="balance"
                                 label="Balance"
                                 readOnly
-                                className="w-3/5 bg-white text-end font-bold text-red-500 md:w-1/2"
+                                inputClassName={`text-end bg-red-100`}
+                                className="text-end font-bold text-red-800 md:w-1/2"
                                 value={`${balance} ksh`}
                             />
                         </div>
                     </div>
-                    <div className="m-2 flex w-11/12 flex-col justify-center gap-4 rounded border-2 p-4 md:w-10/12">
+                    <div className="full m-2 flex w-full flex-col justify-center gap-4 rounded border-0 px-2">
                         <CustomSubmitButton
                             label="Save Sale data"
                             onClick={() => {

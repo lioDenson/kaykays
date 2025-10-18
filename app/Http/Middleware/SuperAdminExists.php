@@ -18,8 +18,7 @@ class SuperAdminExists
     public function handle(Request $request, Closure $next): Response
     {
         if (Setting::latest()->first()->installed) {
-            // abort(403, 'Super Admin Already Exists');
-            return redirect()->back();
+            return to_route('home')->with('warning', 'Admin Exists.');
         }
         return $next($request);
     }

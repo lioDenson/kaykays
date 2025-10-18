@@ -19,7 +19,7 @@ class ProductController extends Controller
 
     public function index(Request $request)
     {
-        $products = Product::paginate(10,['id', 'name', 'price', 'unit','code']);
+        $products = Product::paginate(10, ['id', 'name', 'price', 'unit', 'code']);
         return Inertia::render('Inventory/Product/Index', ['products' => $products]);
     }
 
@@ -30,9 +30,13 @@ class ProductController extends Controller
 
     public function store(ProductRequest $request)
     {
-
-        Product::create($request->validated());
-        return redirect()->route('products.index')->with('success', 'Product created successfully.');
+        $validated = $request->validated();
+        try {
+            Product::create($validated);
+            return redirect()->back()->with('success', "Product created successfully.");
+        } catch (\Exception $e) {
+            return back()->with('error', "Product not created.}");
+        }
     }
 
     public function edit(Product $product)

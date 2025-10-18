@@ -9,6 +9,7 @@ return new class extends Migration
     /**
      * Run the migrations.
      * 'name',
+         'company_name',
         'contact_person',
         'phone',
         'email',
@@ -20,12 +21,12 @@ return new class extends Migration
         Schema::create('suppliers', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('name')->unique();
+            $table->string('company_name')->unique();
             $table->string('contact_person');
             $table->string('phone')->unique();
             $table->string('email')->nullable()->unique();
             $table->string('address')->nullable();
-            $table->foreignId('account_id')->constrained()->cascadeOnDelete();
+            $table->string('description')->nullable();
             $table->softDeletes();
         });
     }

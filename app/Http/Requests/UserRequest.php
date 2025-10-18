@@ -40,10 +40,10 @@ class UserRequest extends FormRequest
                 'string',
                 'max:50',
             ],
-            'role_id' => [
-                'required',
-                'exists:roles,id',
-            ],
+            // 'role_id' => [
+            //     'required',
+            //     'exists:roles,id',
+            // ],
         ];
 
         if ($this->isMethod('post')) {

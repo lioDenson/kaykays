@@ -2,10 +2,12 @@
 
 namespace App\Http\Middleware;
 
+use App\Models\Account;
 use Inertia\Middleware;
 use Illuminate\Http\Request;
 use Spatie\Permission\Models\Role;
 use Illuminate\Foundation\Inspiring;
+use Illuminate\Support\Facades\Auth;
 
 class HandleInertiaRequests extends Middleware
 {
@@ -37,11 +39,13 @@ class HandleInertiaRequests extends Middleware
      */
     public function share(Request $request): array
     {
-        
+
         [$message, $author] = str(Inspiring::quotes()->random())->explode('-');
+        $account = $request->user()?->load('account') ?? [];
 
         return [
             ...parent::share($request),
+            'account' => $account,
             'name' => config('app.name'),
             'quote' => ['message' => trim($message), 'author' => trim($author)],
             'auth' => [
@@ -53,13 +57,13 @@ class HandleInertiaRequests extends Middleware
                 'error' => $request->session()->get('error'),
                 'info' => $request->session()->get('info'),
                 'warning' => $request->session()->get('warning'),
-                'loading'=>$request->session()->get('loading'),
-                
+                'loading' => $request->session()->get('loading'),
+
             ],
-            'actions' =>[
+            'actions' => [
                 'id' => $request->session()->get('id'),
                 'message' => $request->session()->get('message'),
-                'restore'=>$request->session()->get('restore'),
+                'restore' => $request->session()->get('restore'),
                 'forceDelete' => $request->session()->get('forceDelete'),
             ],
             'roles' => Role::all(),

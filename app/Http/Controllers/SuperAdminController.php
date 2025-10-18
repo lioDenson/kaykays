@@ -2,14 +2,18 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreAdminRequest;
-use Illuminate\Http\Request;
-use Inertia\Inertia;
+use Exception;
 use App\Models\User;
+use Inertia\Inertia;
+use App\Models\Account;
+use App\Models\Setting;
+use App\Events\AppInstalled;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Auth\Events\Registered;
-use Illuminate\Support\Facades\Auth;
-use App\Events\AppInstalled;
+use App\Http\Requests\StoreAdminRequest;
 
 class SuperAdminController extends Controller
 {
@@ -34,20 +38,27 @@ class SuperAdminController extends Controller
 
         $validated = $request->validated();
 
-        $user = User::create([
-            'name' => $validated['name'],
-            'phone' => $validated['phone'],
-            'email' => $validated['email'],
-            'password' => Hash::make($validated['password']),
-        ]);
+        try {
 
-        $user->assignRole('super-admin');
+            DB::transaction(function () use ($validated) {
 
-        $request->session()->flash('success', 'Admin created successfully.');
-        event(new Registered($user));
-        event(new AppInstalled());
-        // Auth::login($user);
+                $account = Account::firstOrFail();
+                $user = User::create([
+                    'name' => $validated['name'],
+                    'phone' => $validated['phone'],
+                    'email' => $validated['email'],
+                    'account_id' => $account->id,
+                    'password' => Hash::make($validated['password']),
+                ]);
+                $user->assignRole('super-admin');
+                $user->save();
 
-        return redirect()->route('dashboard')->with('success', 'Admin created successfully. You are now in charge of this System.');
+                $app = Setting::latest()->update(['installed' => true]);
+
+                return route('home');
+            }, 2);
+        } catch (Exception $e) {
+            throw new Exception($e->getMessage());
+        }
     }
 }

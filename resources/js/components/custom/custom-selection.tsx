@@ -55,7 +55,7 @@ const CustomSelection = ({
     }, [selectedOption]);
 
     return (
-        <div className="grid gap-2">
+        <div className={cn('grid gap-2', className)}>
             <Label>{label}</Label>
             <Popover open={open} onOpenChange={setOpen}>
                 <PopoverTrigger asChild disabled={disabled}>
@@ -63,7 +63,7 @@ const CustomSelection = ({
                         {selected ? <div>{selected.label}</div> : <span className="text-muted-foreground">{placeholder ?? label}</span>}
                     </Button>
                 </PopoverTrigger>
-                <PopoverContent className={cn('p-0', className)} side={side} align={align}>
+                <PopoverContent className={'p-0'} side={side} align={align}>
                     <Command>
                         <CommandInput placeholder={placeholder ?? `Search ${label}...`} />
                         <CommandList>
@@ -86,7 +86,7 @@ const CustomSelection = ({
                                             if (item) {
                                                 const selectedItem = {
                                                     value: Number(item.id),
-                                                    label: item.name,
+                                                    label: item.name
                                                 };
                                                 setSelected(selectedItem);
                                                 setOpen(false);

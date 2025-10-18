@@ -1,8 +1,7 @@
-
 import CustomInput from '@/components/custom/custom-input';
 import CustomSearchBar from '@/components/custom/custom-searchbar';
 import { ScrollBar } from '@/components/ui/scroll-area';
-import { TableHeader, TableRow, TableCell, TableBody } from '@/components/ui/table';
+import { TableBody, TableCell, TableHeader, TableRow } from '@/components/ui/table';
 import { useSearch } from '@/hooks/custom/useSearch';
 import AppLayout from '@/layouts/app-layout';
 import AuthLayout from '@/layouts/auth-layout';
@@ -28,7 +27,7 @@ export default function UserRole({ roles }: { roles: RoleInterface[] }) {
         if (searching && selected) {
             setSelected(false);
         }
-    },[response.results, searching, selected])
+    }, [response.results, searching, selected]);
 
     const [data, setData] = useState({
         name: '',
@@ -36,19 +35,18 @@ export default function UserRole({ roles }: { roles: RoleInterface[] }) {
         phone: '',
         user_id: 0
     });
-   
-     const handleUserSelection = (user: Record<string, string>) => {
-         setSelected(true);
-         setQuery(user.name);
-         setData({
-             ...data,
-             user_id: Number(user.id),
-             name: user.name,
-             email: user.email,
-             phone: user.phone
-         });
-     };
 
+    const handleUserSelection = (user: Record<string, string>) => {
+        setSelected(true);
+        setQuery(user.name);
+        setData({
+            ...data,
+            user_id: Number(user.id),
+            name: user.name,
+            email: user.email,
+            phone: user.phone
+        });
+    };
 
     return (
         <AppLayout>
@@ -83,10 +81,9 @@ export default function UserRole({ roles }: { roles: RoleInterface[] }) {
                     </ScrollArea>
                 )}
 
-                    <CustomInput id='name' name='name' label='Name' value={data.name} />
-                    <CustomInput id='email' name='email' label='Email' value={data.email} />
-                    <CustomInput id='phone' name='phone' label='Phone' value={data.phone} />
-
+                <CustomInput id="name" name="name" label="Name" value={data.name} />
+                <CustomInput id="email" name="email" label="Email" value={data.email} />
+                <CustomInput id="phone" name="phone" label="Phone" value={data.phone} />
             </AuthLayout>
         </AppLayout>
     );

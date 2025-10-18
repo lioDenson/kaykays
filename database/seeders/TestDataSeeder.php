@@ -32,24 +32,6 @@ class TestDataSeeder extends Seeder
 
 
 
-
-        // $this->call([
-        //     AccountSeeder::class,
-        //     UserSeeder::class,
-        //     SupplierSeeder::class,
-        //     ProductSeeder::class,
-        //     BatchSeeder::class,
-        //     TransactionSeeder::class,
-        //     CustomerSeeder::class,
-        //     RiderSeeder::class,
-        //     DeliverySeeder::class,
-        //     SaleSeeder::class,
-        //     PaymentSeeder::class,
-        //     CreditSeeder::class,
-        //     SaleItemSeeder::class,
-        //     ScheduleSeeder::class,
-        // ]);
-
         $superAdmin = User::factory()->create([
             'name' => 'super admin',
             'email' => 'superadmin@test.com',
@@ -57,6 +39,24 @@ class TestDataSeeder extends Seeder
             'password' => bcrypt('superadmin')
         ]);
         $superAdmin->assignRole('super-admin');
+        $this->call([
+            AccountSeeder::class,
+            UserSeeder::class,
+            SupplierSeeder::class,
+            ProductSeeder::class,
+            BatchSeeder::class,
+            TransactionSeeder::class,
+            CustomerSeeder::class,
+            RiderSeeder::class,
+            DeliverySeeder::class,
+            SaleSeeder::class,
+            PaymentSeeder::class,
+            CreditSeeder::class,
+            SaleItemSeeder::class,
+            ScheduleSeeder::class,
+        ]);
+
+        
 
         // $admin = User::factory()->create([
         //     'name' => 'admin',

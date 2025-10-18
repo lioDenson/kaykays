@@ -1,3 +1,4 @@
+import { cn } from '@/lib/utils';
 import React from 'react';
 import InputError from '../input-error';
 import { Input } from '../ui/input';
@@ -8,13 +9,15 @@ interface CustomInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
     id: string;
     name: string;
     error?: string;
+    inputClassName?: string;
+    className?: string;
 }
 
-const CustomInput: React.FC<CustomInputProps> = ({ label, name, id, error, ...props }) => {
+const CustomInput: React.FC<CustomInputProps> = ({ label, name, id, error, className, inputClassName, ...props }) => {
     return (
-        <div className="grid gap-2">
+        <div className={cn('grid gap-2', className)}>
             <Label htmlFor={id}>{label}</Label>
-            <Input id={id} name={name} {...props} />
+            <Input id={id} className={cn('w-full', inputClassName)} name={name} {...props} />
             {error && <InputError message={error || ''} className="mt-2" />}
         </div>
     );

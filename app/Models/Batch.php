@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 
 class Batch extends Model
 {
@@ -53,8 +54,8 @@ class Batch extends Model
     {
         parent::boot();
         static::creating(function ($batch) {
-            $batch->account_id = Auth::user()->account_id ?? 1;
-            $batch->user_id = Auth::id()||1;
+            $batch->account_id = 1;
+            $batch->user_id = 1;
             $batch->batch_number = self::getBatchNumber($batch);
             $batch->balance += $batch->quantity_received;
            

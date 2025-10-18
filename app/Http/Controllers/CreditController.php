@@ -12,7 +12,6 @@ class CreditController extends Controller
     {
 
         $credits = Credit::with(['customer:user_id', 'customer.user:name,phone,id', 'sale:invoice_number,id,total,balance,customer_id'])->orderBy('date', 'desc')->paginate(10, ['status', 'balance', 'id', 'sale_id', 'due_date', 'description']);
-
         return Inertia::render('Transactions/Credits/Index', ['credits' => $credits]);
     }
 

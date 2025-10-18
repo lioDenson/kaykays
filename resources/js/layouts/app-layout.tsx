@@ -12,6 +12,6 @@ interface AppLayoutProps {
 
 export default ({ children, breadcrumbs, links, ...props }: AppLayoutProps) => (
     <AppLayoutTemplate breadcrumbs={breadcrumbs} {...props} links={links}>
-        {children}
+        <div className="overflow-y-auto overflow-x-hidden">{children}</div>
     </AppLayoutTemplate>
 );

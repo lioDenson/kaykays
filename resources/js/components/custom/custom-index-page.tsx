@@ -11,7 +11,7 @@ import {
     getSortedRowModel,
     useReactTable
 } from '@tanstack/react-table';
-import { ArrowUpDown, LucideIcon, Plus } from 'lucide-react';
+import { ArrowUpDown, BoxSelectIcon, LucideIcon } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
@@ -22,6 +22,8 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { getValue } from '@/helpers/custom-table-helpers';
 import { ColumnDefinition, Pagination } from '@/types/app-types';
 
+import { useIsMobile } from '@/hooks/use-mobile';
+import { Badge } from '../ui/badge';
 import CustomActionToaster, { ActionsProps } from './custom-action-toaster';
 import CustomActionsButtons from './custom-actions-buttons';
 import CustomHeader from './custom-header';
@@ -32,17 +34,6 @@ import CustomToaster, { FlashMessage } from './custom-toaster';
 // -------------------------------------------------
 // TYPES
 // -------------------------------------------------
-
-// export interface ColumnDefinition<TData> {
-//     header: string;
-//     accessorKey?: string;
-//     accessorFn?: (row: TData) => unknown;
-//     cell?: (row: TData) => React.ReactNode;
-//     filterable?: boolean;
-//     sortable?: boolean;
-//     className?: string;
-//     isActions?: boolean;
-// }
 
 interface HeaderProps {
     title: string;
@@ -56,9 +47,9 @@ interface HeaderProps {
 }
 
 interface CustomPageProps<TData extends { id?: string | number } = Record<string, unknown>> {
-    flashData?: FlashMessage[];
-    actionsData?: ActionsProps[];
-    Data?: TData[];
+    flashData?: FlashMessage;
+    actionsData?: ActionsProps;
+    Data?: TData;
     Columns?: ColumnDefinition<TData>[];
     emptyText?: string;
     Header?: HeaderProps;
@@ -99,6 +90,7 @@ export default function CustomIndexPage<TData extends { id?: string | number } =
     const title = Header?.title || 'Page Title';
     const button = Header?.button || null;
 
+
     // -------------------------------------------------
     // Columns setup
     // -------------------------------------------------
@@ -111,7 +103,8 @@ export default function CustomIndexPage<TData extends { id?: string | number } =
                     const no = (paginate && paginate.from) || 1;
                     return no + row.index;
                 },
-                enableSorting: false
+                enableSorting: false,
+                size: 50 // Fixed small size for index column
             },
             ...Columns.map((col) => {
                 if (col.isActions) {
@@ -119,7 +112,7 @@ export default function CustomIndexPage<TData extends { id?: string | number } =
                         id: 'actions',
                         header: () => <div className="text-right">{col.header}</div>,
                         cell: ({ row }) => (
-                            <div className="flex justify-end">
+                            <div className="flex justify-end space-x-1">
                                 <CustomActionsButtons
                                     infoBtn={{
                                         label: 'Info',
@@ -140,7 +133,8 @@ export default function CustomIndexPage<TData extends { id?: string | number } =
                             </div>
                         ),
                         enableSorting: false,
-                        enableHiding: false
+                        enableHiding: true,
+                        size: 100 // Fixed size for actions column
                     } as ColumnDef<TData>;
                 }
 
@@ -163,19 +157,58 @@ export default function CustomIndexPage<TData extends { id?: string | number } =
                               <Button
                                   variant="ghost"
                                   onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
-                                  className="flex items-center gap-1"
+                                  className="flex w-full items-center justify-start gap-1 px-2 hover:bg-accent"
                               >
-                                  {col.header}
-                                  <ArrowUpDown className="h-4 w-4" />
+                                  <span className="truncate">{col.header}</span>
+                                  <ArrowUpDown className="h-3 w-3 flex-shrink-0 md:h-4 md:w-4" />
                               </Button>
                           )
-                        : col.header,
-                    cell: ({ row }) => (col.cell ? col.cell(row.original) : <span>{String(accessorFn(row.original) ?? '')}</span>),
-                    enableSorting: !!col.sortable
+                        : () => <div className="truncate px-2">{col.header}</div>,
+                    cell: ({ row }) => {
+                        const value = accessorFn(row.original);
+
+                        // Detect arrays
+                        if (Array.isArray(value)) {
+                            if (value.length > 0 && typeof value[0] === 'object') {
+                                return (
+                                    
+                                    <div className="space-x-1 px-2">
+                                        {value.map((v, i) => (
+                                            <span key={i} className="inline-block rounded-md bg-muted px-2 py-1 text-xs">
+                                                {v.name || JSON.stringify(v)}
+                                            </span>
+                                        ))}
+                                    </div>
+                                );
+                            }
+
+                            // If it's an array of strings/numbers
+                            return (
+                                <div className="space-x-1 px-2">
+                                    {value.map((v, i) => (
+                                        <span key={i} className="inline-block rounded-md bg-muted px-2 py-1 text-xs">
+                                            {String(v)}
+                                        </span>
+                                    ))}
+                                </div>
+                            );
+                        }
+
+                        // Fallback for single values
+                        return (
+                            <div className="px-2">
+                                <span className="block truncate">{String(value ?? '')}</span>
+                            </div>
+                        );
+                    },
+
+                    enableSorting: !!col.sortable,
+                    minSize: 50, // Minimum column width
+                    size: col.accessorKey?.includes('name') || col.accessorKey?.includes('title') ? 150 : 100 // Flexible sizing
                 } as ColumnDef<TData>;
             })
         ],
-        [Columns, deleting, handleInfo, handleEdit, handleDelete]
+        [Columns, deleting, handleInfo, handleEdit, handleDelete, paginate]
     );
 
     // -------------------------------------------------
@@ -191,7 +224,13 @@ export default function CustomIndexPage<TData extends { id?: string | number } =
         getCoreRowModel: getCoreRowModel(),
         getFilteredRowModel: getFilteredRowModel(),
         getSortedRowModel: getSortedRowModel(),
-        getPaginationRowModel: getPaginationRowModel()
+        getPaginationRowModel: getPaginationRowModel(),
+        // Enable auto layout for responsiveness
+        defaultColumn: {
+            minSize: 60,
+            size: 150,
+            maxSize: 500
+        }
     });
 
     // -------------------------------------------------
@@ -211,89 +250,120 @@ export default function CustomIndexPage<TData extends { id?: string | number } =
         table.setOptions((opts) => ({ ...opts, data: filteredData }));
     }, [filteredData, table]);
 
+    const isMobile = useIsMobile();
     // -------------------------------------------------
     // RENDER
     // -------------------------------------------------
     return (
-        <div className="flex w-full flex-col gap-3 pb-10">
-            <ScrollArea className="px-2">
-                {actionsData && <CustomActionToaster actions={actionsData} />}
-                {flashData && <CustomToaster flash={flashData} />}
+        <div className="flex w-full flex-col gap-3 px-1 pb-10 sm:px-2">
+            {actionsData && <CustomActionToaster actions={actionsData} />}
+            {flashData && <CustomToaster flash={flashData} />}
 
-                <CustomHeader title={title} button={button}>
-                    {Header?.children}
-                </CustomHeader>
+            <CustomHeader title={title} button={button}>
+                {Header?.children}
+            </CustomHeader>
 
-                {/* Search + Column toggle */}
-                <div className="mb-3 flex flex-col gap-2 py-1 sm:flex-row sm:items-center sm:justify-between">
+            {/* Search + Column toggle */}
+            <div className="flex items-center justify-between gap-2 py-1">
+                <div className="w-">
                     <CustomSearchBar setQuery={setGlobalFilter} searching={false} disabled={deleting} value={globalFilter} />
-
-                    <DropdownMenu>
-                        <DropdownMenuTrigger asChild>
-                            <Button variant="outline">Columns</Button>
-                        </DropdownMenuTrigger>
-                        <DropdownMenuContent align="end">
-                            {table
-                                .getAllColumns()
-                                .filter((col) => col.getCanHide())
-                                .map((col) => (
-                                    <DropdownMenuCheckboxItem
-                                        key={col.id}
-                                        className="capitalize"
-                                        checked={col.getIsVisible()}
-                                        onCheckedChange={(value) => col.toggleVisibility(!!value)}
-                                    >
-                                        {col.id}
-                                    </DropdownMenuCheckboxItem>
-                                ))}
-                        </DropdownMenuContent>
-                    </DropdownMenu>
                 </div>
 
-                {/* Data Table */}
-                <div className="rounded-md border">
-                    <Table>
-                        <TableHeader>
-                            {table.getHeaderGroups().map((headerGroup) => (
-                                <TableRow key={headerGroup.id}>
-                                    {headerGroup.headers.map((header) => (
-                                        <TableHead key={header.id}>{flexRender(header.column.columnDef.header, header.getContext())}</TableHead>
-                                    ))}
-                                </TableRow>
+                <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                        {<Badge className="h-8 min-w-6 hover:cursor-pointer"> {!isMobile ? 'Columns' : <BoxSelectIcon />}</Badge>}
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="end" className="w-48">
+                        {table
+                            .getAllColumns()
+                            .filter((col) => col.getCanHide())
+                            .map((col) => (
+                                <DropdownMenuCheckboxItem
+                                    key={col.id}
+                                    className="truncate capitalize"
+                                    checked={col.getIsVisible()}
+                                    onCheckedChange={(value) => col.toggleVisibility(!!value)}
+                                >
+                                    {col.id}
+                                </DropdownMenuCheckboxItem>
                             ))}
-                        </TableHeader>
+                    </DropdownMenuContent>
+                </DropdownMenu>
+            </div>
 
-                        <TableBody>
-                            {table.getRowModel().rows?.length ? (
-                                table.getRowModel().rows.map((row) => (
-                                    <TableRow key={row.id}>
-                                        {row.getVisibleCells().map((cell) => (
-                                            <TableCell key={cell.id}>{flexRender(cell.column.columnDef.cell, cell.getContext())}</TableCell>
+            {/* Data Table with horizontal scroll only */}
+            <div className="overflow-hidden rounded-md border">
+                <ScrollArea className="w-full">
+                    <div className="overflow-auto">
+                        <Table className="w-full min-w-max">
+                            <TableHeader>
+                                {table.getHeaderGroups().map((headerGroup) => (
+                                    <TableRow key={headerGroup.id}>
+                                        {headerGroup.headers.map((header) => (
+                                            <TableHead
+                                                key={header.id}
+                                                className="bg-muted/50 px-2 py-3 text-xs whitespace-nowrap sm:text-sm"
+                                                style={{
+                                                    width: header.getSize(),
+                                                    minWidth: header.column.columnDef.minSize,
+                                                    maxWidth: header.column.columnDef.maxSize
+                                                }}
+                                            >
+                                                {flexRender(header.column.columnDef.header, header.getContext())}
+                                            </TableHead>
                                         ))}
                                     </TableRow>
-                                ))
-                            ) : (
-                                <TableRow>
-                                    <TableCell colSpan={Columns.length + 1} className="h-24 text-center">
-                                        {emptyText}
-                                    </TableCell>
-                                </TableRow>
-                            )}
-                        </TableBody>
-                    </Table>
-                </div>
+                                ))}
+                            </TableHeader>
 
-                {/* Pagination */}
-                <div className="mt-4 flex items-center justify-between px-2">
-                    {paginate && <div className="text-sm text-muted-foreground">
+                            <TableBody>
+                                {table.getRowModel().rows?.length ? (
+                                    table.getRowModel().rows.map((row) => (
+                                        <TableRow key={row.id} className="hover:bg-muted/50">
+                                            {row.getVisibleCells().map((cell) => (
+                                                <TableCell
+                                                    key={cell.id}
+                                                    className="truncate px-2 py-2 text-xs sm:text-sm"
+                                                    style={{
+                                                        width: cell.column.getSize(),
+                                                        minWidth: cell.column.columnDef.minSize,
+                                                        maxWidth: cell.column.columnDef.maxSize
+                                                    }}
+                                                >
+                                                    {flexRender(cell.column.columnDef.cell, cell.getContext())}
+                                                </TableCell>
+                                            ))}
+                                        </TableRow>
+                                    ))
+                                ) : (
+                                    <TableRow>
+                                        <TableCell colSpan={Columns.length + 1} className="h-24 text-center text-xs sm:text-sm">
+                                            {emptyText}
+                                        </TableCell>
+                                    </TableRow>
+                                )}
+                            </TableBody>
+                        </Table>
+                    </div>
+                    <ScrollBar orientation="horizontal" />
+                </ScrollArea>
+            </div>
+
+            {/* Pagination */}
+            <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                {paginate && (
+                    <div className="text-center text-xs text-muted-foreground sm:text-left sm:text-sm">
                         Showing {paginate?.from} to {paginate?.to} of {paginate?.total} results
-                    </div>}
-                    {paginate && <CustomPagination links={paginate.links} next_page={paginate.next_page_url} prev_page={paginate.prev_page_url} />}
-                </div>
+                    </div>
+                )}
+                {paginate && (
+                    <div className="flex justify-center sm:justify-end">
+                        <CustomPagination links={paginate.links} next_page={paginate.next_page_url} prev_page={paginate.prev_page_url} />
+                    </div>
+                )}
+            </div>
 
-                {children}
-                <ScrollBar orientation="vertical" />
-            </ScrollArea>
+            {children}
         </div>
     );
 }

@@ -12,13 +12,17 @@ interface UserProps extends Pagination {
     };
 }
 
-
-export default function Index({ users }: { users: UserProps }) {
-    console.log(users);
+export default function Index({ users, rolling }: { users: UserProps; rolling: boolean }) {
+    console.log(rolling);
     const flash = usePage().props.flash;
     const actions = usePage().props.actions;
     const handleCreate = () => {
-        router.get(route('users.create'));
+        if (rolling) {
+            router.visit(route('users.roles'));
+
+        } else {
+            router.get(route('users.create'));
+        }
     };
     const handleEdit = (user: UserInterface) => {
         router.get(route('users.edit', user.id), user);
@@ -41,13 +45,27 @@ export default function Index({ users }: { users: UserProps }) {
         },
         {
             header: 'Email',
-            accessorKey: 'email',
+            accessorKey: 'email'
         },
+        {
+            header: 'Phone',
+            accessorKey: 'phone'
+        },
+        // {
+        //     header: 'Role',
+        //     id: 'role',
+        //     accessorKey: 'roles',
+        //     cell: ({ row }) => {
+        //         return <span>1 {row.original.roles.map((role: any) => role.name).join(', ')}</span>
+        //     }
+
+        // },
         {
             header: 'Actions',
             isActions: true
         }
-    ]
+    ];
+
     return (
         <AppLayout
             links={[
@@ -72,7 +90,7 @@ export default function Index({ users }: { users: UserProps }) {
                 flashData={flash}
                 actionsData={actions}
                 Columns={columns}
-                paginate={{ 
+                paginate={{
                     from: users.from,
                     to: users.to,
                     total: users.total,
@@ -80,7 +98,7 @@ export default function Index({ users }: { users: UserProps }) {
                     next_page_url: users.next_page_url,
                     prev_page_url: users.prev_page_url,
                     current_page: users.current_page
-                 }}
+                }}
                 handleEdit={(user: UserInterface) => {
                     handleEdit(user);
                 }}
