@@ -31,8 +31,12 @@ class ProductController extends Controller
     public function store(ProductRequest $request)
     {
         $validated = $request->validated();
-        
-        return back()->with('success', 'Product created successfully.');
+        try {
+            Product::create($validated);
+            return redirect()->back()->with('success', "Product created successfully.");
+        } catch (\Exception $e) {
+            return back()->with('error', "Product not created.}");
+        }
     }
 
     public function edit(Product $product)

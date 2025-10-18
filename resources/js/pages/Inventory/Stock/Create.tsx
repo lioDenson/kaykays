@@ -67,7 +67,7 @@ export default function Create({ stock, products, suppliers }: { stock?: any; pr
                 title={isEdit ? 'Update Stock' : 'Add Stock'}
                 description={isEdit ? `Fill the form to update ${stock.batch_no} stock` : 'Fill the form to create a new stock'}
             >
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid md:grid-cols-2 gap-4 ">
                     <CustomSelection
                         label="Select Product"
                         data={products}

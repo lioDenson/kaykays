@@ -19,7 +19,7 @@ interface CustomHeaderProps {
 }
 const CustomHeader = ({className, children, title, button}: CustomHeaderProps) => {
     return (
-        <div className={cn('flex w-full items-center justify-between  bg-foreground/20 p-2 px-4', className)}>
+        <div className={cn('flex w-full items-center justify-between  bg-foreground/20 p-2', className)}>
 
             <h1 className="text-lg font-bold text-primary">{title}</h1>
             {children}

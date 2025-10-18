@@ -17,7 +17,7 @@ class BatchController extends Controller
      */
     public function index()
     {
-        $stock = Batch::with(['product:id,name,price,unit', 'supplier:name'])->where('balance', '>', 0)->get();
+        $stock = Batch::with(['product:id,name,price,unit', 'supplier:company_name'])->where('balance', '>', 0)->get();
         return Inertia::render('Inventory/Stock/Index', ['stocks' => $stock]);
     }
 
@@ -26,8 +26,14 @@ class BatchController extends Controller
      */
     public function create()
     {
-        $suppliers = Supplier::get(['id', 'name']);
-        $products = Product::get(['id', 'name','unit']);
+        $suppliers = Supplier::get(['id', 'company_name'])->map(function ($supplier) {
+            return [
+                'id' => $supplier->id,
+                'name' => $supplier->company_name,
+            ];
+        });
+
+        $products = Product::get(['id', 'name', 'unit']);
 
         return Inertia::render('Inventory/Stock/Create', ['suppliers' => $suppliers, 'products' => $products]);
     }
@@ -71,9 +77,7 @@ class BatchController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(BatchRequest $request, Batch $batch) {
-
-    }
+    public function update(BatchRequest $request, Batch $batch) {}
 
     /**
      * Remove the specified resource from storage.

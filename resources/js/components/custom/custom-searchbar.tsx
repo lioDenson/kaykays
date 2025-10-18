@@ -4,6 +4,7 @@ interface CustomSearchBarProps extends React.HTMLAttributes<HTMLInputElement> {
     searching: boolean;
     disabled?: boolean;
     value?: string;
+    placeholder?: string;
     setQuery: (query: string) => void;
     
 }

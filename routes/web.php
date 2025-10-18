@@ -1,8 +1,8 @@
 <?php
 
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\SupplierController;
 use App\Models\User;
-use Inertia\Inertia;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\RiderController;
@@ -41,6 +41,7 @@ Route::middleware('installed')->group(function () {
         Route::patch('/products/{id}/restore', [ProductController::class, 'restore'])->name('products.restore');
         Route::delete('/products/{id}/forceDelete', [ProductController::class, 'forceDelete'])->name('products.forceDelete');
 
+        Route::get('/users/roles', [UserController::class, 'userRolling'])->name('users.roles');
         Route::get('/users/search', [UserController::class, 'search'])->name('users.search');
         Route::get('/users/type/{type}', [UserController::class, 'index'])->name('users.byType');
         Route::resource('users', UserController::class);
@@ -65,7 +66,10 @@ Route::middleware('installed')->group(function () {
         Route::resource('/payments', PaymentController::class);
         Route::resource('/transactions', TransactionController::class);
         Route::resource('/credits', CreditController::class);
-        
+
+        Route::resource('/suppliers', SupplierController::class);
+        Route::patch('/suppliers/{id}/restore', [SupplierController::class, 'restore'])->name('suppliers.restore');
+        Route::delete('/suppliers/{id}/forceDelete', [SupplierController::class, 'forceDelete'])->name('suppliers.forceDelete');
     });
 });
 

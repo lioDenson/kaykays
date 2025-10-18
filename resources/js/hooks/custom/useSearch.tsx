@@ -41,7 +41,7 @@ export function useSearch({ query, routeName, isEditing, isSearching, filter }: 
     }, [debouncedQuery, isEditing, routeName, isSearching]);
 
     const filteredResults = useMemo(() => {
-        if (!filter) return results;
+        if (!filter || filter.length === 0) return results;
         return results.filter((result) => filter.includes(result.id));
     }, [results, filter]);
 

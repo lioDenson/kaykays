@@ -11,7 +11,7 @@ import {
     getSortedRowModel,
     useReactTable
 } from '@tanstack/react-table';
-import { ArrowUpDown, BoxSelectIcon, CheckCheckIcon, LucideIcon } from 'lucide-react';
+import { ArrowUpDown, BoxSelectIcon, LucideIcon } from 'lucide-react';
 import { useEffect, useMemo, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
@@ -22,15 +22,14 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { getValue } from '@/helpers/custom-table-helpers';
 import { ColumnDefinition, Pagination } from '@/types/app-types';
 
+import { useIsMobile } from '@/hooks/use-mobile';
+import { Badge } from '../ui/badge';
 import CustomActionToaster, { ActionsProps } from './custom-action-toaster';
 import CustomActionsButtons from './custom-actions-buttons';
 import CustomHeader from './custom-header';
 import CustomPagination from './custom-pagination';
 import CustomSearchBar from './custom-searchbar';
 import CustomToaster, { FlashMessage } from './custom-toaster';
-import { Badge } from '../ui/badge';
-import { useMobileNavigation } from '@/hooks/use-mobile-navigation';
-import { useIsMobile } from '@/hooks/use-mobile';
 
 // -------------------------------------------------
 // TYPES
@@ -48,9 +47,9 @@ interface HeaderProps {
 }
 
 interface CustomPageProps<TData extends { id?: string | number } = Record<string, unknown>> {
-    flashData?: FlashMessage[];
-    actionsData?: ActionsProps[];
-    Data?: TData[];
+    flashData?: FlashMessage;
+    actionsData?: ActionsProps;
+    Data?: TData;
     Columns?: ColumnDefinition<TData>[];
     emptyText?: string;
     Header?: HeaderProps;
@@ -90,6 +89,7 @@ export default function CustomIndexPage<TData extends { id?: string | number } =
 
     const title = Header?.title || 'Page Title';
     const button = Header?.button || null;
+
 
     // -------------------------------------------------
     // Columns setup
@@ -133,8 +133,8 @@ export default function CustomIndexPage<TData extends { id?: string | number } =
                             </div>
                         ),
                         enableSorting: false,
-                        enableHiding: false,
-                        size: 120 // Fixed size for actions column
+                        enableHiding: true,
+                        size: 100 // Fixed size for actions column
                     } as ColumnDef<TData>;
                 }
 
@@ -164,14 +164,47 @@ export default function CustomIndexPage<TData extends { id?: string | number } =
                               </Button>
                           )
                         : () => <div className="truncate px-2">{col.header}</div>,
-                    cell: ({ row }) => (
-                        <div className="px-2">
-                            {col.cell ? col.cell(row.original) : <span className="block truncate">{String(accessorFn(row.original) ?? '')}</span>}
-                        </div>
-                    ),
+                    cell: ({ row }) => {
+                        const value = accessorFn(row.original);
+
+                        // Detect arrays
+                        if (Array.isArray(value)) {
+                            if (value.length > 0 && typeof value[0] === 'object') {
+                                return (
+                                    
+                                    <div className="space-x-1 px-2">
+                                        {value.map((v, i) => (
+                                            <span key={i} className="inline-block rounded-md bg-muted px-2 py-1 text-xs">
+                                                {v.name || JSON.stringify(v)}
+                                            </span>
+                                        ))}
+                                    </div>
+                                );
+                            }
+
+                            // If it's an array of strings/numbers
+                            return (
+                                <div className="space-x-1 px-2">
+                                    {value.map((v, i) => (
+                                        <span key={i} className="inline-block rounded-md bg-muted px-2 py-1 text-xs">
+                                            {String(v)}
+                                        </span>
+                                    ))}
+                                </div>
+                            );
+                        }
+
+                        // Fallback for single values
+                        return (
+                            <div className="px-2">
+                                <span className="block truncate">{String(value ?? '')}</span>
+                            </div>
+                        );
+                    },
+
                     enableSorting: !!col.sortable,
-                    minSize: 80, // Minimum column width
-                    size: col.accessorKey?.includes('name') || col.accessorKey?.includes('title') ? 200 : 150 // Flexible sizing
+                    minSize: 50, // Minimum column width
+                    size: col.accessorKey?.includes('name') || col.accessorKey?.includes('title') ? 150 : 100 // Flexible sizing
                 } as ColumnDef<TData>;
             })
         ],
@@ -231,14 +264,14 @@ export default function CustomIndexPage<TData extends { id?: string | number } =
             </CustomHeader>
 
             {/* Search + Column toggle */}
-            <div className="flex gap-2 py-1 justify-between items-center">
+            <div className="flex items-center justify-between gap-2 py-1">
                 <div className="w-">
                     <CustomSearchBar setQuery={setGlobalFilter} searching={false} disabled={deleting} value={globalFilter} />
                 </div>
 
                 <DropdownMenu>
                     <DropdownMenuTrigger asChild>
-                        {<Badge className='hover:cursor-pointer h-8 min-w-6 '> { !isMobile ? 'Columns' : <BoxSelectIcon/> }</Badge>  }
+                        {<Badge className="h-8 min-w-6 hover:cursor-pointer"> {!isMobile ? 'Columns' : <BoxSelectIcon />}</Badge>}
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="end" className="w-48">
                         {table

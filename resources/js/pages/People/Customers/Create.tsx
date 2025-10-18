@@ -18,6 +18,7 @@ import { useEffect, useState } from 'react';
 import { route } from 'ziggy-js';
 
 export default function Create({ customer, customersIds }: { customer?: CustomerInterface, customerIds?: number[] }) {
+
     const isEdit = customer != null;
 
     const errors = usePage().props.errors;
@@ -106,7 +107,7 @@ export default function Create({ customer, customersIds }: { customer?: Customer
         });
     };
 
-    const handleUserSelection = (user: any) => {
+    const handleUserSelection = (user: Record<string, string>) => {
         setSelected(true);
         setQuery(user.name);
         setData({

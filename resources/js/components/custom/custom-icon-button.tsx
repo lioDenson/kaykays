@@ -21,22 +21,20 @@ const CustomIconButton = ({
     disabled = false,
     className,
     isLoading = false,
-    type = 'button',
 }: Props) => {
     return (
-        <Button
-            type={type}
-            onClick={onClick}
-            disabled={disabled || isLoading}
+        <div
+            
+            onClick={disabled || isLoading ? undefined : onClick}
             className={cn(
-                'flex items-center gap-2 rounded p-1 text-sm font-thin',
+                'flex items-center gap-2 p-1 rounded  text-sm md:text-xs font-thin',
                 disabled || isLoading ? 'cursor-not-allowed opacity-40' : 'cursor-pointer',
                 className,
             )}
         >
             {isLoading ? <Loader className="h-4 w-4 animate-spin" /> : <Icon className="h-4 w-4" />}
             {showLabel && label && <span>{label}</span>}
-        </Button>
+        </div>
     );
 };
 

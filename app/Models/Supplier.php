@@ -4,25 +4,26 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Supplier extends Model
 {
     /** @use HasFactory<\Database\Factories\SupplierFactory> */
-    use HasFactory;
+    use HasFactory, SoftDeletes;
     protected $fillable = [
-        'name',
+        'company_name',
         'contact_person',
         'phone',
         'email',
         'address',
-        'account_id',
+        'description'
     ];
     public function account()
     {
         return $this->belongsTo(Account::class);
     }
-    public function stocks()
+    public function batch()
     {
-        return $this->hasMany(Stock::class);
+        return $this->hasMany(Batch::class);
     }
 }

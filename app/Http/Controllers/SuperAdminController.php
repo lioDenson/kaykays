@@ -55,7 +55,7 @@ class SuperAdminController extends Controller
 
                 $app = Setting::latest()->update(['installed' => true]);
 
-                return redirect()->route('dashboard')->with('success', 'Admin created successfully. You are now in charge of this System.');
+                return route('home');
             }, 2);
         } catch (Exception $e) {
             throw new Exception($e->getMessage());

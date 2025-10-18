@@ -12,9 +12,9 @@ interface ProductProps extends Pagination {
     };
 }
 
-export default function Product({products}:{products: ProductProps}) {
-    const {flash} = usePage().props.flash;
-    const {actions} = usePage().props.actions;
+export default function Product({ products }: { products: ProductProps }) {
+    const flash = usePage().props.flash;
+    const actions = usePage().props.actions;
     const handleCreate = () => {
         router.get(route('products.create'));
     };
@@ -31,20 +31,22 @@ export default function Product({products}:{products: ProductProps}) {
         {
             header: 'Name',
             accessorKey: 'name',
+            sortable: true
         },
         {
             header: 'Price',
             accessorKey: 'price',
+            sortable: true
         },
         {
             header: 'Unit',
-            accessorKey: 'unit',
+            accessorKey: 'unit'
         },
         {
             header: 'Actions',
             isActions: true
         }
-    ]
+    ];
     return (
         <AppLayout links={links}>
             <CustomIndexPage
@@ -60,20 +62,17 @@ export default function Product({products}:{products: ProductProps}) {
                 }}
                 Data={products.data}
                 Columns={columns}
-                paginate={
-                    {
-                        from: products.from,
-                        to: products.to,
-                        total: products.total,
-                        links: products.links,
-                        next_page_url: products.next_page_url,
-                        prev_page_url: products.prev_page_url,
-                        current_page: products.current_page
-                    }
-                }
+                paginate={{
+                    from: products.from,
+                    to: products.to,
+                    total: products.total,
+                    links: products.links,
+                    next_page_url: products.next_page_url,
+                    prev_page_url: products.prev_page_url,
+                    current_page: products.current_page
+                }}
                 flashData={flash}
                 actionsData={actions}
-                
                 handleEdit={(data: ProductInterface) => {
                     router.get(`/products/${data.id}/edit`, {
                         preserveState: true,

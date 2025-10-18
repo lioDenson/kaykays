@@ -1,3 +1,5 @@
+import { ReactNode } from "react";
+
 export default interface App {
     name: string;
     version: string;
@@ -37,6 +39,7 @@ export interface ColumnDefinition<TData> {
     cell?: (row: TData) => React.ReactNode;
     filterable?: boolean;
     className?: string;
+    listCell?: ReactNode;
     isActions?: boolean;
     sortable?: boolean;
 

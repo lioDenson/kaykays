@@ -9,15 +9,23 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     className?: string;
     isLoading?: boolean;
     label: string;
+    activeLabel?: string;
     onClick?: () => void;
-
 }
 
-const CustomSubmitButton: React.FC<Props> = ({ label,children, type = 'submit', className, isLoading=false, onClick }) => {
+const CustomSubmitButton: React.FC<Props> = ({
+    label,
+    children,
+    type = 'submit',
+    activeLabel = 'submitting...',
+    className,
+    isLoading = false,
+    onClick
+}) => {
     return (
         <Button type={type} className={cn('', className)} onClick={onClick}>
             {isLoading && <Loader className="mr-2 h-4 w-4 animate-spin" />}
-            {label}
+            {isLoading ? activeLabel : label}
             {children}
         </Button>
     );

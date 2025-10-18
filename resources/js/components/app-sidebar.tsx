@@ -3,6 +3,7 @@
 import {
     ArrowRightLeft,
     Bike,
+    BoxesIcon,
     CalendarCheck2Icon,
     ChartCandlestick,
     Coins,
@@ -76,7 +77,8 @@ const navData = [
         icon: Combine,
         items: [
             { title: 'Product', url: '/products', icon: Forklift },
-            { title: 'Stock', url: '/batches', icon: PackageOpen }
+            { title: 'Stock', url: '/batches', icon: BoxesIcon },
+            { title: 'Supplier', url: '/suppliers', icon: PackageOpen }
         ]
     },
     {

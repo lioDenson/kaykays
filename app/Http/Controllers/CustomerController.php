@@ -20,12 +20,14 @@ class CustomerController extends Controller
     public function index()
     {
         $customers = Customer::with(['user'])->paginate(10);
+        
         return Inertia::render('People/Customers/Index', ['customers' => $customers]);
     }
 
     public function create()
     {
         $customersIds = Customer::select('id')->pluck('id');
+        
         return Inertia::render('People/Customers/Create', ['customersIds' => $customersIds]);
     }
 

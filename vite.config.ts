@@ -2,6 +2,8 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import laravel from 'laravel-vite-plugin';
 import { defineConfig } from 'vite';
+// import wayfinder from 'wayfinder'
+
 
 export default defineConfig({
     plugins: [
@@ -12,7 +14,6 @@ export default defineConfig({
         }),
         react(),
         tailwindcss()
-        // ✅ Temporarily disable wayfinder for phone debugging
         // ...(process.env.NODE_ENV === 'production' ? [] : [wayfinder({ formVariants: true })])
     ],
     esbuild: {
@@ -22,8 +23,10 @@ export default defineConfig({
         host: '0.0.0.0',
         port: 5173,
         hmr: {
+            
             host: '192.168.100.161',
             port: 5173
-        }
+        },
+        
     }
 });

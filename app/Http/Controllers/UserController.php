@@ -19,8 +19,9 @@ class UserController extends Controller
 
     /**Search user 
      * 
-    */
-    public function search( Request $request){
+     */
+    public function search(Request $request)
+    {
 
         // $this->authorize('search', User::class);
 
@@ -49,27 +50,34 @@ class UserController extends Controller
                 'trace' => $e->getTraceAsString()
             ], 500);
         }
-
     }
-  
+    public function userRolling()
+    {
+        $roles = Role::all()->map(function ($role) {
+            if ($role->name == 'customer') {
+                return null;
+            }
+        });
+        return Inertia::render('People/Users/Roles', ['roles' => $roles]);
+    }
 
     /**
      * Display a listing of the resource.
      */
     public function index($type = null)
     {
-        
-        if($type){
+        $rolling = false;
+        if ($type) {
             $users = User::with('roles')
                 ->when($type, function ($query, $type) {
                     $query->whereHas('roles', fn($q) => $q->where('name', $type));
                 })
                 ->paginate(10);
-        }else{
+            $rolling = true;
+        } else {
             $users = User::with('roles')->paginate(10);
         }
-        
-        return Inertia::render('People/Users/Index', ['users' => $users]);
+        return Inertia::render('People/Users/Index', ['users' => $users, 'rolling' => $rolling]);
     }
 
     /**
@@ -87,8 +95,9 @@ class UserController extends Controller
     {
         $validated = $request->validated();
         $validated['password'] = bcrypt('password');
+        $validated['account_id'] = session('account_id');
         $user = User::create($validated);
-        $user->assignRole($validated['role_id']);
+        // $user->assignRole($validated['role_id']);
         return redirect()->route('users.index')->with('success', "$user->name created successfully.");
     }
 
@@ -135,9 +144,9 @@ class UserController extends Controller
     public function restore(Request $request, $id)
     {
         $user = User::withTrashed()->find($id);
-       if ($user->restore()){
-           return redirect()->route('users.index')->with('success', "$user->name restored successfully.");
-       }
+        if ($user->restore()) {
+            return redirect()->route('users.index')->with('success', "$user->name restored successfully.");
+        }
         return redirect()->route('users.index')->with('error', "Failed to restore user $user->name .");
     }
 
