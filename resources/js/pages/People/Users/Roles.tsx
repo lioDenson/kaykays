@@ -1,14 +1,13 @@
 import CustomInput from '@/components/custom/custom-input';
 import CustomSearchBar from '@/components/custom/custom-searchbar';
 import { ScrollBar } from '@/components/ui/scroll-area';
-import { TableBody, TableCell, TableHeader, TableRow } from '@/components/ui/table';
+import { Table, TableBody, TableCell, TableHeader, TableRow } from '@/components/ui/table';
 import { useSearch } from '@/hooks/custom/useSearch';
 import AppLayout from '@/layouts/app-layout';
 import AuthLayout from '@/layouts/auth-layout';
 import { RoleInterface } from '@/pages/interface/general';
 import { Head } from '@inertiajs/react';
 import { ScrollArea } from '@radix-ui/react-scroll-area';
-import { Table } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { route } from 'ziggy-js';
 
