@@ -55,8 +55,9 @@ class UserController extends Controller
     {
         $roles = Role::all()->map(function ($role) {
             if ($role->name == 'customer') {
-                return null;
+                return false;
             }
+            return $role;
         });
         return Inertia::render('People/Users/Roles', ['roles' => $roles]);
     }

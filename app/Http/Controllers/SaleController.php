@@ -49,7 +49,7 @@ class SaleController extends Controller
 
 
         $customers = Customer::with(['user:id,name,phone'])->get(['id', 'house_number', 'estate', 'street', 'bill_cycle', 'user_id']);
-        $deliveries = Delivery::with(['rider.user:name,id'])->where('status', 'canceled')->get(['id', 'status', 'rider_id', 'description']);
+        $deliveries = Delivery::with(['rider.user:name,id'])->where('status', 'pending')->get(['id', 'status', 'rider_id', 'description']);
 
         $riders = Rider::with(['user:id,name'])
             ->whereDoesntHave('deliveries', function ($query) {
@@ -71,15 +71,15 @@ class SaleController extends Controller
                 $validated['deliveryFee'],
             );
         }
-        $balance = $validated['balance'];
+      
         $totalPaid = $validated['totalPaid'];
 
+        
         try {
-            DB::transaction(function () use ($balance, $totalPaid, $validated) {
-                // [ ]: remember to add appropriate account it;
+            DB::transaction(function () use ($totalPaid, $validated) {
                 $sale = new SaleService;
                 $saleId = $sale->createSaleFromRequest($validated);
-                $accountId = 1;
+                $accountId = session('account_id');
                 SaleService::registerSaleItems($validated['products'], $saleId, $accountId);
                 SaleService::registerPayment(
                     $validated['mpesa'],
@@ -87,9 +87,9 @@ class SaleController extends Controller
                     $saleId,
                     $accountId,
                     $totalPaid,
-                    $balance
+                    $validated['balance']
                 );
-                $balance > 0 && CreditService::registerCredit(['sale_id' => $saleId, 'balance' => $balance]);
+                $validated['balance'] > 0 && CreditService::registerCredit(['sale_id' => $saleId, 'balance' => $validated['balance']]);
                 
             }, 2);
             return to_route('sales.create')->with('success', 'Sale Recorded successfully.');

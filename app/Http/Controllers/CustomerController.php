@@ -26,7 +26,8 @@ class CustomerController extends Controller
 
     public function create()
     {
-        $customersIds = Customer::select('id')->pluck('id');
+        $customersIds = Customer::all()->pluck('user_id');
+       
         
         return Inertia::render('People/Customers/Create', ['customersIds' => $customersIds]);
     }
@@ -49,7 +50,7 @@ class CustomerController extends Controller
                 ]);
             }, 2);
 
-            return to_route('customers.index')->with('success', "$user->name created successfully.");
+            return to_route('customers.index')->with('success', "Customer $user->name created successfully.");
         } catch (\Exception $e) {
             return to_route('customers.index')->with('error', 'Customer not created. Something went wrong' . $e->getMessage());
         }

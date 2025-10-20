@@ -1,31 +1,25 @@
 import CustomDropdown from '@/components/custom/custom-dropdown';
 import CustomInput from '@/components/custom/custom-input';
 import CustomSearchBar from '@/components/custom/custom-searchbar';
-import CustomSelection from '@/components/custom/custom-selection';
 import CustomSubmitButton from '@/components/custom/custom-submit-button';
 import CustomTextArea from '@/components/custom/custom-text-area';
-import InputError from '@/components/input-error';
-import { Label } from '@/components/ui/label';
-import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
-import { Table, TableBody, TableCell, TableHeader, TableRow } from '@/components/ui/table';
+import CustomUserSearchResultsTable from '@/components/custom/custom-user-search-results-table';
 import { useSearch } from '@/hooks/custom/useSearch';
 import AppLayout from '@/layouts/app-layout';
 import AuthLayout from '@/layouts/auth-layout';
 import { CustomerInterface } from '@/pages/interface/general';
-import { Tab } from '@headlessui/react';
 import { Head, router, usePage } from '@inertiajs/react';
 import { useEffect, useState } from 'react';
 import { route } from 'ziggy-js';
 
-export default function Create({ customer, customersIds }: { customer?: CustomerInterface, customerIds?: number[] }) {
-
+export default function Create({ customer, customersIds }: { customer?: CustomerInterface; customerIds?: number[] }) {
     const isEdit = customer != null;
 
     const errors = usePage().props.errors;
     const [query, setQuery] = useState('');
     const [searching, setSearching] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
-    const  [selected, setSelected] = useState(false);
+    const [selected, setSelected] = useState(false);
 
     const [data, setData] = useState({
         name: customer?.user?.name || '',
@@ -37,59 +31,57 @@ export default function Create({ customer, customersIds }: { customer?: Customer
         house_number: customer?.house_number || '',
         description: customer?.description || '',
         user_id: customer?.user_id || 0,
-        is_edit: isEdit,
+        is_edit: isEdit
     });
 
+    // console.log(customersIds);
 
     const response = useSearch({
         query: query,
         routeName: route('users.search'),
         isSearching: setSearching,
-        filter: customersIds,
+        filter: customersIds
     });
 
-    
-    
-   useEffect(() => {
-       if (!isEdit) {
-           if (query === '') {
-               // reset everything
-               setData({
-                   name: '',
-                   email: '',
-                   phone: '',
-                   bill_cycle: '',
-                   street: '',
-                   estate: '',
-                   house_number: '',
-                   description: '',
-                   user_id: 0,
-                   is_edit: isEdit,
-               });
-               return; // stop here
-           }
+    useEffect(() => {
+        if (!isEdit) {
+            if (query === '') {
+                // reset everything
+                setData({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    bill_cycle: '',
+                    street: '',
+                    estate: '',
+                    house_number: '',
+                    description: '',
+                    user_id: 0,
+                    is_edit: isEdit
+                });
+                return; // stop here
+            }
 
-           if (response.results.length > 0) {
-               const res = response.results[0];
-               setData((prev) => ({
-                   ...prev,
-                   name: res.name,
-                   email: res.email,
-                   phone: res.phone,
-                   user_id: res.id,
-               }));
-           } else {
-               setData((prev) => ({
-                   ...prev,
-                   name: '',
-                   email: '',
-                   phone: '',
-                   user_id: 0,
-               }));
-           }
-       }
-   }, [response.results, query, isEdit]);
-
+            if (response.results.length > 0) {
+                const res = response.results[0];
+                setData((prev) => ({
+                    ...prev,
+                    name: res.name,
+                    email: res.email,
+                    phone: res.phone,
+                    user_id: res.id
+                }));
+            } else {
+                setData((prev) => ({
+                    ...prev,
+                    name: '',
+                    email: '',
+                    phone: '',
+                    user_id: 0
+                }));
+            }
+        }
+    }, [response.results, query, isEdit]);
 
     const handleSubmit = () => {
         setIsLoading(true);
@@ -97,28 +89,28 @@ export default function Create({ customer, customersIds }: { customer?: Customer
             return router.put(route('customers.update', customer.id), data, {
                 onFinish: () => {
                     setIsLoading(false);
-                },
+                }
             });
         }
         return router.post(route('customers.store'), data, {
             onFinish: () => {
                 setIsLoading(false);
-            },
+            }
         });
     };
 
     const handleUserSelection = (user: Record<string, string>) => {
         setSelected(true);
-        setQuery(user.name);
         setData({
             ...data,
             user_id: user.id,
             name: user.name,
             email: user.email,
-            phone: user.phone,
+            phone: user.phone
         });
     };
 
+    console.log(response.results);
 
     return (
         <AppLayout>
@@ -127,36 +119,21 @@ export default function Create({ customer, customersIds }: { customer?: Customer
                 title={isEdit ? `Updated ${customer.user.name}` : 'Create Customer'}
                 description={isEdit ? `Fill the form to update ${customer.user.name} customer` : 'Fill the form to create a new customer'}
             >
-                {!isEdit && <CustomSearchBar value={query} searching={searching} setQuery={(query: string) => {
-                    setSelected(false);
-                    setQuery(query)
-                }} />}
+                {!isEdit && (
+                    <CustomSearchBar
+                        value={query}
+                        searching={searching}
+                        setQuery={(query: string) => {
+                            setSelected(false);
+                            setQuery(query);
+                        }}
+                    />
+                )}
                 {response.results.length > 0 && query !== '' && !selected && (
-                    <ScrollArea>
-                        <div className="max-h-[25vh]">
-                            <Table>
-                                <TableHeader>
-                                    <TableRow>
-                                        <TableCell></TableCell>
-                                        <TableCell>Name</TableCell>
-                                        <TableCell>Email</TableCell>
-                                        <TableCell>Phone</TableCell>
-                                    </TableRow>
-                                </TableHeader>
-                                <TableBody className="text-xs">
-                                    {response.results.map((user, index) => (
-                                        <TableRow key={user.id} className='cursor-pointer' onClick={handleUserSelection.bind(null, user)}>
-                                            <TableCell>{index + 1}</TableCell>
-                                            <TableCell>{user.name}</TableCell>
-                                            <TableCell>{user.email}</TableCell>
-                                            <TableCell>{user.phone}</TableCell>
-                                        </TableRow>
-                                    ))}
-                                </TableBody>
-                            </Table>
-                        </div>
-                        <ScrollBar orientation="vertical" />
-                    </ScrollArea>
+                    <CustomUserSearchResultsTable
+                        results={response.results}
+                        onSelect={(user) => handleUserSelection(user as Record<string, string>)}
+                    />
                 )}
                 <div className="grid grid-cols-2 gap-4 space-x-2">
                     <CustomInput
@@ -224,10 +201,14 @@ export default function Create({ customer, customersIds }: { customer?: Customer
                     />
                     <div className="grid gap-2">
                         <CustomDropdown
-                            label='Bill Cycle'
+                            label="Bill Cycle"
                             error={errors.bill_cycle}
-                            items={[{ label: 'Daily', value: 'daily' }, { label: 'Weekly', value: 'weekly' }, { label: 'Monthly', value: 'monthly' }]}
-                            trigger='Select Bill Cycle'
+                            items={[
+                                { label: 'Daily', value: 'daily' },
+                                { label: 'Weekly', value: 'weekly' },
+                                { label: 'Monthly', value: 'monthly' }
+                            ]}
+                            trigger="Select Bill Cycle"
                             onChange={(value) => setData({ ...data, bill_cycle: value })}
                         />
                     </div>

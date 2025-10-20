@@ -94,9 +94,8 @@ export default function Sale({
                 price: product.price,
                 display_name: product.display_name as string,
                 unit: product.unit,
-                // **RECALCULATION LOGIC**
+                // re-calculate
                 subTotal: Number((currentQuantity * product.price).toFixed(2)) || 0
-                // **END RECALCULATION**
             };
         }
         setProductList(updated);

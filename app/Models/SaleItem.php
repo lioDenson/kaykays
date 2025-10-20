@@ -38,6 +38,9 @@ class SaleItem extends Model
     {
         return $this->stock->product;
     }
+    public function product(){
+        return $this?->batch?->product;
+    }
 
     public static function boot()
     {

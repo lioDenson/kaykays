@@ -3,8 +3,9 @@
 namespace App\Models;
 
 use Carbon\Carbon;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Sale extends Model
 {
@@ -24,6 +25,17 @@ class Sale extends Model
         'description',
         'created_by',
     ];
+
+    protected $appends = [
+        'paid'
+    ];
+
+    protected function paid(): Attribute
+    {
+        return Attribute::make(
+            get: fn() => $this->total + $this->delivery_fee - $this->balance,
+        );
+    }
     public function account()
     {
         return $this->belongsTo(Account::class);
@@ -32,10 +44,11 @@ class Sale extends Model
     {
         return $this->belongsTo(Delivery::class);
     }
-    public function items()
+    public function saleItems()
     {
         return $this->hasMany(SaleItem::class);
     }
+
     public function payments()
     {
         return $this->hasMany(Payment::class);
@@ -54,6 +67,8 @@ class Sale extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+
 
 
     public static function boot()

@@ -42,6 +42,7 @@ Route::middleware('installed')->group(function () {
         Route::patch('/products/{id}/restore', [ProductController::class, 'restore'])->name('products.restore');
         Route::delete('/products/{id}/forceDelete', [ProductController::class, 'forceDelete'])->name('products.forceDelete');
 
+        Route::post('/user/roles', [UserController::class, 'userSetRole'])->name('users.setRole');
         Route::get('/users/roles', [UserController::class, 'userRolling'])->name('users.roles');
         Route::get('/users/search', [UserController::class, 'search'])->name('users.search');
         Route::get('/users/type/{type}', [UserController::class, 'index'])->name('users.byType');
@@ -63,6 +64,7 @@ Route::middleware('installed')->group(function () {
         Route::delete('/batches/{id}/forceDelete', [BatchController::class, 'forceDelete'])->name('batches.forceDelete');
 
         Route::resource('/sales', SaleController::class);
+        Route::get('/deliveries/details',[DeliveryController::class, 'details'])->name('deliveries.details');
         Route::resource('/deliveries', DeliveryController::class);
         Route::resource('/payments', PaymentController::class);
         Route::resource('/transactions', TransactionController::class);

@@ -32,6 +32,24 @@ class Delivery extends Model
         return $this->belongsTo(Account::class);
     }
 
+    public function customers()
+    {
+        return $this->hasManyThrough(Customer::class, Sale::class, 'delivery_id', 'id', 'id', 'customer_id');
+    }
+
+    public function items()
+    {
+        return $this->hasManyThrough(
+            SaleItem::class,
+            Sale::class,
+            'delivery_id',
+            'sale_id',
+            'id',
+            'id',
+        );
+    }
+    
+
     public function user()
     {
         return $this->hasOneThrough(
@@ -43,6 +61,4 @@ class Delivery extends Model
             'user_id'     // local key on riders table
         );
     }
-
-    
 }

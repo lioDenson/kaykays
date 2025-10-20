@@ -14,6 +14,7 @@ interface CreditInterface extends Pagination {
         sale: {
             invoice_number: string;
             amount: number;
+            paid: number;
             balance: number;
             total: number;
         };
@@ -28,14 +29,11 @@ interface CreditInterface extends Pagination {
 export default function index({ credits }: { credits: CreditInterface }) {
     const saleColumns: ColumnDefinition<any>[] = [
         {
-            header: 'Sale No',
+            header: 'Invoice #',
             id: 'sale.invoice_number',
-            accessorFn: (row) => row.sale.invoice_number,
-            cell: (row) => {
-                return <span className="text-blue-600 hover:underline">{row.sale.invoice_number}</span>;
-            },
             sortable: true,
-            filterable: true
+            filterable: true,
+            accessorFn: (row) => row.sale.invoice_number
         },
         {
             header: 'Customer',
@@ -45,10 +43,20 @@ export default function index({ credits }: { credits: CreditInterface }) {
             accessorFn: (row) => row.customer?.user?.name ?? 'Walk in'
         },
         {
-            header: 'Sale Amount (Ksh)',
+            header: 'Cost (Ksh)',
             id: 'sale.amount',
-            accessorFn: (row) => row.sale.total,
+            accessorFn: (row) => {
+                // calculate the cost  of the sale (add cost of item and the delivery fee).
+                return Number(row.sale.total) + Number(row.sale.delivery_fee);
+            },
             filterable: false
+        },
+
+        {
+            header: 'Paid Amt. (Ksh)',
+            id: 'sale.paid',
+            accessorFn: (row) => row.sale.paid,
+            filterable: true
         },
         {
             header: 'Balance (Ksh)',

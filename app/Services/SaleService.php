@@ -2,11 +2,12 @@
 
 namespace App\Services;
 
+use Exception;
+use Carbon\Carbon;
 use App\Models\Sale;
 use App\Models\Payment;
-use Carbon\Carbon;
+use App\Models\SaleItem;
 use Illuminate\Support\Facades\Auth;
-use Exception;
 
 class SaleService
 {
@@ -20,9 +21,13 @@ class SaleService
 
     public function createSaleFromRequest(array $data): int
     {
+        
         try {
+            $delivery_fee = isset($data['deliveryFee']) ? $data['deliveryFee'] : 0;
+
+            $data['deliveryFee'] = $delivery_fee;
             $date = Carbon::now();
-            $status = $this->saleStatus($data['balance'], $data['totalPaid']);
+            $status = $this->saleStatus($data['balance'], $data['total'] + $delivery_fee);
             $customer_id = $data['customer'];
             $delivery_id = $data['delivery_id'];
             $delivery_fee = $data['deliveryFee'];
@@ -52,14 +57,15 @@ class SaleService
         }
     }
 
-    public static function saleStatus($balance, $totalPaid): string
+    public static function saleStatus($balance, $totalExpected): string
     {
         $status = 'unknown';
-        if ($balance == $totalPaid) {
+
+        if ($balance == $totalExpected) {
             $status = 'unpaid';
         } elseif ($balance == 0) {
             $status = 'paid';
-        } elseif ($balance > 0 && $balance < $totalPaid) {
+        } elseif ($balance > 0 && $balance < $totalExpected) {
             $status = 'partial';
         }
         return $status;
@@ -70,12 +76,29 @@ class SaleService
 
         $items = self::saleItems($items);
 
-        collect($items)->map(
+        $final_items = collect($items)->map(
             function ($item) use ($saleId, $accountId) {
-                $item['sale_id'] = $saleId;
-                $item['account_id'] = $accountId;
+                return [
+                    'sale_id' => $saleId,
+                    'account_id' => $accountId,
+                    'batch_id' => $item['batch_id'],
+                    'quantity' => $item['quantity'],
+                    'total' => $item['total'],
+                    'description' => $item['description'],
+                ];
             }
         );
+
+        try{
+            $final_items->map(function ($item){
+                SaleItem::create($item);
+            
+            });
+        } catch(Exception $e){
+            throw new Exception($e->getMessage());
+        }
+
+        
     }
 
     public static function saleItems(array  $items): array
@@ -103,7 +126,7 @@ class SaleService
                     'method' => 'mpesa',
                     'sale_id' => $saleId,
                     'account_id' => $accountId,
-                    // 'balance' => $balance,
+                    'balance' => $balance,
                     'date' => Carbon::now(),
                     'user_id' => Auth::id(),
                     'description' => 'Mpesa payment on sale',
@@ -117,7 +140,7 @@ class SaleService
                     'amount' => $cash,
                     'method' => 'cash',
                     'account_id' => $accountId,
-                    // 'balance' => $balance,
+                    'balance' => $balance,
                     'date' => Carbon::now(),
                     'user_id' => Auth::id(),
                     'description' => 'Cash payment on sale.',

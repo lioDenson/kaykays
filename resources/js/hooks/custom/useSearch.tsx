@@ -42,7 +42,7 @@ export function useSearch({ query, routeName, isEditing, isSearching, filter }: 
 
     const filteredResults = useMemo(() => {
         if (!filter || filter.length === 0) return results;
-        return results.filter((result) => filter.includes(result.id));
+        return results.filter((result) => !filter.includes(result.id));
     }, [results, filter]);
 
     return { results: filteredResults, searching };

@@ -49,7 +49,7 @@ interface HeaderProps {
 interface CustomPageProps<TData extends { id?: string | number } = Record<string, unknown>> {
     flashData?: FlashMessage;
     actionsData?: ActionsProps;
-    Data?: TData;
+    Data?: TData[];
     Columns?: ColumnDefinition<TData>[];
     emptyText?: string;
     Header?: HeaderProps;
@@ -90,12 +90,11 @@ export default function CustomIndexPage<TData extends { id?: string | number } =
     const title = Header?.title || 'Page Title';
     const button = Header?.button || null;
 
-
     // -------------------------------------------------
     // Columns setup
     // -------------------------------------------------
-    const columns: ColumnDef<TData>[] = useMemo(
-        () => [
+    const columns: ColumnDef<TData>[] = useMemo(() => {
+        const baseColumns: ColumnDef<TData>[] = [
             {
                 id: 'index',
                 header: '#',
@@ -104,112 +103,129 @@ export default function CustomIndexPage<TData extends { id?: string | number } =
                     return no + row.index;
                 },
                 enableSorting: false,
-                size: 50 // Fixed small size for index column
-            },
-            ...Columns.map((col) => {
-                if (col.isActions) {
-                    return {
-                        id: 'actions',
-                        header: () => <div className="text-right">{col.header}</div>,
-                        cell: ({ row }) => (
-                            <div className="flex justify-end space-x-1">
-                                <CustomActionsButtons
-                                    infoBtn={{
-                                        label: 'Info',
-                                        disabled: deleting,
-                                        onClick: () => handleInfo?.(row.original)
-                                    }}
-                                    editBtn={{
-                                        label: 'Edit',
-                                        disabled: deleting,
-                                        onClick: () => handleEdit?.(row.original)
-                                    }}
-                                    deleteBtn={{
-                                        label: 'Delete',
-                                        disabled: deleting,
-                                        onClick: () => handleDelete?.(row.original)
-                                    }}
-                                />
-                            </div>
-                        ),
-                        enableSorting: false,
-                        enableHiding: true,
-                        size: 100 // Fixed size for actions column
-                    } as ColumnDef<TData>;
-                }
+                size: 50
+            }
+        ];
 
-                const accessorFn =
-                    col.accessorFn ||
-                    ((row: TData) => {
-                        const val = col.accessorKey ? getValue(row, col.accessorKey) : undefined;
+        const dataColumns = Columns.map((col): ColumnDef<TData> => {
+            // Handle actions column
+            if (col.isActions) {
+                return {
+                    id: 'actions',
+                    header: () => <div className="text-right">{col.header}</div>,
+                    cell: ({ row }) => (
+                        <div className="flex justify-end space-x-1">
+                            <CustomActionsButtons
+                                infoBtn={{
+                                    label: 'Info',
+                                    disabled: deleting,
+                                    onClick: () => handleInfo?.(row.original)
+                                }}
+                                editBtn={{
+                                    label: 'Edit',
+                                    disabled: deleting,
+                                    onClick: () => handleEdit?.(row.original)
+                                }}
+                                deleteBtn={{
+                                    label: 'Delete',
+                                    disabled: deleting,
+                                    onClick: () => handleDelete?.(row.original)
+                                }}
+                            />
+                        </div>
+                    ),
+                    enableSorting: false,
+                    enableHiding: true,
+                    size: 100
+                };
+            }
+
+            // Create the base column definition
+            const columnDef: ColumnDef<TData> = {
+                id: col.id || col.accessorKey || col.header,
+                header: col.sortable
+                    ? ({ column }) => (
+                          <Button
+                              variant="ghost"
+                              onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
+                              className="flex w-full items-center justify-start gap-1 px-2 hover:bg-accent"
+                          >
+                              <span className="truncate">{col.header}</span>
+                              <ArrowUpDown className="h-3 w-3 flex-shrink-0 md:h-4 md:w-4" />
+                          </Button>
+                      )
+                    : () => <div className="truncate px-2">{col.header}</div>,
+                enableSorting: !!col.sortable,
+                minSize: 50,
+                size: col.accessorKey?.includes('name') || col.accessorKey?.includes('title') ? 150 : 100
+            };
+
+            // Set accessor based on what's provided
+            if (col.accessorFn) {
+                columnDef.accessorFn = col.accessorFn;
+            } else if (col.accessorKey) {
+                columnDef.accessorKey = col.accessorKey;
+            }
+
+            // Handle custom cell function - ADAPTED FOR YOUR COLUMN DEFINITION
+            if (col.cell) {
+                // Convert your cell function (which takes row data) to TanStack cell function
+                columnDef.cell = ({ row }) => {
+                    return col.cell!(row.original);
+                };
+            } else {
+                // Default cell rendering
+                columnDef.cell = ({ row }) => {
+                    let value: any;
+
+                    if (col.accessorFn) {
+                        value = col.accessorFn(row.original);
+                    } else if (col.accessorKey) {
+                        value = getValue(row.original, col.accessorKey);
                         if (col.accessorKey?.includes('||')) {
                             const [path, fallback] = col.accessorKey.split('||').map((x) => x.trim());
-                            return getValue(row, path) || fallback.replace(/['"]/g, '');
+                            value = getValue(row.original, path) || fallback.replace(/['"]/g, '');
                         }
-                        return val;
-                    });
+                    }
 
-                return {
-                    id: col.accessorKey ?? col.header,
-                    accessorFn,
-                    header: col.sortable
-                        ? ({ column }) => (
-                              <Button
-                                  variant="ghost"
-                                  onClick={() => column.toggleSorting(column.getIsSorted() === 'asc')}
-                                  className="flex w-full items-center justify-start gap-1 px-2 hover:bg-accent"
-                              >
-                                  <span className="truncate">{col.header}</span>
-                                  <ArrowUpDown className="h-3 w-3 flex-shrink-0 md:h-4 md:w-4" />
-                              </Button>
-                          )
-                        : () => <div className="truncate px-2">{col.header}</div>,
-                    cell: ({ row }) => {
-                        const value = accessorFn(row.original);
-
-                        // Detect arrays
-                        if (Array.isArray(value)) {
-                            if (value.length > 0 && typeof value[0] === 'object') {
-                                return (
-                                    
-                                    <div className="space-x-1 px-2">
-                                        {value.map((v, i) => (
-                                            <span key={i} className="inline-block rounded-md bg-muted px-2 py-1 text-xs">
-                                                {v.name || JSON.stringify(v)}
-                                            </span>
-                                        ))}
-                                    </div>
-                                );
-                            }
-
-                            // If it's an array of strings/numbers
+                    // Handle arrays
+                    if (Array.isArray(value)) {
+                        if (value.length > 0 && typeof value[0] === 'object') {
                             return (
                                 <div className="space-x-1 px-2">
                                     {value.map((v, i) => (
                                         <span key={i} className="inline-block rounded-md bg-muted px-2 py-1 text-xs">
-                                            {String(v)}
+                                            {v.name || JSON.stringify(v)}
                                         </span>
                                     ))}
                                 </div>
                             );
                         }
-
-                        // Fallback for single values
                         return (
-                            <div className="px-2">
-                                <span className="block truncate">{String(value ?? '')}</span>
+                            <div className="space-x-1 px-2">
+                                {value.map((v, i) => (
+                                    <span key={i} className="inline-block rounded-md bg-muted px-2 py-1 text-xs">
+                                        {String(v)}
+                                    </span>
+                                ))}
                             </div>
                         );
-                    },
+                    }
 
-                    enableSorting: !!col.sortable,
-                    minSize: 50, // Minimum column width
-                    size: col.accessorKey?.includes('name') || col.accessorKey?.includes('title') ? 150 : 100 // Flexible sizing
-                } as ColumnDef<TData>;
-            })
-        ],
-        [Columns, deleting, handleInfo, handleEdit, handleDelete, paginate]
-    );
+                    // Single value
+                    return (
+                        <div className="px-2">
+                            <span className="block truncate">{String(value ?? '')}</span>
+                        </div>
+                    );
+                };
+            }
+
+            return columnDef;
+        });
+
+        return [...baseColumns, ...dataColumns];
+    }, [Columns, deleting, handleInfo, handleEdit, handleDelete, paginate]);
 
     // -------------------------------------------------
     // Table instance
@@ -225,7 +241,6 @@ export default function CustomIndexPage<TData extends { id?: string | number } =
         getFilteredRowModel: getFilteredRowModel(),
         getSortedRowModel: getSortedRowModel(),
         getPaginationRowModel: getPaginationRowModel(),
-        // Enable auto layout for responsiveness
         defaultColumn: {
             minSize: 60,
             size: 150,
@@ -251,6 +266,7 @@ export default function CustomIndexPage<TData extends { id?: string | number } =
     }, [filteredData, table]);
 
     const isMobile = useIsMobile();
+
     // -------------------------------------------------
     // RENDER
     // -------------------------------------------------
