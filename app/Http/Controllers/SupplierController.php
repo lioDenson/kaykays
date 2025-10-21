@@ -29,10 +29,12 @@ class SupplierController extends Controller
     public function store(SupplierRequest $request)
     {
         $validated = $request->validated();
+        
         try {
+            $name =  $validated['company_name'];
             Supplier::create($validated);
             return to_route('suppliers.index')
-                ->with('success', "Supplier {$validated->company_name} was added successfully.");
+                ->with('success', "Supplier $name was added successfully.");
         } catch (\Exception $e) {
             return back()->with('error', "Supplier not added successfully. {$e->getMessage()}");
         }

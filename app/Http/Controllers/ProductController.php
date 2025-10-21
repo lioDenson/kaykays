@@ -33,7 +33,7 @@ class ProductController extends Controller
         $validated = $request->validated();
         try {
             Product::create($validated);
-            return redirect()->back()->with('success', "Product created successfully.");
+            return redirect()->back()->with('success', "Product added successfully.");
         } catch (\Exception $e) {
             return back()->with('error', "Product not created.}");
         }
