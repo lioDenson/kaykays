@@ -11,7 +11,7 @@ import { Head, router, usePage } from '@inertiajs/react';
 import { useCallback, useEffect, useState } from 'react';
 import { route } from 'ziggy-js';
 
-export default function UserRole({ roles }: { roles: RoleInterface[] }) {
+export default function UserRole({ roles, userIds }: { roles: RoleInterface[], userIds?: number[] }) {
     const [query, setQuery] = useState('');
     const [searching, setSearching] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
@@ -30,10 +30,11 @@ export default function UserRole({ roles }: { roles: RoleInterface[] }) {
         role_id: 0
     };
 
-    let response = useSearch({
+    const response = useSearch({
         query: query,
         routeName: route('users.search'),
-        isSearching: setSearching
+        isSearching: setSearching,
+        filter: userIds
     });
 
     const [data, setData] = useState(emptyData);

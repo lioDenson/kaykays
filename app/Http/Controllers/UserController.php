@@ -8,6 +8,7 @@ use Inertia\Inertia;
 use Illuminate\Http\Request;
 use Spatie\Searchable\Search;
 use App\Http\Requests\UserRequest;
+use Illuminate\Support\Facades\DB;
 use Spatie\Permission\Models\Role;
 use App\Http\Requests\SetRoleRequest;
 
@@ -61,7 +62,10 @@ class UserController extends Controller
             }
             return $role;
         });
-        return Inertia::render('People/Users/Roles', ['roles' => $roles]);
+        
+        $userIds = DB::table('model_has_roles')->pluck('model_id');
+        
+        return Inertia::render('People/Users/Roles', ['roles' => $roles, 'userIds' => $userIds]);
     }
 
     public function userSetRole(SetRoleRequest $request){
