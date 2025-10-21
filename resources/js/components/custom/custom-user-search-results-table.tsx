@@ -27,7 +27,11 @@ const CustomUserSearchResultsTable = ({ results, onSelect }: CustomSearchResults
                     </TableHeader>
                     <TableBody className="text-xs">
                         {results.map((user, index) => (
-                            <TableRow key={user.id as number} className="cursor-pointer" onClick={onSelect.bind(null, user as Record<string, string>)}>
+                            <TableRow
+                                key={user.id as number}
+                                className="cursor-pointer"
+                                onClick={onSelect.bind(null, user )}
+                            >
                                 <TableCell>{index + 1}</TableCell>
                                 <TableCell>{user.name}</TableCell>
                                 <TableCell>{user.email}</TableCell>
@@ -40,7 +44,7 @@ const CustomUserSearchResultsTable = ({ results, onSelect }: CustomSearchResults
             <ScrollBar orientation="vertical" />
         </ScrollArea>
     ) : (
-            <InputError message="No results found "  />
+        <InputError className="opacity-100 transition-opacity duration-700 ease-in" message="No results found " />
     );
 };
 

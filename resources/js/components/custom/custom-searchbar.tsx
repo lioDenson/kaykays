@@ -11,6 +11,7 @@ interface CustomSearchBarProps extends React.HTMLAttributes<HTMLInputElement> {
 }
 
 const CustomSearchBar: React.FC<CustomSearchBarProps> = ({ searching, disabled = false, setQuery, value, error }: CustomSearchBarProps) => {
+    
     return (
         <div className="flex flex-col gap-1">
             <div className="flex h-9 items-center justify-center rounded-2xl bg-accent/50">
@@ -26,7 +27,7 @@ const CustomSearchBar: React.FC<CustomSearchBarProps> = ({ searching, disabled =
                 />
                 {searching && <Loader2 className="mx-2 h-5 w-5 animate-spin" />}
             </div>
-            {error && <InputError message={error} />}
+            {error &&  <InputError message={error} />}
         </div>
     );
 };

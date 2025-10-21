@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\UserRequest;
+use Exception;
 use App\Models\User;
 use Inertia\Inertia;
 use Illuminate\Http\Request;
-use Spatie\Permission\Models\Role;
 use Spatie\Searchable\Search;
+use App\Http\Requests\UserRequest;
+use Spatie\Permission\Models\Role;
+use App\Http\Requests\SetRoleRequest;
 
 class UserController extends Controller
 {
@@ -60,6 +62,21 @@ class UserController extends Controller
             return $role;
         });
         return Inertia::render('People/Users/Roles', ['roles' => $roles]);
+    }
+
+    public function userSetRole(SetRoleRequest $request){
+        $validated = $request->validated();
+        try{
+            $user = User::findOrFail($validated['user_id']);
+            $role = Role::findOrFail($validated['role_id']);
+            $user->assignRole($validated['role_id']);
+
+            return to_route('users.byType', $role->name)->with('success', "$user->name  role updated to $role->name.");
+
+        }catch(Exception $e) {
+            return redirect()->back()->with('error', 'User role not updated. Try again or contact the administrator.');
+        }
+
     }
 
     /**

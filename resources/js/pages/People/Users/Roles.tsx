@@ -2,28 +2,33 @@ import CustomInput from '@/components/custom/custom-input';
 import CustomSearchBar from '@/components/custom/custom-searchbar';
 import CustomSelection from '@/components/custom/custom-selection';
 import CustomSubmitButton from '@/components/custom/custom-submit-button';
-import { ScrollBar } from '@/components/ui/scroll-area';
-import { Table, TableBody, TableCell, TableHeader, TableRow } from '@/components/ui/table';
+import CustomUserSearchResultsTable from '@/components/custom/custom-user-search-results-table';
 import { useSearch } from '@/hooks/custom/useSearch';
 import AppLayout from '@/layouts/app-layout';
 import AuthLayout from '@/layouts/auth-layout';
 import { RoleInterface } from '@/pages/interface/general';
 import { Head, router, usePage } from '@inertiajs/react';
-import { ScrollArea } from '@radix-ui/react-scroll-area';
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { route } from 'ziggy-js';
 
 export default function UserRole({ roles }: { roles: RoleInterface[] }) {
     const [query, setQuery] = useState('');
     const [searching, setSearching] = useState(false);
-    const [selected, setSelected] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
+    const [selected, setSelected] = useState(false);
+    const [submitData, setSubmitData] = useState({});
     const [selectedRole, setSelectedRole] = useState({
         value: 0,
         label: ''
     });
-    const [show, setShow] = useState(true);
 
+    const emptyData = {
+        name: '',
+        email: '',
+        phone: '',
+        user_id: 0,
+        role_id: 0
+    };
 
     let response = useSearch({
         query: query,
@@ -31,120 +36,94 @@ export default function UserRole({ roles }: { roles: RoleInterface[] }) {
         isSearching: setSearching
     });
 
+    const [data, setData] = useState(emptyData);
+
+    const errors = usePage().props.errors as Record<string, string>;
+
+    const handleQueryChange = (q: string) => {
+        setQuery(q);
+        setSelected(false);
+        setData(emptyData);
+        setSubmitData({});
+    };
+
+    const handleSelect = useCallback(
+        (user: Record<string, string>) => {
+            setSelected(true);
+            setData({
+                name: user.name,
+                email: user.email,
+                phone: user.phone,
+                user_id: Number(user.id),
+                role_id: selectedRole.value
+            });
+            setSubmitData({
+                user_id: user.id,
+                role_id: selectedRole.value
+            });
+        },
+        [selectedRole]
+    );
 
     useEffect(() => {
-        if (searching && selected) {
-            setSelected(false);
+        if (response.results.length == 1) {
+            handleSelect(response.results[0]);
         }
-    }, [response.results, searching, selected]);
+    }, [response.results, handleSelect]);
 
-    const [data, setData] = useState({
-        name: '',
-        email: '',
-        phone: '',
-        user_id: 0,
-        role_id: 0
-    });
-
-    const handleUserSelection = (user: Record<string, string>) => {
-        setShow(false);
-        setData({
-            ...data,
-            user_id: Number(user.id),
-            name: user.name,
-            email: user.email,
-            phone: user.phone
+    const handleSubmit = () => {
+        setIsLoading(true);
+        router.post(route('users.setRole'), submitData, {
+            onFinish: () => {
+                setIsLoading(false);
+            }
         });
     };
 
-    const errors = usePage().props.errors as Record<string, string>;
-    const setRole = () => {
-        setIsLoading(true);
-        router.post(
-            route('users.setRole'),
-            { user_id: data.user_id, role_id: data.role_id },
-            {
-                onFinish: () => {
-                    setIsLoading(false);
-                }
-            }
-        );
-    };
+    const [error, setError] = useState(errors.user_id);
 
     useEffect(() => {
-        if (query == '') {
-            setIsLoading(false); 
-            response.results = [];
-            setShow(true);
-            return;
-        };
-
-        if (searching) {
-            setShow(false);
-        } else {
-            setShow(true);
+        if (errors.user_id) {
+            setError(errors.user_id);
         }
 
-    },[query, response, searching]);
+    }, [errors]);
+
     return (
         <AppLayout>
             <Head title="Assign role" />
             <AuthLayout title="Assign role" description="Assign role to a user">
                 <CustomSearchBar
                     value={query}
-                    setQuery={(value: string) => {
-                        setQuery(value);
-                        setShow(true);
+                    setQuery={(q: string) => {
+                        handleQueryChange(q);
+                        setError('')
                     }}
                     searching={searching}
+                    error={error}
                 />
-                {response.results.length > 0 && query !== '' && show ? (
-                    <ScrollArea>
-                        <div className="max-h-[25vh] overflow-auto py-2">
-                            <Table>
-                                <TableHeader>
-                                    <TableRow>
-                                        <TableCell></TableCell>
-                                        <TableCell>Name</TableCell>
-                                        <TableCell>Email</TableCell>
-                                        <TableCell>Phone</TableCell>
-                                    </TableRow>
-                                </TableHeader>
-                                <TableBody className="text-xs">
-                                    {response.results.map((user, index) => (
-                                        <TableRow key={user.id} className="cursor-pointer" onClick={handleUserSelection.bind(null, user)}>
-                                            <TableCell>{index + 1}</TableCell>
-                                            <TableCell>{user.name}</TableCell>
-                                            <TableCell>{user.email}</TableCell>
-                                            <TableCell>{user.phone}</TableCell>
-                                        </TableRow>
-                                    ))}
-                                </TableBody>
-                            </Table>
-                        </div>
-                        <ScrollBar orientation="vertical" />
-                    </ScrollArea>
-                ) : (
-                        response.results.length <= 0 && query !== '' && !searching &&(
-                            <div>No results found.</div>
-                    )
+                {response.results && query !== '' && !selected && (
+                    <CustomUserSearchResultsTable results={response.results} onSelect={(user) => handleSelect(user as Record<string, string>)} />
                 )}
 
                 <div className="grid gap-2 md:grid-cols-2">
-                    <CustomInput id="name" name="name" label="Name" readOnly value={data.name} />
+                    <CustomInput id="name" name="name" label="Name" readOnly disabled value={data.name} />
+
+                    <CustomInput id="email" name="email" label="Email" readOnly disabled value={data.email} />
+                    <CustomInput id="phone" name="phone" label="Phone" readOnly disabled value={data.phone} />
                     <CustomSelection
                         data={roles}
                         label="Role"
+                        disabled={!selected}
                         placeholder="Select Role"
-                        onSelect={(value: number) => setData({ ...data, role_id: value })}
+                        onSelect={(role) => {
+                            setSelectedRole(role as { value: number; label: string });
+                        }}
                         error={errors.role_id}
                         selectedOption={selectedRole}
                     />
-                    <CustomInput id="email" name="email" label="Email" readOnly value={data.email} />
-
-                    <CustomInput id="phone" name="phone" label="Phone" readOnly value={data.phone} />
                 </div>
-                <CustomSubmitButton label="Assign Role" onClick={setRole} isLoading={isLoading} />
+                <CustomSubmitButton label="Assign Role" onClick={handleSubmit} isLoading={isLoading} />
             </AuthLayout>
         </AppLayout>
     );

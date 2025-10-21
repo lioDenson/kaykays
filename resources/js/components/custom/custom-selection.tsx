@@ -1,20 +1,20 @@
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { cn } from '@/lib/utils';
-import { useEffect, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import { Button } from '../ui/button';
 import { Label } from '../ui/label';
 import InputError from '../input-error';
 
 interface CustomSelectionProps {
-    data: any[];
+    data: Record<string, unknown>[];
     label?: string;
     error?: string;
-    selectedOption?: any;
+    selectedOption?: Record<string, unknown> | null;
     disabled?: boolean;
     placeholder?: string;
     className?: string;
-    onSelect: (value: any) => void;
+    onSelect: (value: Record<string, unknown> | null) => void;
     side?: 'left' | 'right' | 'top' | 'bottom';
     align?: 'start' | 'end' | 'center';
 }
@@ -43,7 +43,7 @@ const CustomSelection = ({
             })),
     ];
 
-    const [selected, setSelected] = useState<any>(selectedOption ?? null);
+    const [selected, setSelected] = useState<Record<string, unknown> | null>(selectedOption ?? null);
 
     // keep state in sync if parent updates selectedOption
     useEffect(() => {
@@ -60,7 +60,7 @@ const CustomSelection = ({
             <Popover open={open} onOpenChange={setOpen}>
                 <PopoverTrigger asChild disabled={disabled}>
                     <Button variant="outline" className="w-full justify-start">
-                        {selected ? <div>{selected.label}</div> : <span className="text-muted-foreground">{placeholder ?? label}</span>}
+                        {selected ? <div>{selected.label as string}</div> : <span className="text-muted-foreground">{placeholder ?? label}</span>}
                     </Button>
                 </PopoverTrigger>
                 <PopoverContent className={'p-0'} side={side} align={align}>
@@ -72,7 +72,7 @@ const CustomSelection = ({
                                 {options.map((option) => (
                                     <CommandItem
                                         key={String(option.value)}
-                                        value={option.label}
+                                        value={option.label as string}
                                         onSelect={(value) => {
                                             if (option.value === null) {
                                                 // cancel option clicked
@@ -94,7 +94,7 @@ const CustomSelection = ({
                                             }
                                         }}
                                     >
-                                        {option.label}
+                                        {option.label as string}
                                     </CommandItem>
                                 ))}
                             </CommandGroup>
