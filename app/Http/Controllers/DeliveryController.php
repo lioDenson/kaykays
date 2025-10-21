@@ -12,8 +12,8 @@ class DeliveryController extends Controller
 {
     public function index()
     {
-        $details = Sale::with(['saleItems:id,quantity', 'saleItems.product:id,name,unit'])->get();
-        dd($details);
+        // $details = Sale::with(['saleItems:id,quantity', 'saleItems.product:id,name,unit'])->get();
+        // dd($details);
 
         $deliveries = Delivery::with('user:name,phone')->select('id','status', 'description', 'date', 'rider_id', 'total_fee')->paginate(10);
 

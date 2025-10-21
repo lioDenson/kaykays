@@ -24,23 +24,24 @@ class SaleItem extends Model
     }
     public function sale()
     {
-        return $this->belongsTo(Sale::class);
+        return $this->belongsTo(Sale::class,'sale_id', 'id');
     }
     public function batch()
     {
         return $this->belongsTo(Batch::class);
     }
+
+    public function product(){
+        return $this->hasOneThrough(Product::class, Batch::class, 'id', 'id', 'batch_id', 'product_id');
+    }
     public function transaction()
     {
         return $this->belongsTo(Transaction::class);
     }
-    public function getProductAttribute()
-    {
-        return $this->stock->product;
-    }
-    public function product(){
-        return $this?->batch?->product;
-    }
+    
+    // public function product(){
+    //     return $this->batch->product;
+    // }
 
     public static function boot()
     {

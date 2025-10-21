@@ -26,7 +26,7 @@ class SaleController extends Controller
 {
     public function index()
     {
-        $sales = Sale::with(['items:id,batch_id,quantity,total', 'customer:id,user_id', 'customer.user:id,name'])->orderBy('date', 'desc')->paginate(10, ['invoice_number', 'status', 'customer_id', 'date', 'total', 'is_delivery']);
+        $sales = Sale::with(['saleItems:id,batch_id,quantity,total,sale_id', 'saleItems.product:name,price,unit', 'customer:id,user_id', 'customer.user:id,name'])->orderBy('date', 'desc')->paginate(10, ['invoice_number', 'status', 'customer_id', 'date', 'total', 'is_delivery', 'id']);
         return Inertia::render('Transactions/Sales/Index', ['sales' => $sales]);
     }
 
@@ -71,10 +71,10 @@ class SaleController extends Controller
                 $validated['deliveryFee'],
             );
         }
-      
+
         $totalPaid = $validated['totalPaid'];
 
-        
+
         try {
             DB::transaction(function () use ($totalPaid, $validated) {
                 $sale = new SaleService;
@@ -90,7 +90,6 @@ class SaleController extends Controller
                     $validated['balance']
                 );
                 $validated['balance'] > 0 && CreditService::registerCredit(['sale_id' => $saleId, 'balance' => $validated['balance']]);
-                
             }, 2);
             return to_route('sales.create')->with('success', 'Sale Recorded successfully.');
         } catch (Exception $e) {
