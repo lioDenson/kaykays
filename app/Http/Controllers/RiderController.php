@@ -20,7 +20,8 @@ class RiderController extends Controller
 
     public function create()
     {
-        return Inertia::render('People/Riders/Create');
+        $riders = Rider::pluck('user_id');
+        return Inertia::render('People/Riders/Create', ['riders' => $riders]);
     }
 
     public function store(RiderRequest $request)
@@ -38,7 +39,7 @@ class RiderController extends Controller
         return Inertia::render('People/Riders/Create', ['rider' => $rider]);
     }
 
-    public function update(UpdateRiderRequest $request, Rider $rider)
+    public function update(RiderRequest $request, Rider $rider)
     {
 
         $validated = $request->validated();
@@ -49,7 +50,7 @@ class RiderController extends Controller
                 $rider->update([
                     'vehicle_number' => $validated['vehicle_number']
                 ]);
-                Arr::forget($validated, ['vehicle_number', 'user_id', 'email']);
+                // Arr::forget($validated, ['vehicle_number', 'user_id', 'email']);
                 $rider->user->update($validated);
             }, 2);
         } catch (\Exception $e) {

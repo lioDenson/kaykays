@@ -1,3 +1,4 @@
+import InputError from '../input-error';
 import { ScrollArea, ScrollBar } from '../ui/scroll-area';
 import { Table, TableBody, TableCell, TableHeader, TableRow } from '../ui/table';
 
@@ -12,7 +13,7 @@ interface CustomSearchResultsTableProps {
 }
 
 const CustomUserSearchResultsTable = ({ results, onSelect }: CustomSearchResultsTableProps) => {
-    return (
+    return results.length > 0 ? (
         <ScrollArea>
             <div className="max-h-[25vh]">
                 <Table>
@@ -38,6 +39,8 @@ const CustomUserSearchResultsTable = ({ results, onSelect }: CustomSearchResults
             </div>
             <ScrollBar orientation="vertical" />
         </ScrollArea>
+    ) : (
+            <InputError message="No results found "  />
     );
 };
 

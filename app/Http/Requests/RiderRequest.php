@@ -7,28 +7,24 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class RiderRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     */
     public function authorize(): bool
     {
         return $this->user()->can('manage.riders', $this->route('rider'));
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
-     */
     public function rules(): array
     {
+        // Detect if we’re updating (edit) or creating (store)
+        $riderId = $this->route('rider')?->id;
+        // ?? $this->route('rider');
+
         return [
             'user_id' => [
                 'required',
-                Rule::exists('users', 'id')->whereNull('deleted_at'), // check only active users
+                Rule::exists('users', 'id')->whereNull('deleted_at'),
                 Rule::unique('riders', 'user_id')
-                    ->ignore($this->route('rider')) // ignore current record when editing
-                    ->whereNull('deleted_at'),     // check only active riders
+                    ->ignore($riderId)
+                    ->whereNull('deleted_at'),
             ],
             'vehicle_number' => [
                 'required',
@@ -38,7 +34,7 @@ class RiderRequest extends FormRequest
         ];
     }
 
-    public function messages()
+    public function messages(): array
     {
         return [
             'user_id.exists' => 'Search a user first to convert to a rider',

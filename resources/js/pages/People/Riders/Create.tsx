@@ -1,117 +1,82 @@
+import CustomInput from '@/components/custom/custom-input';
+import CustomSearchBar from '@/components/custom/custom-searchbar';
 import CustomSubmitButton from '@/components/custom/custom-submit-button';
-import InputError from '@/components/input-error';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+import CustomUserSearchResultsTable from '@/components/custom/custom-user-search-results-table';
+import { useSearch } from '@/hooks/custom/useSearch';
 import AppLayout from '@/layouts/app-layout';
 import AuthLayout from '@/layouts/auth-layout';
-import { RiderInterface, UserInterface } from '@/pages/interface/general';
+import { RiderInterface } from '@/pages/interface/general';
 import { Head, router, usePage } from '@inertiajs/react';
-import axios from 'axios';
-import {  Loader2, Search } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { route } from 'ziggy-js';
 
-export default function Create({rider} :{rider?: RiderInterface} ) {
+export default function Create({ rider, riders }: { rider?: RiderInterface; riders?: number[] }) {
     const isEdit = rider != null;
-    
 
     const [isLoading, setIsLoading] = useState(false);
     const [searching, setSearching] = useState(false);
-    const [users, setUsers] = useState<UserInterface[]>();
     const [query, setQuery] = useState('');
-    const [debouncingQuery, setDebouncingQuery] = useState(query);
+    const [selected, setSelected] = useState(false);
     const [data, setData] = useState({
         user_id: rider?.user?.id || 0,
         name: rider?.user?.name || '',
         email: rider?.user?.email || '',
         phone: rider?.user?.phone || '',
-        vehicle_number: rider?.vehicle_number || '',
+        vehicle_number: rider?.vehicle_number || ''
     });
 
-    const { errors } = usePage().props as any;
+    const errors = usePage().props.errors;
 
-    useEffect(() => {
-        const timeout = setTimeout(() => {
-            setDebouncingQuery(query);
-        }, 500);
+    const response = useSearch({
+        query: query.trim(),
+        routeName: route('users.search'),
+        isSearching: setSearching,
+        filter: riders
+    });
 
-        return () => clearTimeout(timeout);
-    }, [query]);
-
-    useEffect(() => {
-        if (debouncingQuery && !isEdit) {
-            setSearching(true);
-            axios.get(route('users.search'), { params: { query: debouncingQuery } }).then((response) => {
-                setUsers(response.data);
-            }).finally(() => {
-                setSearching(false);
-            });
-        }
-
-        if (!debouncingQuery) {
-            setUsers([]);
-        }
-    }, [debouncingQuery]);
-
-    useEffect(() => {
-        if (isEdit) {
-            return
-        }
-        if (users && users.length == 1) {
-            setData({
-                ...data,
-                user_id: users[0].id,
-                name: users[0].name,
-                email: users[0].email,
-                phone: users[0].phone,
-            });
-        } else {
-            setData({
-                user_id: 0,
-                name: '',
-                email: '',
-                phone: '',
-                vehicle_number: '',
-            });
-        }
-    }, [users]);
-
-    const handleSelected = (user: UserInterface) => {
-        setData({
-            user_id: 0,
-            name: '',
-            email: '',
-            phone: '',
-            vehicle_number: '',
-        });
-
-        setData({
-            ...data,
-            user_id: user.id,
-            name: user.name,
-            email: user.email,
-            phone: user.phone,
-        });
-        setUsers([user]);
-    };
+    console.log(errors);
 
     const handleSubmit = () => {
+        const submitData = {
+            user_id: data.user_id,
+            vehicle_number: data.vehicle_number
+        };
         setIsLoading(true);
         if (isEdit) {
+            
 
-            router.put(route('riders.update', rider.id), data, {
+            router.put(route('riders.update', rider.id), submitData, {
                 onFinish: () => {
                     setIsLoading(false);
                 }
-            })
+            });
             return;
         }
-        router.post(route('riders.store'), data,{
+        router.post(route('riders.store'), submitData, {
             onFinish: () => {
                 setIsLoading(false);
             }
         });
-    }
+    };
+
+    const handleQueryChange = (q: string) => {
+        setQuery(q);
+        setSelected(false);
+        setData({ ...data, user_id: 0, name: '', email: '', phone: '', vehicle_number: '' });
+    };
+
+    useEffect(() => {
+        if (response.results.length == 1) {
+            setSelected(true);
+            setData({
+                ...data,
+                user_id: response.results[0].id as number,
+                name: response.results[0].name as string,
+                email: response.results[0].email as string,
+                phone: response.results[0].phone as string
+            });
+        }
+    }, [response.results]);
 
     return (
         <AppLayout>
@@ -121,97 +86,84 @@ export default function Create({rider} :{rider?: RiderInterface} ) {
                 description={isEdit ? `Fill the form to update Rider ${rider.user.name}` : 'Fill the form to create a new Rider'}
             >
                 {!isEdit && (
-                    <div className="flex h-9 items-center justify-center rounded-2xl bg-accent/50">
-                        <Search className="mx-2 mr-4 h-5 w-5 shrink-0 opacity-50" />
-                        <Input
-                            disabled={isEdit}
-                            onChange={(e) => setQuery(e.target.value)}
-                            className={`h-full rounded-none border-0 ${searching ? '' : 'rounded-r-2xl'} bg-accent/90 px-2 ring-0 focus:ring-0 focus-visible:ring-0`}
-                            placeholder="Search a user to make a rider"
-                        />
-                        {searching && <Loader2 className="mx-2 h-5 w-5 animate-spin" />}
-                    </div>
+                    <CustomSearchBar
+                        searching={searching}
+                        setQuery={(q) => {
+                            handleQueryChange(q);
+                        }}
+                        value={query}
+                        error={errors.user_id}
+                    />
                 )}
-                <InputError message={errors.id} />
 
-                <div className="w-full">
-                    {users && users.length > 0 && (
-                        <div className="w-full overflow-y-auto bg-accent/20 p-1">
-                            {users.map((user, index) => (
-                                <div
-                                    onClick={() => handleSelected(user)}
-                                    key={index}
-                                    className="flex justify-between gap-3 border-b px-2 py-2 hover:cursor-pointer hover:bg-accent/50"
-                                >
-                                    <span>{index + 1}</span>
-                                    <span>{user.name}</span>
-                                    <span>{user.email}</span>
-                                    <span>{user.phone}</span>
-                                </div>
-                            ))}
-                        </div>
-                    )}
-                </div>
+                {response.results && query !== '' && !searching && !selected && (
+                    <CustomUserSearchResultsTable
+                        results={response.results}
+                        onSelect={(user) => {
+                            setSelected(true);
+                            setData({
+                                ...data,
+                                user_id: user.id as number,
+                                name: user.name as string,
+                                email: user.email as string,
+                                phone: user.phone as string,
+                                vehicle_number: user.vehicle_number as string
+                            });
+                        }}
+                    />
+                )}
 
-                <div className="grid grid-cols-2 gap-x-3 gap-y-6">
-                    <div className="grid gap-2">
-                        <Label htmlFor="name">Name</Label>
-                        <Input
-                            id="name"
-                            readOnly={!isEdit}
-                            disabled={!isEdit}
-                            type="text"
-                            className="capitalize"
-                            value={data.name}
-                            placeholder="Rider name"
-                            onChange={(e) => {
-                                setData({ ...data, name: e.target.value });
-                            }}
-                        />
-                        <InputError message="" />
-                    </div>
-                    <div className="grid gap-2">
-                        <Label htmlFor="email">Email</Label>
-                        <Input
-                            readOnly
-                            disabled
-                            id="email"
-                            className=""
-                            value={data.email}
-                            type="text"
-                            placeholder="Rider email"
-                        />
-                        <InputError message="" />
-                    </div>
-                    <div className="grid gap-2">
-                        <Label htmlFor="phone">Phone Number</Label>
-                        <Input
-                            readOnly={!isEdit}
-                            disabled={!isEdit}
-                            id="phone"
-                            className="capitalize"
-                            value={data.phone}
-                            type="text"
-                            placeholder="Rider phone number"
-                            onChange={(e) => {
-                                setData({ ...data, phone: e.target.value });
-                            }}
-                        />
-                        <InputError message="" />
-                    </div>
-                    <div className="grid gap-2">
-                        <Label htmlFor="vehicle_number">Vehicle Number</Label>
-                        <Input
-                            id="vehicle_number"
-                            value={data.vehicle_number}
-                            onChange={(e) => {
-                                setData({ ...data, vehicle_number: e.target.value });
-                            }}
-                            type="text"
-                            className="uppercase"
-                        />
-                        <InputError message={errors.vehicle_number} />
-                    </div>
+                <div className="grid gap-x-3 gap-y-6 md:grid-cols-2">
+                    <CustomInput
+                        id="name"
+                        name="name"
+                        label="Name"
+                        value={data.name}
+                        readOnly
+                        disabled
+                        onChange={(e) => {
+                            setData({ ...data, name: e.target.value });
+                        }}
+                        error={errors.name}
+                    />
+                    <CustomInput
+                        id="email"
+                        name="email"
+                        label="Email"
+                        disabled
+                        readOnly
+                        value={data.email}
+                        onChange={(e) => {
+                            setData({ ...data, email: e.target.value });
+                        }}
+                        error={errors.email}
+                    />
+                    <CustomInput
+                        id="phone"
+                        name="phone"
+                        label="Phone"
+                        disabled
+                        readOnly
+                        inputClassName="uppercase"
+                        value={data.phone}
+                        onChange={(e) => {
+                            setData({ ...data, phone: e.target.value });
+                        }}
+                        error={errors.phone}
+                    />
+                    <CustomInput
+                        id="vehicle_number"
+                        name="vehicle_number"
+                        label="Vehicle Number"
+                        inputClassName="uppercase"
+                        disabled={!selected && !isEdit}
+                        readOnly={!selected && !isEdit}
+                        value={data.vehicle_number}
+                        onChange={(e) => {
+                            setData({ ...data, vehicle_number: e.target.value });
+                        }}
+                        error={errors.vehicle_number}
+                    />
                 </div>
                 <CustomSubmitButton onClick={handleSubmit} isLoading={isLoading} label={isEdit ? 'Update Rider' : 'Create Rider'} />
             </AuthLayout>

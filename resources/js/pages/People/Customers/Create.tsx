@@ -110,7 +110,6 @@ export default function Create({ customer, customersIds }: { customer?: Customer
         });
     };
 
-    console.log(response.results);
 
     return (
         <AppLayout>
