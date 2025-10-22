@@ -56,7 +56,7 @@ const CustomSelection = ({
 
     return (
         <div className={cn('grid gap-2', className)}>
-            <Label>{label}</Label>
+            <Label className='text-xs md:text-sm'>{label}</Label>
             <Popover open={open} onOpenChange={setOpen}>
                 <PopoverTrigger asChild disabled={disabled}>
                     <Button variant="outline" className="w-full justify-start">

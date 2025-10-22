@@ -16,7 +16,7 @@ interface CustomInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
 const CustomInput: React.FC<CustomInputProps> = ({ label, name, id, error, className, inputClassName, ...props }) => {
     return (
         <div className={cn('grid gap-2', className)}>
-            <Label htmlFor={id}>{label}</Label>
+            <Label className='text-xs md:text-sm' htmlFor={id}>{label}</Label>
             <Input id={id} className={cn('w-full', inputClassName)} name={name} {...props} />
             {error && <InputError message={error || ''} className="mt-2" />}
         </div>

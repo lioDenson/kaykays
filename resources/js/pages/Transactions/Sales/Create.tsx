@@ -260,7 +260,7 @@ export default function Sale({
                                 onSelect={(customer) => setSelectedCustomer(customer)}
                                 selectedOption={selectedCustomer}
                                 label="Select Customer"
-                                className="w-full"
+                                className="w-fit"
                                 error={errors.customer}
                             />
                             <CustomSwitch
@@ -273,7 +273,7 @@ export default function Sale({
                                     setSelectedDelivery(null);
                                     setDeliveryFee({ raw: '', numeric: 0 });
                                 }}
-                                label="Set as Delivery?"
+                                label="Delivery?"
                                 className="text-xs md:text-base"
                                 error={errors.isDelivery || errors.deliveryData}
                             />
@@ -379,9 +379,9 @@ export default function Sale({
                                             placeholder="Select Delivery to attach sale to"
                                             onSelect={(selectedDelivery) => {
                                                 const selected =
-                                                    deliveries?.find((d) => d.id === selectedDelivery.value) || ({} as DeliveryInterface);
+                                                    deliveries?.find((d) => d.id === selectedDelivery?.value) || ({} as DeliveryInterface);
 
-                                                setSelectedDelivery(selectedDelivery.value);
+                                                setSelectedDelivery(selectedDelivery?.value);
                                                 setDeliveryData({
                                                     ...emptyDelivery,
                                                     delivery_id: selected.id,
@@ -439,7 +439,7 @@ export default function Sale({
                         )}
                     </div>
                     {/* Sales Products Section */}
-                    <div className="m-2 flex w-11/12 flex-col justify-center gap-4 rounded border-2 border-black p-4 md:w-10/12">
+                    <div className=" m-1 flex w-11/12 flex-col justify-center gap-4 rounded border-2 border-black p-2 m:p-4 md:w-10/12">
                         <div className="font-bold uppercase text-xs md:text-base">Sales Products</div>
                         {productList.map((item, idx) => (
                             <div key={item.index} className="flex w-full flex-col items-center justify-between">
@@ -453,7 +453,7 @@ export default function Sale({
                                         data={products}
                                         label="select"
                                         placeholder="Select Product"
-                                        onSelect={(selected: { value: number } | null) => {
+                                        onSelect={(selected) => {
                                             handleSelectedProduct(selected!, idx);
                                         }}
                                         selectedOption={
@@ -550,7 +550,7 @@ export default function Sale({
                                 showLabel
                                 onClick={handleAddNewItem}
                                 disabled={btnDisabled}
-                                className="w-[120px] bg-primary/70 text-secondary p-2 hover:bg-primary/80"
+                                className="w-fit bg-primary/70 text-secondary p-2 hover:bg-primary/80"
                             />
                         </div>
                     </div>

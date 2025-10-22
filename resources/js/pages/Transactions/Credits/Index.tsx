@@ -49,7 +49,7 @@ export default function index({ credits }: { credits: CreditInterface }) {
                         </p>
                     ))}
                     <p className="ms-1.5 px-1 pt-1 text-end text-xs md:text-sm">Delivery: {row.sale.delivery_fee} </p>
-                    <div className="mt-2 grid grid-cols-2 items-center justify-between gap-2 border-t-2 py-2 text-xs font-semibold md:grid-cols-3 md:text-xs">
+                    <div className="mt-2 grid items-center justify-between gap-2 border-t-2 py-2 text-xs font-semibold mgrid-cols-3 md:text-xs">
                         <p className="text-blue-500">Total: {Number(row.sale.total) + Number(row.sale.delivery_fee)}</p>
                         <p className="text-green-400">Paid: {row.sale.paid}</p>
                         <p className="text-red-500">Balance: {row.sale.balance}</p>

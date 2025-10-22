@@ -32,41 +32,61 @@ export function AppSidebarHeader({ breadcrumbs = [] }: { breadcrumbs?: Breadcrum
     const isMobile = useIsMobile();
 
     return (
-        <header className="flex h-16 w-full shrink-0 items-center gap-2 border-b border-sidebar-border/50 p-2 px:md-6 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12 md:px-4">
-            <div className="flex w-full  flex-col-reverse items-start justify-between py-2 gap-1 md:pr-4">
-                <div className='flex items-center gap-2 text-neutral-500 font-medium text-sm mb-4'>
-                    <SidebarTrigger className="-ml-1" />
+        <header className="my-2 flex h-auto w-full items-center border-b border-sidebar-border/50 bg-transparent px-4 py-3 backdrop-blur-sm transition-all duration-300 ease-linear md:my-4 md:h-20 md:px-6 md:py-4">
+            <div className="flex w-full flex-col-reverse justify-center gap-3 md:gap-2">
+                {/* Breadcrumb & sidebar trigger */}
+                <div className="flex items-center gap-3 text-xs font-medium md:text-sm">
+                    <SidebarTrigger className="-ml-2 h-6 w-6 transition-transform duration-300 hover:scale-110 md:-ml-4" />
                     <Breadcrumbs breadcrumbs={breadcrumbs} />
                 </div>
-                <div className="flex items-center justify-end w-12/12 mt-4  gap-4 px-2">
-                    <CustomAvatarContainer className="me-2 border-0">
-                        <CustomIconAvatar className="bg-green-500" icon={Bell} badge={3} />
-                        <CustomIconAvatar className="bg-blue-500" icon={MessageCircleMoreIcon} badge={1} />
+
+                <div className="mt-2 flex w-full items-center justify-between gap-3 px-1 md:mt-3 md:justify-end md:gap-5 md:px-2">
+                    <CustomAvatarContainer className="me-1 flex gap-2 border-0 md:me-3">
+                        <CustomIconAvatar className="bg-green-500 transition-transform duration-300 hover:scale-110" icon={Bell} badge={3} />
+                        <CustomIconAvatar
+                            className="bg-blue-500 transition-transform duration-300 hover:scale-110"
+                            icon={MessageCircleMoreIcon}
+                            badge={1}
+                        />
                     </CustomAvatarContainer>
-                    {/*  */}
+
+                    {/* appearance toggle */}
                     {isMobile ? (
                         <Badge
-                            className="h-6 w-6 rounded-full"
+                            className="flex h-7 w-7 cursor-pointer items-center justify-center rounded-full transition-all duration-300 hover:rotate-180 md:h-8 md:w-8"
                             onClick={() => updateAppearance(appearance === 'system' ? 'dark' : appearance === 'dark' ? 'light' : 'system')}
                         >
-                            {appearance === 'system' ? <Monitor /> : appearance === 'dark' ? <Moon /> : <Sun />}
+                            {appearance === 'system' ? (
+                                <Monitor className="h-4 w-4" />
+                            ) : appearance === 'dark' ? (
+                                <Moon className="h-4 w-4" />
+                            ) : (
+                                <Sun className="h-4 w-4" />
+                            )}
                         </Badge>
                     ) : (
                         <CustomAppearanceToggleTab />
                     )}
+
+                    {/* profile dropdown */}
                     <DropdownMenu>
-                        <DropdownMenuTrigger>
+                        <DropdownMenuTrigger className="transition-transform duration-300 hover:scale-105">
                             <CustomAvatar name={auth.user.name} />
                         </DropdownMenuTrigger>
-                        <DropdownMenuContent>
-                            <DropdownMenuLabel className="text-end font-semibold uppercase">Profile</DropdownMenuLabel>
+                        <DropdownMenuContent className="rounded-xl border border-border/40 shadow-lg">
+                            <DropdownMenuLabel className="text-end font-semibold tracking-wide uppercase">Profile</DropdownMenuLabel>
                             <DropdownMenuSeparator />
                             <DropdownMenuItem>Profile</DropdownMenuItem>
                             <DropdownMenuItem>Billing</DropdownMenuItem>
                             <DropdownMenuItem>Team</DropdownMenuItem>
                             <DropdownMenuItem>
-                                <Button size={'sm'} variant={'ghost'} className="w-full justify-start" onClick={() => logout()}>
-                                    Log out <LogOut className="ml-2 h-4 w-4" />{' '}
+                                <Button
+                                    size={'sm'}
+                                    variant={'ghost'}
+                                    className="w-full justify-start transition-colors duration-200 hover:bg-accent/10"
+                                    onClick={() => logout()}
+                                >
+                                    Log out <LogOut className="ml-2 h-4 w-4" />
                                 </Button>
                             </DropdownMenuItem>
                         </DropdownMenuContent>
