@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Credit;
+use App\Models\User;
 use Inertia\Inertia;
 
 class CreditController extends Controller
@@ -14,13 +15,9 @@ class CreditController extends Controller
         return Inertia::render('Transactions/Credits/Index', ['credits' => $credits]);
     }
 
-    public function create() {}
+    public function pay(Credit $credit)
+    {
+        return Inertia::render('Transactions/Credits/Pay', ['credit' => $credit]);
+    }
 
-    public function store() {}
-
-    public function edit() {}
-
-    public function update() {}
-
-    public function destroy() {}
 }

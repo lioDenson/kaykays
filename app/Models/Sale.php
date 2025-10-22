@@ -48,7 +48,7 @@ class Sale extends Model
     {
         return $this->hasMany(SaleItem::class, 'sale_id', 'id',);
     }
-    
+
 
     public function payments()
     {
@@ -84,13 +84,16 @@ class Sale extends Model
 
     private static function generateInvoiceNumber($sale)
     {
-        $account = 1;
-        $date = Carbon::parse($sale->date)->format('dmy');
-        $count = Sale::count() + 1;
-        $monthCount = Sale::whereMonth('date', now()->month())->whereYear('date', now()->year())->count() + 1;
-        $dayCount = Sale::where('date', $sale->date)->count() + 1;
+        $prefix = 'SLE';
+        $year = now()->format('y'); // e.g. 25
+        $month = strtoupper(now()->format('M'));
+        $day = now()->format('d');
 
-        $invoiceNumber = "SLE/$account/{$date}/$dayCount.$monthCount.$count";
-        return $invoiceNumber;
+        $count = Sale::whereMonth('date', now()->month)
+            ->whereYear('date', now()->year)
+            ->count() + 1;
+
+        // Format: SLE25/NOV/0002
+        return sprintf('%s%s/%s%s/%03d', $prefix, $year, $month, $day, $count);
     }
 }

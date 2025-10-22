@@ -68,8 +68,8 @@ Route::middleware('installed')->group(function () {
         Route::resource('/deliveries', DeliveryController::class);
         Route::resource('/payments', PaymentController::class);
         Route::resource('/transactions', TransactionController::class);
-        Route::resource('/credits', CreditController::class);
-
+        Route::get('/credits', [CreditController::class, 'index'])->name('credits.index');
+        Route::get('/credits/{credit}/pay', [CreditController::class, 'pay'])->name('credit.pay');
         Route::resource('/suppliers', SupplierController::class);
         Route::patch('/suppliers/{id}/restore', [SupplierController::class, 'restore'])->name('suppliers.restore');
         Route::delete('/suppliers/{id}/forceDelete', [SupplierController::class, 'forceDelete'])->name('suppliers.forceDelete');

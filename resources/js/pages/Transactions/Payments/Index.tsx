@@ -1,5 +1,4 @@
 import CustomIndexPage from '@/components/custom/custom-index-page';
-import CustomPagination from '@/components/custom/custom-pagination';
 import { Badge } from '@/components/ui/badge';
 import AppLayout from '@/layouts/app-layout';
 import { ColumnDefinition, Pagination } from '@/types/app-types';
@@ -29,81 +28,79 @@ interface PaymentInterface extends Pagination {
 }
 
 export default function index({ payments }: { payments: PaymentInterface }) {
-
     console.log(payments);
 
     const columns: ColumnDefinition<any>[] = [
         {
             header: 'Sale No',
             id: 'sale_no',
-            accessorFn: (row)=> row.sale.invoice_number,
-        },
-        {
-            header: 'Customer',
-            id: 'customer',
-            accessorFn: (row)=> row.sale?.customer?.user?.name || 'Walk In',
+            accessorFn: (row) => row.sale.invoice_number
         },
         {
             header: 'Sale Amount',
             id: 'sale_amount',
-            accessorFn: (row)=> row.amount,
-        }, 
-        // {
-        //     header: 'Balance',
-        //     accessorFn: (row)=> row.sale.balance,
-        // },
+            accessorFn: (row) => {
+                return Number(row.amount) + Number(row.sale.delivery_fee);
+            },
+            sortable: true,
+        },
+        {
+            header: 'Balance',
+            accessorFn: (row) => row.sale.balance,
+            sortable: true,
+        },
         {
             header: 'Method',
             id: 'method',
             accessorFn: (row) => row.method,
             cell: (row) => {
                 if (row.method == 'cash') {
-                    return (
-                        <Badge variant={'warning'}>
-                            {row.method}
-                        </Badge>
-                    )
+                    return <Badge variant={'default'}>{row.method}</Badge>;
                 } else if (row.method == 'mpesa') {
-                    return (
-                        <Badge variant={'success'}>
-                            {row.method}
-                        </Badge>
-                    )
-                    } else {
-                    return (
-                        <Badge variant={'danger'}>
-                            {row.method}
-                        </Badge>
-                    )
+                    return <Badge variant={'success'}>{row.method}</Badge>;
+                } else {
+                    return <Badge variant={'danger'}>{row.method}</Badge>;
                 }
-            }
-        }, {
-            header: 'Date',
-            accessorKey: 'date->formatDate(DD/MM/YYYY)'
+            },
+            sortable: true, 
         },
         {
-            header: 'Actions',
-            isActions: true,
-        }
-    ]
+            header: 'Status',
+            id: 'status',
+            accessorFn: (row) => row.sale.status,
+            cell: (row) => {
+                if (row.sale.status == 'partial') {
+                    return <Badge variant={'warning'} className='capitalize'>{row.sale.status}</Badge>;
+                } else if (row.sale.status == 'paid') {
+                    return <Badge variant={'info'}>Cleared</Badge>;
+                } else {
+                    return <Badge variant={'danger'}>{row.sale.status}</Badge>;
+                }
+            },
+            sortable: true,
+        },
+        {
+            header: 'Date',
+            accessorKey: 'date',
+            sortable: true,
+        },
+    ];
     return (
         <AppLayout>
             <Head title="Payments" />
             <CustomIndexPage
                 Data={payments.data}
-                Header={ {title: 'Payments'}}
+                Header={{ title: 'Payments' }}
                 Columns={columns}
-                paginate={
-                    {
-                        from: payments.from,
-                        to: payments.to,
-                        total: payments.total,
-                        next_page_url: payments.next_page_url,
-                        prev_page_url: payments.prev_page_url,
-                        links: payments.links,
-                        current_page: payments.current_page,
-                    }
-                }
+                paginate={{
+                    from: payments.from,
+                    to: payments.to,
+                    total: payments.total,
+                    next_page_url: payments.next_page_url,
+                    prev_page_url: payments.prev_page_url,
+                    links: payments.links,
+                    current_page: payments.current_page
+                }}
             />
         </AppLayout>
     );

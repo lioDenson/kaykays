@@ -100,9 +100,8 @@ const navData = [
         url: '#',
         icon: Truck,
         items: [
-            { title: 'All Deliveries', url: '/deliveries', icon: TableOfContentsIcon },
-            { title: 'All Sales', url: '/sales', icon: Euro },
-            { title: 'All Supplies ', url: '#', icon: Table2Icon }
+            { title: 'Deliveries', url: '/deliveries', icon: TableOfContentsIcon },
+            { title: 'Sales', url: '/sales', icon: Table2Icon },
         ]
     },
     {
