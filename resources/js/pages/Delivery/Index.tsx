@@ -4,10 +4,6 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import AppLayout from '@/layouts/app-layout';
 import { ColumnDefinition, Pagination } from '@/types/app-types';
 import { Head } from '@inertiajs/react';
-import axios from 'axios';
-import { useEffect } from 'react';
-import { route } from 'ziggy-js';
-
 
 interface DeliveryInterface extends Pagination {
     data: {
@@ -19,22 +15,6 @@ interface DeliveryInterface extends Pagination {
 }
 
 export default function Index({ deliveries }: { deliveries: DeliveryInterface }) {
-
-    useEffect(() => {
-        if (deliveries.data.length > 0) {
-            const fetchedDeliveryDetails = async () => {
-                try {
-                    const response = await axios.get(route('delivery.details'), {
-                        timeout: 10000,
-                    });
-                
-                } catch (error) {
-                    console.log(error);
-                }
-        }
-        }
-    }, []);
-
     const deliveryColumns: ColumnDefinition<any>[] = [
         {
             header: 'Rider',
@@ -64,17 +44,27 @@ export default function Index({ deliveries }: { deliveries: DeliveryInterface })
         {
             header: 'Items details',
             cell: (row) => {
+                console.log(row);
                 return (
                     <Popover>
                         <PopoverTrigger className="rounded bg-primary p-0.5 text-secondary hover:cursor-pointer">See Delivery details</PopoverTrigger>
                         <PopoverContent className="flex max-h-30 flex-col gap-0.5 overflow-auto px-1 py-2 text-xs md:text-base">
-                            {/* <p className="w-full h-full max-w-full truncate p-2 font-semibold">Delivery description </p> */}
-                            <p>1. User Name Milk 5l.</p>
-                            <p>1. User Name Milk 5l.</p>
-                            <p>1. User Name Milk 5l.</p>
-                            <p>1. User Name Milk 5l.</p>
-                            <p>1. User Name Milk 5l.</p>
-                            <p>1. User Name Milk 5l.</p>
+                            <p className="text-center text-sm font-bold">Delivery Items</p>
+                            {row.sales.map((sale, i) => (
+                                <div className="py-1" key={sale.id}>
+                                    <p className="w-fit border-b text-sm font-bold capitalize gap-2 overflow-hidden">
+                                        {i + 1}. {sale.customer.user.name} <span className="font-thin">({sale.customer.estate} HsNo. {sale.customer.house_number})</span>
+                                    </p>
+                                    <ul>
+                                        {sale.sale_items.map((item) => (
+                                            <p className="ms-3 ps-1.5 border-0 border-s text-xs md:text-sm overflow-hidden" key={item.id}>
+                                                {item.product.name} — {item.quantity}
+                                                {item.product.unit}
+                                            </p>
+                                        ))}
+                                    </ul>
+                                </div>
+                            ))}
                         </PopoverContent>
                     </Popover>
                 );
