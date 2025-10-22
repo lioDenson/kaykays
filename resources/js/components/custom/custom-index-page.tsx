@@ -372,7 +372,7 @@ export default function CustomIndexPage<TData extends { id?: string | number } =
                         Showing {paginate?.from} to {paginate?.to} of {paginate?.total} results
                     </div>
                 )}
-                {paginate && (
+                {paginate && paginate.links.length > 3 && (
                     <div className="flex justify-center sm:justify-end">
                         <CustomPagination links={paginate.links} next_page={paginate.next_page_url} prev_page={paginate.prev_page_url} />
                     </div>

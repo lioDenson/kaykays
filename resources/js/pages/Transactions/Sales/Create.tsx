@@ -521,14 +521,12 @@ export default function Sale({
                                     )}
                                     {/* Delete Icon Implementation */}
                                     {isMobile ? (
-                                        <div className="items-cent flex w-full justify-end">
                                             <div
                                                 onClick={() => handleRemoveItem(idx)}
-                                                className="rounded-0 w-fit rounded-b-2xl bg-red-600 p-2 text-center font-bold text-red-100 active:bg-red-700"
+                                                className="rounded-0 w-fit rounded bg-red-600 py-0.5 px-2 text-center font-bold text-red-100 active:bg-red-700"
                                             >
-                                                Remove
+                                                <Trash2/>
                                             </div>
-                                        </div>
                                     ) : (
                                         // <div  className=' bg-red-600 h-12/12' ><Trash2/> </div>
                                         <div

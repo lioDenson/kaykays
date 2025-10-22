@@ -1,18 +1,13 @@
 import CustomInput from '@/components/custom/custom-input';
-import CustomSelection from '@/components/custom/custom-selection';
 import CustomSubmitButton from '@/components/custom/custom-submit-button';
-import InputError from '@/components/input-error';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
 import AppLayout from '@/layouts/app-layout';
 import AuthLayout from '@/layouts/auth-layout';
-import { RoleInterface } from '@/pages/interface/general';
 import { Head, router, usePage } from '@inertiajs/react';
-import { PieChart, Table, UserPlus } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { PieChart, Table } from 'lucide-react';
+import { useState } from 'react';
 import { route } from 'ziggy-js';
 
-export default function Create({ user, rolling }: { user?: any }) {
+export default function Create({ user }: { user?: any }) {
     const isEdit = user != null;
 
     const [data, setData] = useState({
@@ -21,19 +16,9 @@ export default function Create({ user, rolling }: { user?: any }) {
         phone: user?.phone || '',
         role_id: user?.role_id || null,
     });
-    const [selected, setSelected] = useState({
-        value: user?.roles[0]?.id || 0,
-        label: user?.roles[0]?.name || 'Role',
-    });
+   
+  
 
-    useEffect(() => {
-        setData({
-            ...data,
-            role_id: selected.value,
-        });
-    }, [selected]);
-
-    const auth = usePage().props.auth as any;
     const errors = usePage().props.errors as Record<string, string>;
     const  [isLoading, setIsLoading] = useState(false);
 

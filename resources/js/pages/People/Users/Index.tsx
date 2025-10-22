@@ -25,7 +25,7 @@ export default function Index({ users, rolling }: { users: UserProps; rolling: b
         }
     };
     const handleEdit = (user: UserInterface) => {
-        router.get(route('users.edit', user.id), user);
+        router.get(route('users.edit', user.id));
     };
 
     const handleDelete = (user: UserInterface) => {

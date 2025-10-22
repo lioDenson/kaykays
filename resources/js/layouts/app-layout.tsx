@@ -1,7 +1,6 @@
 import AppLayoutTemplate from '@/layouts/app/app-sidebar-layout';
 import { Links } from '@/pages/interface/general';
 import { type BreadcrumbItem } from '@/types';
-import { LucideIcon } from 'lucide-react';
 import { type ReactNode } from 'react';
 
 interface AppLayoutProps {
@@ -12,6 +11,6 @@ interface AppLayoutProps {
 
 export default ({ children, breadcrumbs, links, ...props }: AppLayoutProps) => (
     <AppLayoutTemplate breadcrumbs={breadcrumbs} {...props} links={links}>
-        <div className="overflow-y-auto overflow-x-hidden">{children}</div>
+        <div className="overflow-y-auto overflow-x-hidden text-xs md:text-sm lg:text-base">{children}</div>
     </AppLayoutTemplate>
 );

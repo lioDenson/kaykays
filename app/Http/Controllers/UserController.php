@@ -119,7 +119,6 @@ class UserController extends Controller
         $validated['password'] = bcrypt('password');
         $validated['account_id'] = session('account_id');
         $user = User::create($validated);
-        // $user->assignRole($validated['role_id']);
         return redirect()->route('users.index')->with('success', "$user->name created successfully.");
     }
 
@@ -136,7 +135,6 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        $user->load(['roles:id,name']);
         return Inertia::render('People/Users/Create', ['user' => $user]);
     }
 
@@ -147,7 +145,6 @@ class UserController extends Controller
     {
         $validated = $request->validated();
         $user->update($validated);
-        $user->syncRoles($validated['role_id']);
         return redirect()->route('users.index')->with('success', "$user->name updated successfully.");
     }
 
