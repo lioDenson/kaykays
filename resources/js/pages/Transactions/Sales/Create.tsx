@@ -251,7 +251,7 @@ export default function Sale({
                 <div className="flex w-full flex-col items-center">
                     {/* Customer and Delivery Section */}
                     <div className="m-2 flex w-11/12 flex-col justify-center gap-4 rounded border-2 border-black p-4 md:w-10/12">
-                        <div className="font-bold uppercase text-xs md:text-base">Customer & Delivery</div>
+                        <div className="text-xs font-bold uppercase md:text-base">Customer & Delivery</div>
 
                         <div className={`flex w-full justify-between gap-4`}>
                             <CustomSelection
@@ -293,7 +293,7 @@ export default function Sale({
                                             setDeliveryData(emptyDelivery);
                                             setDeliveryFee({ raw: '', numeric: 0 });
                                         }}
-                                        className="flex flex-col h-[100px] w-1/2 cursor-pointer items-center text-center text-xs md:text-base justify-center gap-2 overflow-hidden p-2 hover:border-2 hover:bg-primary/70 hover:shadow-2xs md:w-1/4"
+                                        className="flex h-[100px] w-1/2 cursor-pointer flex-col items-center justify-center gap-2 overflow-hidden p-2 text-center text-xs hover:border-2 hover:bg-primary/70 hover:shadow-2xs md:w-1/4 md:text-base"
                                     >
                                         <PlusCircle /> Create new delivery
                                     </Skeleton>
@@ -361,7 +361,7 @@ export default function Sale({
                                     deliveriesAvailable && (
                                         <Skeleton
                                             onClick={() => setIsNewDelivery(false)}
-                                            className="flex flex-col h-[100px] w-1/2 cursor-pointer items-center text-center text-xs md:text-base justify-center gap-2 overflow-hidden px-2 hover:border-2 hover:bg-primary/70 hover:shadow-2xs md:w-1/4"
+                                            className="flex h-[100px] w-1/2 cursor-pointer flex-col items-center justify-center gap-2 overflow-hidden px-2 text-center text-xs hover:border-2 hover:bg-primary/70 hover:shadow-2xs md:w-1/4 md:text-base"
                                         >
                                             <TagsIcon /> Attach to a delivery
                                         </Skeleton>
@@ -439,8 +439,8 @@ export default function Sale({
                         )}
                     </div>
                     {/* Sales Products Section */}
-                    <div className=" m-1 flex w-11/12 flex-col justify-center gap-4 rounded border-2 border-black p-2 m:p-4 md:w-10/12">
-                        <div className="font-bold uppercase text-xs md:text-base">Sales Products</div>
+                    <div className="m:p-4 m-1 flex w-11/12 flex-col justify-center gap-4 rounded border-2 border-black p-2 md:w-10/12">
+                        <div className="text-xs font-bold uppercase md:text-base">Sales Products</div>
                         {productList.map((item, idx) => (
                             <div key={item.index} className="flex w-full flex-col items-center justify-between">
                                 <div className="md grid w-full items-center gap-6 rounded-2xl border md:flex md:justify-around">
@@ -521,11 +521,13 @@ export default function Sale({
                                     )}
                                     {/* Delete Icon Implementation */}
                                     {isMobile ? (
-                                        <div
-                                            onClick={() => handleRemoveItem(idx)}
-                                            className="rounded-0 w-full rounded-b-2xl bg-red-600 p-2 text-center font-bold text-red-100 active:bg-red-700"
-                                        >
-                                            Remove
+                                        <div className="items-cent flex w-full justify-end">
+                                            <div
+                                                onClick={() => handleRemoveItem(idx)}
+                                                className="rounded-0 w-fit rounded-b-2xl bg-red-600 p-2 text-center font-bold text-red-100 active:bg-red-700"
+                                            >
+                                                Remove
+                                            </div>
                                         </div>
                                     ) : (
                                         // <div  className=' bg-red-600 h-12/12' ><Trash2/> </div>
@@ -550,13 +552,13 @@ export default function Sale({
                                 showLabel
                                 onClick={handleAddNewItem}
                                 disabled={btnDisabled}
-                                className="w-fit bg-primary/70 text-secondary p-2 hover:bg-primary/80"
+                                className="w-fit bg-primary/70 p-2 text-secondary hover:bg-primary/80"
                             />
                         </div>
                     </div>
                     {/* Payment Details Section */}
-                    <div className="m-2 md:mx-5 flex w-11/12 flex-col justify-center gap-4 rounded border-2 border-black p-4 md:w-10/12">
-                        <div className="font-bold uppercase text-xs md:text-base">Payment Details</div>
+                    <div className="m-2 flex w-11/12 flex-col justify-center gap-4 rounded border-2 border-black p-4 md:mx-5 md:w-10/12">
+                        <div className="text-xs font-bold uppercase md:text-base">Payment Details</div>
                         <div className="grid grid-cols-2 items-center justify-center gap-4 md:flex">
                             <CustomInput
                                 id="mpesa"
