@@ -28,7 +28,7 @@ const CustomIconButton = ({
             onClick={disabled || isLoading ? undefined : onClick}
             className={cn(
                 'flex items-center gap-2 p-1 rounded  text-sm md:text-xs font-thin',
-                disabled || isLoading ? 'cursor-not-allowed opacity-40' : 'cursor-pointer',
+                disabled || isLoading ? ' opacity-60' : 'cursor-pointer opacity-100',
                 className,
             )}
         >

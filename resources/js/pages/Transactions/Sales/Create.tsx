@@ -251,7 +251,7 @@ export default function Sale({
                 <div className="flex w-full flex-col items-center">
                     {/* Customer and Delivery Section */}
                     <div className="m-2 flex w-11/12 flex-col justify-center gap-4 rounded border-2 border-black p-4 md:w-10/12">
-                        <div className="font-bold uppercase">Customer & Delivery</div>
+                        <div className="font-bold uppercase text-xs md:text-base">Customer & Delivery</div>
 
                         <div className={`flex w-full justify-between gap-4`}>
                             <CustomSelection
@@ -440,7 +440,7 @@ export default function Sale({
                     </div>
                     {/* Sales Products Section */}
                     <div className="m-2 flex w-11/12 flex-col justify-center gap-4 rounded border-2 border-black p-4 md:w-10/12">
-                        <div className="font-bold uppercase">Sales Products</div>
+                        <div className="font-bold uppercase text-xs md:text-base">Sales Products</div>
                         {productList.map((item, idx) => (
                             <div key={item.index} className="flex w-full flex-col items-center justify-between">
                                 <div className="md grid w-full items-center gap-6 rounded-2xl border md:flex md:justify-around">
@@ -523,15 +523,15 @@ export default function Sale({
                                     {isMobile ? (
                                         <div
                                             onClick={() => handleRemoveItem(idx)}
-                                            className="rounded-0 w-full rounded-b-2xl bg-red-900 p-2 text-center font-bold text-red-100 active:bg-red-700"
+                                            className="rounded-0 w-full rounded-b-2xl bg-red-600 p-2 text-center font-bold text-red-100 active:bg-red-700"
                                         >
                                             Remove
                                         </div>
                                     ) : (
-                                        // <div  className=' bg-red-900 h-12/12' ><Trash2/> </div>
+                                        // <div  className=' bg-red-600 h-12/12' ><Trash2/> </div>
                                         <div
                                             onClick={() => handleRemoveItem(idx)}
-                                            className="rounded-s-0 flex h-22 w-8 items-center justify-center rounded-e-2xl bg-red-900 hover:cursor-pointer hover:bg-red-700"
+                                            className="rounded-s-0 flex h-22 w-8 items-center justify-center rounded-e-2xl bg-red-600 hover:cursor-pointer hover:bg-red-700"
                                         >
                                             <Trash2 className="h-6 w-5" />
                                         </div>
@@ -550,13 +550,13 @@ export default function Sale({
                                 showLabel
                                 onClick={handleAddNewItem}
                                 disabled={btnDisabled}
-                                className="w-[150px] bg-primary/90 p-2 hover:bg-primary/30"
+                                className="w-[120px] bg-primary/70 text-secondary p-2 hover:bg-primary/80"
                             />
                         </div>
                     </div>
                     {/* Payment Details Section */}
-                    <div className="m-2 mx-5 flex w-11/12 flex-col justify-center gap-4 rounded border-2 border-black p-4 md:w-10/12">
-                        <div className="font-bold uppercase">Payment Details</div>
+                    <div className="m-2 md:mx-5 flex w-11/12 flex-col justify-center gap-4 rounded border-2 border-black p-4 md:w-10/12">
+                        <div className="font-bold uppercase text-xs md:text-base">Payment Details</div>
                         <div className="grid grid-cols-2 items-center justify-center gap-4 md:flex">
                             <CustomInput
                                 id="mpesa"

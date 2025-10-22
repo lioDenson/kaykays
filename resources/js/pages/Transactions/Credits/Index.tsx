@@ -1,5 +1,6 @@
 import CustomIndexPage from '@/components/custom/custom-index-page';
 import { Badge } from '@/components/ui/badge';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import AppLayout from '@/layouts/app-layout';
 import { ColumnDefinition, Pagination } from '@/types/app-types';
 import { Head } from '@inertiajs/react';
@@ -27,24 +28,58 @@ interface CreditInterface extends Pagination {
     }[];
 }
 export default function index({ credits }: { credits: CreditInterface }) {
+    const saleDetails = (row) => {
+        return (
+            <Popover>
+                <PopoverTrigger className="hover:cursor-pointer">
+                    <Badge>See Sale Details</Badge>
+                </PopoverTrigger>
+                <PopoverContent className="overflow-auto">
+                    <p className="font-bol text-center text-xs md:text-sm">Sale Details</p>
+                    {row.sale.sale_items.map((item, i) => (
+                        <p className="ms-1.5 flex gap-2 px-1 pt-1 text-xs md:text-sm">
+                            <span>
+                                {i + 1}. {item.product.name}
+                            </span>{' '}
+                            <span>
+                                {item.quantity}
+                                {item.product.unit}
+                            </span>{' '}
+                            <span>{item.total}</span>
+                        </p>
+                    ))}
+                    <p className="ms-1.5 px-1 pt-1 text-end text-xs md:text-sm">Delivery: {row.sale.delivery_fee} </p>
+                    <div className="mt-2 grid grid-cols-2 items-center justify-between gap-2 border-t-2 py-2 text-xs font-semibold md:grid-cols-3 md:text-xs">
+                        <p className="text-blue-500">Total: {Number(row.sale.total) + Number(row.sale.delivery_fee)}</p>
+                        <p className="text-green-400">Paid: {row.sale.paid}</p>
+                        <p className="text-red-500">Balance: {row.sale.balance}</p>
+                    </div>
+                </PopoverContent>
+            </Popover>
+        );
+    };
+
     const saleColumns: ColumnDefinition<any>[] = [
         {
-            header: 'Invoice #',
-            id: 'sale.invoice_number',
+            header: 'Sale',
+            id: 'sale',
             sortable: true,
             filterable: true,
-            accessorFn: (row) => row.sale.invoice_number
+            accessorFn: (row) => row.sale.invoice_number,
+            cell: (row) => {
+                return saleDetails(row);
+            }
         },
         {
             header: 'Customer',
-            id: 'customer.user.name',
+            id: 'customer',
             sortable: true,
             filterable: true,
             accessorFn: (row) => row.customer?.user?.name ?? 'Walk in'
         },
         {
             header: 'Cost (Ksh)',
-            id: 'sale.amount',
+            id: 'amount',
             accessorFn: (row) => {
                 // calculate the cost  of the sale (add cost of item and the delivery fee).
                 return Number(row.sale.total) + Number(row.sale.delivery_fee);
@@ -54,14 +89,15 @@ export default function index({ credits }: { credits: CreditInterface }) {
 
         {
             header: 'Paid Amt. (Ksh)',
-            id: 'sale.paid',
+            id: 'paid',
             accessorFn: (row) => row.sale.paid,
             filterable: true
         },
         {
             header: 'Balance (Ksh)',
-            id: 'sale.balance',
-            accessorFn: (row) => row.sale.balance
+            id: 'balance',
+            accessorFn: (row) => row.sale.balance,
+            filterable: true
         },
         {
             header: 'Payment Status',
