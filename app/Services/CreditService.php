@@ -52,7 +52,12 @@ class CreditService
         }
     }
 
-    public function clearCredit(){
-        
+    public static function  clearCredit($id){
+    try{
+            Credit::findOrFail($id)->delete();
+            return true;
+        } catch(Exception $e){
+            throw new Exception($e->getMessage());
+        }        
     }
 }

@@ -27,7 +27,7 @@ class CreditController extends Controller
         $validated = $request->validated();
         try {
             CreditService::registerCreditPayment(mpesa: $validated['mpesa'], cash: $validated['cash'], saleId: $validated['sale_id'], dueBalance: $validated['due_balance']);
-
+            CreditService::clearCredit($validated['credit_id']);
             return redirect()->back()->with('success', 'Payment recorded successfully.');
         } catch (Exception $e) {
             return back()->with('error', "Failed to record the payment");

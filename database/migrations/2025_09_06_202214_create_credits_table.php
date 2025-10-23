@@ -22,6 +22,8 @@ return new class extends Migration
             $table->date('date');
             $table->string('description');
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->softDeletes();
+
         });
     }
 
