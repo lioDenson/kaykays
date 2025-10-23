@@ -36,7 +36,6 @@ const CustomIconButton = ({
 
 const color = colorMap[variant] ?? '';
 
-    console.log(variant);
     return (
         <div
             onClick={disabled || isLoading ? undefined : onClick}

@@ -12,17 +12,15 @@ interface CustomToasterProps {
 
 const CustomToaster = ({ flash }: CustomToasterProps) => {
     useEffect(() => {
-        Object.entries(flash || {}).forEach(([ type, message ]) => {
+        Object.entries(flash || {}).forEach(([type, message]) => {
             if (!message) return;
-
-            // skip restore and forceDelete completely
             if (type === 'restore' || type === 'forceDelete') return;
 
             (toast as any)[type]?.(type, { description: message });
         });
     }, [flash]);
 
-    return <Toaster richColors position="top-center" toastOptions={{ duration: 6000, className: 'toaster' }} />;
+    return <Toaster richColors position="top-center" toastOptions={{ duration: 3000, className: 'toaster' }} closeButton />;
 };
 
 export default CustomToaster;

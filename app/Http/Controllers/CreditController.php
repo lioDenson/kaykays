@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\CreditRequest;
 use Illuminate\Http\Request;
 use App\Models\Credit;
 use App\Models\User;
 use Inertia\Inertia;
+use App\Services\CreditService;
+use Exception;
 
 class CreditController extends Controller
 {
@@ -15,9 +18,19 @@ class CreditController extends Controller
         return Inertia::render('Transactions/Credits/Index', ['credits' => $credits]);
     }
 
-    public function pay(Credit $credit)
-    {
-        return Inertia::render('Transactions/Credits/Pay', ['credit' => $credit]);
-    }
 
+
+    public function pay(CreditRequest $request)
+    {
+
+
+        $validated = $request->validated();
+        try {
+            CreditService::registerCreditPayment(mpesa: $validated['mpesa'], cash: $validated['cash'], saleId: $validated['sale_id'], dueBalance: $validated['due_balance']);
+
+            return redirect()->back()->with('success', 'Payment recorded successfully.');
+        } catch (Exception $e) {
+            return back()->with('error', "Failed to record the payment");
+        }
+    }
 }
