@@ -14,7 +14,7 @@ import AppLayout from '@/layouts/app-layout';
 import { ProductInterface, RiderInterface } from '@/pages/interface/general';
 import { Head, router, usePage } from '@inertiajs/react';
 import { Plus, PlusCircle, TagsIcon, Trash2 } from 'lucide-react';
-import { useEffect, useMemo, useState } from 'react';
+import { useCallback, useEffect, useMemo, useState } from 'react';
 import { route } from 'ziggy-js';
 import { DeliveryDataInterface, DeliveryInterface, customerInterface, saleItem } from './sale-interfaces';
 
@@ -147,7 +147,7 @@ export default function Sale({
         return Number(total) + Number(deliveryFee?.numeric ?? 0);
     }, [total, deliveryFee.numeric]);
 
-    const handlePaymentChange = (type: 'mpesa' | 'cash', amount: number) => {
+    const handlePaymentChange = useCallback((type: 'mpesa' | 'cash', amount: number) => {
         let newMpesa = mpesa;
         let newCash = cash;
 
@@ -173,7 +173,7 @@ export default function Sale({
         const totalPaid = newMpesa + newCash;
         setTotalPaid(totalPaid);
         setBalance((grandTotal - totalPaid).toFixed(0));
-    };
+    },[cash, mpesa, grandTotal]);
 
     useEffect(() => {
         // Recalculate balance whenever payment or grandTotal changes

@@ -4,10 +4,12 @@ import CustomInput from '@/components/custom/custom-input';
 import { Badge } from '@/components/ui/badge';
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip';
+import { sanitizeOnBlur, sanitizeOnChange } from '@/helpers/numberSanitizer';
 import AppLayout from '@/layouts/app-layout';
 import { ColumnDefinition, Pagination } from '@/types/app-types';
 import { Head } from '@inertiajs/react';
-import { ClipboardCheck, EuroIcon, Ticket, X } from 'lucide-react';
+import { CircleCheckBig, ClipboardCheck, EuroIcon, X } from 'lucide-react';
+import { useCallback, useState } from 'react';
 
 interface CreditInterface extends Pagination {
     data: {
@@ -31,7 +33,7 @@ interface CreditInterface extends Pagination {
         };
     }[];
 }
-export default function index({ credits }: { credits: CreditInterface }) {
+export default function Index({ credits }: { credits: CreditInterface }) {
     const saleDetails = (row) => {
         return (
             <Popover>
@@ -63,7 +65,37 @@ export default function index({ credits }: { credits: CreditInterface }) {
         );
     };
 
-    const handlePayment = (row) => {
+    function PaymentCell({ row }) {
+        const [mpesa, setMpesa] = useState(0);
+        const [cash, setCash] = useState(0);
+        const balance = row.sale.balance;
+        const [paymentBalance, setPaymentBalance] = useState(balance);
+        const paymentChange = useCallback(
+            (type: 'mpesa' | 'cash', amount: number) => {
+                let newMpesa = mpesa;
+                let newCash = cash;
+                if (type === 'mpesa') {
+                    newMpesa = amount;
+                    setMpesa(amount);
+                } else {
+                    newCash = amount;
+                    setCash(amount);
+                }
+                // Prevent overpaying
+                if (newMpesa + newCash > balance) {
+                    if (type === 'mpesa') {
+                        newMpesa = balance - newCash;
+                        setMpesa(Math.max(0, newMpesa));
+                    } else {
+                        newCash = balance - newMpesa;
+                        setCash(Math.max(0, newCash));
+                    }
+                }
+                setPaymentBalance(balance - newMpesa - newCash);
+            },
+            [balance, cash, mpesa]
+        );
+
         return (
             <Popover>
                 <PopoverTrigger>
@@ -71,45 +103,76 @@ export default function index({ credits }: { credits: CreditInterface }) {
                         <CustomIconButton icon={EuroIcon} variant="info" label="Make Payment" showLabel />
                     </div>
                 </PopoverTrigger>
-                <PopoverContent className="overflow-auto border-blue-400 px-1 py-0.5 text-xs md:text-sm">
+                <PopoverContent className="overflow-auto border-blue-400 p-2 text-xs md:text-sm">
                     <p className="text-center font-bold">Make Payment</p>
                     <div className="flex flex-col gap-2 py-2">
                         <p className="font-bold">
                             Bill Balance: <span className="text-red-500">{row.balance}</span>
                         </p>
                         <div className="flex gap-4 px-2">
-                            <CustomInput name="mpesa" label="Mpesa" inputClassName="bg-green-600 text-black" className="font-bold text-green-400" />
+                            <CustomInput
+                                name="mpesa"
+                                label="Mpesa (Ksh)"
+                                inputClassName="bg-green-600 text-white"
+                                className="font-bold text-green-400"
+                                value={!isNaN(mpesa) && mpesa !== 0 ? mpesa : ''}
+                                onChange={(e) => {
+                                    const { numeric } = sanitizeOnChange(e.target.value);
+                                    setMpesa(numeric);
+                                    paymentChange('mpesa', numeric);
+                                }}
+                                onBlur={(e) => {
+                                    const { numeric } = sanitizeOnBlur(e.target.value);
+                                    setMpesa(numeric);
+                                }}
+                            />
                             <CustomInput
                                 name="cash"
-                                label="Cash"
-                                inputClassName="bg-amber-500/60 text-black text-end "
+                                label="Cash (Ksh)"
+                                inputClassName="bg-amber-500/60 text-black text-end focus:outline-none focus:border-0"
                                 className="pe-0.5 text-end font-bold text-amber-600"
+                                value={!isNaN(cash) && cash !== 0 ? cash : ''}
+                                onChange={(e) => {
+                                    const { numeric } = sanitizeOnChange(e.target.value);
+                                    setCash(numeric);
+                                    paymentChange('cash', numeric);
+                                }}
+                                onBlur={(e) => {
+                                    const { numeric } = sanitizeOnBlur(e.target.value);
+                                    setCash(numeric);
+                                }}
                             />
                         </div>
                         <div className="flex w-full text-end">
-                            <p className="w-full text-end font-bold">
-                                Balance <span className="text-amber-500">{row.balance}</span>
-                            </p>
+                            {paymentBalance != row.sale.balance && (
+                                <p className="w-full text-end font-bold">
+                                    {paymentBalance != 0 ? (
+                                        <span className="text-red-500">Balance: {paymentBalance}</span>
+                                    ) : (
+                                        <span className="text-green-600">Cleared</span>
+                                    )}
+                                </p>
+                            )}
                         </div>
-                        <div className="mt-2 flex w-full items-center justify-end  gap-5 pr-4">
+                        <div className="mt-2 flex w-full items-center justify-start gap-2 pl-2">
                             <Tooltip>
                                 <TooltipTrigger>
-                                    <CustomIconButton variant="dark" icon={X} />
+                                    <CustomIconButton variant="dark" icon={X} className="p-2" />
                                 </TooltipTrigger>
-                                <TooltipContent className='bg-red-200'>Cancel Payment</TooltipContent>
+                                <TooltipContent className="bg-red-400">Cancel</TooltipContent>
                             </Tooltip>
                             <Tooltip>
                                 <TooltipTrigger>
-                                    <CustomIconButton variant="success" icon={ClipboardCheck} />
+                                    <CustomIconButton variant="success" icon={CircleCheckBig} className="p-2" />
                                 </TooltipTrigger>
-                                <TooltipContent>Confirm Payment</TooltipContent>
+                                <TooltipContent>Confirm</TooltipContent>
                             </Tooltip>
                         </div>
                     </div>
                 </PopoverContent>
             </Popover>
         );
-    };
+    }
 
     const saleColumns: ColumnDefinition<any>[] = [
         {
@@ -166,7 +229,7 @@ export default function index({ credits }: { credits: CreditInterface }) {
             header: 'Action',
             accessorKey: 'actions',
             cell: (row) => {
-                return handlePayment(row);
+                return <PaymentCell row={row} />;
             }
         }
     ];
