@@ -256,7 +256,7 @@ function SidebarTrigger({
 }: React.ComponentProps<typeof Button>) {
   const { toggleSidebar } = useSidebar()
   const [open, setOpen] = React.useState(usePage().props.sidebarOpen);
-
+  const isMobile = useIsMobile();
   return (
     <Button
       data-sidebar="trigger"
@@ -274,7 +274,8 @@ function SidebarTrigger({
     >
 
       {
-        open? <X className="h-7 w-7" /> : <List className="h-7 w-7 " />
+        !isMobile ?
+          open? <X className="h-7 w-7" /> : <List className="h-7 w-7 " /> : <List className="h-7 w-7 " /> 
       }
       <span className="sr-only">Toggle Sidebar</span>
     </Button>
