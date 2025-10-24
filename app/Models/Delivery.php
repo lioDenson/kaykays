@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Enums\Enum\DeliveryEnums;
 use Illuminate\Database\Eloquent\Attributes\Scope;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -17,6 +18,11 @@ class Delivery extends Model
         'account_id',
         'description',
         'status',
+    ];
+
+    protected $casts = [
+        'status' => DeliveryEnums::class,
+        'date' => 'date',
     ];
 
     public function rider()
@@ -48,7 +54,7 @@ class Delivery extends Model
             'id',
         );
     }
-    
+
 
     public function user()
     {

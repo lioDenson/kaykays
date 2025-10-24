@@ -19,7 +19,13 @@ return new class extends Migration
             $table->integer('total_fee');
             $table->foreignId('account_id')->constrained();
             $table->string('description');
-            $table->enum('status', ['pending', 'in_transit', 'delivered', 'canceled']);
+            $table->enum('status', [
+                'pending',
+                'in_transit',
+                'delivered',
+                'cancelled',
+                'hold'
+            ]);
             $table->softDeletes();
             $table->index(['rider_id', 'account_id', 'date']);
         });
