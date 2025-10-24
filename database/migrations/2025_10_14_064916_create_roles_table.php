@@ -26,6 +26,12 @@ return new class extends Migration
             'manage.products',
             'manage.suppliers',
             'manage.riders',
+            'manage.credits',
+            'manage.deliveries',
+            'manage.schedules',
+            'manage.settings',
+            'manage.payments',
+            'manage.reports',
             'make.sales',
             'view.sales',
         ];
@@ -49,12 +55,18 @@ return new class extends Migration
             'manage.products',
             'manage.suppliers',
             'manage.riders',
+            'manage.credits',
+            'manage.payments',
+            'manage.reports',
+
         ]);
 
         $cashier->givePermissionTo([
             'make.sales',
             'view.sales',
             'manage.stocks',
+            'manage.payments',
+            'manage.credits'
         ]);
 
         $customer->givePermissionTo([

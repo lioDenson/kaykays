@@ -20,7 +20,7 @@ const CustomToaster = ({ flash }: CustomToasterProps) => {
         });
     }, [flash]);
 
-    return <Toaster richColors position="top-center" toastOptions={{ duration: 3000, className: 'toaster' }} closeButton />;
+    return <Toaster richColors position="top-center" toastOptions={{ duration: 9000, className: 'toaster' }} closeButton />;
 };
 
 export default CustomToaster;

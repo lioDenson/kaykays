@@ -33,7 +33,7 @@ class Sale extends Model
     protected function paid(): Attribute
     {
         return Attribute::make(
-            get: fn() => $this->total + $this->delivery_fee - $this->balance,
+            get: fn() => $this->total + $this->delivery_fee - (float) $this->balance,
         );
     }
     public function account()

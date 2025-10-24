@@ -36,15 +36,15 @@ export function AppSidebarHeader({ breadcrumbs = [] }: { breadcrumbs?: Breadcrum
             <div className="flex w-full flex-col-reverse justify-center gap-3 md:gap-2">
                 {/* Breadcrumb & sidebar trigger */}
                 <div className="flex items-center gap-3 text-xs font-medium md:text-sm">
-                    <SidebarTrigger className="-ml-2 h-6 w-6 transition-transform duration-300 hover:scale-110 md:-ml-4" />
+                    <SidebarTrigger className="-ml-2 h-6 w-6 transition-transform duration-300 hover:scale-120 md:-ml-4 rounded-0" />
                     <Breadcrumbs breadcrumbs={breadcrumbs} />
                 </div>
 
                 <div className="mt-2 flex w-full items-center justify-between gap-3 px-1 md:mt-3 md:justify-end md:gap-5 md:px-2">
                     <CustomAvatarContainer className="me-1 flex gap-2 border-0 md:me-3">
-                        <CustomIconAvatar className="bg-green-500 transition-transform duration-300 hover:scale-110" icon={Bell} badge={3} />
+                        <CustomIconAvatar className="bg-green-500 transition-transform duration-300 hover:scale-140" icon={Bell} badge={3} />
                         <CustomIconAvatar
-                            className="bg-blue-500 transition-transform duration-300 hover:scale-110"
+                            className="bg-blue-500 transition-transform duration-300 hover:scale-140"
                             icon={MessageCircleMoreIcon}
                             badge={1}
                         />

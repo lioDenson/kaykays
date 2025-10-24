@@ -10,6 +10,7 @@ use App\Models\Credit;
 use Illuminate\Support\Facades\Auth;
 use App\Models\Payment;
 use Illuminate\Support\Facades\DB;
+use App\Models\Sale;
 
 class CreditService
 {
@@ -46,18 +47,38 @@ class CreditService
                     $dueBalance -= $cash;
                     $payment->register(PaymentMethod::CASH, $cash, $saleId, $dueBalance, description: 'Credit payment by cash.');
                 }
+
+                $sale = Sale::findOrFail($saleId);
+                $status = $sale->status;
+                $status = match ($dueBalance) {
+                    $dueBalance > 0 => 'partial',
+                    $dueBalance == 0 => 'paid',
+                    default => 'unknown',
+                };
+                $sale->update(['status' => $status, 'balance' => $dueBalance]);
             }, 2);
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
         }
     }
 
-    public static function  clearCredit($id){
-    try{
-            Credit::findOrFail($id)->delete();
-            return true;
-        } catch(Exception $e){
-            throw new Exception($e->getMessage());
-        }        
+    public static function  updateCredit($id)
+    {
+        DB::transaction(function () use ($id) {
+            try {
+
+                $credit =  Credit::with(['sale:id,balance'])->findOrFail($id);
+                $balance = $credit->sale->balance;
+
+                $status =  $balance == 0 ? 'paid' : 'pending';
+                $credit->update(['status' => $status, 'balance' => $balance]);
+
+                $balance == 0 && $credit->delete();
+                return true;
+            } catch (Exception $e) {
+
+                throw new Exception($e->getMessage());
+            }
+        }, 2);
     }
 }
