@@ -39,7 +39,6 @@ return new class extends Migration
         foreach ($permissions as $permission) {
             Permission::firstOrCreate(['name' => $permission]);
         }
-
         $superAdmin = Role::firstOrCreate(['name' => 'super-admin']);
         $admin = Role::firstOrCreate(['name' => 'admin']);
         $cashier = Role::firstOrCreate(['name' => 'cashier']);

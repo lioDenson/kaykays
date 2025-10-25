@@ -27,7 +27,8 @@ class Sale extends Model
     ];
 
     protected $appends = [
-        'paid'
+        'paid',
+        'total_cost'
     ];
 
     protected function paid(): Attribute
@@ -36,6 +37,14 @@ class Sale extends Model
             get: fn() => $this->total + $this->delivery_fee - (float) $this->balance,
         );
     }
+
+    protected function total_cost(): Attribute
+    {
+        return Attribute::make(
+            get: fn() => (float) $this->total + (float) $this->delivery_fee,
+        );
+    }
+
     public function account()
     {
         return $this->belongsTo(Account::class);

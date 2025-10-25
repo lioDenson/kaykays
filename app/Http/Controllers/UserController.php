@@ -127,7 +127,9 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        dd($user->load(['accounts']));
+        // $user->load(['roles']);
+        return Inertia::render('People/Users/Show', ['user' => $user]);
+
     }
 
     /**

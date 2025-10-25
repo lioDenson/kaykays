@@ -34,7 +34,7 @@ export default function Index({ users, rolling }: { users: UserProps; rolling: b
 
     const handleInfo = (user: UserInterface) => {
         router.get(route('users.show', user.id), user);
-        console.log(user);
+      
     };
 
     const columns: ColumnDefinition<any>[] = [

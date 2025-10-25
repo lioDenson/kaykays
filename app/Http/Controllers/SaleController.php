@@ -53,7 +53,7 @@ class SaleController extends Controller
 
         $riders = Rider::with(['user:id,name'])
             ->whereDoesntHave('deliveries', function ($query) {
-                $query->where('status', 'pending');
+                $query->where('status', 'pending')->where('status', 'in_transit');
             })
             ->get(['id', 'user_id']);
         return Inertia::render('Transactions/Sales/Create', ['customers' => $customers, 'products' => $products, 'deliveries' => $deliveries, 'riders' => $riders]);

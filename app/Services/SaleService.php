@@ -151,4 +151,8 @@ class SaleService
             throw new Exception($e->getMessage());
         }
     }
+
+    public static function updateSale () {
+        
+    }
 }

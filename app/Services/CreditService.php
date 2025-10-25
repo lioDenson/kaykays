@@ -50,11 +50,18 @@ class CreditService
 
                 $sale = Sale::findOrFail($saleId);
                 $status = $sale->status;
-                $status = match ($dueBalance) {
-                    $dueBalance > 0 => 'partial',
-                    $dueBalance == 0 => 'paid',
-                    default => 'unknown',
-                };
+                $totalCost = $sale->total_cost;
+
+                if ($dueBalance == 0) {
+                    $status = 'paid';
+                } elseif ($dueBalance > 0 && $dueBalance < $totalCost) {
+                    $status = 'partial';
+                } elseif ($dueBalance  == $totalCost) {
+                    $status = 'unpaid';
+                } else {
+                    $status = 'unknown';
+                }
+                
                 $sale->update(['status' => $status, 'balance' => $dueBalance]);
             }, 2);
         } catch (Exception $e) {
