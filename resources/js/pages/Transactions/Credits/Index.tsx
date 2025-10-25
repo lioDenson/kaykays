@@ -13,7 +13,6 @@ import { ColumnDefinition, Pagination } from '@/types/app-types';
 import { Head, router, usePage } from '@inertiajs/react';
 import { CircleCheckBig, EuroIcon, X } from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
-import { isSet } from 'util/types';
 import { route } from 'ziggy-js';
 
 interface CreditInterface extends Pagination {

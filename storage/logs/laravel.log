@@ -26045,3 +26045,167 @@ Did you mean one of these?
 #4 /home/dennis/Projects/kaykays/artisan(16): Illuminate\\Foundation\\Application->handleCommand()
 #5 {main}
 "} 
+[2025-10-25 10:23:11] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Log/LogManager.php:222)
+[stacktrace]
+#0 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(138): Illuminate\\Log\\LogManager->resolve()
+#1 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(125): Illuminate\\Log\\LogManager->get()
+#2 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(703): Illuminate\\Log\\LogManager->driver()
+#3 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(403): Illuminate\\Log\\LogManager->error()
+#4 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(366): Illuminate\\Foundation\\Exceptions\\Handler->reportThrowable()
+#5 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(562): Illuminate\\Foundation\\Exceptions\\Handler->report()
+#6 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(146): Illuminate\\Foundation\\Http\\Kernel->reportException()
+#7 /home/dennis/.vscode/extensions/tiansin.vscode-laravel-assist-0.1.7/assets/cache/LyZqumow(54): Illuminate\\Foundation\\Http\\Kernel->handle()
+#8 {main}
+"} 
+[2025-10-25 10:23:11] laravel.ERROR: array_merge(): Argument #2 must be of type array, int given {"exception":"[object] (TypeError(code: 0): array_merge(): Argument #2 must be of type array, int given at /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php:102)
+[stacktrace]
+#0 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(102): array_merge()
+#1 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(80): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFile()
+#2 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(39): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFiles()
+#3 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->bootstrap()
+#4 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(186): Illuminate\\Foundation\\Application->bootstrapWith()
+#5 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(170): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#6 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#7 /home/dennis/.vscode/extensions/tiansin.vscode-laravel-assist-0.1.7/assets/cache/LyZqumow(54): Illuminate\\Foundation\\Http\\Kernel->handle()
+#8 {main}
+"} 
+[2025-10-25 10:23:27] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Log/LogManager.php:222)
+[stacktrace]
+#0 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(138): Illuminate\\Log\\LogManager->resolve()
+#1 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(125): Illuminate\\Log\\LogManager->get()
+#2 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(703): Illuminate\\Log\\LogManager->driver()
+#3 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(403): Illuminate\\Log\\LogManager->error()
+#4 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(366): Illuminate\\Foundation\\Exceptions\\Handler->reportThrowable()
+#5 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(562): Illuminate\\Foundation\\Exceptions\\Handler->report()
+#6 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(146): Illuminate\\Foundation\\Http\\Kernel->reportException()
+#7 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1220): Illuminate\\Foundation\\Http\\Kernel->handle()
+#8 /home/dennis/Projects/kaykays/public/index.php(20): Illuminate\\Foundation\\Application->handleRequest()
+#9 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(23): require_once('...')
+#10 {main}
+"} 
+[2025-10-25 10:23:27] laravel.ERROR: array_merge(): Argument #2 must be of type array, int given {"exception":"[object] (TypeError(code: 0): array_merge(): Argument #2 must be of type array, int given at /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php:102)
+[stacktrace]
+#0 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(102): array_merge()
+#1 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(80): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFile()
+#2 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(39): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFiles()
+#3 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->bootstrap()
+#4 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(186): Illuminate\\Foundation\\Application->bootstrapWith()
+#5 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(170): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#6 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#7 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1220): Illuminate\\Foundation\\Http\\Kernel->handle()
+#8 /home/dennis/Projects/kaykays/public/index.php(20): Illuminate\\Foundation\\Application->handleRequest()
+#9 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(23): require_once('...')
+#10 {main}
+"} 
+[2025-10-25 10:23:37] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Log/LogManager.php:222)
+[stacktrace]
+#0 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(138): Illuminate\\Log\\LogManager->resolve()
+#1 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(125): Illuminate\\Log\\LogManager->get()
+#2 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(703): Illuminate\\Log\\LogManager->driver()
+#3 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(403): Illuminate\\Log\\LogManager->error()
+#4 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(366): Illuminate\\Foundation\\Exceptions\\Handler->reportThrowable()
+#5 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(562): Illuminate\\Foundation\\Exceptions\\Handler->report()
+#6 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(146): Illuminate\\Foundation\\Http\\Kernel->reportException()
+#7 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1220): Illuminate\\Foundation\\Http\\Kernel->handle()
+#8 /home/dennis/Projects/kaykays/public/index.php(20): Illuminate\\Foundation\\Application->handleRequest()
+#9 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(23): require_once('...')
+#10 {main}
+"} 
+[2025-10-25 10:23:37] laravel.ERROR: array_merge(): Argument #2 must be of type array, int given {"exception":"[object] (TypeError(code: 0): array_merge(): Argument #2 must be of type array, int given at /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php:102)
+[stacktrace]
+#0 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(102): array_merge()
+#1 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(80): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFile()
+#2 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(39): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFiles()
+#3 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->bootstrap()
+#4 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(186): Illuminate\\Foundation\\Application->bootstrapWith()
+#5 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(170): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#6 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#7 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1220): Illuminate\\Foundation\\Http\\Kernel->handle()
+#8 /home/dennis/Projects/kaykays/public/index.php(20): Illuminate\\Foundation\\Application->handleRequest()
+#9 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(23): require_once('...')
+#10 {main}
+"} 
+[2025-10-25 10:23:39] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Log/LogManager.php:222)
+[stacktrace]
+#0 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(138): Illuminate\\Log\\LogManager->resolve()
+#1 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(125): Illuminate\\Log\\LogManager->get()
+#2 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(703): Illuminate\\Log\\LogManager->driver()
+#3 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(403): Illuminate\\Log\\LogManager->error()
+#4 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(366): Illuminate\\Foundation\\Exceptions\\Handler->reportThrowable()
+#5 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(562): Illuminate\\Foundation\\Exceptions\\Handler->report()
+#6 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(146): Illuminate\\Foundation\\Http\\Kernel->reportException()
+#7 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1220): Illuminate\\Foundation\\Http\\Kernel->handle()
+#8 /home/dennis/Projects/kaykays/public/index.php(20): Illuminate\\Foundation\\Application->handleRequest()
+#9 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(23): require_once('...')
+#10 {main}
+"} 
+[2025-10-25 10:23:39] laravel.ERROR: array_merge(): Argument #2 must be of type array, int given {"exception":"[object] (TypeError(code: 0): array_merge(): Argument #2 must be of type array, int given at /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php:102)
+[stacktrace]
+#0 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(102): array_merge()
+#1 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(80): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFile()
+#2 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(39): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFiles()
+#3 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->bootstrap()
+#4 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(186): Illuminate\\Foundation\\Application->bootstrapWith()
+#5 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(170): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#6 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#7 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1220): Illuminate\\Foundation\\Http\\Kernel->handle()
+#8 /home/dennis/Projects/kaykays/public/index.php(20): Illuminate\\Foundation\\Application->handleRequest()
+#9 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(23): require_once('...')
+#10 {main}
+"} 
+[2025-10-25 10:23:42] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Log/LogManager.php:222)
+[stacktrace]
+#0 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(138): Illuminate\\Log\\LogManager->resolve()
+#1 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(125): Illuminate\\Log\\LogManager->get()
+#2 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(703): Illuminate\\Log\\LogManager->driver()
+#3 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(403): Illuminate\\Log\\LogManager->error()
+#4 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(366): Illuminate\\Foundation\\Exceptions\\Handler->reportThrowable()
+#5 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(562): Illuminate\\Foundation\\Exceptions\\Handler->report()
+#6 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(146): Illuminate\\Foundation\\Http\\Kernel->reportException()
+#7 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1220): Illuminate\\Foundation\\Http\\Kernel->handle()
+#8 /home/dennis/Projects/kaykays/public/index.php(20): Illuminate\\Foundation\\Application->handleRequest()
+#9 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(23): require_once('...')
+#10 {main}
+"} 
+[2025-10-25 10:23:42] laravel.ERROR: array_merge(): Argument #2 must be of type array, int given {"exception":"[object] (TypeError(code: 0): array_merge(): Argument #2 must be of type array, int given at /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php:102)
+[stacktrace]
+#0 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(102): array_merge()
+#1 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(80): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFile()
+#2 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(39): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFiles()
+#3 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->bootstrap()
+#4 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(186): Illuminate\\Foundation\\Application->bootstrapWith()
+#5 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(170): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#6 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#7 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1220): Illuminate\\Foundation\\Http\\Kernel->handle()
+#8 /home/dennis/Projects/kaykays/public/index.php(20): Illuminate\\Foundation\\Application->handleRequest()
+#9 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(23): require_once('...')
+#10 {main}
+"} 
+[2025-10-25 10:23:48] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Log/LogManager.php:222)
+[stacktrace]
+#0 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(138): Illuminate\\Log\\LogManager->resolve()
+#1 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(125): Illuminate\\Log\\LogManager->get()
+#2 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(703): Illuminate\\Log\\LogManager->driver()
+#3 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(403): Illuminate\\Log\\LogManager->error()
+#4 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(366): Illuminate\\Foundation\\Exceptions\\Handler->reportThrowable()
+#5 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(562): Illuminate\\Foundation\\Exceptions\\Handler->report()
+#6 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(146): Illuminate\\Foundation\\Http\\Kernel->reportException()
+#7 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1220): Illuminate\\Foundation\\Http\\Kernel->handle()
+#8 /home/dennis/Projects/kaykays/public/index.php(20): Illuminate\\Foundation\\Application->handleRequest()
+#9 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(23): require_once('...')
+#10 {main}
+"} 
+[2025-10-25 10:23:48] laravel.ERROR: array_merge(): Argument #2 must be of type array, int given {"exception":"[object] (TypeError(code: 0): array_merge(): Argument #2 must be of type array, int given at /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php:102)
+[stacktrace]
+#0 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(102): array_merge()
+#1 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(80): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFile()
+#2 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(39): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->loadConfigurationFiles()
+#3 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate\\Foundation\\Bootstrap\\LoadConfiguration->bootstrap()
+#4 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(186): Illuminate\\Foundation\\Application->bootstrapWith()
+#5 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(170): Illuminate\\Foundation\\Http\\Kernel->bootstrap()
+#6 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Http/Kernel.php(144): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter()
+#7 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1220): Illuminate\\Foundation\\Http\\Kernel->handle()
+#8 /home/dennis/Projects/kaykays/public/index.php(20): Illuminate\\Foundation\\Application->handleRequest()
+#9 /home/dennis/Projects/kaykays/vendor/laravel/framework/src/Illuminate/Foundation/resources/server.php(23): require_once('...')
+#10 {main}
+"} 

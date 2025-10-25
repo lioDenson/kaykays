@@ -62,9 +62,10 @@ Route::middleware('installed')->group(function () {
         Route::resource('batches', BatchController::class);
         Route::patch('/batches/{id}/restore', [BatchController::class, 'restore'])->name('batches.restore');
         Route::delete('/batches/{id}/forceDelete', [BatchController::class, 'forceDelete'])->name('batches.forceDelete');
-
         Route::resource('/sales', SaleController::class);
-        Route::get('/deliveries/details',[DeliveryController::class, 'details'])->name('deliveries.details');
+        Route::put('/deliveries/{id}/status', [DeliveryController::class, 'status'])->name('deliveries.status');
+        Route::get('/deliveries/details', [DeliveryController::class, 'details'])->name('deliveries.details');
+
         Route::resource('/deliveries', DeliveryController::class);
         Route::resource('/payments', PaymentController::class);
         Route::resource('/transactions', TransactionController::class);

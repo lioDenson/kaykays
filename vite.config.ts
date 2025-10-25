@@ -2,31 +2,27 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import laravel from 'laravel-vite-plugin';
 import { defineConfig } from 'vite';
-// import wayfinder from 'wayfinder'
-
 
 export default defineConfig({
     plugins: [
         laravel({
             input: ['resources/css/app.css', 'resources/js/app.tsx'],
-            ssr: 'resources/js/ssr.tsx',
-            refresh: true
+            // disable SSR unless you're actually using it
+            refresh: ['resources/views/**', 'routes/**']
         }),
         react(),
         tailwindcss()
-        // ...(process.env.NODE_ENV === 'production' ? [] : [wayfinder({ formVariants: true })])
     ],
     esbuild: {
         jsx: 'automatic'
     },
     server: {
-        host: '0.0.0.0',
+        // use only localhost for dev
+        host: 'localhost',
         port: 5173,
+        strictPort: true, // avoids random port switching
         hmr: {
-            
-            host: 'localhost',
-            port: 5173
-        },
-        
+            host: 'localhost'
+        }
     }
 });
