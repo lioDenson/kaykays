@@ -43,6 +43,7 @@ class PaymentLogic
                 'description' => $description,
             ];
             Payment::create($paymentData);
+            
         } catch (Exception $e) {
             throw new Exception($e->getMessage());
         }

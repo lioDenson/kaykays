@@ -154,11 +154,11 @@ export default function Index({ credits }: { credits: CreditInterface }) {
             <Popover open={openState[row.id]} onOpenChange={() => toggleOpen(row.id)}>
                 <PopoverTrigger>
                     <div className="flex w-full justify-center">
-                        <CustomIconButton icon={EuroIcon} variant="info" label="Make Payment" showLabel />
+                        <CustomIconButton icon={EuroIcon} variant="success" label="Make Payment" showLabel />
                     </div>
                 </PopoverTrigger>
                 {!loading ? (
-                    <PopoverContent className="overflow-auto border-blue-400 p-2 text-xs md:text-sm">
+                    <PopoverContent className="overflow-auto border-green-400 p-2 text-xs md:text-sm">
                         <p className="text-center font-bold">Make Payment</p>
                         <div className="flex flex-col gap-2 py-2">
                             <p className="font-bold">
@@ -169,8 +169,9 @@ export default function Index({ credits }: { credits: CreditInterface }) {
                                 <CustomInput
                                     name="mpesa"
                                     label="Mpesa (Ksh)"
-                                    inputClassName="bg-green-600 text-white"
-                                    className="font-bold text-green-400"
+                                    
+                                    inputClassName=" text-white"
+                                    className="font-bold text-green-400 "
                                     value={!isNaN(mpesa) && mpesa !== 0 ? mpesa : ''}
                                     onChange={(e) => {
                                         const { numeric } = sanitizeOnChange(e.target.value);
@@ -186,7 +187,7 @@ export default function Index({ credits }: { credits: CreditInterface }) {
                                 <CustomInput
                                     name="cash"
                                     label="Cash (Ksh)"
-                                    inputClassName="bg-amber-500/60 text-black text-end focus:outline-none focus:border-0"
+                                    inputClassName="bg-amber-500/60 text-black text-end text-white focus:outline-none focus:border-0"
                                     className="pe-0.5 text-end font-bold text-amber-600"
                                     value={!isNaN(cash) && cash !== 0 ? cash : ''}
                                     onChange={(e) => {
@@ -217,11 +218,11 @@ export default function Index({ credits }: { credits: CreditInterface }) {
                                     <TooltipTrigger>
                                         <CustomIconButton onClick={handleCancel} variant="dark" icon={X} className="p-2" />
                                     </TooltipTrigger>
-                                    <TooltipContent className="bg-red-400">Cancel</TooltipContent>
+                                    <TooltipContent className="bg-red-400 fill-red-400">Cancel</TooltipContent>
                                 </Tooltip>
                                 <Tooltip>
                                     <TooltipTrigger>
-                                        <CustomIconButton onClick={handleSubmit} variant="success" icon={CircleCheckBig} className="p-2" />
+                                        <CustomIconButton disabled={cash+mpesa <= 0} onClick={handleSubmit} variant="success" icon={CircleCheckBig} className="p-2" />
                                     </TooltipTrigger>
                                     <TooltipContent>Confirm</TooltipContent>
                                 </Tooltip>
@@ -294,7 +295,11 @@ export default function Index({ credits }: { credits: CreditInterface }) {
             accessorKey: 'status',
             cell: (row) => {
                 if (row.status === 'pending') {
-                    return <Badge variant={'success'}>Pending</Badge>;
+                    return <Badge variant={'warning'}>Pending</Badge>;
+                } else if (row.status === 'paid') {
+                    return <Badge variant={'success'}>Cleared</Badge>;
+                } else {
+                    return <Badge variant={'danger'}>Overdue</Badge>;
                 }
             }
         },

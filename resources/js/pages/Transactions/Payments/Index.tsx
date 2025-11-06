@@ -2,7 +2,8 @@ import CustomIndexPage from '@/components/custom/custom-index-page';
 import { Badge } from '@/components/ui/badge';
 import AppLayout from '@/layouts/app-layout';
 import { ColumnDefinition, Pagination } from '@/types/app-types';
-import { Head } from '@inertiajs/react';
+import { Head, router } from '@inertiajs/react';
+import { route } from 'ziggy-js';
 
 interface PaymentInterface extends Pagination {
     data: {
@@ -28,7 +29,6 @@ interface PaymentInterface extends Pagination {
 }
 
 export default function index({ payments }: { payments: PaymentInterface }) {
-    console.log(payments);
 
     const columns: ColumnDefinition<any>[] = [
         {
@@ -37,17 +37,45 @@ export default function index({ payments }: { payments: PaymentInterface }) {
             accessorFn: (row) => row.sale.invoice_number
         },
         {
-            header: 'Sale Amount',
-            id: 'sale_amount',
+            header: 'Date',
+            accessorKey: 'date',
+            cell: (row) => {
+                return new Date(row.date).toLocaleDateString('en-Us', {
+                    hour: 'numeric',
+                    minute: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                });
+            }
+        },
+        {
+            header: 'Amount Paid',
+            id: 'amount_paid',
             accessorFn: (row) => {
                 return Number(row.amount) + Number(row.sale.delivery_fee);
             },
-            sortable: true,
+            sortable: true
         },
         {
             header: 'Balance',
-            accessorFn: (row) => row.sale.balance,
-            sortable: true,
+            accessorKey: 'balance',
+            cell: (row) => {
+                const balance = row.balance;
+                if (balance > 0) {
+                    return (
+                        <Badge className="min-w-1/2 hover:cursor-pointer" variant={'danger'}>
+                            {balance} Ksh
+                        </Badge>
+                    );
+                } else {
+                    return (
+                        <Badge onClick={() => router.get('/sales')} className="min-w-1/2 hover:cursor-pointer" variant={'success'}>
+                            Cleared
+                        </Badge>
+                    );
+                }
+            },
+            sortable: true
         },
         {
             header: 'Method',
@@ -62,28 +90,8 @@ export default function index({ payments }: { payments: PaymentInterface }) {
                     return <Badge variant={'danger'}>{row.method}</Badge>;
                 }
             },
-            sortable: true, 
-        },
-        {
-            header: 'Status',
-            id: 'status',
-            accessorFn: (row) => row.sale.status,
-            cell: (row) => {
-                if (row.sale.status == 'partial') {
-                    return <Badge variant={'warning'} className='capitalize'>{row.sale.status}</Badge>;
-                } else if (row.sale.status == 'paid') {
-                    return <Badge variant={'info'}>Cleared</Badge>;
-                } else {
-                    return <Badge variant={'danger'}>{row.sale.status}</Badge>;
-                }
-            },
-            sortable: true,
-        },
-        {
-            header: 'Date',
-            accessorKey: 'date',
-            sortable: true,
-        },
+            sortable: true
+        }
     ];
     return (
         <AppLayout>

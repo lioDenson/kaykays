@@ -38,8 +38,8 @@ class CreditService
         try {
             $payment = new PaymentLogic();
             DB::transaction(function () use ($mpesa, $cash, $saleId, $dueBalance, $payment) {
-                if ($mpesa > 0) {
 
+                if ($mpesa > 0) {
                     $dueBalance -= $mpesa;
                     $payment->register(PaymentMethod::MPESA, $mpesa, $saleId, $dueBalance, description: 'Credit payment by mpesa.');
                 }
@@ -61,7 +61,7 @@ class CreditService
                 } else {
                     $status = 'unknown';
                 }
-                
+
                 $sale->update(['status' => $status, 'balance' => $dueBalance]);
             }, 2);
         } catch (Exception $e) {

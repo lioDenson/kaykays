@@ -38,7 +38,7 @@ class Sale extends Model
         );
     }
 
-    protected function total_cost(): Attribute
+    protected function totalCost(): Attribute
     {
         return Attribute::make(
             get: fn() => (float) $this->total + (float) $this->delivery_fee,
@@ -95,7 +95,7 @@ class Sale extends Model
     {
         $prefix = 'SLE';
         $year = now()->format('y'); // e.g. 25
-        $month = strtoupper(now()->format('M'));
+        $month = strtoupper(now()->format('m'));
         $day = now()->format('d');
 
         $count = Sale::whereMonth('date', now()->month)
@@ -103,6 +103,6 @@ class Sale extends Model
             ->count() + 1;
 
         // Format: SLE25/NOV/0002
-        return sprintf('%s%s/%s%s/%03d', $prefix, $year, $month, $day, $count);
+        return sprintf('%s%s%s%s%03d', $prefix, $day, $month, $year, $count);
     }
 }

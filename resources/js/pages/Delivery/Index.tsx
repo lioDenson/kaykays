@@ -179,10 +179,6 @@ export default function Index({ deliveries }: { deliveries: DeliveryInterface })
                     minute: '2-digit'
                 });
             }
-        },
-        {
-            header: 'Actions',
-            isActions: true
         }
     ];
 
@@ -195,10 +191,6 @@ export default function Index({ deliveries }: { deliveries: DeliveryInterface })
                 Columns={deliveryColumns}
                 Header={{
                     title: 'Deliveries',
-                    button: {
-                        label: 'Create Delivery',
-                        onClick: () => {}
-                    }
                 }}
                 paginate={{
                     from: deliveries.from,

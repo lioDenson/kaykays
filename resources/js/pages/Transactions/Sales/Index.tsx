@@ -1,12 +1,12 @@
 import CustomIndexPage from '@/components/custom/custom-index-page';
 import CustomToaster from '@/components/custom/custom-toaster';
 import { Badge } from '@/components/ui/badge';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 import AppLayout from '@/layouts/app-layout';
 import { ColumnDefinition } from '@/types/app-types';
 import { Head, router, usePage } from '@inertiajs/react';
 import { route } from 'ziggy-js';
 import { SaleInterface } from './sale-interfaces';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
 
 export default function Index({ sales }: { sales: SaleInterface }) {
     const { flash } = usePage().props as any;
@@ -14,19 +14,16 @@ export default function Index({ sales }: { sales: SaleInterface }) {
         router.get(route('sales.create'));
     };
 
-    
-
     const saleColumns: ColumnDefinition<any>[] = [
         {
             header: 'Sale No',
             accessorFn: (row) => row.invoice_number,
             id: 'invoice_number',
             cell: (row) => {
-                console.log(row.sale_items);
                 return (
                     <Popover>
                         <PopoverTrigger>
-                            <span className="text-blue-600 hover:cursor-pointer p-0.5"> {row.invoice_number}</span>
+                            <span className="p-0.5 text-blue-600 hover:cursor-pointer"> {row.invoice_number}</span>
                         </PopoverTrigger>
                         <PopoverContent>
                             <p className="text-sm font-bold">Sale Items</p>
@@ -58,11 +55,18 @@ export default function Index({ sales }: { sales: SaleInterface }) {
         },
         {
             header: 'Date',
-            accessorKey: 'date'
+            accessorKey: 'date',
+            cell: (row) => {
+                return new Date(row.date).toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric'
+                });
+            }
         },
         {
-            header: 'Amount',
-            accessorKey: 'total',
+            header: 'Sale Cost',
+            accessorKey: 'total_cost',
             sortable: true
         },
         {
@@ -73,7 +77,11 @@ export default function Index({ sales }: { sales: SaleInterface }) {
                 if (row.status === 'unpaid') {
                     return <Badge variant={'warning'}>{row.status}</Badge>;
                 } else if (row.status === 'paid') {
-                    return <Badge variant={'success'}>{row.status}</Badge>;
+                    return (
+                        <Badge className="hover:cursor-pointer" variant={'success'}>
+                            {row.status}
+                        </Badge>
+                    );
                 } else if (row.status === 'partial') {
                     return <Badge variant={'default'}>{row.status}</Badge>;
                 } else {
@@ -87,15 +95,15 @@ export default function Index({ sales }: { sales: SaleInterface }) {
             id: 'is_delivery',
             cell: (row) => {
                 if (row.is_delivery) {
-                    return <Badge variant={'warning'}>Delivery</Badge>;
+                    return (
+                        <Badge className="hover:cursor-pointer" onClick={() => router.get(route('deliveries.index'))} variant={'warning'}>
+                            Delivery
+                        </Badge>
+                    );
                 } else {
                     return <Badge variant={'default'}>Pickup</Badge>;
                 }
             }
-        },
-        {
-            header: 'Actions',
-            isActions: true
         }
     ];
     return (
