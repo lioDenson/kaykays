@@ -8,27 +8,28 @@ use Inertia\Inertia;
 use App\Models\Customer;
 use Illuminate\Support\Facades\DB;
 use App\Http\Requests\CustomerRequest;
+use Illuminate\Support\Facades\Auth;
 
 class CustomerController extends Controller
 {
 
     public function __construct()
     {
+
         $this->authorizeResource(Customer::class, 'customer');
     }
 
     public function index()
     {
         $customers = Customer::with(['user'])->paginate(10);
-        
         return Inertia::render('People/Customers/Index', ['customers' => $customers]);
     }
 
     public function create()
     {
         $customersIds = Customer::all()->pluck('user_id');
-       
-        
+
+
         return Inertia::render('People/Customers/Create', ['customersIds' => $customersIds]);
     }
 
@@ -56,6 +57,11 @@ class CustomerController extends Controller
         }
     }
 
+    public function show(Customer $customer)
+    {
+        $customer->load(['user']);
+        return Inertia::render('People/Customers/customer', ['customer' => $customer]);
+    }
 
     public function edit(Customer $customer)
     {
@@ -87,7 +93,7 @@ class CustomerController extends Controller
 
             return to_route('customers.index')->with('success', "$user->name updated successfully.");
         } catch (\Exception $e) {
-            return to_route('customers.index')->with('error', 'Customer not updated. Something went wrong'.$e->getMessage());
+            return to_route('customers.index')->with('error', 'Customer not updated. Something went wrong' . $e->getMessage());
         }
     }
 

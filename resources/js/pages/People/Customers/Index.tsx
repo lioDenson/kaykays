@@ -28,21 +28,21 @@ export default function Index({ customers }: { customers: Record<string, unknown
         },
         {
             header: 'Email',
-            accessorKey: 'user.email',
+            accessorKey: 'user.email'
         },
         {
             header: 'Phone',
-            accessorKey: 'user.phone',
+            accessorKey: 'user.phone'
         },
         {
             header: 'Address',
-            accessorKey: 'address',
+            accessorKey: 'address'
         },
         {
             header: 'Actions',
             isActions: true
         }
-    ]
+    ];
 
     return (
         <AppLayout>
@@ -62,6 +62,9 @@ export default function Index({ customers }: { customers: Record<string, unknown
                     }
                 }}
                 Columns={columns}
+                handleInfo={(data) => {
+                    router.get(route('customers.show', data.id))
+                }}
                 handleEdit={(data) => {
                     router.get(`/customers/${data.id}/edit`, {});
                 }}
