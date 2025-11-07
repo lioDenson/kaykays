@@ -224,12 +224,12 @@ export default function Sale({
                     {/* Header */}
                     <div className="mb-6 flex items-center justify-between">
                         <div>
-                            <h1 className="text-2xl font-bold text-gray-900">New Sale</h1>
-                            <p className="text-gray-600">Create a new sales transaction</p>
+                            <h1 className="light:text-gray-900 text-2xl font-bold dark:text-white">New Sale</h1>
+                            <p className="text-gray-500 dark:text-gray-100">Create a new sales transaction</p>
                         </div>
                         <div className="text-right">
-                            <div className="text-2xl font-bold text-green-600">{grandTotal.toFixed(0)} KSH</div>
-                            <div className="text-sm text-gray-500">{productCount} items</div>
+                            <div className="text-2xl font-bold text-green-600 dark:text-green-500">{grandTotal.toFixed(0)} KSH</div>
+                            <div className="text-sm text-gray-500 dark:text-gray-100">{productCount} items</div>
                         </div>
                     </div>
 
@@ -563,7 +563,7 @@ export default function Sale({
                                                         {/* Product Content - Optimized Grid */}
                                                         <div className="grid flex-1 grid-cols-2 items-center gap-3 min-[480px]:grid-cols-6 md:grid-cols-12 md:gap-4">
                                                             {/* Product Selection - Responsive columns */}
-                                                            <div className="min-[480px]:col-span-4 md:col-span-5 lg:col-span-6">
+                                                            <div className="min-[480px]:col-span-4 md:col-span-5 ">
                                                                 <CustomSelection
                                                                     data={products}
                                                                     label="Product"
@@ -575,7 +575,7 @@ export default function Sale({
                                                                             : null
                                                                     }
                                                                     error={errors[`products.${idx}.id`] || errors['products']}
-                                                                    className="w-full"
+                                                                    className="max-w-fit"
                                                                 />
                                                             </div>
 
@@ -698,26 +698,33 @@ export default function Sale({
                         {/* Right Column - Payment & Summary */}
                         <div className="space-y-6">
                             {/* Payment Card */}
-                            <Card>
+                            <Card className="bg-gradient-to-br border-0 from-white to-gray-50/50 shadow-lg dark:border dark:border-gray-700/50 dark:from-gray-900 dark:to-gray-800/50">
                                 <Collapsible>
                                     <CollapsibleTrigger className="flex w-full justify-between">
                                         <CardHeader className="pb-3">
                                             <CardTitle className="flex items-center gap-2 text-lg">
-                                                <CreditCard className="h-5 w-5" />
-                                                Payment
-                                                <div className="flex items-center gap-2">
-                                                    <Badge
-                                                        variant="secondary"
-                                                        className="min-w-fit bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300"
-                                                    >
-                                                        M-Pesa
-                                                    </Badge>
-                                                    <Badge
-                                                        variant="secondary"
-                                                        className="min-w-fit bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300"
-                                                    >
-                                                        Cash
-                                                    </Badge>
+                                                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-amber-100 dark:bg-amber-900/30">
+                                                    <CreditCard className="h-5 w-5 text-amber-600 dark:text-amber-400" />
+                                                </div>
+                                                <div>
+                                                    <div className="flex items-center gap-2">
+                                                        Payment
+                                                        <Badge
+                                                            variant="secondary"
+                                                            className="min-w-fit bg-green-100 text-green-700 dark:bg-green-900/50 dark:text-green-300"
+                                                        >
+                                                            M-Pesa
+                                                        </Badge>
+                                                        <Badge
+                                                            variant="secondary"
+                                                            className="min-w-fit bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-300"
+                                                        >
+                                                            Cash
+                                                        </Badge>
+                                                    </div>
+                                                    <CardDescription className="mt-1 text-sm font-normal text-gray-600 dark:text-gray-400">
+                                                        Select payment method and amount
+                                                    </CardDescription>
                                                 </div>
                                             </CardTitle>
                                         </CardHeader>
@@ -740,7 +747,7 @@ export default function Sale({
                                                         M-Pesa
                                                     </label>
                                                     <CustomInput
-                                                        inputClassName="border-0 rounded-none  border-b  bg-transparent p-0 text-2xl font-bold text-green-900 placeholder-green-400/60 focus:ring-0 dark:text-green-100 dark:placeholder-green-400/40"
+                                                        inputClassName="border-0 rounded-none text-end pe-4  border-b  bg-transparent p-0 text-2xl font-bold text-green-900 placeholder-green-400/60 focus:ring-0 dark:text-green-100 dark:placeholder-green-400/40"
                                                         className="space-y-2"
                                                         id="mpesa"
                                                         name="mpesa"
@@ -766,7 +773,7 @@ export default function Sale({
                                                         Cash
                                                     </label>
                                                     <CustomInput
-                                                        inputClassName="border-0 rounded-none  border-b   bg-transparent p-0 text-2xl font-bold text-blue-900 placeholder-blue-400/60  dark:text-blue-100 dark:placeholder-blue-400/40"
+                                                        inputClassName="border-0 rounded-none  border-b text-end  bg-transparent p-0 text-2xl font-bold text-blue-900 placeholder-blue-400/60  dark:text-blue-100 dark:placeholder-blue-400/40"
                                                         className="space-y-2 bg-transparent"
                                                         id="cash"
                                                         name="cash"
@@ -835,7 +842,7 @@ export default function Sale({
                                                         </div>
                                                     </div>
                                                     <div className="mt-2 text-center">
-                                                        <div className="text-2xl font-bold text-red-900 dark:text-red-100">{balance} KSH</div>
+                                                        <div className="text-2xl font-bold  text-red-900 dark:text-red-100">{balance} KSH</div>
                                                         <div className="mt-1 text-xs text-red-600/70 dark:text-red-400/70">Remaining amount</div>
                                                     </div>
                                                 </div>

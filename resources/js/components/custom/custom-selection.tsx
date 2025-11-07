@@ -34,7 +34,7 @@ const CustomSelection = ({
     const [open, setOpen] = useState(false);
 
     const options = [
-        { value: null, label: '❌ Cancel selection' },
+        { value: null, label: ' Cancel selection' },
         ...data
             .filter((item) => item.name !== '')
             .map((entry) => ({
@@ -55,11 +55,11 @@ const CustomSelection = ({
     }, [selectedOption]);
 
     return (
-        <div className={cn('grid gap-2', className)}>
+        <div className={cn('grid gap-2 w-full  ', className)}>
             <Label className='text-xs md:text-sm '>{label}</Label>
             <Popover open={open} onOpenChange={setOpen}>
                 <PopoverTrigger asChild disabled={disabled}>
-                    <Button variant="outline" className="w-fit justify-start">
+                    <Button variant="outline" className="overflow-hidden  justify-start">
                         {selected ? <div>{selected.label as string}</div> : <span className="text-muted-foreground">{placeholder ?? label}</span>}
                     </Button>
                 </PopoverTrigger>
