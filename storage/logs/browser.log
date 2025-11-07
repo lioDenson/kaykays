@@ -13552,3 +13552,196 @@ Visit https://react.dev/link/error-boundaries to learn more about error boundari
 [2025-11-07 13:25:32] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/users","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T13:25:32.777Z"} 
 [2025-11-07 13:25:33] local.DEBUG: false {"url":"http://127.0.0.1:8000/users","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T13:25:33.414Z"} 
 [2025-11-07 13:27:25] local.DEBUG: false {"url":"http://127.0.0.1:8000/users","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T13:27:25.005Z"} 
+[2025-11-07 14:11:42] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T14:11:41.833Z"} 
+[2025-11-07 14:43:41] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T14:43:41.637Z"} 
+[2025-11-07 14:43:51] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T14:43:49.522Z"} 
+[2025-11-07 14:52:23] local.ERROR: ReferenceError: Calendar is not defined http://localhost:5173/resources/js/pages/dashboard.tsx?t=1762527140386 776 40 ReferenceError Calendar is not defined Dashboard@http://localhost:5173/resources/js/pages/dashboard.tsx?t=1762527140386:776:40
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRefresh@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:372:11
+performReactRefresh/<@http://localhost:5173/@react-refresh:228:17
+performReactRefresh@http://localhost:5173/@react-refresh:217:26
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T14:52:22.139Z"} 
+[2025-11-07 14:52:23] local.ERROR: ReferenceError: Calendar is not defined http://localhost:5173/resources/js/pages/dashboard.tsx?t=1762527140386 776 40 ReferenceError Calendar is not defined Dashboard@http://localhost:5173/resources/js/pages/dashboard.tsx?t=1762527140386:776:40
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRefresh@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:372:11
+performReactRefresh/<@http://localhost:5173/@react-refresh:228:17
+performReactRefresh@http://localhost:5173/@react-refresh:217:26
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T14:52:22.139Z"} 
+[2025-11-07 14:52:23] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T14:52:22.140Z"} 
+[2025-11-07 14:52:24] local.ERROR: ReferenceError: Calendar is not defined http://localhost:5173/resources/js/pages/dashboard.tsx?t=1762527142369 776 40 ReferenceError Calendar is not defined Dashboard@http://localhost:5173/resources/js/pages/dashboard.tsx?t=1762527142369:776:40
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T14:52:23.245Z"} 
+[2025-11-07 14:52:24] local.ERROR: ReferenceError: Calendar is not defined http://localhost:5173/resources/js/pages/dashboard.tsx?t=1762527142369 776 40 ReferenceError Calendar is not defined Dashboard@http://localhost:5173/resources/js/pages/dashboard.tsx?t=1762527142369:776:40
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T14:52:23.245Z"} 
+[2025-11-07 14:52:24] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T14:52:23.245Z"} 
+[2025-11-07 14:53:36] local.ERROR: ReferenceError: Calendar is not defined http://localhost:5173/resources/js/pages/dashboard.tsx?t=1762527212071 776 40 ReferenceError Calendar is not defined Dashboard@http://localhost:5173/resources/js/pages/dashboard.tsx?t=1762527212071:776:40
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T14:53:34.130Z"} 
+[2025-11-07 14:53:36] local.ERROR: ReferenceError: Calendar is not defined http://localhost:5173/resources/js/pages/dashboard.tsx?t=1762527212071 776 40 ReferenceError Calendar is not defined Dashboard@http://localhost:5173/resources/js/pages/dashboard.tsx?t=1762527212071:776:40
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T14:53:34.130Z"} 
+[2025-11-07 14:53:36] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T14:53:34.130Z"} 
+[2025-11-07 14:53:36] local.ERROR: ReferenceError: Calendar is not defined http://localhost:5173/resources/js/pages/dashboard.tsx?t=1762527213527 776 40 ReferenceError Calendar is not defined Dashboard@http://localhost:5173/resources/js/pages/dashboard.tsx?t=1762527213527:776:40
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T14:53:35.145Z"} 
+[2025-11-07 14:53:36] local.ERROR: ReferenceError: Calendar is not defined http://localhost:5173/resources/js/pages/dashboard.tsx?t=1762527213527 776 40 ReferenceError Calendar is not defined Dashboard@http://localhost:5173/resources/js/pages/dashboard.tsx?t=1762527213527:776:40
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T14:53:35.145Z"} 
+[2025-11-07 14:53:36] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T14:53:35.145Z"} 
+[2025-11-07 15:01:31] local.ERROR: ReferenceError: GradientMetricCard is not defined http://localhost:5173/resources/js/pages/dashboard.tsx?t=1762527691003 95 11 ReferenceError GradientMetricCard is not defined Dashboard@http://localhost:5173/resources/js/pages/dashboard.tsx?t=1762527691003:95:11
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRefresh@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:372:11
+performReactRefresh/<@http://localhost:5173/@react-refresh:228:17
+performReactRefresh@http://localhost:5173/@react-refresh:217:26
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:01:31.580Z"} 
+[2025-11-07 15:01:31] local.ERROR: ReferenceError: GradientMetricCard is not defined http://localhost:5173/resources/js/pages/dashboard.tsx?t=1762527691003 95 11 ReferenceError GradientMetricCard is not defined Dashboard@http://localhost:5173/resources/js/pages/dashboard.tsx?t=1762527691003:95:11
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRefresh@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:372:11
+performReactRefresh/<@http://localhost:5173/@react-refresh:228:17
+performReactRefresh@http://localhost:5173/@react-refresh:217:26
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:01:31.580Z"} 
+[2025-11-07 15:01:31] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:01:31.581Z"} 
