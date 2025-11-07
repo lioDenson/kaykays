@@ -8,7 +8,7 @@ interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     type?: 'submit' | 'reset' | 'button';
     className?: string;
     isLoading?: boolean;
-    label: string;
+    label: string | React.ReactNode;
     activeLabel?: string;
     onClick?: () => void;
 }
