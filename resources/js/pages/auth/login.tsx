@@ -26,18 +26,9 @@ export default function Login({ status, canResetPassword }: LoginProps) {
                     <>
                         <div className="grid gap-6">
                             <div className="grid gap-2">
-                                <Label htmlFor="email">Email address</Label>
-                                <Input
-                                    id="email"
-                                    type="email"
-                                    name="email"
-                                    required
-                                    autoFocus
-                                    tabIndex={1}
-                                    autoComplete="email"
-                                    placeholder="email@example.com"
-                                />
-                                <InputError message={errors.email} />
+                                <Label htmlFor="phone">Phone</Label>
+                                <Input id="phone" name="phone" required autoFocus tabIndex={1} autoComplete="phone" placeholder="07345874" />
+                                <InputError message={errors.phone} />
                             </div>
 
                             <div className="grid gap-2">
@@ -60,7 +51,6 @@ export default function Login({ status, canResetPassword }: LoginProps) {
                                 />
                                 <InputError message={errors.password} />
                             </div>
-
 
                             <div className="flex items-center space-x-3">
                                 <Checkbox id="remember" name="remember" tabIndex={3} />

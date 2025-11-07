@@ -54,7 +54,7 @@ export default function Create({ user }: { user?: any }) {
             >
                 <Head title="Create User" />
                 <div className="space-y-2">
-                    <div className="grid md:grid-cols-2 gap-2">
+                    <div className="grid gap-2 md:grid-cols-2">
                         <CustomInput
                             id="name"
                             name="name"
@@ -63,22 +63,23 @@ export default function Create({ user }: { user?: any }) {
                             onChange={(e) => setData({ ...data, name: e.target.value })}
                             error={errors.name}
                         />
+
                         <CustomInput
-                            id="email"
-                            name="email"
-                            label="Email"
-                            value={data.email}
-                            onChange={(e) => setData({ ...data, email: e.target.value })}
-                            error={errors.email}
+                            id="phone"
+                            name="phone"
+                            label="Phone"
+                            value={data.phone}
+                            onChange={(e) => setData({ ...data, phone: e.target.value })}
+                            error={errors.phone}
                         />
                     </div>
                     <CustomInput
-                        id="phone"
-                        name="phone"
-                        label="Phone"
-                        value={data.phone}
-                        onChange={(e) => setData({ ...data, phone: e.target.value })}
-                        error={errors.phone}
+                        id="email"
+                        name="email"
+                        label="Email (Optional)"
+                        value={data.email}
+                        onChange={(e) => setData({ ...data, email: e.target.value })}
+                        error={errors.email}
                     />
                     <CustomSubmitButton
                         className="mt-4 w-full"

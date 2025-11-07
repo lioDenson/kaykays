@@ -637,7 +637,7 @@ export default function Sale({
                                                                                 </span>
                                                                             </span>
                                                                         ) : (
-                                                                            <span className="text-gray-400 dark:text-gray-500">Select product</span>
+                                                                            <span className="text-gray-400 dark:text-gray-500 overflow-hidden whitespace-nowrap">Select product</span>
                                                                         )}
                                                                     </div>
                                                                 </div>

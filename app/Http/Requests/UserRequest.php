@@ -30,7 +30,7 @@ class UserRequest extends FormRequest
         $rules = [
             'name' => 'required|string|max:255',
             'email' => [
-                'required',
+                'nullable',
                 'string',
                 'email',
                 'max:255',
@@ -48,8 +48,8 @@ class UserRequest extends FormRequest
 
         if ($this->isMethod('post')) {
             // store
-            $rules['email'][] = Rule::unique('users', 'email');
             $rules['phone'][] = Rule::unique('users', 'phone');
+            $rules['email'][] = Rule::unique('users', 'email');
         }
 
         if ($this->isMethod('put') || $this->isMethod('patch')) {
@@ -69,6 +69,5 @@ class UserRequest extends FormRequest
                 'role_id' => Auth::user()->roles->first()?->id,
             ]);
         }
-        
     }
 }

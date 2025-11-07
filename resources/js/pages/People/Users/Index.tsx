@@ -45,7 +45,10 @@ export default function Index({ users, rolling }: { users: UserProps; rolling: b
         },
         {
             header: 'Email',
-            accessorKey: 'email'
+            accessorKey: 'email',
+            cell(row) {
+                return <span>{row.email? row.email : 'No Email'}</span>;
+            },
         },
         {
             header: 'Phone',
