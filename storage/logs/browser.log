@@ -12946,3 +12946,271 @@ If you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.
 [2025-11-07 08:14:59] local.ERROR: [vite] Failed to reload /resources/js/pages/Transactions/Sales/Create.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:14:59.212Z"} 
 [2025-11-07 08:21:43] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762503700421 null {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:21:41.059Z"} 
 [2025-11-07 08:21:43] local.ERROR: [vite] Failed to reload /resources/js/pages/Transactions/Sales/Create.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:21:41.059Z"} 
+[2025-11-07 08:50:56] local.ERROR: ReferenceError: CardDescription is not defined http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505452216 275 40 ReferenceError CardDescription is not defined Sale@http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505452216:275:40
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRefresh@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:372:11
+performReactRefresh/<@http://localhost:5173/@react-refresh:228:17
+performReactRefresh@http://localhost:5173/@react-refresh:217:26
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:50:55.037Z"} 
+[2025-11-07 08:50:56] local.ERROR: ReferenceError: CardDescription is not defined http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505452216 275 40 ReferenceError CardDescription is not defined Sale@http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505452216:275:40
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRefresh@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:372:11
+performReactRefresh/<@http://localhost:5173/@react-refresh:228:17
+performReactRefresh@http://localhost:5173/@react-refresh:217:26
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:50:55.037Z"} 
+[2025-11-07 08:50:56] local.WARNING: %s
+
+%s An error occurred in the <Sale> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:50:55.037Z"} 
+[2025-11-07 08:50:59] local.ERROR: ReferenceError: CardDescription is not defined http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505457170 275 40 ReferenceError CardDescription is not defined Sale@http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505457170:275:40
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:50:59.357Z"} 
+[2025-11-07 08:50:59] local.ERROR: ReferenceError: CardDescription is not defined http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505457170 275 40 ReferenceError CardDescription is not defined Sale@http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505457170:275:40
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:50:59.357Z"} 
+[2025-11-07 08:50:59] local.WARNING: %s
+
+%s An error occurred in the <Sale> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:50:59.357Z"} 
+[2025-11-07 08:51:07] local.ERROR: ReferenceError: CardDescription is not defined http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505465988 275 40 ReferenceError CardDescription is not defined Sale@http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505465988:275:40
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:51:06.888Z"} 
+[2025-11-07 08:51:07] local.ERROR: ReferenceError: CardDescription is not defined http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505465988 275 40 ReferenceError CardDescription is not defined Sale@http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505465988:275:40
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:51:06.888Z"} 
+[2025-11-07 08:51:07] local.WARNING: %s
+
+%s An error occurred in the <Sale> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:51:06.888Z"} 
+[2025-11-07 08:51:29] local.ERROR: ReferenceError: CardDescription is not defined http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505487999 275 40 ReferenceError CardDescription is not defined Sale@http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505487999:275:40
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRefresh@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:372:11
+performReactRefresh/<@http://localhost:5173/@react-refresh:228:17
+performReactRefresh@http://localhost:5173/@react-refresh:217:26
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:51:29.079Z"} 
+[2025-11-07 08:51:29] local.ERROR: ReferenceError: CardDescription is not defined http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505487999 275 40 ReferenceError CardDescription is not defined Sale@http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505487999:275:40
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRefresh@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:372:11
+performReactRefresh/<@http://localhost:5173/@react-refresh:228:17
+performReactRefresh@http://localhost:5173/@react-refresh:217:26
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:51:29.079Z"} 
+[2025-11-07 08:51:29] local.WARNING: %s
+
+%s An error occurred in the <Sale> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:51:29.079Z"} 
+[2025-11-07 08:51:33] local.ERROR: ReferenceError: CardDescription is not defined http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505492310 275 40 ReferenceError CardDescription is not defined Sale@http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505492310:275:40
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:51:33.120Z"} 
+[2025-11-07 08:51:33] local.ERROR: ReferenceError: CardDescription is not defined http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505492310 275 40 ReferenceError CardDescription is not defined Sale@http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505492310:275:40
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:51:33.120Z"} 
+[2025-11-07 08:51:33] local.WARNING: %s
+
+%s An error occurred in the <Sale> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:51:33.120Z"} 
+[2025-11-07 08:52:26] local.ERROR: ReferenceError: CardDescription is not defined http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505542759 275 40 ReferenceError CardDescription is not defined Sale@http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505542759:275:40
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRefresh@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:372:11
+performReactRefresh/<@http://localhost:5173/@react-refresh:228:17
+performReactRefresh@http://localhost:5173/@react-refresh:217:26
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:52:25.068Z"} 
+[2025-11-07 08:52:26] local.ERROR: ReferenceError: CardDescription is not defined http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505542759 275 40 ReferenceError CardDescription is not defined Sale@http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505542759:275:40
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRefresh@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:372:11
+performReactRefresh/<@http://localhost:5173/@react-refresh:228:17
+performReactRefresh@http://localhost:5173/@react-refresh:217:26
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:52:25.069Z"} 
+[2025-11-07 08:52:26] local.WARNING: %s
+
+%s An error occurred in the <Sale> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:52:25.070Z"} 
+[2025-11-07 08:52:30] local.ERROR: ReferenceError: CardDescription is not defined http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505547392 275 40 ReferenceError CardDescription is not defined Sale@http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505547392:275:40
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:52:29.412Z"} 
+[2025-11-07 08:52:30] local.ERROR: ReferenceError: CardDescription is not defined http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505547392 275 40 ReferenceError CardDescription is not defined Sale@http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762505547392:275:40
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:52:29.412Z"} 
+[2025-11-07 08:52:30] local.WARNING: %s
+
+%s An error occurred in the <Sale> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:52:29.412Z"} 
+[2025-11-07 09:11:28] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762506688094 null {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T09:11:28.447Z"} 
+[2025-11-07 09:11:28] local.ERROR: [vite] Failed to reload /resources/js/pages/Transactions/Sales/Create.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T09:11:28.447Z"} 
