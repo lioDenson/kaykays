@@ -69,7 +69,7 @@ const GradientActionButton = ({ label, href, icon, gradient }) => (
     </a>
 );
 
-const FeedbackItem = ({ type, text, author, time, urgent }) => (
+const FeedbackItem = ({ type, text, author, time, urgent=false }) => (
     <div
         className={`rounded-lg p-2 ${
             type === 'complaint' ? 'bg-red-50/50 dark:bg-red-900/20' : 'bg-blue-50/50 dark:bg-blue-900/20'

@@ -1,10 +1,37 @@
 import CustomToaster from '@/components/custom/custom-toaster';
-import { GradientMetricCard, TopItem, CompactActivityItem, DebtorItem, GradientActionButton, PerformanceMetric, FeedbackItem, AlertCard, EventCard } from '@/components/custom/dashboard/components';
+import {
+    AlertCard,
+    CompactActivityItem,
+    DebtorItem,
+    EventCard,
+    FeedbackItem,
+    GradientActionButton,
+    GradientMetricCard,
+    PerformanceMetric,
+    TopItem
+} from '@/components/custom/dashboard/components';
 import { PlaceholderPattern } from '@/components/ui/placeholder-pattern';
 import AppLayout from '@/layouts/app-layout';
 import { type BreadcrumbItem } from '@/types';
 import { Head, usePage } from '@inertiajs/react';
-import { AlertTriangle, Award, BarChart3, Calendar, Clock, CreditCard, MessageCircle, Package, Star, TrendingUp, Truck, Users, UserX, Zap } from 'lucide-react';
+import {
+    AlertTriangle,
+    Award,
+    BarChart3,
+    Calendar,
+    Clock,
+    CreditCard,
+    MessageCircle,
+    Package,
+    Star,
+    TrendingUp,
+    Truck,
+    Users,
+    UserX,
+    Zap
+} from 'lucide-react';
+import { RecentSale } from './types';
+import { formatTime } from '@/helpers/custom-time-format';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
@@ -13,7 +40,7 @@ const breadcrumbs: BreadcrumbItem[] = [
     }
 ];
 
-export default function Dashboard() {
+export default function Dashboard({ recentSales, customerCount, discoveredCustomers }: { recentSales: RecentSale[]; customerCount: number, discoveredCustomers: number }) {
     const { flash } = usePage().props as any;
 
     return (
@@ -71,9 +98,9 @@ export default function Dashboard() {
                     />
                     <GradientMetricCard
                         title="Customers"
-                        value="342"
+                        value={customerCount.toString()}
                         subtitle="Total"
-                        trend="+8 New"
+                        trend={`+ ${discoveredCustomers.toString()} New`}
                         trendType="up"
                         icon={<Users className="h-4 w-4" />}
                         gradient="from-purple-500/10 to-violet-500/10"
@@ -134,10 +161,21 @@ export default function Dashboard() {
                                     <span className="text-xs text-gray-500">View All</span>
                                 </div>
                                 <div className="space-y-2">
-                                    <CompactActivityItem title="Sale #2845" amount="2,450 KSH" time="2m ago" />
+                                    {recentSales &&
+                                        recentSales.map((sale, index) => {
+                                            return (
+                                                <CompactActivityItem
+                                                    key={index}
+                                                    title={sale.invoice_number}
+                                                    amount={sale.total_cost}
+                                                    time={formatTime(sale.date)}
+                                                />
+                                            );
+                                        })}
+                                    {/* <CompactActivityItem title="Sale #2845" amount="2,450 KSH" time="2m ago" />
                                     <CompactActivityItem title="Sale #2844" amount="1,890 KSH" time="15m ago" />
                                     <CompactActivityItem title="Sale #2843" amount="3,210 KSH" time="1h ago" />
-                                    <CompactActivityItem title="Sale #2842" amount="4,150 KSH" time="2h ago" />
+                                    <CompactActivityItem title="Sale #2842" amount="4,150 KSH" time="2h ago" /> */}
                                 </div>
                             </div>
 
@@ -240,7 +278,7 @@ export default function Dashboard() {
                                 </div>
                                 <div className="space-y-2">
                                     <FeedbackItem type="complaint" text="Late delivery yesterday" author="John D." time="5h ago" urgent />
-                                    <FeedbackItem type="complaint" text="Wrong item received" author="Lisa M." time="1d ago" />
+                                    <FeedbackItem type="complaint" text="Wrong item received" author="Lisa M." time="1d ago " />
                                     <FeedbackItem type="complaint" text="Poor packaging quality" author="Robert B." time="3d ago" />
                                 </div>
                             </div>
@@ -284,12 +322,10 @@ export default function Dashboard() {
                                 <EventCard
                                     icon={<Truck className="h-4 w-4" />}
                                     title="Delivery Schedule"
-                                    events={[
-                                        { time: '09:00 AM', description: 'Morning deliveries dispatch' },
-                                    ]}
+                                    events={[{ time: '09:00 AM', description: 'Morning deliveries dispatch' }]}
                                     type="schedule"
                                 />
-                                
+
                                 <EventCard
                                     icon={<CreditCard className="h-4 w-4" />}
                                     title="Financial Reminders"
@@ -309,5 +345,3 @@ export default function Dashboard() {
 }
 
 // Improved Components with Gradients
-
-

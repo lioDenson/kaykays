@@ -14,6 +14,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DeliveryController;
 use App\Http\Controllers\SupplierController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SuperAdminController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\StockMovementController;
@@ -31,9 +32,7 @@ Route::middleware('installed')->group(function () {
     })->name('home');
 
     Route::middleware(['auth', 'verified'])->group(function () {
-        Route::get('dashboard', function () {
-            return Inertia::render('dashboard');
-        })->name('dashboard');
+        Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
         Route::delete('/accounts/{id}/forceDelete', [AccountController::class, 'forceDelete'])->name('accounts.forceDelete');
         Route::patch('/accounts/{id}/restore', [AccountController::class, 'restore'])->name('accounts.restore');
         Route::resource('accounts', AccountController::class);

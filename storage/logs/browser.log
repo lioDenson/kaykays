@@ -13745,3 +13745,928 @@ enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0
 
 %s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
 Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:01:31.581Z"} 
+[2025-11-07 15:12:28] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:12:27.895Z"} 
+[2025-11-07 15:13:08] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762528388549 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:13:08.678Z"} 
+[2025-11-07 15:13:08] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:13:08.678Z"} 
+[2025-11-07 15:13:12] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762528392626 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:13:12.737Z"} 
+[2025-11-07 15:13:12] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:13:12.737Z"} 
+[2025-11-07 15:13:34] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762528414727 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:13:34.807Z"} 
+[2025-11-07 15:13:34] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:13:34.807Z"} 
+[2025-11-07 15:13:37] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762528417536 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:13:37.566Z"} 
+[2025-11-07 15:13:37] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:13:37.567Z"} 
+[2025-11-07 15:13:39] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762528419522 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:13:39.808Z"} 
+[2025-11-07 15:13:39] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:13:39.809Z"} 
+[2025-11-07 15:28:05] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:28:04.794Z"} 
+[2025-11-07 15:30:01] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:30:00.856Z"} 
+[2025-11-07 15:34:31] local.ERROR: ReferenceError: format is not defined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529668548 367 123 ReferenceError format is not defined Dashboard/<.children<.children<.children<.children<.children<.children<.children<@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529668548:367:123
+Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529668548:366:108
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRefresh@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:372:11
+performReactRefresh/<@http://localhost:5173/@react-refresh:228:17
+performReactRefresh@http://localhost:5173/@react-refresh:217:26
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:34:30.212Z"} 
+[2025-11-07 15:34:31] local.ERROR: ReferenceError: format is not defined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529668548 367 123 ReferenceError format is not defined Dashboard/<.children<.children<.children<.children<.children<.children<.children<@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529668548:367:123
+Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529668548:366:108
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRefresh@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:372:11
+performReactRefresh/<@http://localhost:5173/@react-refresh:228:17
+performReactRefresh@http://localhost:5173/@react-refresh:217:26
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:34:30.212Z"} 
+[2025-11-07 15:34:31] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:34:30.212Z"} 
+[2025-11-07 15:34:33] local.ERROR: ReferenceError: formatTim is not defined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529671008 367 123 ReferenceError formatTim is not defined Dashboard/<.children<.children<.children<.children<.children<.children<.children<@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529671008:367:123
+Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529671008:366:108
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:34:32.524Z"} 
+[2025-11-07 15:34:33] local.ERROR: ReferenceError: formatTim is not defined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529671008 367 123 ReferenceError formatTim is not defined Dashboard/<.children<.children<.children<.children<.children<.children<.children<@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529671008:367:123
+Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529671008:366:108
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:34:32.524Z"} 
+[2025-11-07 15:34:33] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:34:32.525Z"} 
+[2025-11-07 15:38:17] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529897631 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:38:17.704Z"} 
+[2025-11-07 15:38:17] local.ERROR: [vite] Failed to reload /resources/js/pages/Dashboard/dashboard.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:38:17.704Z"} 
+[2025-11-07 15:38:24] local.ERROR: TypeError: can't access property "toStr", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529903691 200 13 TypeError can't access property "toStr", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529903691:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRefresh@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:372:11
+performReactRefresh/<@http://localhost:5173/@react-refresh:228:17
+performReactRefresh@http://localhost:5173/@react-refresh:217:26
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:38:24.074Z"} 
+[2025-11-07 15:38:24] local.ERROR: TypeError: can't access property "toStr", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529903691 200 13 TypeError can't access property "toStr", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529903691:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRefresh@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:372:11
+performReactRefresh/<@http://localhost:5173/@react-refresh:228:17
+performReactRefresh@http://localhost:5173/@react-refresh:217:26
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:38:24.074Z"} 
+[2025-11-07 15:38:24] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:38:24.074Z"} 
+[2025-11-07 15:38:26] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529905922 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529905922:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:38:26.368Z"} 
+[2025-11-07 15:38:26] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529905922 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529905922:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:38:26.368Z"} 
+[2025-11-07 15:38:26] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:38:26.368Z"} 
+[2025-11-07 15:38:28] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529908041 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529908041:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:38:28.455Z"} 
+[2025-11-07 15:38:28] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529908041 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529908041:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:38:28.455Z"} 
+[2025-11-07 15:38:28] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:38:28.456Z"} 
+[2025-11-07 15:38:30] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529910024 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529910024:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:38:30.297Z"} 
+[2025-11-07 15:38:30] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529910024 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762529910024:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:38:30.297Z"} 
+[2025-11-07 15:38:30] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T15:38:30.297Z"} 
+[2025-11-07 16:05:29] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531528105 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:28.197Z"} 
+[2025-11-07 16:05:29] local.ERROR: [vite] Failed to reload /resources/js/pages/Dashboard/dashboard.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:28.198Z"} 
+[2025-11-07 16:05:33] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531530532 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531530532:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:32.390Z"} 
+[2025-11-07 16:05:33] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531530532 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531530532:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:32.390Z"} 
+[2025-11-07 16:05:33] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:32.390Z"} 
+[2025-11-07 16:05:35] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531533451 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531533451:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:34.796Z"} 
+[2025-11-07 16:05:35] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531533451 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531533451:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:34.796Z"} 
+[2025-11-07 16:05:35] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:34.796Z"} 
+[2025-11-07 16:05:36] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531535398 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531535398:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:35.817Z"} 
+[2025-11-07 16:05:36] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531535398 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531535398:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:35.817Z"} 
+[2025-11-07 16:05:36] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:35.817Z"} 
+[2025-11-07 16:05:39] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531538306 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531538306:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:38.837Z"} 
+[2025-11-07 16:05:39] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531538306 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531538306:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:38.837Z"} 
+[2025-11-07 16:05:39] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:38.837Z"} 
+[2025-11-07 16:05:46] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531543998 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531543998:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:45.382Z"} 
+[2025-11-07 16:05:46] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531543998 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531543998:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:45.382Z"} 
+[2025-11-07 16:05:46] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:45.383Z"} 
+[2025-11-07 16:05:49] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531546957 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531546957:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:48.425Z"} 
+[2025-11-07 16:05:49] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531546957 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531546957:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:48.425Z"} 
+[2025-11-07 16:05:49] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:48.425Z"} 
+[2025-11-07 16:05:52] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531549956 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531549956:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:51.311Z"} 
+[2025-11-07 16:05:52] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531549956 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531549956:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:51.311Z"} 
+[2025-11-07 16:05:52] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:51.311Z"} 
+[2025-11-07 16:05:53] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531551638 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531551638:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:52.320Z"} 
+[2025-11-07 16:05:53] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531551638 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531551638:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:52.320Z"} 
+[2025-11-07 16:05:53] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:52.320Z"} 
+[2025-11-07 16:05:56] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531554339 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531554339:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:55.637Z"} 
+[2025-11-07 16:05:56] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531554339 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531554339:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:55.637Z"} 
+[2025-11-07 16:05:56] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:55.639Z"} 
+[2025-11-07 16:05:57] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531556196 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531556196:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:56.651Z"} 
+[2025-11-07 16:05:57] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531556196 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531556196:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:56.651Z"} 
+[2025-11-07 16:05:57] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:05:56.651Z"} 
+[2025-11-07 16:06:11] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531569216 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531569216:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:06:10.537Z"} 
+[2025-11-07 16:06:11] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531569216 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531569216:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:06:10.537Z"} 
+[2025-11-07 16:06:11] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:06:10.538Z"} 
+[2025-11-07 16:06:23] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531581577 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531581577:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:06:22.833Z"} 
+[2025-11-07 16:06:23] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531581577 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531581577:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:06:22.833Z"} 
+[2025-11-07 16:06:23] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:06:22.833Z"} 
+[2025-11-07 16:06:29] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531586821 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531586821:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:06:28.051Z"} 
+[2025-11-07 16:06:29] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531586821 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531586821:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:06:28.051Z"} 
+[2025-11-07 16:06:29] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:06:28.052Z"} 
+[2025-11-07 16:06:29] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531588350 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531588350:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:06:29.063Z"} 
+[2025-11-07 16:06:29] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531588350 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531588350:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:06:29.063Z"} 
+[2025-11-07 16:06:29] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:06:29.063Z"} 
+[2025-11-07 16:07:19] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531639204 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531639204:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3
+setTimeout handler*debounce/<@http://localhost:5173/@react-refresh:598:14
+validateRefreshBoundaryAndEnqueueUpdate@http://localhost:5173/@react-refresh:648:5
+@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531588350:905:48
+accept/<@http://localhost:5173/@vite/client:66:95
+fetchUpdate/<@http://localhost:5173/@vite/client:218:54
+queueUpdate/<@http://localhost:5173/@vite/client:196:55
+queueUpdate@http://localhost:5173/@vite/client:196:33
+async*handleMessage/<@http://localhost:5173/@vite/client:839:55
+handleMessage@http://localhost:5173/@vite/client:838:38
+async*createHMRHandler/</<@http://localhost:5173/@vite/client:459:49
+dequeue@http://localhost:5173/@vite/client:481:8
+enqueue/<@http://localhost:5173/@vite/client:473:9
+enqueue@http://localhost:5173/@vite/client:467:10
+createHMRHandler/<@http://localhost:5173/@vite/client:459:28
+onMessage@http://localhost:5173/@vite/client:306:15
+createWebSocketModuleRunnerTransport/connect/<@http://localhost:5173/@vite/client:414:14 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:07:19.523Z"} 
+[2025-11-07 16:07:19] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531639204 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531639204:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3
+setTimeout handler*debounce/<@http://localhost:5173/@react-refresh:598:14
+validateRefreshBoundaryAndEnqueueUpdate@http://localhost:5173/@react-refresh:648:5
+@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531588350:905:48
+accept/<@http://localhost:5173/@vite/client:66:95
+fetchUpdate/<@http://localhost:5173/@vite/client:218:54
+queueUpdate/<@http://localhost:5173/@vite/client:196:55
+queueUpdate@http://localhost:5173/@vite/client:196:33
+async*handleMessage/<@http://localhost:5173/@vite/client:839:55
+handleMessage@http://localhost:5173/@vite/client:838:38
+async*createHMRHandler/</<@http://localhost:5173/@vite/client:459:49
+dequeue@http://localhost:5173/@vite/client:481:8
+enqueue/<@http://localhost:5173/@vite/client:473:9
+enqueue@http://localhost:5173/@vite/client:467:10
+createHMRHandler/<@http://localhost:5173/@vite/client:459:28
+onMessage@http://localhost:5173/@vite/client:306:15
+createWebSocketModuleRunnerTransport/connect/<@http://localhost:5173/@vite/client:414:14 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:07:19.523Z"} 
+[2025-11-07 16:07:19] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:07:19.529Z"} 
+[2025-11-07 16:07:28] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531648173 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531648173:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3
+setTimeout handler*debounce/<@http://localhost:5173/@react-refresh:598:14
+validateRefreshBoundaryAndEnqueueUpdate@http://localhost:5173/@react-refresh:648:5
+@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531639204:905:48
+accept/<@http://localhost:5173/@vite/client:66:95
+fetchUpdate/<@http://localhost:5173/@vite/client:218:54
+queueUpdate/<@http://localhost:5173/@vite/client:196:55
+queueUpdate@http://localhost:5173/@vite/client:196:33
+async*handleMessage/<@http://localhost:5173/@vite/client:839:55
+handleMessage@http://localhost:5173/@vite/client:838:38
+async*createHMRHandler/</<@http://localhost:5173/@vite/client:459:49
+dequeue@http://localhost:5173/@vite/client:481:8
+enqueue/<@http://localhost:5173/@vite/client:473:9
+enqueue@http://localhost:5173/@vite/client:467:10
+createHMRHandler/<@http://localhost:5173/@vite/client:459:28
+onMessage@http://localhost:5173/@vite/client:306:15
+createWebSocketModuleRunnerTransport/connect/<@http://localhost:5173/@vite/client:414:14 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:07:28.482Z"} 
+[2025-11-07 16:07:28] local.ERROR: TypeError: can't access property "toString", customerCount is undefined http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531648173 200 13 TypeError can't access property "toString", customerCount is undefined Dashboard@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531648173:200:13
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:360:117
+performReactRefresh/<@http://localhost:5173/@react-refresh:208:17
+performReactRefresh@http://localhost:5173/@react-refresh:190:25
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3
+setTimeout handler*debounce/<@http://localhost:5173/@react-refresh:598:14
+validateRefreshBoundaryAndEnqueueUpdate@http://localhost:5173/@react-refresh:648:5
+@http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762531639204:905:48
+accept/<@http://localhost:5173/@vite/client:66:95
+fetchUpdate/<@http://localhost:5173/@vite/client:218:54
+queueUpdate/<@http://localhost:5173/@vite/client:196:55
+queueUpdate@http://localhost:5173/@vite/client:196:33
+async*handleMessage/<@http://localhost:5173/@vite/client:839:55
+handleMessage@http://localhost:5173/@vite/client:838:38
+async*createHMRHandler/</<@http://localhost:5173/@vite/client:459:49
+dequeue@http://localhost:5173/@vite/client:481:8
+enqueue/<@http://localhost:5173/@vite/client:473:9
+enqueue@http://localhost:5173/@vite/client:467:10
+createHMRHandler/<@http://localhost:5173/@vite/client:459:28
+onMessage@http://localhost:5173/@vite/client:306:15
+createWebSocketModuleRunnerTransport/connect/<@http://localhost:5173/@vite/client:414:14 {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:07:28.483Z"} 
+[2025-11-07 16:07:28] local.WARNING: %s
+
+%s An error occurred in the <Dashboard> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:07:28.484Z"} 
+[2025-11-07 16:08:19] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:08:18.883Z"} 
+[2025-11-07 16:08:46] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:08:46.352Z"} 
+[2025-11-07 16:09:27] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:09:27.546Z"} 
+[2025-11-07 16:12:16] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T16:12:16.236Z"} 
