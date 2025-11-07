@@ -19,7 +19,16 @@ const CustomInput: React.FC<CustomInputProps> = ({ label, name, id, error, class
             <Label className="text-xs md:text-sm" htmlFor={id}>
                 {label}
             </Label>
-            <Input id={id} className={cn('w-full', inputClassName)} name={name} {...props} />
+            {/* <Input id={id} className={cn('', inputClassName)} name={name} {...props} /> */}
+            <Input
+                id={id}
+                className={cn(
+                    ' focus-visible:ring-0 focus-visible:ring-transparent focus-visible:ring-offset-0',
+                    inputClassName
+                )}
+                name={name}
+                {...props}
+            />
             {error && <InputError message={error || ''} className="mt-2" />}
         </div>
     );

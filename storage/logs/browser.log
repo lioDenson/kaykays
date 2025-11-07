@@ -12822,3 +12822,127 @@ enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0
 %s An error occurred in the <Customer> component. Consider adding an error boundary to your tree to customize error handling behavior.
 Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/customers/1","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-06T15:27:20.231Z"} 
 [2025-11-06 15:27:33] local.ERROR: The tag <%s> is unrecognized in this browser. If you meant to render a React component, start its name with an uppercase letter. info {"url":"http://127.0.0.1:8000/customers/1","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-06T15:27:33.601Z"} 
+[2025-11-07 05:49:35] local.ERROR: [vite] failed to connect to websocket.
+your current setup:
+  (browser) localhost:5173/ <--[HTTP]--> localhost:5173/ (server)
+  (browser) localhost:5173/ <--[WebSocket (failing)]--> localhost:5173/ (server)
+Check out your Vite / network configuration and https://vite.dev/config/server-options.html#server-hmr . {"url":"http://127.0.0.1:8000/customers/1","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T05:49:27.650Z"} 
+[2025-11-07 05:49:35] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/customers/1","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T05:49:27.814Z"} 
+[2025-11-07 05:49:52] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/login","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T05:49:52.358Z"} 
+[2025-11-07 05:50:13] local.ERROR: ReferenceError: CustomToaster is not defined http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx 205 28 ReferenceError CustomToaster is not defined Sale@http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx:205:28
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+processRootScheduleInMicrotask@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11558:38
+node_modules/react-dom/cjs/react-dom-client.development.js/scheduleImmediateRootScheduleTask/<@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11649:15 {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T05:50:13.174Z"} 
+[2025-11-07 05:50:13] local.ERROR: ReferenceError: CustomToaster is not defined http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx 205 28 ReferenceError CustomToaster is not defined Sale@http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx:205:28
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+processRootScheduleInMicrotask@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11558:38
+node_modules/react-dom/cjs/react-dom-client.development.js/scheduleImmediateRootScheduleTask/<@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11649:15 {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T05:50:13.175Z"} 
+[2025-11-07 05:50:13] local.WARNING: %s
+
+%s An error occurred in the <Sale> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T05:50:13.175Z"} 
+[2025-11-07 05:51:34] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T05:51:34.652Z"} 
+[2025-11-07 05:57:10] local.ERROR: Received `%s` for a non-boolean attribute `%s`.
+
+If you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.toString()}. true cl cl true cl {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T05:57:07.552Z"} 
+[2025-11-07 05:58:02] local.ERROR: Received `%s` for a non-boolean attribute `%s`.
+
+If you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.toString()}. true in in true in {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T05:58:02.737Z"} 
+[2025-11-07 07:48:16] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/login","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T07:48:15.237Z"} 
+[2025-11-07 07:58:07] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762502286246 null {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T07:58:06.612Z"} 
+[2025-11-07 07:58:07] local.ERROR: [vite] Failed to reload /resources/js/pages/Transactions/Sales/Create.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T07:58:06.613Z"} 
+[2025-11-07 07:58:09] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762502288604 null {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T07:58:09.004Z"} 
+[2025-11-07 07:58:09] local.ERROR: [vite] Failed to reload /resources/js/pages/Transactions/Sales/Create.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T07:58:09.004Z"} 
+[2025-11-07 07:58:11] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762502291221 null {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T07:58:11.508Z"} 
+[2025-11-07 07:58:11] local.ERROR: [vite] Failed to reload /resources/js/pages/Transactions/Sales/Create.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T07:58:11.509Z"} 
+[2025-11-07 07:58:15] local.ERROR: ReferenceError: DollarSign is not defined http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762502294492 904 229 ReferenceError DollarSign is not defined Sale@http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762502294492:904:229
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRefresh@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:372:11
+performReactRefresh/<@http://localhost:5173/@react-refresh:228:17
+performReactRefresh@http://localhost:5173/@react-refresh:217:26
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T07:58:14.914Z"} 
+[2025-11-07 07:58:15] local.ERROR: ReferenceError: DollarSign is not defined http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762502294492 904 229 ReferenceError DollarSign is not defined Sale@http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762502294492:904:229
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:10567:86
+scheduleRefresh@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=2e00512c:372:11
+performReactRefresh/<@http://localhost:5173/@react-refresh:228:17
+performReactRefresh@http://localhost:5173/@react-refresh:217:26
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3 {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T07:58:14.914Z"} 
+[2025-11-07 07:58:15] local.WARNING: %s
+
+%s An error occurred in the <Sale> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T07:58:14.914Z"} 
+[2025-11-07 07:59:05] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T07:59:05.105Z"} 
+[2025-11-07 07:59:25] local.ERROR: Received `%s` for a non-boolean attribute `%s`.
+
+If you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.toString()}. true w- w- true w- {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T07:59:25.463Z"} 
+[2025-11-07 07:59:28] local.ERROR: Received `%s` for a non-boolean attribute `%s`.
+
+If you want to write it to the DOM, pass a string instead: %s="%s" or %s={value.toString()}. true wid wid true wid {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T07:59:28.578Z"} 
+[2025-11-07 07:59:32] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762502371953 null {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T07:59:32.216Z"} 
+[2025-11-07 07:59:32] local.ERROR: [vite] Failed to reload /resources/js/pages/Transactions/Sales/Create.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T07:59:32.216Z"} 
+[2025-11-07 07:59:36] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762502376247 null {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T07:59:36.599Z"} 
+[2025-11-07 07:59:36] local.ERROR: [vite] Failed to reload /resources/js/pages/Transactions/Sales/Create.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T07:59:36.599Z"} 
+[2025-11-07 08:01:30] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762502489595 null {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:01:29.917Z"} 
+[2025-11-07 08:01:30] local.ERROR: [vite] Failed to reload /resources/js/pages/Transactions/Sales/Create.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:01:29.917Z"} 
+[2025-11-07 08:02:42] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762502561685 null {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:02:42.058Z"} 
+[2025-11-07 08:02:42] local.ERROR: [vite] Failed to reload /resources/js/pages/Transactions/Sales/Create.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:02:42.059Z"} 
+[2025-11-07 08:02:45] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762502564895 null {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:02:45.402Z"} 
+[2025-11-07 08:02:45] local.ERROR: [vite] Failed to reload /resources/js/pages/Transactions/Sales/Create.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:02:45.403Z"} 
+[2025-11-07 08:06:07] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762502766467 null {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:06:06.929Z"} 
+[2025-11-07 08:06:07] local.ERROR: [vite] Failed to reload /resources/js/pages/Transactions/Sales/Create.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:06:06.929Z"} 
+[2025-11-07 08:06:09] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762502768852 null {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:06:09.213Z"} 
+[2025-11-07 08:06:09] local.ERROR: [vite] Failed to reload /resources/js/pages/Transactions/Sales/Create.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:06:09.214Z"} 
+[2025-11-07 08:06:18] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762502777725 null {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:06:17.983Z"} 
+[2025-11-07 08:06:18] local.ERROR: [vite] Failed to reload /resources/js/pages/Transactions/Sales/Create.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:06:17.984Z"} 
+[2025-11-07 08:06:20] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762502780130 null {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:06:20.571Z"} 
+[2025-11-07 08:06:20] local.ERROR: [vite] Failed to reload /resources/js/pages/Transactions/Sales/Create.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:06:20.571Z"} 
+[2025-11-07 08:06:23] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762502782633 null {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:06:22.899Z"} 
+[2025-11-07 08:06:23] local.ERROR: [vite] Failed to reload /resources/js/pages/Transactions/Sales/Create.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:06:22.899Z"} 
+[2025-11-07 08:06:27] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762502786741 null {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:06:27.002Z"} 
+[2025-11-07 08:06:27] local.ERROR: [vite] Failed to reload /resources/js/pages/Transactions/Sales/Create.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:06:27.003Z"} 
+[2025-11-07 08:14:59] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762503298949 null {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:14:59.212Z"} 
+[2025-11-07 08:14:59] local.ERROR: [vite] Failed to reload /resources/js/pages/Transactions/Sales/Create.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:14:59.212Z"} 
+[2025-11-07 08:21:43] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Transactions/Sales/Create.tsx?t=1762503700421 null {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:21:41.059Z"} 
+[2025-11-07 08:21:43] local.ERROR: [vite] Failed to reload /resources/js/pages/Transactions/Sales/Create.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-07T08:21:41.059Z"} 
