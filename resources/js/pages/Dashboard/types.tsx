@@ -15,3 +15,10 @@ export interface SaleStatistics {
     diff: number;
     percentageDiff: number;
 }
+
+export interface TopSales {
+    id: number;
+    customer: string;
+    total: number;
+    date: string;
+}

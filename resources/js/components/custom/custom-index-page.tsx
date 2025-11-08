@@ -524,7 +524,7 @@ export default function CustomIndexPage<TData extends { id?: string | number } =
 
             {/* Pagination & Info with Solid Design */}
             <div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                {paginate && (
+                {paginate && paginate.total > 0 && (
                     <div className="text-center text-sm text-gray-600 sm:text-left dark:text-gray-400">
                         Showing{' '}
                         <span className="font-semibold text-gray-900 dark:text-white">

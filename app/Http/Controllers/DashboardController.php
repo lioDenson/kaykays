@@ -32,6 +32,7 @@ class DashboardController extends Controller
                 'discoveredCustomers' => $discoveredCustomers,
                 'lowStock' => self::getLowStock(),
                 'saleStatistics' => self::getSaleDifference(),
+                'topSales' => self::getTopSales(),
 
             ],
         );
@@ -67,5 +68,23 @@ class DashboardController extends Controller
             'diff' => $diff,
             'percentageDiff' => $percentageDiff,
         ];
+    }
+
+    protected function getTopSales()
+    {
+        $thiWeek = Carbon::now()->startOfWeek();
+        $topSales = Sale::with(['customer:user_id','customer.user:name'])->whereDate('date', '>=', $thiWeek)->orderBy('total', 'asc')->take(5)->get(['id','customer_id','total','date']);
+
+        $top = [];
+        foreach ($topSales as $sale) {
+            $top[] = [
+                'id' => $sale->id,
+                'customer' => $sale->customer?->user->name ?? 'Walk In Customer',
+                'total' => $sale->total,
+                'date' => $sale->date
+            ];
+        }
+
+        return $top;
     }
 }

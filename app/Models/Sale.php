@@ -70,7 +70,7 @@ class Sale extends Model
 
     public function customerUser()
     {
-        return $this->customer?->user;
+        return $this->customer->user;
     }
 
     public function user()

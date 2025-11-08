@@ -31,7 +31,7 @@ import {
     UserX,
     Zap
 } from 'lucide-react';
-import { lowStock, RecentSale, SaleStatistics } from './types';
+import { lowStock, RecentSale, SaleStatistics, TopSales } from './types';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
@@ -46,7 +46,9 @@ export default function Dashboard({
     discoveredCustomers,
     lowStock,
     stockCount,
-    saleStatistics
+    saleStatistics,
+    topSales,
+    topDebtors,
 }: {
     recentSales: RecentSale[];
     customerCount: number;
@@ -54,6 +56,7 @@ export default function Dashboard({
     lowStock: lowStock[];
     stockCount: number;
     saleStatistics: SaleStatistics;
+    topSales: TopSales[],
 }) {
     const { flash } = usePage().props as any;
 
@@ -158,10 +161,13 @@ export default function Dashboard({
                                     <Star className="h-4 w-4 text-amber-500" />
                                 </div>
                                 <div className="space-y-3">
-                                    <TopItem rank={1} name="John Doe" value="45,200 KSH" />
-                                    <TopItem rank={2} name="Jane Smith" value="38,700 KSH" />
-                                    <TopItem rank={3} name="Mike Johnson" value="32,100 KSH" />
-                                    <TopItem rank={4} name="Sarah Wilson" value="28,400 KSH" />
+                                    {
+                                        topSales && topSales.map((sale, index) => {
+                                            return (
+                                                <TopItem key={index} rank={index + 1} name={sale.customer} value={`${sale.total.toString()} KSH`} />
+                                            );
+                                        })
+                                    }
                                 </div>
                             </div>
                         </div>

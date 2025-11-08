@@ -1,3 +1,5 @@
+import { LucideIcon } from "lucide-react";
+
 const GradientMetricCard = ({ title, value, subtitle, trend, trendType, icon, gradient, darkGradient }) => (
     <div className={`rounded-xl bg-gradient-to-br ${gradient} p-3 shadow-xs transition-all hover:shadow-sm dark:${darkGradient}`}>
         <div className="flex items-center justify-between">
@@ -24,17 +26,12 @@ const GradientMetricCard = ({ title, value, subtitle, trend, trendType, icon, gr
     </div>
 );
 
-const TopItem = ({ rank, name, value }) => (
+const TopItem = ({ rank, name, value }:{rank: number, name: string, value: string}) => (
     <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
             <div
-                className={`flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold ${
-                    rank === 1
-                        ? 'bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300'
-                        : rank === 2
-                          ? 'bg-gray-100 text-gray-700 dark:bg-gray-700 dark:text-gray-300'
-                          : 'bg-orange-100 text-orange-700 dark:bg-orange-900/50 dark:text-orange-300'
-                }`}
+                className={`flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold 'bg-amber-100 text-amber-700 dark:bg-amber-900/50 dark:text-amber-300 
+                `}
             >
                 {rank}
             </div>
@@ -44,7 +41,7 @@ const TopItem = ({ rank, name, value }) => (
     </div>
 );
 
-const DebtorItem = ({ name, amount, days }) => (
+const DebtorItem = ({ name, amount, days }:{name: string, amount: string, days: number}) => (
     <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
             <div className="flex h-6 w-6 items-center justify-center rounded-full bg-red-100 text-xs font-bold text-red-700 dark:bg-red-900/50 dark:text-red-300">
@@ -59,7 +56,7 @@ const DebtorItem = ({ name, amount, days }) => (
     </div>
 );
 
-const GradientActionButton = ({ label, href, icon, gradient }) => (
+const GradientActionButton = ({ label, href, icon, gradient }:{label: string, href: string, icon: any, gradient: string}) => (
     <a
         href={href}
         className={`flex flex-col items-center gap-2 rounded-xl bg-gradient-to-r ${gradient} p-3 text-xs font-semibold text-white shadow-xs transition-all hover:scale-105 hover:shadow-sm`}
@@ -69,7 +66,7 @@ const GradientActionButton = ({ label, href, icon, gradient }) => (
     </a>
 );
 
-const FeedbackItem = ({ type, text, author, time, urgent=false }) => (
+const FeedbackItem = ({ type, text, author, time, urgent=false }:{type: string, text: string, author: string, time: string, urgent?: boolean}) => (
     <div
         className={`rounded-lg p-2 ${
             type === 'complaint' ? 'bg-red-50/50 dark:bg-red-900/20' : 'bg-blue-50/50 dark:bg-blue-900/20'
@@ -83,7 +80,7 @@ const FeedbackItem = ({ type, text, author, time, urgent=false }) => (
     </div>
 );
 
-const AlertCard = ({ icon, title, message, type }) => (
+const AlertCard = ({ icon, title, message, type }:{icon: LucideIcon, title: string, message: string, type: string}) => (
     <div
         className={`rounded-xl border p-3 ${
             type === 'warning'
@@ -124,7 +121,7 @@ const AlertCard = ({ icon, title, message, type }) => (
 );
 
 // Keep existing components
-const CompactActivityItem = ({ title, amount, time }) => (
+const CompactActivityItem = ({ title, amount, time }:{title: string, amount: string, time: string}) => (
     <div className="flex items-center justify-between rounded-lg bg-white/50 p-2 backdrop-blur-sm dark:bg-gray-800/50">
         <div>
             <p className="text-xs font-medium text-gray-900 dark:text-white">{title}</p>
@@ -134,7 +131,7 @@ const CompactActivityItem = ({ title, amount, time }) => (
     </div>
 );
 
-const PerformanceMetric = ({ label, value, change, changeType }) => (
+const PerformanceMetric = ({ label, value, change, changeType }:{label: string, value: string, change: string, changeType: string}) => (
     <div className="flex items-center justify-between">
         <span className="text-xs text-gray-600 dark:text-gray-400">{label}</span>
         <div className="text-right">
@@ -146,7 +143,7 @@ const PerformanceMetric = ({ label, value, change, changeType }) => (
     </div>
 );
 
-const EventCard = ({ icon, title, events, type }) => (
+const EventCard = ({ icon, title, events, type }:{icon: LucideIcon, title: string, events: any[], type: string}) => (
     <div
         className={`rounded-xl border p-3 ${
             type === 'schedule'
