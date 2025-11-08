@@ -62,25 +62,29 @@ class UserController extends Controller
             }
             return $role;
         });
-        
-        $userIds = DB::table('model_has_roles')->pluck('model_id');
-        
-        return Inertia::render('People/Users/Roles', ['roles' => $roles, 'userIds' => $userIds]);
+
+        // $userIds = DB::table('model_has_roles')->pluck('model_id');
+        return Inertia::render('People/Users/Roles', ['roles' => $roles]);
     }
 
-    public function userSetRole(SetRoleRequest $request){
+    public function userSetRole(SetRoleRequest $request)
+    {
         $validated = $request->validated();
-        try{
+        try {
             $user = User::findOrFail($validated['user_id']);
+
+            // see if user has an existing role and remove it
+            $roles = $user->roles;
+            if(isset($roles)){
+                $user->removeRole($roles);
+            }
             $role = Role::findOrFail($validated['role_id']);
             $user->assignRole($validated['role_id']);
 
             return to_route('users.byType', $role->name)->with('success', "$user->name  role updated to $role->name.");
-
-        }catch(Exception $e) {
+        } catch (Exception $e) {
             return redirect()->back()->with('error', 'User role not updated. Try again or contact the administrator.');
         }
-
     }
 
     /**
@@ -129,7 +133,6 @@ class UserController extends Controller
     {
         // $user->load(['roles']);
         return Inertia::render('People/Users/Show', ['user' => $user]);
-
     }
 
     /**
