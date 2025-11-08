@@ -34,6 +34,7 @@ export default function index({ payments }: { payments: PaymentInterface }) {
         {
             header: 'Sale No',
             id: 'sale_no',
+            accessorKey: 'invoice_number',
             accessorFn: (row) => row.sale.invoice_number
         },
         {
@@ -50,6 +51,7 @@ export default function index({ payments }: { payments: PaymentInterface }) {
         },
         {
             header: 'Amount Paid',
+            accessorKey: 'amount',
             id: 'amount_paid',
             accessorFn: (row) => {
                 return Number(row.amount) + Number(row.sale.delivery_fee);
@@ -58,6 +60,7 @@ export default function index({ payments }: { payments: PaymentInterface }) {
         },
         {
             header: 'Balance',
+            id: 'balance',
             accessorKey: 'balance',
             cell: (row) => {
                 const balance = row.balance;
@@ -80,6 +83,7 @@ export default function index({ payments }: { payments: PaymentInterface }) {
         {
             header: 'Method',
             id: 'method',
+            accessorKey: 'method',
             accessorFn: (row) => row.method,
             cell: (row) => {
                 if (row.method == 'cash') {

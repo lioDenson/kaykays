@@ -11,6 +11,7 @@ import {
     TopItem
 } from '@/components/custom/dashboard/components';
 import { PlaceholderPattern } from '@/components/ui/placeholder-pattern';
+import { formatTime } from '@/helpers/custom-time-format';
 import AppLayout from '@/layouts/app-layout';
 import { type BreadcrumbItem } from '@/types';
 import { Head, usePage } from '@inertiajs/react';
@@ -30,8 +31,7 @@ import {
     UserX,
     Zap
 } from 'lucide-react';
-import { RecentSale } from './types';
-import { formatTime } from '@/helpers/custom-time-format';
+import { lowStock, RecentSale, SaleStatistics } from './types';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
@@ -40,7 +40,21 @@ const breadcrumbs: BreadcrumbItem[] = [
     }
 ];
 
-export default function Dashboard({ recentSales, customerCount, discoveredCustomers }: { recentSales: RecentSale[]; customerCount: number, discoveredCustomers: number }) {
+export default function Dashboard({
+    recentSales,
+    customerCount,
+    discoveredCustomers,
+    lowStock,
+    stockCount,
+    saleStatistics
+}: {
+    recentSales: RecentSale[];
+    customerCount: number;
+    discoveredCustomers: number;
+    lowStock: lowStock[];
+    stockCount: number;
+    saleStatistics: SaleStatistics;
+}) {
     const { flash } = usePage().props as any;
 
     return (
@@ -68,10 +82,10 @@ export default function Dashboard({ recentSales, customerCount, discoveredCustom
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:gap-4">
                     <GradientMetricCard
                         title="Today's Sales"
-                        value="24.5K"
+                        value={saleStatistics.salesValue}
                         subtitle="KSH"
-                        trend="+12%"
-                        trendType="up"
+                        trend={saleStatistics.percentageDiff > 0 ? `+${saleStatistics.percentageDiff.toString()} %` : `${saleStatistics.percentageDiff.toString()} %`}
+                        trendType={saleStatistics.percentageDiff > 0 ? 'up' : 'down'}
                         icon={<CreditCard className="h-4 w-4" />}
                         gradient="from-green-500/10 to-emerald-500/10"
                         darkGradient="from-green-900/20 to-emerald-900/20"
@@ -88,10 +102,10 @@ export default function Dashboard({ recentSales, customerCount, discoveredCustom
                     />
                     <GradientMetricCard
                         title="Products"
-                        value="156"
+                        value={stockCount.toString()}
                         subtitle="Active"
-                        trend="12 Low"
-                        trendType="down"
+                        trend={lowStock.length > 0 ? lowStock.length.toString() + ' Products remain Below 15%' : 'All Above 15% balance'}
+                        trendType={lowStock.length > 0 ? 'down' : 'up'}
                         icon={<Package className="h-4 w-4" />}
                         gradient="from-blue-500/10 to-cyan-500/10"
                         darkGradient="from-blue-900/20 to-cyan-900/20"
@@ -100,7 +114,7 @@ export default function Dashboard({ recentSales, customerCount, discoveredCustom
                         title="Customers"
                         value={customerCount.toString()}
                         subtitle="Total"
-                        trend={`+ ${discoveredCustomers.toString()} New`}
+                        trend={`+ ${discoveredCustomers.toString()} New User`}
                         trendType="up"
                         icon={<Users className="h-4 w-4" />}
                         gradient="from-purple-500/10 to-violet-500/10"
