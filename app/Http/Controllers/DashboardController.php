@@ -9,6 +9,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use App\Models\Batch;
+use DivisionByZeroError;
 
 class DashboardController extends Controller
 {
@@ -45,6 +46,7 @@ class DashboardController extends Controller
         $lowStock = [];
         foreach ($stocks as $stock) {
             $percentage = $stock->balance * 100 / $stock->quantity_received;
+            $percentage = number_format($percentage, 0);
             if ($percentage < 15) {
                 $lowStock[] = $stock;
             }
@@ -61,7 +63,12 @@ class DashboardController extends Controller
         $yesterdaySales = Sale::whereDate('date', $yesterday)->sum('total');
 
         $diff = $todaySales - $yesterdaySales;
-        $percentageDiff = ($diff / $yesterdaySales) * 100;
+        try {
+            $percentageDiff = ($diff / $yesterdaySales) * 100;
+            $percentageDiff = number_format($percentageDiff, 0);
+        } catch (DivisionByZeroError $e) {
+            $percentageDiff = 0;
+        }
 
         return [
             'salesValue' => $todaySales,
@@ -73,7 +80,7 @@ class DashboardController extends Controller
     protected function getTopSales()
     {
         $thiWeek = Carbon::now()->startOfWeek();
-        $topSales = Sale::with(['customer:user_id','customer.user:name'])->whereDate('date', '>=', $thiWeek)->orderBy('total', 'asc')->take(5)->get(['id','customer_id','total','date']);
+        $topSales = Sale::with(['customer:user_id', 'customer.user:name'])->whereDate('date', '>=', $thiWeek)->orderBy('total', 'asc')->take(5)->get(['id', 'customer_id', 'total', 'date']);
 
         $top = [];
         foreach ($topSales as $sale) {
