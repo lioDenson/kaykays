@@ -26,7 +26,7 @@ class CustomerRequest extends FormRequest
 
         return [
             'name' => 'required|string|max:255',
-            'email' => 'required|email|exists:users,email',
+            'email' => 'nullable|email|exists:users,email',
             'phone' => 'required|string|max:50',
             'bill_cycle' => 'required|string|in:daily,weekly,monthly',
             'street' => 'required|string|max:100',
