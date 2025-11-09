@@ -183,7 +183,7 @@ function Sidebar({
       <div
         data-slot="sidebar"
         className={cn(
-          "bg-gradient-to-br from-white via-blue-50/50 to-cyan-50 dark:from-gray-900 dark:via-purple-900 dark:to-violet-900 border-r border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white flex h-full w-(--sidebar-width) flex-col shadow-sm backdrop-blur-sm",
+          "bg-gradient-to-br from-white via-blue-50 to-cyan-50 dark:from-gray-900 dark:via-purple-900 dark:to-violet-900 border-r border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white flex h-full w-(--sidebar-width) flex-col shadow-sm backdrop-blur-sm",
           className
         )}
         {...props}
@@ -204,7 +204,7 @@ function Sidebar({
           data-sidebar="sidebar"
           data-slot="sidebar"
           data-mobile="true"
-          className="bg-gradient-to-tr from-white via-blue-50/50 to-cyan-50/30 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900/95 text-gray-900 dark:text-white w-(--sidebar-width) p-0 [&>button]:hidden border-0 shadow-xl"
+          className="bg-gradient-to-tr from-white via-blue-50 to-cyan-50/80 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900/95 text-gray-900 dark:text-white w-(--sidebar-width) p-0 [&>button]:hidden border-0 shadow-xl"
           style={
             {
               "--sidebar-width": SIDEBAR_WIDTH_MOBILE,
