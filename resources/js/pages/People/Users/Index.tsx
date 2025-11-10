@@ -13,7 +13,6 @@ interface UserProps extends Pagination {
 }
 
 export default function Index({ users, rolling }: { users: UserProps; rolling: boolean }) {
-    console.log(rolling);
     const flash = usePage().props.flash;
     const actions = usePage().props.actions;
     const handleCreate = () => {

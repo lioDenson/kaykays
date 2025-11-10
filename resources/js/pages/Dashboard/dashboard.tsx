@@ -31,7 +31,8 @@ import {
     UserX,
     Zap
 } from 'lucide-react';
-import { lowStock, RecentSale, SaleStatistics, TopSales } from './types';
+import { Debtor, lowStock, RecentSale, SaleStatistics, TopSales } from './types';
+import formatCurrency from '@/helpers/format-currency';
 
 const breadcrumbs: BreadcrumbItem[] = [
     {
@@ -56,7 +57,8 @@ export default function Dashboard({
     lowStock: lowStock[];
     stockCount: number;
     saleStatistics: SaleStatistics;
-    topSales: TopSales[],
+        topSales: TopSales[],
+    topDebtors: Debtor[];
 }) {
     const { flash } = usePage().props as any;
 
@@ -85,9 +87,13 @@ export default function Dashboard({
                 <div className="grid grid-cols-2 gap-3 sm:grid-cols-4 lg:gap-4">
                     <GradientMetricCard
                         title="Today's Sales"
-                        value={saleStatistics.salesValue}
-                        subtitle="KSH"
-                        trend={saleStatistics.percentageDiff > 0 ? `+${saleStatistics.percentageDiff.toString()} %` : `${saleStatistics.percentageDiff.toString()} %`}
+                        value={formatCurrency(saleStatistics.salesValue)}
+                        subtitle=""
+                        trend={
+                            saleStatistics.percentageDiff > 0
+                                ? `+${saleStatistics.percentageDiff.toString()} %`
+                                : `${saleStatistics.percentageDiff.toString()} %`
+                        }
                         trendType={saleStatistics.percentageDiff > 0 ? 'up' : 'down'}
                         icon={<CreditCard className="h-4 w-4" />}
                         gradient="from-green-500/10 to-emerald-500/10"
@@ -161,13 +167,12 @@ export default function Dashboard({
                                     <Star className="h-4 w-4 text-amber-500" />
                                 </div>
                                 <div className="space-y-3">
-                                    {
-                                        topSales && topSales.map((sale, index) => {
+                                    {topSales &&
+                                        topSales.map((sale, index) => {
                                             return (
                                                 <TopItem key={index} rank={index + 1} name={sale.customer} value={`${sale.total.toString()} KSH`} />
                                             );
-                                        })
-                                    }
+                                        })}
                                 </div>
                             </div>
                         </div>
@@ -208,11 +213,21 @@ export default function Dashboard({
                                     </h3>
                                     <AlertTriangle className="h-4 w-4 text-red-500" />
                                 </div>
-                                <div className="space-y-3">
-                                    <DebtorItem name="Robert Brown" amount="15,200 KSH" days={45} />
-                                    <DebtorItem name="Lisa Anderson" amount="12,800 KSH" days={32} />
-                                    <DebtorItem name="David Miller" amount="9,500 KSH" days={28} />
-                                    <DebtorItem name="Emma Davis" amount="7,200 KSH" days={21} />
+                                <div className="space-y-3"> {
+                                    topDebtors &&
+                                    topDebtors.map((debtor, index) => {
+                                        return (
+                                            <DebtorItem
+                                                key={index}
+                                                name={debtor.name}
+                                                amount={formatCurrency(debtor.balance)}
+                                                days={debtor.due_date}
+                                            />
+                                        );
+                                    })
+
+                                }
+                                    
                                 </div>
                             </div>
                         </div>

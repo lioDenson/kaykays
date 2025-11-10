@@ -9,7 +9,9 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use App\Models\Batch;
+use App\Models\Credit;
 use DivisionByZeroError;
+use Illuminate\Support\Number;
 
 class DashboardController extends Controller
 {
@@ -34,6 +36,7 @@ class DashboardController extends Controller
                 'lowStock' => self::getLowStock(),
                 'saleStatistics' => self::getSaleDifference(),
                 'topSales' => self::getTopSales(),
+                'topDebtors' => self::getTopDebtors(),
 
             ],
         );
@@ -63,11 +66,22 @@ class DashboardController extends Controller
         $yesterdaySales = Sale::whereDate('date', $yesterday)->sum('total');
 
         $diff = $todaySales - $yesterdaySales;
-        try {
-            $percentageDiff = ($diff / $yesterdaySales) * 100;
-            $percentageDiff = number_format($percentageDiff, 0);
-        } catch (DivisionByZeroError $e) {
-            $percentageDiff = 0;
+        $percentageDiff = 0;
+
+        // today = 0, yes = 0, today > yest=0, yester > today = 0;
+
+        if ($todaySales == 0) {
+            if ($yesterdaySales == 0) {
+                $percentageDiff = 0;
+            } else {
+                $percentageDiff = -100;
+            }
+        } else {
+            if ($yesterdaySales == 0) {
+                $percentageDiff = 100;
+            } else {
+                $percentageDiff = $diff / $yesterdaySales * 100;
+            }
         }
 
         return [
@@ -80,8 +94,7 @@ class DashboardController extends Controller
     protected function getTopSales()
     {
         $thiWeek = Carbon::now()->startOfWeek();
-        $topSales = Sale::with(['customer:user_id', 'customer.user:name'])->whereDate('date', '>=', $thiWeek)->orderBy('total', 'asc')->take(5)->get(['id', 'customer_id', 'total', 'date']);
-
+        $topSales = Sale::with(['customer:user_id,id', 'customer.user:name,id'])->whereDate('date', '>=', $thiWeek)->orderBy('total', 'asc')->take(5)->get(['id', 'customer_id', 'total', 'date']);
         $top = [];
         foreach ($topSales as $sale) {
             $top[] = [
@@ -92,6 +105,24 @@ class DashboardController extends Controller
             ];
         }
 
+        return $top;
+    }
+
+    protected function getTopDebtors()
+    {
+        $top = [];
+        $topDebtors = Credit::with(['sale:id,customer_id', 'sale.customer.user:id,name'])->where('status', 'pending')->get(['id', 'sale_id', 'balance', 'due_date']);
+
+        $grouped = $topDebtors->groupBy('sale.customer_id');
+
+        foreach ($grouped as $debtor) {
+            $top[] = [
+                'customer_id' => $debtor[0]->sale->customer->id,
+                'name' => $debtor[0]->sale->customer->user->name,
+                'balance' => $debtor->map(fn($rec) => $rec->balance)->sum(),
+                'due_date' => $debtor[0]->due_date,
+            ];
+        }
         return $top;
     }
 }

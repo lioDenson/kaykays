@@ -22,3 +22,9 @@ export interface TopSales {
     total: number;
     date: string;
 }
+export interface Debtor {
+    id: number;
+    name: string;
+    balance: number;
+    due_date: number;
+}

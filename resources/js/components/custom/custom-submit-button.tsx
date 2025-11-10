@@ -23,7 +23,7 @@ const CustomSubmitButton: React.FC<Props> = ({
     onClick
 }) => {
     return (
-        <Button type={type} className={cn('', className)} onClick={onClick}>
+        <Button type={type} className={cn(' -bg-linear-90 from-green-600 to-green-900/95 dark:text-gray-300 w-full ', className)} onClick={onClick}>
             {isLoading && <Loader className="mr-2 h-4 w-4 animate-spin" />}
             {isLoading ? activeLabel : label}
             {children}

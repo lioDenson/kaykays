@@ -1,4 +1,4 @@
-import { LucideIcon } from "lucide-react";
+import { Info, LucideIcon, LucideInfo } from "lucide-react";
 
 const GradientMetricCard = ({ title, value, subtitle, trend, trendType, icon, gradient, darkGradient }) => (
     <div className={`rounded-xl bg-gradient-to-br ${gradient} p-3 shadow-xs transition-all hover:shadow-sm dark:${darkGradient}`}>
@@ -41,18 +41,25 @@ const TopItem = ({ rank, name, value }:{rank: number, name: string, value: strin
     </div>
 );
 
-const DebtorItem = ({ name, amount, days }:{name: string, amount: string, days: number}) => (
+const DebtorItem = ({ name, amount, days, status = 'overdue' }: { name: string; amount: string; days: number; status: 'overdue' | 'pending' }) => (
     <div className="flex items-center justify-between">
         <div className="flex items-center gap-3">
-            <div className="flex h-6 w-6 items-center justify-center rounded-full bg-red-100 text-xs font-bold text-red-700 dark:bg-red-900/50 dark:text-red-300">
-                !
-            </div>
+            {status === 'overdue' ? (
+                <div className="flex h-6 w-6 items-center justify-center rounded-full bg-red-100 text-xs font-bold text-red-700 dark:bg-background dark:text-red-400">
+                    <Info className="rotate-180 " />
+                </div>
+            ) : (
+                <div className="flex h-6 w-6 items-center justify-center rounded-full bg-blue-100 text-xs font-bold text-blue-700 dark:bg-background dark:text-blue-300">
+                    <Info/>
+                </div>
+            )}
+
             <div>
                 <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{name}</span>
                 <span className="block text-xs text-red-600 dark:text-red-400">{days} days overdue</span>
             </div>
         </div>
-        <span className="text-sm font-semibold text-red-700 dark:text-red-300">{amount}</span>
+        <span className="text-end text-xs font-normal text-red-700 md:text-sm dark:text-red-300">{amount}</span>
     </div>
 );
 

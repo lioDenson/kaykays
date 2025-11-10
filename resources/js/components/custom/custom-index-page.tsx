@@ -276,37 +276,38 @@ export default function CustomIndexPage<TData extends { id?: string | number } =
                                     <h3 className="text-sm font-semibold text-gray-900 dark:text-white">{`Row No ${index + 1}`}</h3>
                                 </div>
                             </div>
-                            <DropdownMenu>
-                                <DropdownMenuTrigger asChild>
-                                    <Button
-                                        variant="ghost"
-                                        size="sm"
-                                        className="rounded-full bg-white shadow-sm active:bg-gray-100 dark:bg-gray-700 dark:active:bg-gray-600"
-                                    >
-                                        <MoreHorizontal className="h-4 w-4" />
-                                    </Button>
-                                </DropdownMenuTrigger>
-                                <DropdownMenuContent align="end" className="shadow-xl">
-                                    <CustomActionsButtons
-                                        infoBtn={{
-                                            label: 'View Details',
-                                            disabled: deleting,
-                                            onClick: () => handleInfo?.(row.original)
-                                        }}
-                                        editBtn={{
-                                            label: 'Edit',
-                                            disabled: deleting,
-                                            onClick: () => handleEdit?.(row.original)
-                                        }}
-                                        deleteBtn={{
-                                            label: 'Delete',
-                                            disabled: deleting,
-                                            onClick: () => handleDelete?.(row.original)
-                                        }}
-                                        vertical
-                                    />
-                                </DropdownMenuContent>
-                            </DropdownMenu>
+                            {Columns.some((col) => col.isActions)   && (
+                                <DropdownMenu>
+                                    <DropdownMenuTrigger asChild>
+                                        <Button
+                                            variant="ghost"
+                                            size="sm"
+                                            className="rounded-full bg-white shadow-sm active:bg-gray-100 dark:bg-gray-700 dark:active:bg-gray-600"
+                                        >
+                                            <MoreHorizontal className="h-4 w-4" />
+                                        </Button>
+                                    </DropdownMenuTrigger>
+                                    <DropdownMenuContent align="end" className="shadow-xl">
+                                        <CustomActionsButtons
+                                            infoBtn={{
+                                                label: 'View Details',
+                                                disabled: deleting,
+                                                onClick: () => handleInfo?.(row.original)
+                                            }}
+                                            editBtn={{
+                                                label: 'Edit',
+                                                disabled: deleting,
+                                                onClick: () => handleEdit?.(row.original)
+                                            }}
+                                            deleteBtn={{
+                                                label: 'Delete',
+                                                disabled: deleting,
+                                                onClick: () => handleDelete?.(row.original)
+                                            }}
+                                        />
+                                    </DropdownMenuContent>
+                                </DropdownMenu>
+                            )}
                         </div>
                         <div className="mt-3 space-y-2">
                             {Columns.filter((col) => !col.isActions && col.accessorKey)

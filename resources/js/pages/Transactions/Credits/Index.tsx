@@ -252,6 +252,8 @@ export default function Index({ credits }: { credits: CreditInterface }) {
         {
             header: 'Sale',
             id: 'sale',
+            accessorKey: 'sale',
+
             sortable: true,
             filterable: true,
             accessorFn: (row) => row.sale.invoice_number,
@@ -262,6 +264,7 @@ export default function Index({ credits }: { credits: CreditInterface }) {
         {
             header: 'Customer',
             id: 'customer',
+            accessorKey: 'customer',
             sortable: true,
             filterable: true,
             accessorFn: (row) => row.customer?.user?.name ?? 'Walk in'
@@ -269,6 +272,7 @@ export default function Index({ credits }: { credits: CreditInterface }) {
         {
             header: 'Cost (Ksh)',
             id: 'amount',
+            accessorKey: 'amount',
             accessorFn: (row) => {
                 // calculate the cost  of the sale (add cost of item and the delivery fee).
                 return Number(row.sale.total) + Number(row.sale.delivery_fee);
@@ -279,12 +283,14 @@ export default function Index({ credits }: { credits: CreditInterface }) {
         {
             header: 'Paid Amt. (Ksh)',
             id: 'paid',
+            accessorKey: 'paid',
             accessorFn: (row) => row.sale.paid,
             filterable: true
         },
         {
             header: 'Balance (Ksh)',
             id: 'balance',
+            accessorKey: 'balance',
             accessorFn: (row) => row.sale.balance,
             filterable: true
         },
@@ -312,7 +318,6 @@ export default function Index({ credits }: { credits: CreditInterface }) {
         }
     ];
 
-    console.log(errors.form_);
     const flash = usePage().props.flash as FlashMessage;
     if (flash['error'] == null && errors.form_ != undefined) flash['error'] = errors.form_;
 

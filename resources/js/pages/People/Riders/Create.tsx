@@ -34,7 +34,6 @@ export default function Create({ rider, riders }: { rider?: RiderInterface; ride
         filter: riders
     });
 
-    console.log(errors);
 
     const handleSubmit = () => {
         const submitData = {
@@ -165,7 +164,7 @@ export default function Create({ rider, riders }: { rider?: RiderInterface; ride
                         error={errors.vehicle_number}
                     />
                 </div>
-                <CustomSubmitButton onClick={handleSubmit} isLoading={isLoading} label={isEdit ? 'Update Rider' : 'Create Rider'} />
+                <CustomSubmitButton onClick={handleSubmit} isLoading={isLoading} label={isEdit ? 'Update Rider' : 'Create Rider'} className='w-full'/>
             </AuthLayout>
         </AppLayout>
     );

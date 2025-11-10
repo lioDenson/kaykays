@@ -63,7 +63,6 @@ class UserController extends Controller
             return $role;
         });
 
-        // $userIds = DB::table('model_has_roles')->pluck('model_id');
         return Inertia::render('People/Users/Roles', ['roles' => $roles]);
     }
 

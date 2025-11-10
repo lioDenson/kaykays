@@ -16640,3 +16640,389 @@ Visit https://react.dev/link/error-boundaries to learn more about error boundari
 [2025-11-09 13:57:58] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/users","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-09T13:57:58.241Z"} 
 [2025-11-09 13:57:59] local.DEBUG: false {"url":"http://127.0.0.1:8000/users","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-09T13:57:58.788Z"} 
 [2025-11-09 14:02:53] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/users/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-09T14:02:52.863Z"} 
+[2025-11-09 14:13:50] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/users","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-09T14:13:49.165Z"} 
+[2025-11-09 14:13:50] local.DEBUG: false {"url":"http://127.0.0.1:8000/users","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-09T14:13:49.804Z"} 
+[2025-11-10 06:33:47] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T06:33:47.299Z"} 
+[2025-11-10 06:41:06] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T06:41:06.218Z"} 
+[2025-11-10 06:51:13] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/users","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T06:51:13.768Z"} 
+[2025-11-10 06:51:14] local.DEBUG: false {"url":"http://127.0.0.1:8000/users","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T06:51:14.241Z"} 
+[2025-11-10 06:51:28] local.DEBUG: false {"url":"http://127.0.0.1:8000/users","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T06:51:27.843Z"} 
+[2025-11-10 06:51:51] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/riders","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T06:51:51.266Z"} 
+[2025-11-10 06:52:01] local.DEBUG:  {"url":"http://127.0.0.1:8000/riders/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T06:52:00.531Z"} 
+[2025-11-10 06:52:01] local.DEBUG:  {"url":"http://127.0.0.1:8000/riders/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T06:52:00.783Z"} 
+[2025-11-10 07:06:12] local.DEBUG:  {"url":"http://127.0.0.1:8000/riders/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:06:11.822Z"} 
+[2025-11-10 07:06:12] local.DEBUG:  {"url":"http://127.0.0.1:8000/riders/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:06:12.068Z"} 
+[2025-11-10 07:06:12] local.DEBUG:  {"url":"http://127.0.0.1:8000/riders/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:06:12.209Z"} 
+[2025-11-10 07:06:12] local.DEBUG:  {"url":"http://127.0.0.1:8000/riders/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:06:12.345Z"} 
+[2025-11-10 07:06:16] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/People/Riders/Create.tsx?t=1762758376263 null {"url":"http://127.0.0.1:8000/riders/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:06:16.387Z"} 
+[2025-11-10 07:06:16] local.ERROR: [vite] Failed to reload /resources/js/pages/People/Riders/Create.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/riders/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:06:16.388Z"} 
+[2025-11-10 07:06:18] local.DEBUG:  {"url":"http://127.0.0.1:8000/riders/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:06:17.891Z"} 
+[2025-11-10 07:06:18] local.DEBUG:  {"url":"http://127.0.0.1:8000/riders/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:06:17.973Z"} 
+[2025-11-10 07:10:51] local.DEBUG:  {"url":"http://127.0.0.1:8000/riders/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:10:46.523Z"} 
+[2025-11-10 07:10:52] local.DEBUG:  {"url":"http://127.0.0.1:8000/riders/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:10:46.568Z"} 
+[2025-11-10 07:10:55] local.DEBUG: Search a user first to convert to a rider The vehicle number field is required. {"url":"http://127.0.0.1:8000/riders/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:10:55.816Z"} 
+[2025-11-10 07:11:29] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/sales/create","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:11:29.852Z"} 
+[2025-11-10 07:11:51] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/users/type/cashier","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:11:51.279Z"} 
+[2025-11-10 07:11:51] local.DEBUG: true {"url":"http://127.0.0.1:8000/users/type/cashier","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:11:51.568Z"} 
+[2025-11-10 07:51:32] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:51:31.839Z"} 
+[2025-11-10 07:51:32] local.DEBUG: null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:51:32.324Z"} 
+[2025-11-10 07:52:09] local.DEBUG: null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:52:09.779Z"} 
+[2025-11-10 07:52:11] local.DEBUG: null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:52:11.477Z"} 
+[2025-11-10 07:52:16] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Transactions/Credits/Index.tsx?t=1762761136307 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:52:16.438Z"} 
+[2025-11-10 07:52:16] local.ERROR: [vite] Failed to reload /resources/js/pages/Transactions/Credits/Index.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:52:16.438Z"} 
+[2025-11-10 07:52:18] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Transactions/Credits/Index.tsx?t=1762761138139 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:52:18.418Z"} 
+[2025-11-10 07:52:18] local.ERROR: [vite] Failed to reload /resources/js/pages/Transactions/Credits/Index.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:52:18.426Z"} 
+[2025-11-10 07:52:20] local.DEBUG: null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:52:20.641Z"} 
+[2025-11-10 07:52:23] local.DEBUG: null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:52:23.204Z"} 
+[2025-11-10 07:52:48] local.DEBUG: null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:52:48.462Z"} 
+[2025-11-10 07:55:25] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761324117 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:55:24.339Z"} 
+[2025-11-10 07:55:25] local.ERROR: [vite] Failed to reload /resources/js/components/custom/custom-index-page.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:55:24.340Z"} 
+[2025-11-10 07:55:29] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761328071 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:55:28.402Z"} 
+[2025-11-10 07:55:29] local.ERROR: [vite] Failed to reload /resources/js/components/custom/custom-index-page.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:55:28.403Z"} 
+[2025-11-10 07:55:44] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761342844 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:55:43.127Z"} 
+[2025-11-10 07:55:44] local.ERROR: [vite] Failed to reload /resources/js/components/custom/custom-index-page.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:55:43.128Z"} 
+[2025-11-10 07:55:46] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761344862 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:55:45.122Z"} 
+[2025-11-10 07:55:46] local.ERROR: [vite] Failed to reload /resources/js/components/custom/custom-index-page.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:55:45.122Z"} 
+[2025-11-10 07:55:49] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761347913 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:55:48.183Z"} 
+[2025-11-10 07:55:49] local.ERROR: [vite] Failed to reload /resources/js/components/custom/custom-index-page.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:55:48.184Z"} 
+[2025-11-10 07:55:51] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761349581 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:55:49.953Z"} 
+[2025-11-10 07:55:51] local.ERROR: [vite] Failed to reload /resources/js/components/custom/custom-index-page.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:55:49.954Z"} 
+[2025-11-10 07:57:18] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761437344 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:57:17.653Z"} 
+[2025-11-10 07:57:18] local.ERROR: [vite] Failed to reload /resources/js/components/custom/custom-index-page.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:57:17.653Z"} 
+[2025-11-10 07:57:21] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761440364 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:57:20.662Z"} 
+[2025-11-10 07:57:21] local.ERROR: [vite] Failed to reload /resources/js/components/custom/custom-index-page.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:57:20.662Z"} 
+[2025-11-10 07:57:23] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761441941 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:57:22.357Z"} 
+[2025-11-10 07:57:23] local.ERROR: [vite] Failed to reload /resources/js/components/custom/custom-index-page.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:57:22.357Z"} 
+[2025-11-10 07:57:28] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761447301 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:57:27.729Z"} 
+[2025-11-10 07:57:28] local.ERROR: [vite] Failed to reload /resources/js/components/custom/custom-index-page.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:57:27.729Z"} 
+[2025-11-10 07:57:44] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761463410 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:57:43.809Z"} 
+[2025-11-10 07:57:44] local.ERROR: [vite] Failed to reload /resources/js/components/custom/custom-index-page.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:57:43.810Z"} 
+[2025-11-10 07:58:06] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761485613 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:58:05.979Z"} 
+[2025-11-10 07:58:06] local.ERROR: [vite] Failed to reload /resources/js/components/custom/custom-index-page.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:58:05.980Z"} 
+[2025-11-10 07:58:22] local.ERROR: TypeError: row.original is not a function http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761499371 296 17 TypeError row.original is not a function CustomIndexPage/MobileCardView/<.children<@http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761499371:296:17
+MobileCardView@http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761499371:269:158
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10567:86
+scheduleRefresh@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:372:11
+performReactRefresh/<@http://localhost:5173/@react-refresh:228:17
+performReactRefresh@http://localhost:5173/@react-refresh:217:26
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3
+setTimeout handler*debounce/<@http://localhost:5173/@react-refresh:598:14
+validateRefreshBoundaryAndEnqueueUpdate@http://localhost:5173/@react-refresh:648:5
+@http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761474129:888:48
+accept/<@http://localhost:5173/@vite/client:66:95
+fetchUpdate/<@http://localhost:5173/@vite/client:218:54
+queueUpdate/<@http://localhost:5173/@vite/client:196:55
+queueUpdate@http://localhost:5173/@vite/client:196:33
+async*handleMessage/<@http://localhost:5173/@vite/client:839:55
+handleMessage@http://localhost:5173/@vite/client:838:38
+async*createHMRHandler/</<@http://localhost:5173/@vite/client:459:49
+dequeue@http://localhost:5173/@vite/client:481:8
+enqueue/<@http://localhost:5173/@vite/client:473:9
+enqueue@http://localhost:5173/@vite/client:467:10
+createHMRHandler/<@http://localhost:5173/@vite/client:459:28
+onMessage@http://localhost:5173/@vite/client:306:15
+createWebSocketModuleRunnerTransport/connect/<@http://localhost:5173/@vite/client:414:14 {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:58:22.072Z"} 
+[2025-11-10 07:58:22] local.ERROR: TypeError: row.original is not a function http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761499371 296 17 TypeError row.original is not a function CustomIndexPage/MobileCardView/<.children<@http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761499371:296:17
+MobileCardView@http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761499371:269:158
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10567:86
+scheduleRefresh@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:372:11
+performReactRefresh/<@http://localhost:5173/@react-refresh:228:17
+performReactRefresh@http://localhost:5173/@react-refresh:217:26
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3
+setTimeout handler*debounce/<@http://localhost:5173/@react-refresh:598:14
+validateRefreshBoundaryAndEnqueueUpdate@http://localhost:5173/@react-refresh:648:5
+@http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761474129:888:48
+accept/<@http://localhost:5173/@vite/client:66:95
+fetchUpdate/<@http://localhost:5173/@vite/client:218:54
+queueUpdate/<@http://localhost:5173/@vite/client:196:55
+queueUpdate@http://localhost:5173/@vite/client:196:33
+async*handleMessage/<@http://localhost:5173/@vite/client:839:55
+handleMessage@http://localhost:5173/@vite/client:838:38
+async*createHMRHandler/</<@http://localhost:5173/@vite/client:459:49
+dequeue@http://localhost:5173/@vite/client:481:8
+enqueue/<@http://localhost:5173/@vite/client:473:9
+enqueue@http://localhost:5173/@vite/client:467:10
+createHMRHandler/<@http://localhost:5173/@vite/client:459:28
+onMessage@http://localhost:5173/@vite/client:306:15
+createWebSocketModuleRunnerTransport/connect/<@http://localhost:5173/@vite/client:414:14 {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:58:22.072Z"} 
+[2025-11-10 07:58:22] local.WARNING: %s
+
+%s An error occurred in the <MobileCardView> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:58:22.075Z"} 
+[2025-11-10 07:58:27] local.DEBUG: null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T07:58:27.363Z"} 
+[2025-11-10 08:00:46] local.ERROR: ReferenceError: isA is not defined http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761642914 296 13 ReferenceError isA is not defined CustomIndexPage/MobileCardView/<.children<@http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761642914:296:13
+MobileCardView@http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761642914:269:158
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10567:86
+scheduleRefresh@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:372:11
+performReactRefresh/<@http://localhost:5173/@react-refresh:228:17
+performReactRefresh@http://localhost:5173/@react-refresh:217:26
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3
+setTimeout handler*debounce/<@http://localhost:5173/@react-refresh:598:14
+validateRefreshBoundaryAndEnqueueUpdate@http://localhost:5173/@react-refresh:648:5
+@http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761523156:888:48
+accept/<@http://localhost:5173/@vite/client:66:95
+fetchUpdate/<@http://localhost:5173/@vite/client:218:54
+queueUpdate/<@http://localhost:5173/@vite/client:196:55
+queueUpdate@http://localhost:5173/@vite/client:196:33
+async*handleMessage/<@http://localhost:5173/@vite/client:839:55
+handleMessage@http://localhost:5173/@vite/client:838:38
+async*createHMRHandler/</<@http://localhost:5173/@vite/client:459:49
+dequeue@http://localhost:5173/@vite/client:481:8
+enqueue/<@http://localhost:5173/@vite/client:473:9
+enqueue@http://localhost:5173/@vite/client:467:10
+createHMRHandler/<@http://localhost:5173/@vite/client:459:28
+onMessage@http://localhost:5173/@vite/client:306:15
+createWebSocketModuleRunnerTransport/connect/<@http://localhost:5173/@vite/client:414:14 {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:00:44.612Z"} 
+[2025-11-10 08:00:46] local.ERROR: ReferenceError: isA is not defined http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761642914 296 13 ReferenceError isA is not defined CustomIndexPage/MobileCardView/<.children<@http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761642914:296:13
+MobileCardView@http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761642914:269:158
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10567:86
+scheduleRefresh@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:372:11
+performReactRefresh/<@http://localhost:5173/@react-refresh:228:17
+performReactRefresh@http://localhost:5173/@react-refresh:217:26
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3
+setTimeout handler*debounce/<@http://localhost:5173/@react-refresh:598:14
+validateRefreshBoundaryAndEnqueueUpdate@http://localhost:5173/@react-refresh:648:5
+@http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761523156:888:48
+accept/<@http://localhost:5173/@vite/client:66:95
+fetchUpdate/<@http://localhost:5173/@vite/client:218:54
+queueUpdate/<@http://localhost:5173/@vite/client:196:55
+queueUpdate@http://localhost:5173/@vite/client:196:33
+async*handleMessage/<@http://localhost:5173/@vite/client:839:55
+handleMessage@http://localhost:5173/@vite/client:838:38
+async*createHMRHandler/</<@http://localhost:5173/@vite/client:459:49
+dequeue@http://localhost:5173/@vite/client:481:8
+enqueue/<@http://localhost:5173/@vite/client:473:9
+enqueue@http://localhost:5173/@vite/client:467:10
+createHMRHandler/<@http://localhost:5173/@vite/client:459:28
+onMessage@http://localhost:5173/@vite/client:306:15
+createWebSocketModuleRunnerTransport/connect/<@http://localhost:5173/@vite/client:414:14 {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:00:44.612Z"} 
+[2025-11-10 08:00:46] local.WARNING: %s
+
+%s An error occurred in the <MobileCardView> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:00:44.613Z"} 
+[2025-11-10 08:00:48] local.DEBUG: null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:00:47.063Z"} 
+[2025-11-10 08:01:18] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761676702 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:01:16.945Z"} 
+[2025-11-10 08:01:18] local.ERROR: [vite] Failed to reload /resources/js/components/custom/custom-index-page.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:01:16.946Z"} 
+[2025-11-10 08:01:37] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761696281 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:01:36.567Z"} 
+[2025-11-10 08:01:37] local.ERROR: [vite] Failed to reload /resources/js/components/custom/custom-index-page.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:01:36.568Z"} 
+[2025-11-10 08:01:57] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:01:57.656Z"} 
+[2025-11-10 08:01:57] local.ERROR: Unhandled Promise Rejection TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Transactions/Credits/Index.tsx?t=1762761696281 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:01:57.705Z"} 
+[2025-11-10 08:02:29] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:02:29.029Z"} 
+[2025-11-10 08:02:31] local.DEBUG: null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:02:30.341Z"} 
+[2025-11-10 08:03:16] local.DEBUG: null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:03:16.720Z"} 
+[2025-11-10 08:03:23] local.DEBUG: null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:03:23.361Z"} 
+[2025-11-10 08:03:26] local.DEBUG: null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:03:26.493Z"} 
+[2025-11-10 08:04:24] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Transactions/Credits/Index.tsx?t=1762761863744 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:04:23.835Z"} 
+[2025-11-10 08:04:24] local.ERROR: [vite] Failed to reload /resources/js/pages/Transactions/Credits/Index.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:04:23.836Z"} 
+[2025-11-10 08:04:40] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:04:40.389Z"} 
+[2025-11-10 08:06:08] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761967140 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:06:07.617Z"} 
+[2025-11-10 08:06:08] local.ERROR: [vite] Failed to reload /resources/js/components/custom/custom-index-page.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:06:07.617Z"} 
+[2025-11-10 08:06:13] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761972566 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:06:12.913Z"} 
+[2025-11-10 08:06:13] local.ERROR: [vite] Failed to reload /resources/js/components/custom/custom-index-page.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:06:12.913Z"} 
+[2025-11-10 08:06:18] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761977709 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:06:18.133Z"} 
+[2025-11-10 08:06:18] local.ERROR: [vite] Failed to reload /resources/js/components/custom/custom-index-page.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:06:18.134Z"} 
+[2025-11-10 08:06:26] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762761985576 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:06:25.793Z"} 
+[2025-11-10 08:06:26] local.ERROR: [vite] Failed to reload /resources/js/components/custom/custom-index-page.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:06:25.794Z"} 
+[2025-11-10 08:06:45] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762762004515 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:06:44.910Z"} 
+[2025-11-10 08:06:45] local.ERROR: [vite] Failed to reload /resources/js/components/custom/custom-index-page.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:06:44.910Z"} 
+[2025-11-10 08:06:59] local.ERROR: ReferenceError: Head is not defined http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762762019032 296 13 ReferenceError Head is not defined CustomIndexPage/MobileCardView/<.children<@http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762762019032:296:13
+MobileCardView@http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762762019032:269:158
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10567:86
+scheduleRefresh@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:372:11
+performReactRefresh/<@http://localhost:5173/@react-refresh:228:17
+performReactRefresh@http://localhost:5173/@react-refresh:217:26
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3
+setTimeout handler*debounce/<@http://localhost:5173/@react-refresh:598:14
+validateRefreshBoundaryAndEnqueueUpdate@http://localhost:5173/@react-refresh:648:5
+@http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762762002163:888:48
+accept/<@http://localhost:5173/@vite/client:66:95
+fetchUpdate/<@http://localhost:5173/@vite/client:218:54
+queueUpdate/<@http://localhost:5173/@vite/client:196:55
+queueUpdate@http://localhost:5173/@vite/client:196:33
+async*handleMessage/<@http://localhost:5173/@vite/client:839:55
+handleMessage@http://localhost:5173/@vite/client:838:38
+async*createHMRHandler/</<@http://localhost:5173/@vite/client:459:49
+dequeue@http://localhost:5173/@vite/client:481:8
+enqueue/<@http://localhost:5173/@vite/client:473:9
+enqueue@http://localhost:5173/@vite/client:467:10
+createHMRHandler/<@http://localhost:5173/@vite/client:459:28
+onMessage@http://localhost:5173/@vite/client:306:15
+createWebSocketModuleRunnerTransport/connect/<@http://localhost:5173/@vite/client:414:14
+EventListener.handleEvent*connect@http://localhost:5173/@vite/client:413:11
+connect@http://localhost:5173/@vite/client:751:23
+connect@http://localhost:5173/@vite/client:290:23
+connect@http://localhost:5173/@vite/client:374:45
+@http://localhost:5173/@vite/client:823:11 {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:06:59.587Z"} 
+[2025-11-10 08:06:59] local.ERROR: ReferenceError: Head is not defined http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762762019032 296 13 ReferenceError Head is not defined CustomIndexPage/MobileCardView/<.children<@http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762762019032:296:13
+MobileCardView@http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762762019032:269:158
+react_stack_bottom_frame@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:17424:20
+renderWithHooks@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:4206:42
+updateFunctionComponent@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:6619:21
+beginWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:7654:20
+runWithFiberInDEV@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:1487:15
+performUnitOfWork@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10868:98
+workLoopSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10728:60
+renderRootSync@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10711:13
+performWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10359:46
+performSyncWorkOnRoot@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:11635:26
+flushSyncWorkAcrossRoots_impl@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:11536:122
+flushSyncWork$1@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:10567:86
+scheduleRefresh@http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=50535f6f:372:11
+performReactRefresh/<@http://localhost:5173/@react-refresh:228:17
+performReactRefresh@http://localhost:5173/@react-refresh:217:26
+enqueueUpdate<@http://localhost:5173/@react-refresh:608:3
+setTimeout handler*debounce/<@http://localhost:5173/@react-refresh:598:14
+validateRefreshBoundaryAndEnqueueUpdate@http://localhost:5173/@react-refresh:648:5
+@http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762762002163:888:48
+accept/<@http://localhost:5173/@vite/client:66:95
+fetchUpdate/<@http://localhost:5173/@vite/client:218:54
+queueUpdate/<@http://localhost:5173/@vite/client:196:55
+queueUpdate@http://localhost:5173/@vite/client:196:33
+async*handleMessage/<@http://localhost:5173/@vite/client:839:55
+handleMessage@http://localhost:5173/@vite/client:838:38
+async*createHMRHandler/</<@http://localhost:5173/@vite/client:459:49
+dequeue@http://localhost:5173/@vite/client:481:8
+enqueue/<@http://localhost:5173/@vite/client:473:9
+enqueue@http://localhost:5173/@vite/client:467:10
+createHMRHandler/<@http://localhost:5173/@vite/client:459:28
+onMessage@http://localhost:5173/@vite/client:306:15
+createWebSocketModuleRunnerTransport/connect/<@http://localhost:5173/@vite/client:414:14
+EventListener.handleEvent*connect@http://localhost:5173/@vite/client:413:11
+connect@http://localhost:5173/@vite/client:751:23
+connect@http://localhost:5173/@vite/client:290:23
+connect@http://localhost:5173/@vite/client:374:45
+@http://localhost:5173/@vite/client:823:11 {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:06:59.587Z"} 
+[2025-11-10 08:06:59] local.WARNING: %s
+
+%s An error occurred in the <MobileCardView> component. Consider adding an error boundary to your tree to customize error handling behavior.
+Visit https://react.dev/link/error-boundaries to learn more about error boundaries. {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:06:59.589Z"} 
+[2025-11-10 08:07:43] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762762063324 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:07:43.500Z"} 
+[2025-11-10 08:07:43] local.ERROR: [vite] Failed to reload /resources/js/components/custom/custom-index-page.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:07:43.500Z"} 
+[2025-11-10 08:07:53] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762762072887 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:07:53.125Z"} 
+[2025-11-10 08:07:53] local.ERROR: [vite] Failed to reload /resources/js/components/custom/custom-index-page.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:07:53.126Z"} 
+[2025-11-10 08:08:17] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/custom-index-page.tsx?t=1762762097023 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:08:17.291Z"} 
+[2025-11-10 08:08:17] local.ERROR: [vite] Failed to reload /resources/js/components/custom/custom-index-page.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:08:17.292Z"} 
+[2025-11-10 08:09:10] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Transactions/Credits/Index.tsx?t=1762762150654 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:09:10.748Z"} 
+[2025-11-10 08:09:10] local.ERROR: [vite] Failed to reload /resources/js/pages/Transactions/Credits/Index.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:09:10.753Z"} 
+[2025-11-10 08:09:12] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Transactions/Credits/Index.tsx?t=1762762151957 null {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:09:12.007Z"} 
+[2025-11-10 08:09:12] local.ERROR: [vite] Failed to reload /resources/js/pages/Transactions/Credits/Index.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:09:12.008Z"} 
+[2025-11-10 08:11:12] local.WARNING: Popover is changing from uncontrolled to controlled. Components should not switch from controlled to uncontrolled (or vice versa). Decide between using a controlled or uncontrolled value for the lifetime of the component. {"url":"http://127.0.0.1:8000/credits","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:11:12.321Z"} 
+[2025-11-10 08:11:41] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/payments","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:11:41.359Z"} 
+[2025-11-10 08:12:13] local.ERROR: Each child in a list should have a unique "key" prop.%s%s See https://react.dev/link/warning-keys for more information. Check the render method of `MobileCardView`. null {"url":"http://127.0.0.1:8000/payments","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:12:13.070Z"} 
+[2025-11-10 08:14:25] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:14:25.435Z"} 
+[2025-11-10 08:23:09] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:23:09.747Z"} 
+[2025-11-10 08:26:08] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/pages/Dashboard/dashboard.tsx?t=1762763166970 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:26:07.084Z"} 
+[2025-11-10 08:26:08] local.ERROR: [vite] Failed to reload /resources/js/pages/Dashboard/dashboard.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:26:07.088Z"} 
+[2025-11-10 08:29:11] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:29:11.513Z"} 
+[2025-11-10 08:31:06] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:31:06.014Z"} 
+[2025-11-10 08:40:23] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:40:23.256Z"} 
+[2025-11-10 08:47:00] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T08:47:00.275Z"} 
+[2025-11-10 09:08:16] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T09:08:16.166Z"} 
+[2025-11-10 10:11:00] local.INFO: %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:10:59.824Z"} 
+[2025-11-10 10:15:41] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769740608 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:15:40.817Z"} 
+[2025-11-10 10:15:41] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:15:40.818Z"} 
+[2025-11-10 10:15:43] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769743259 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:15:43.451Z"} 
+[2025-11-10 10:15:43] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:15:43.451Z"} 
+[2025-11-10 10:15:48] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769747046 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:15:47.371Z"} 
+[2025-11-10 10:15:48] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:15:47.371Z"} 
+[2025-11-10 10:15:59] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769758642 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:15:58.819Z"} 
+[2025-11-10 10:15:59] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:15:58.819Z"} 
+[2025-11-10 10:16:01] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769761379 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:16:01.565Z"} 
+[2025-11-10 10:16:01] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:16:01.565Z"} 
+[2025-11-10 10:16:19] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769778937 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:16:19.195Z"} 
+[2025-11-10 10:16:19] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:16:19.196Z"} 
+[2025-11-10 10:16:22] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769781232 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:16:21.828Z"} 
+[2025-11-10 10:16:22] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:16:21.828Z"} 
+[2025-11-10 10:16:26] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769785841 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:16:25.997Z"} 
+[2025-11-10 10:16:26] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:16:25.997Z"} 
+[2025-11-10 10:16:38] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769797932 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:16:38.166Z"} 
+[2025-11-10 10:16:38] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:16:38.167Z"} 
+[2025-11-10 10:16:41] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769800600 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:16:41.061Z"} 
+[2025-11-10 10:16:41] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:16:41.061Z"} 
+[2025-11-10 10:17:11] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769830443 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:17:11.054Z"} 
+[2025-11-10 10:17:11] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:17:11.054Z"} 
+[2025-11-10 10:17:18] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769837992 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:17:18.197Z"} 
+[2025-11-10 10:17:18] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:17:18.198Z"} 
+[2025-11-10 10:17:28] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769846998 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:17:27.343Z"} 
+[2025-11-10 10:17:28] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:17:27.350Z"} 
+[2025-11-10 10:17:29] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769848226 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:17:28.601Z"} 
+[2025-11-10 10:17:29] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:17:28.601Z"} 
+[2025-11-10 10:17:34] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769854457 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:17:34.654Z"} 
+[2025-11-10 10:17:34] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:17:34.654Z"} 
+[2025-11-10 10:17:38] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769857678 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:17:37.986Z"} 
+[2025-11-10 10:17:38] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:17:37.986Z"} 
+[2025-11-10 10:17:57] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769876499 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:17:56.832Z"} 
+[2025-11-10 10:17:57] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:17:56.833Z"} 
+[2025-11-10 10:18:00] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769879312 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:17:59.562Z"} 
+[2025-11-10 10:18:00] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:17:59.563Z"} 
+[2025-11-10 10:18:07] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769886236 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:18:06.514Z"} 
+[2025-11-10 10:18:07] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:18:06.515Z"} 
+[2025-11-10 10:19:07] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769946380 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:19:06.459Z"} 
+[2025-11-10 10:19:07] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:19:06.459Z"} 
+[2025-11-10 10:19:10] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769949313 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:19:09.779Z"} 
+[2025-11-10 10:19:10] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:19:09.782Z"} 
+[2025-11-10 10:19:13] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769951878 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:19:12.068Z"} 
+[2025-11-10 10:19:13] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:19:12.069Z"} 
+[2025-11-10 10:19:21] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769959747 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:19:20.014Z"} 
+[2025-11-10 10:19:21] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:19:20.015Z"} 
+[2025-11-10 10:19:25] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769965519 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:19:25.634Z"} 
+[2025-11-10 10:19:25] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:19:25.634Z"} 
+[2025-11-10 10:19:27] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769966718 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:19:27.548Z"} 
+[2025-11-10 10:19:27] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:19:27.549Z"} 
+[2025-11-10 10:19:29] local.ERROR: [vite] TypeError error loading dynamically imported module: http://localhost:5173/resources/js/components/custom/dashboard/components.tsx?t=1762769968702 null {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:19:28.993Z"} 
+[2025-11-10 10:19:29] local.ERROR: [vite] Failed to reload /resources/js/components/custom/dashboard/components.tsx. This could be due to syntax errors or importing non-existent modules. (see errors above) {"url":"http://127.0.0.1:8000/dashboard","user_agent":"Mozilla/5.0 (X11; Linux x86_64; rv:144.0) Gecko/20100101 Firefox/144.0","timestamp":"2025-11-10T10:19:28.993Z"} 
