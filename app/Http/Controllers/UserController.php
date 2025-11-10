@@ -72,7 +72,6 @@ class UserController extends Controller
         try {
             $user = User::findOrFail($validated['user_id']);
 
-            // see if user has an existing role and remove it
             $roles = $user->roles;
             if(isset($roles)){
                 $user->removeRole($roles);

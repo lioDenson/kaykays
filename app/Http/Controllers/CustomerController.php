@@ -6,9 +6,10 @@ use Log;
 use App\Models\User;
 use Inertia\Inertia;
 use App\Models\Customer;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
-use App\Http\Requests\CustomerRequest;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\CustomerRequest;
 
 class CustomerController extends Controller
 {
@@ -137,4 +138,6 @@ class CustomerController extends Controller
             return back()->with('error', 'Customer not deleted. Something went wrong');
         }
     }
+
+    
 }

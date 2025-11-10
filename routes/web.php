@@ -28,7 +28,7 @@ Route::middleware('admin.exists')->group(function () {
 
 Route::middleware('installed')->group(function () {
     Route::get('/', function () {
-        return Inertia::render('welcome');
+        return view('welcome');
     })->name('home');
 
     Route::middleware(['auth', 'verified'])->group(function () {

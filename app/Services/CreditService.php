@@ -2,15 +2,16 @@
 
 namespace App\Services;
 
+use Exception;
+use App\Models\Sale;
+use App\Services\CustomerService;
+use App\Models\Credit;
+use App\Models\Payment;
 use App\Logics\PaymentLogic;
 use App\Logics\PaymentMethod;
-use Exception;
 use Illuminate\Support\Carbon;
-use App\Models\Credit;
-use Illuminate\Support\Facades\Auth;
-use App\Models\Payment;
 use Illuminate\Support\Facades\DB;
-use App\Models\Sale;
+use Illuminate\Support\Facades\Auth;
 
 class CreditService
 {
@@ -21,13 +22,24 @@ class CreditService
 
     public static function registerCredit(array $data)
     {
+
         try {
+            $customer = Sale::findOrFail($data['sale_id'])->customer;
+
+            $due_date = CustomerService::getCustomerDueDate($customer->bill_cycle);
+            dd($due_date);
+
             $data['date'] = Carbon::now();
             $data['account_id'] = 1;
             $data['user_id'] = Auth::id();
             $data['description'] = 'Credit sale';
+            $data['$due_date'] =
 
-            Credit::create($data);
+
+                // $customer = Sale::findOrFail($data['sale_id'])->customer;
+
+
+                Credit::create($data);
         } catch (Exception $e) {
             throw new   Exception($e->getMessage());
         }
