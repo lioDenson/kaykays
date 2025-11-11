@@ -32,7 +32,7 @@
                     animation: {
                         'float': 'float 6s ease-in-out infinite',
                         'fadeIn': 'fadeIn 1s ease-in-out',
-                        'slideIn': 'slideIn 1s ease-in-out',
+                        'slideIn': 'slideIn 1.5s ease-in-out',
                     },
                     keyframes: {
                         float: {
@@ -88,7 +88,7 @@
         }
         
         .product-card:hover {
-            transform: translateY(-10px);
+            transform: translateY(-2px);
             transition: transform 0.3s ease;
         }
         
@@ -160,20 +160,26 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero-section flex items-center text-white">
-        <div class="container  px-4">
-            <div class="max-w-4xl  text-satrt space-y-6 animate-fadeIn gap-y-2.5">
-                <h1 class="text-4xl md:text-6xl  font-bold leading-loose">
-                    Fresh Daily Products 
-                    <span class="block ml-10 text-7xl text-black" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">&</span>
-
-                    <span class="block text-shadow-2xl  text-shadow-black bg-gradient-to-r from-amber-400 to-amber-800 bg-clip-text text-transparent ">
+        <div class="container text-start  px-4">
+            <div class="lg:max-w-4xl max-w-full space-y-4 md:space-y-6 animate-fadeIn gap-y-2.5">
+                <div class="flex flex-col w-fit  md:items-center justify-center space-y-2">
+                    <h1 class="text-3xl md:text-6xl w-full  font-bold leading-tight text-center">
+                        Fresh Daily Products 
+                    </h1>
+                    <span class="block ml-10 text-2xl md:text-7xl text-center text-black" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">&</span>
+                    <h1 class="block text-3xl md:text-6xl text-center w-full font-bold text-shadow-2xl  text-shadow-black bg-gradient-to-r from-amber-400 to-amber-800 bg-clip-text text-transparent ">
                         Artisan Bakery
-                    </span>
-                </h1>
-                <p class="text-xl md:text-2xl  max-w-2xl mx-auto leading-loose">
+                    </h1>
+                </div>
+                
+                
+            </div>
+            <div class="max-w-5xl  space-6 w-fit absolute bottom-1 text-start mt-8 animate-fadeIn  md:bg-transparent" style="text-shadow: 6px 2.5px 5px rgba(236, 167, 17, 0.6);">
+ <p class="text-xl md:text-2xl font-extralight text-satrt mt-4 max-w-2xl mx-auto text-center text-gray-200  animate-slideIn">
                     Farm-fresh milk, natural mala, kienyeji eggs, and delicious baked goods delivered daily to your doorstep.
+                    Make an order and enjoy you pack of premium joy
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+                {{-- <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
                     <a href="#products" class="px-8 py-4 rounded-xl bg-gradient-to-r from-secondary to-primary text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105">
                         <i class="fas fa-shopping-basket mr-2"></i>
                         Shop Now
@@ -181,8 +187,10 @@
                     <a href="#about" class="px-8 py-4 rounded-xl border border-white text-white font-semibold hover:bg-white/10 transition-all duration-200">
                         Learn More
                     </a>
-                </div>
+                </div> --}}
             </div>
+           
+                
         </div>
         
         <!-- Scroll Indicator -->
@@ -200,37 +208,84 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">Our Fresh Products</h2>
                 <p class="text-lg text-dark/70 max-w-2xl mx-auto">Daily delivered farm-fresh products for your healthy lifestyle</p>
             </div>
-
-            <div class="flex flex-1 p-2 overflow-x-scroll scrollbar-hide gap-8">
-                <!-- Product 1 -->
-                <div class="product-card bg-light rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+            @php
+                $dailyProducts = [
+            [
+                "name"=> 'Fresh Raw Milk',
+                "imageUrl"=> "https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fG1pbGslMjBpbiUyMHRhbmt8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500",
+                "fallBack"=> 'image',
+                "tag"=> 'Full Cream ',
+                "description"=> 'Direct from our farm, unpasteurized and full of nutrients',
+                "stars"=> 4.5,
+                "starCount"=> 247,
+                "price"=> 90
+        ],
+            [
+                "name"=> 'Kienyeji Eggs',
+                "imageUrl"=> "https://images.unsplash.com/photo-1590991977680-d00d9e4f4ae9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=472",
+                "fallBack"=> 'image',
+                "tag"=> 'Rich in Flavor ',
+                "description"=> 'Free-range chicken eggs, rich in flavor and nutrients',
+                "stars"=> 5,
+                "starCount"=> 189,
+                "price"=> 600
+        ],
+            [
+                "name"=> 'Natural Mala',
+                "imageUrl"=> "https://images.unsplash.com/photo-1540915506836-cd886d09205d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTk4fHxmZXJtZW50ZWQlMjBtaWxrfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500",
+                "fallBack"=> 'image',
+                "tag"=> 'Natural',
+                "description"=> 'Traditional fermented milk, probiotic-rich and refreshing',
+                "stars"=> 4,
+                "starCount"=> 156,
+                "price"=> 160
+        ],
+            [
+                "name"=> 'Farm Fresh Cheese',
+                "imageUrl"=> "https://images.unsplash.com/photo-1683314573422-649a3c6ad784?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470",
+                "fallBack"=> 'image',
+                "tag"=> ' Comming Soon ',
+                "description"=> "Spongy, cheese made from our farm's fresh milk",
+                "stars"=> 4.5,
+                "starCount"=> 203,
+                "price"=> 250
+        ],
+        ];
+            @endphp
+            <div class="flex  overflow-x-scroll scrollbar-hide gap-8" id="daily">
+                @foreach($dailyProducts as $product)
+                    <div class="product-card bg-light min-w-[300px] rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all duration-300" >
                     <div class="flex justify-between items-start mb-4">
                         <span class="px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-accent to-primary text-white">
-                            Fresh Today
+                           {{$product['tag']}}
                         </span>
                         <button class="p-2 rounded-full bg-medium hover:bg-red-50 transition-colors">
                             <i class="fas fa-heart text-dark hover:text-red-500"></i>
                         </button>
                     </div>
                     <div class="w-full h-48 rounded-xl mb-4 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1563636619-e9143da7973b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Fresh Milk" class="w-full h-full object-cover">
+                        <img 
+                        src="{{ $product['imageUrl'] }} "
+                        alt="{{ $product['name'] }}" 
+                         class="w-full h-full object-cover"/>
                     </div>
                     <div class="space-y-3">
-                        <h3 class="font-semibold text-dark text-lg">Fresh Raw Milk</h3>
-                        <p class="text-dark/70 text-sm">Direct from our farm, unpasteurized and full of nutrients</p>
+                        <h3 class="font-semibold text-dark text-lg">{{ $product['name'] }}</h3>
+                        <p class="text-dark/70 text-sm">{{ $product['description'] }}</p>
                         <div class="flex items-center gap-2">
                             <div class="flex items-center gap-1">
+                                @for($i = 0; $i < floor($product['stars']); $i++)
                                 <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star text-yellow-400"></i>
+                                @endfor
+                                @if(is_float($product['stars']) )
                                 <i class="fas fa-star-half-alt text-yellow-400"></i>
+                                @endif
                             </div>
-                            <span class="text-sm text-dark/70">(247)</span>
+                            <span class="text-sm text-dark/70">{{ $product['starCount'] }}</span>
                         </div>
                         <div class="flex items-center justify-between">
                             <div class="text-2xl font-bold text-dark">
-                                Ksh 120
+                                Ksh {{ $product['price'] }}
                             </div>
                             <button class="px-4 py-2 rounded-lg bg-gradient-to-r from-secondary to-primary text-white font-medium hover:shadow-lg transition-all duration-200">
                                 Add to Cart
@@ -238,117 +293,7 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Product 2 -->
-                <div class="product-card bg-light rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-accent to-primary text-white">
-                            Popular
-                        </span>
-                        <button class="p-2 rounded-full bg-medium hover:bg-red-50 transition-colors">
-                            <i class="fas fa-heart text-dark hover:text-red-500"></i>
-                        </button>
-                    </div>
-                    <div class="w-full h-48 rounded-xl mb-4 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Kienyeji Eggs" class="w-full h-full object-cover">
-                    </div>
-                    <div class="space-y-3">
-                        <h3 class="font-semibold text-dark text-lg">Kienyeji Eggs</h3>
-                        <p class="text-dark/70 text-sm">Free-range chicken eggs, rich in flavor and nutrients</p>
-                        <div class="flex items-center gap-2">
-                            <div class="flex items-center gap-1">
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star text-yellow-400"></i>
-                            </div>
-                            <span class="text-sm text-dark/70">(189)</span>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <div class="text-2xl font-bold text-dark">
-                                Ksh 450
-                            </div>
-                            <button class="px-4 py-2 rounded-lg bg-gradient-to-r from-secondary to-primary text-white font-medium hover:shadow-lg transition-all duration-200">
-                                Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 3 -->
-                <div class="product-card bg-light rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-accent to-primary text-white">
-                            New
-                        </span>
-                        <button class="p-2 rounded-full bg-medium hover:bg-red-50 transition-colors">
-                            <i class="fas fa-heart text-dark hover:text-red-500"></i>
-                        </button>
-                    </div>
-                    <div class="w-full h-48 rounded-xl mb-4 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Natural Mala" class="w-full h-full object-cover">
-                    </div>
-                    <div class="space-y-3">
-                        <h3 class="font-semibold text-dark text-lg">Natural Mala</h3>
-                        <p class="text-dark/70 text-sm">Traditional fermented milk, probiotic-rich and refreshing</p>
-                        <div class="flex items-center gap-2">
-                            <div class="flex items-center gap-1">
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="far fa-star text-yellow-400"></i>
-                            </div>
-                            <span class="text-sm text-dark/70">(156)</span>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <div class="text-2xl font-bold text-dark">
-                                Ksh 180
-                            </div>
-                            <button class="px-4 py-2 rounded-lg bg-gradient-to-r from-secondary to-primary text-white font-medium hover:shadow-lg transition-all duration-200">
-                                Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Product 4 -->
-                <div class="product-card bg-light rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
-                    <div class="flex justify-between items-start mb-4">
-                        <span class="px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-accent to-primary text-white">
-                            Bestseller
-                        </span>
-                        <button class="p-2 rounded-full bg-medium hover:bg-red-50 transition-colors">
-                            <i class="fas fa-heart text-dark hover:text-red-500"></i>
-                        </button>
-                    </div>
-                    <div class="w-full h-48 rounded-xl mb-4 overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Fresh Butter" class="w-full h-full object-cover">
-                    </div>
-                    <div class="space-y-3">
-                        <h3 class="font-semibold text-dark text-lg">Farm Fresh Butter</h3>
-                        <p class="text-dark/70 text-sm">Creamy, rich butter made from our farm's fresh milk</p>
-                        <div class="flex items-center gap-2">
-                            <div class="flex items-center gap-1">
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star text-yellow-400"></i>
-                                <i class="fas fa-star-half-alt text-yellow-400"></i>
-                            </div>
-                            <span class="text-sm text-dark/70">(203)</span>
-                        </div>
-                        <div class="flex items-center justify-between">
-                            <div class="text-2xl font-bold text-dark">
-                                Ksh 320
-                            </div>
-                            <button class="px-4 py-2 rounded-lg bg-gradient-to-r from-secondary to-primary text-white font-medium hover:shadow-lg transition-all duration-200">
-                                Add to Cart
-                            </button>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div>
     </section>
@@ -361,7 +306,7 @@
                 <p class="text-lg text-dark/70 max-w-2xl mx-auto">Freshly baked goods made with love and the finest ingredients</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="bakery-items">
                 <!-- Bakery Item 1 -->
                 <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 product-card">
                     <div class="w-full h-48 rounded-xl mb-4 overflow-hidden">
@@ -624,6 +569,19 @@
         document.querySelectorAll('.product-card, .testimonial-card').forEach(el => {
             observer.observe(el);
         });
+    </script>
+
+    <script>
+        
+
+        const dailySection = document.getElementById('daily');
+
+        dailySection.innerHTML =  dailyProducts.map((product,index)=>{
+            return (
+                ``
+            )
+        });
+
     </script>
 </body>
 </html>
