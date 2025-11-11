@@ -104,59 +104,92 @@
 <body class="min-h-screen bg-light">
     <!-- Header/Navigation -->
     <header class="fixed w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm">
-        <div class="container mx-auto px-4 py-4">
+    <div class="container mx-auto px-4 py-2">
+        <!-- Mobile Layout -->
+        <div class="block md:hidden space-y-2">
+            <!-- First Row: Logo, Name, Menu Button -->
             <div class="flex items-center justify-between">
-                <!-- Logo -->
-                <div class="flex items-center gap-3">
-                    <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-secondary to-primary flex items-center justify-center">
-                        <i class="fas fa-bread-slice text-white"></i>
+                <!-- Logo and Name -->
+                <div class="flex items-center gap-2">
+                    <div class="h-8 w-8 rounded-lg bg-gradient-to-br from-secondary to-primary flex items-center justify-center">
+                        <i class="fas fa-bread-slice text-white text-sm"></i>
                     </div>
-                    <span class="text-2xl font-bold bg-gradient-to-br from-dark to-primary bg-clip-text text-transparent">
+                    <span class="text-xl font-bold bg-gradient-to-br from-dark to-primary bg-clip-text text-transparent">
                         KayKay's
                     </span>
                 </div>
 
-                <!-- Desktop Navigation -->
-                <nav class="hidden md:flex items-center gap-8">
-                    <a href="#home" class="text-dark hover:text-primary font-medium transition-colors">Home</a>
-                    <a href="#products" class="text-dark hover:text-primary font-medium transition-colors">Products</a>
-                    <a href="#bakery" class="text-dark hover:text-primary font-medium transition-colors">Bakery</a>
-                    <a href="#about" class="text-dark hover:text-primary font-medium transition-colors">About</a>
-                    <a href="#testimonials" class="text-dark hover:text-primary font-medium transition-colors">Testimonials</a>
-                </nav>
-
-                <!-- Navigation Actions -->
-                <div class="flex items-center gap-4">
-                    <a href="/cart" class="relative p-2 rounded-lg glass hover:shadow-lg transition-all duration-200 hover:scale-105">
-                        <i class="fas fa-shopping-cart text-dark"></i>
-                        <span class="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-gradient-to-r from-secondary to-primary text-xs text-white flex items-center justify-center">
-                            3
-                        </span>
-                    </a>
-                    <a href="/login" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-secondary to-primary text-white shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105">
-                        <i class="fas fa-sign-in-alt"></i>
-                        <span class="font-medium">Login</span>
-                    </a>
-                    
-                    <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg glass hover:shadow-lg transition-all duration-200">
-                        <i class="fas fa-bars text-dark"></i>
-                    </button>
-                </div>
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="p-2 rounded-lg glass hover:shadow-lg transition-all duration-200">
+                    <i class="fas fa-bars text-dark text-sm"></i>
+                </button>
             </div>
-            
-            <!-- Mobile Navigation -->
-            <div id="mobile-menu" class="hidden md:hidden mt-4 py-4 border-t border-medium">
-                <div class="flex flex-col gap-4">
-                    <a href="#home" class="text-dark hover:text-primary font-medium transition-colors">Home</a>
-                    <a href="#products" class="text-dark hover:text-primary font-medium transition-colors">Products</a>
-                    <a href="#bakery" class="text-dark hover:text-primary font-medium transition-colors">Bakery</a>
-                    <a href="#about" class="text-dark hover:text-primary font-medium transition-colors">About</a>
-                    <a href="#testimonials" class="text-dark hover:text-primary font-medium transition-colors">Testimonials</a>
-                </div>
+
+            <!-- Second Row: Login and Cart - Compact -->
+            <div class="flex items-center justify-end gap-2">
+                <!-- Login Button -->
+                
+
+                <!-- Cart Icon -->
+                <a href="/cart" class="relative p-2 max-w-fit rounded-lg glass hover:shadow-lg transition-all duration-200 group flex-1 text-center">
+                    <i class="fas fa-shopping-cart text-dark text-sm"></i>
+                    <span class="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-gradient-to-r from-red-400 to-red-700 text-xs text-white flex items-center justify-center text-[10px]">
+                        3
+                    </span>
+                </a>
+                <a href="/login" class="flex max-w-fit items-center gap-1 px-3 py-1.5 rounded-lg bg-gradient-to-r from-secondary to-primary text-white text-sm hover:shadow-lg transition-all duration-200 hover:scale-105 flex-1 justify-center">
+                    <i class="fas fa-sign-in-alt text-xs"></i>
+                    <span class="font-medium">Login</span>
+                </a>
             </div>
         </div>
-    </header>
+
+        <!-- Desktop Layout (same as above) -->
+        <div class="hidden md:flex items-center justify-between w-full">
+            <!-- Desktop content remains the same -->
+            <div class="flex items-center gap-3">
+                <div class="h-10 w-10 rounded-xl bg-gradient-to-br from-secondary to-primary flex items-center justify-center">
+                    <i class="fas fa-bread-slice text-white"></i>
+                </div>
+                <span class="text-2xl font-bold bg-gradient-to-br from-dark to-primary bg-clip-text text-transparent">
+                    KayKay's
+                </span>
+            </div>
+
+            <nav class="flex items-center gap-6 lg:gap-8">
+                <a href="#home" class="text-dark hover:text-primary font-medium transition-colors py-2 px-1">Home</a>
+                <a href="#products" class="text-dark hover:text-primary font-medium transition-colors py-2 px-1">Products</a>
+                <a href="#bakery" class="text-dark hover:text-primary font-medium transition-colors py-2 px-1">Bakery</a>
+                <a href="#about" class="text-dark hover:text-primary font-medium transition-colors py-2 px-1">About</a>
+                <a href="#testimonials" class="text-dark hover:text-primary font-medium transition-colors py-2 px-1">Testimonials</a>
+            </nav>
+
+            <div class="flex items-center gap-4">
+                <a href="/cart" class="relative p-2 rounded-lg glass hover:shadow-lg transition-all duration-200 group">
+                    <i class="fas fa-shopping-cart text-dark group-hover:scale-105 transition-transform"></i>
+                    <span class="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-gradient-to-r from-red-400 to-red-700 text-xs text-white flex items-center justify-center">
+                        3
+                    </span>
+                </a>
+                <a href="/login" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-secondary to-primary text-white shadow-lg hover:shadow-xl transition-all duration-200 hover:scale-105">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <span class="font-medium">Login</span>
+                </a>
+            </div>
+        </div>
+        
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-3 py-3 border-t border-medium">
+            <div class="flex overflow-x-scroll scrollbar-hide gap-3">
+                <a href="#home" class="text-dark hover:text-primary font-medium transition-colors py-2 px-2 rounded-lg hover:bg-gray-50 text-sm">Home</a>
+                <a href="#products" class="text-dark hover:text-primary font-medium transition-colors py-2 px-2 rounded-lg hover:bg-gray-50 text-sm">Products</a>
+                <a href="#bakery" class="text-dark hover:text-primary font-medium transition-colors py-2 px-2 rounded-lg hover:bg-gray-50 text-sm">Bakery</a>
+                <a href="#about" class="text-dark hover:text-primary font-medium transition-colors py-2 px-2 rounded-lg hover:bg-gray-50 text-sm">About</a>
+                <a href="#testimonials" class="text-dark hover:text-primary font-medium transition-colors py-2 px-2 rounded-lg hover:bg-gray-50 text-sm">Testimonials</a>
+            </div>
+        </div>
+    </div>
+</header>
 
     <!-- Hero Section -->
     <section id="home" class="hero-section flex items-center text-white">
@@ -259,7 +292,7 @@
                         <span class="px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-accent to-primary text-white">
                            {{$product['tag']}}
                         </span>
-                        <button class="p-2 rounded-full bg-medium hover:bg-red-50 transition-colors">
+                        <button class="py-1 px-2 rounded-full bg-medium hover:bg-red-50 transition-colors">
                             <i class="fas fa-heart text-dark hover:text-red-500"></i>
                         </button>
                     </div>
@@ -281,7 +314,7 @@
                                 <i class="fas fa-star-half-alt text-yellow-400"></i>
                                 @endif
                             </div>
-                            <span class="text-sm text-dark/70">{{ $product['starCount'] }}</span>
+                            <span class="text-sm text-dark/70">({{ $product['starCount'] }})</span>
                         </div>
                         <div class="flex items-center justify-between">
                             <div class="text-2xl font-bold text-dark">
@@ -293,7 +326,160 @@
                         </div>
                     </div>
                 </div>
-                
+                @endforeach
+                <!-- Product 1 -->
+                {{-- <div class="product-card bg-light min-w-[300px] rounded-2xl p-4 shadow-lg hover:shadow-xl transition-all duration-300" >
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-accent to-primary text-white">
+                            Full Cream
+                        </span>
+                        <button class="p-2 rounded-full bg-medium hover:bg-red-50 transition-colors">
+                            <i class="fas fa-heart text-dark hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="w-full h-48 rounded-xl mb-4 overflow-hidden">
+                        <img src='https://images.unsplash.com/photo-1550583724-b2692b85b150?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzN8fG1pbGslMjBpbiUyMHRhbmt8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&q=60&w=500' alt="Fresh Milk" class="w-full h-full object-cover"/>
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="font-semibold text-dark text-lg">Fresh Raw Milk</h3>
+                        <p class="text-dark/70 text-sm">Direct from our farm, unpasteurized and full of nutrients</p>
+                        <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star-half-alt text-yellow-400"></i>
+                            </div>
+                            <span class="text-sm text-dark/70">(247)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="text-2xl font-bold text-dark">
+                                Ksh 120
+                            </div>
+                            <button class="px-4 py-2 rounded-lg bg-gradient-to-r from-secondary to-primary text-white font-medium hover:shadow-lg transition-all duration-200">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div> --}}
+
+                <!-- Product 2 -->
+                {{-- <div class="product-card bg-light rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-accent to-primary text-white">
+                            Rich in Flavor
+                        </span>
+                        <button class="p-2 rounded-full bg-medium hover:bg-red-50 transition-colors">
+                            <i class="fas fa-heart text-dark hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="w-full h-48 rounded-xl mb-4 overflow-hidden">
+                        <img src=
+                        "https://images.unsplash.com/photo-1590991977680-d00d9e4f4ae9?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=472"
+                         alt="Kienyeji Eggs" class="w-full h-full object-cover">
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="font-semibold text-dark text-lg">Kienyeji Eggs</h3>
+                        <p class="text-dark/70 text-sm">Free-range chicken eggs, rich in flavor and nutrients</p>
+                        <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                            <span class="text-sm text-dark/70">(189)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="text-2xl font-bold text-dark">
+                                Ksh 450
+                            </div>
+                            <button class="px-4 py-2 rounded-lg bg-gradient-to-r from-secondary to-primary text-white font-medium hover:shadow-lg transition-all duration-200">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div> --}}
+
+                <!-- Product 3 -->
+                {{-- <div class="product-card bg-light rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-accent to-primary text-white">
+                            Natural
+                        </span>
+                        <button class="p-2 rounded-full bg-medium hover:bg-red-50 transition-colors">
+                            <i class="fas fa-heart text-dark hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="w-full h-48 rounded-xl mb-4 overflow-hidden">
+                        <img src=
+                        "https://images.unsplash.com/photo-1540915506836-cd886d09205d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTk4fHxmZXJtZW50ZWQlMjBtaWxrfGVufDB8fDB8fHww&auto=format&fit=crop&q=60&w=500"
+                         alt="Natural Mala" class="w-full h-full object-cover">
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="font-semibold text-dark text-lg">Natural Mala</h3>
+                        <p class="text-dark/70 text-sm">Traditional fermented milk, probiotic-rich and refreshing</p>
+                        <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="far fa-star text-yellow-400"></i>
+                            </div>
+                            <span class="text-sm text-dark/70">(156)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="text-2xl font-bold text-dark">
+                                Ksh 180
+                            </div>
+                            <button class="px-4 py-2 rounded-lg bg-gradient-to-r from-secondary to-primary text-white font-medium hover:shadow-lg transition-all duration-200">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div> --}}
+
+                <!-- Product 4 -->
+                {{-- <div class="product-card bg-light rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="px-3 py-1 rounded-full text-xs font-medium bg-gradient-to-r from-accent to-primary text-white">
+                            Comming soon
+                        </span>
+                        <button class="p-2 rounded-full bg-medium hover:bg-red-50 transition-colors">
+                            <i class="fas fa-heart text-dark hover:text-red-500"></i>
+                        </button>
+                    </div>
+                    <div class="w-full h-48 rounded-xl mb-4 overflow-hidden">
+                        <img src=
+                        "https://images.unsplash.com/photo-1683314573422-649a3c6ad784?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1470"
+                        alt="Fresh Butter" class="w-full h-full object-cover">
+                    </div>
+                    <div class="space-y-3">
+                        <h3 class="font-semibold text-dark text-lg">Farm Fresh Cheese</h3>
+                        <p class="text-dark/70 text-sm">Spongy, cheese made from our farm's fresh milk</p>
+                        <div class="flex items-center gap-2">
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star-half-alt text-yellow-400"></i>
+                            </div>
+                            <span class="text-sm text-dark/70">(203)</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="text-2xl font-bold text-dark">
+                                Ksh 320
+                            </div>
+                            <button class="px-4 py-2 rounded-lg bg-gradient-to-r from-secondary to-primary text-white font-medium hover:shadow-lg transition-all duration-200">
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div> --}}
             </div>
         </div>
     </section>
