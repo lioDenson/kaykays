@@ -38,6 +38,7 @@ import * as React from 'react';
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarRail } from '@/components/ui/sidebar';
 import { CustomNavMain } from './custom/custom-nav-main';
 import { Separator } from './ui/separator';
+import { usePage } from '@inertiajs/react';
 
 const systemData = [
     {
@@ -133,6 +134,9 @@ const navData = [
 ];
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
+
+    const auth = usePage().props.auth;
+    console.log(auth.user.role)
     return (
         <Sidebar collapsible="icon" {...props}>
             <SidebarHeader></SidebarHeader>

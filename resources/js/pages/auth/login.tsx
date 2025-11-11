@@ -18,7 +18,7 @@ interface LoginProps {
 
 export default function Login({ status, canResetPassword }: LoginProps) {
     return (
-        <AuthLayout title="Log in to your account" description="Enter your email and password below to log in">
+        <AuthLayout title="Log in to your account" description="Enter your phone number and password below to log in">
             <Head title="Log in" />
 
             <Form {...AuthenticatedSessionController.store.form()} resetOnSuccess={['password']} className="flex flex-col gap-6">
@@ -27,24 +27,23 @@ export default function Login({ status, canResetPassword }: LoginProps) {
                         <div className="grid gap-6">
                             <div className="grid gap-2">
                                 <Label htmlFor="phone">Phone</Label>
-                                <Input id="phone" name="phone" required autoFocus tabIndex={1} autoComplete="phone" placeholder="07345874" />
+                                <Input id="phone" name="phone"  autoFocus tabIndex={1} autoComplete="phone" placeholder="07345874" />
                                 <InputError message={errors.phone} />
                             </div>
 
                             <div className="grid gap-2">
                                 <div className="flex items-center">
                                     <Label htmlFor="password">Password</Label>
-                                    {canResetPassword && (
+                                    {/* {canResetPassword && (
                                         <TextLink href={request()} className="ml-auto text-sm" tabIndex={5}>
-                                            Forgot password?
+                                            Forgot password? request reset by admin
                                         </TextLink>
-                                    )}
+                                    )} */}
                                 </div>
                                 <Input
                                     id="password"
                                     type="password"
                                     name="password"
-                                    required
                                     tabIndex={2}
                                     autoComplete="current-password"
                                     placeholder="Password"

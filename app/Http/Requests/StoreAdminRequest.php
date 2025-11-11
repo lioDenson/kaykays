@@ -26,8 +26,19 @@ class StoreAdminRequest extends FormRequest
         return [
             'name' => 'required|string|max:255|min:3',
             'phone' => 'required|string|max:50',
-            'email' => 'required|string|lowercase|email|max:255|unique:' . User::class,
+            'email' => 'nullable|string|lowercase|email|max:255|unique:' . User::class,
             'password' => ['required', 'confirmed', Password::defaults()],
+        ];
+    }
+
+     public function messages()
+    {
+        return [
+            'email.unique' => 'Email already exists.',
+            'name.required' => 'Name is required.',
+            'phone.required' => 'Phone is required.',
+            'password.required' => 'Password is required.',
+            'password.confirmed' => 'Passwords do not match.',
         ];
     }
 }

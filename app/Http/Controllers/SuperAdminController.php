@@ -42,20 +42,14 @@ class SuperAdminController extends Controller
 
             DB::transaction(function () use ($validated) {
 
-                $account = Account::firstOrFail();
-                $user = User::create([
-                    'name' => $validated['name'],
-                    'phone' => $validated['phone'],
-                    'email' => $validated['email'],
-                    'account_id' => $account->id,
-                    'password' => Hash::make($validated['password']),
-                ]);
+                $validated['account_id'] = Account::firstOrFail()->value('id');
+                $validated['password'] = Hash::make($validated['password']);
+                $user = User::create($validated);
                 $user->assignRole('super-admin');
                 $user->save();
-
-                $app = Setting::latest()->update(['installed' => true]);
-
-                return route('home');
+                Setting::latest()->update(['installed' => true]);
+                Auth::login($user);
+                return route('dashboard');
             }, 2);
         } catch (Exception $e) {
             throw new Exception($e->getMessage());

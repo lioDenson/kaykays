@@ -15,8 +15,11 @@ export function UserMenuContent({ user }: UserMenuContentProps) {
     const cleanup = useMobileNavigation();
 
     const handleLogout = () => {
-        cleanup();
-        router.flushAll();
+        
+        router.post(logout(), {}, {
+            onSuccess: () => {
+                window.location.href = '/';
+        }});
     };
 
     return (
@@ -37,10 +40,11 @@ export function UserMenuContent({ user }: UserMenuContentProps) {
             </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuItem asChild>
-                <Link className="block w-full" href={logout()} as="button" onClick={handleLogout}>
+                {/* <Link className="block w-full" href={logou as="button" onClick={handleLogout}>
                     <LogOut className="mr-2" />
                     Log out
-                </Link>
+                </Link> */}
+                <a href='/' onClick={handleLogout}  >log out</a>
             </DropdownMenuItem>
         </>
     );

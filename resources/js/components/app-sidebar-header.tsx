@@ -5,13 +5,12 @@ import { router, usePage } from '@inertiajs/react';
 
 import { useAppearance } from '@/hooks/use-appearance';
 import { useIsMobile } from '@/hooks/use-mobile';
-import { Bell, LogOut, MessageCircleMoreIcon, Monitor, Moon, Sun } from 'lucide-react';
+import { Bell, MessageCircleMoreIcon, Monitor, Moon, Sun } from 'lucide-react';
 import CustomAppearanceToggleTab from './custom/custom-appearance-toggle-tab';
 import CustomAvatar from './custom/custom-avatar';
 import { CustomAvatarContainer } from './custom/custom-avatar-container';
 import CustomIconAvatar from './custom/custom-icon-avatar';
 import { Badge } from './ui/badge';
-import { Button } from './ui/button';
 import {
     DropdownMenu,
     DropdownMenuContent,
@@ -83,14 +82,17 @@ export function AppSidebarHeader({ breadcrumbs = [] }: { breadcrumbs?: Breadcrum
                                 <DropdownMenuItem>Billing</DropdownMenuItem>
                                 <DropdownMenuItem>Team</DropdownMenuItem>
                                 <DropdownMenuItem>
-                                    <Button
+                                    {/* <Button
                                         size={'sm'}
                                         variant={'ghost'}
                                         className="w-full justify-start transition-colors duration-200 hover:bg-accent/10"
                                         onClick={() => logout()}
                                     >
                                         Log out <LogOut className="ml-2 h-4 w-4" />
-                                    </Button>
+                                    </Button> */}
+                                    <a href="/" onClick={() => logout()}>
+                                        logout
+                                    </a>
                                 </DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>

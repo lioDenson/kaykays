@@ -41,7 +41,7 @@ class HandleInertiaRequests extends Middleware
     {
 
         [$message, $author] = str(Inspiring::quotes()->random())->explode('-');
-        $account = $request->user()?->load('account') ?? [];
+        $account = $request->user()?->load([ 'account','roles']) ?? [];
 
         return [
             ...parent::share($request),
