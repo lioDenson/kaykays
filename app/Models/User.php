@@ -36,10 +36,14 @@ class User extends Authenticatable implements Searchable
      * @var list<string>
      */
     protected $fillable = [
+        'avatar',
         'name',
         'email',
         'phone',
+        'google_id',
         'account_id',
+        'email_verified_at',
+        'remember_token',
         'password',
 
     ];
@@ -86,7 +90,8 @@ class User extends Authenticatable implements Searchable
         return $this->belongsToMany(Account::class, 'account_users', 'user_id', 'account_id')->withTimestamps();
     }
 
-    public function customer(){
+    public function customer()
+    {
         return $this->hasOneThrough(Customer::class, Sale::class);
     }
 

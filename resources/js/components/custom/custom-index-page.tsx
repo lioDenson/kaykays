@@ -364,7 +364,7 @@ export default function CustomIndexPage<TData extends { id?: string | number } =
                         {Header?.button && (
                             <Button
                                 onClick={Header.button.onClick}
-                                className="gap-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg active:from-blue-600 active:to-cyan-600 active:shadow-md"
+                                className="w-full gap-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white shadow-lg active:from-blue-600 active:to-cyan-600 active:shadow-md"
                                 size="sm"
                             >
                                 {Header.button.icon && <Header.button.icon className="h-4 w-4" />}

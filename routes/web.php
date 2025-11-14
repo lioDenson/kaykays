@@ -11,6 +11,7 @@ use App\Http\Controllers\CreditController;
 use App\Http\Controllers\AccountController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\DeliveryController;
 use App\Http\Controllers\SupplierController;
@@ -18,62 +19,71 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SuperAdminController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\StockMovementController;
+use App\Http\Controllers\Auth\GoogleController;
 
-Route::middleware('admin.exists')->group(function () {
-    Route::get('/super-admin', [SuperAdminController::class, 'index'])->name('super-admin.index');
-    Route::get('/super-admin/create', [SuperAdminController::class, 'create'])->name('super-admin.create');
-    Route::post('/super-admin', [SuperAdminController::class, 'store'])->name('super-admin.store');
+Route::middleware('configured')->group(function () {
+    Route::get('/system', [SuperAdminController::class, 'index'])->name('system.init');
+    Route::get('/system/admin', [GoogleController::class, 'redirect'])->name('system.admin.create');
+    Route::post('/system/admin', [SuperAdminController::class, 'store'])->name('system.admin.store');
 });
-
+Route::get('/auth/google/callback', [GoogleController::class,  'callback'])->name('google.callback');
 
 Route::middleware('installed')->group(function () {
     Route::get('/', function () {
         return view('welcome');
     })->name('home');
 
+    Route::get('/auth/google/redirect', [GoogleController::class, 'redirect'])->name('google.redirect');
     Route::middleware(['auth', 'verified'])->group(function () {
         Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
-        Route::delete('/accounts/{id}/forceDelete', [AccountController::class, 'forceDelete'])->name('accounts.forceDelete');
-        Route::patch('/accounts/{id}/restore', [AccountController::class, 'restore'])->name('accounts.restore');
-        Route::resource('accounts', AccountController::class);
 
-        Route::resource('products', ProductController::class);
-        Route::patch('/products/{id}/restore', [ProductController::class, 'restore'])->name('products.restore');
-        Route::delete('/products/{id}/forceDelete', [ProductController::class, 'forceDelete'])->name('products.forceDelete');
+        Route::middleware('user.has.role')->group(function () {
+            Route::delete('/accounts/{id}/forceDelete', [AccountController::class, 'forceDelete'])->name('accounts.forceDelete');
+            Route::patch('/accounts/{id}/restore', [AccountController::class, 'restore'])->name('accounts.restore');
+            Route::resource('accounts', AccountController::class);
 
-        Route::post('/user/roles', [UserController::class, 'userSetRole'])->name('users.setRole');
-        Route::get('/users/roles', [UserController::class, 'userRolling'])->name('users.roles');
-        Route::get('/users/search', [UserController::class, 'search'])->name('users.search');
-        Route::get('/users/type/{type}', [UserController::class, 'index'])->name('users.byType');
-        Route::resource('users', UserController::class);
-        Route::patch('/users/{id}/restore', [UserController::class, 'restore'])->name('users.restore');
-        Route::delete('/users/{id}/forceDelete', [UserController::class, 'forceDelete'])->name('users.forceDelete');
+            Route::resource('categories', CategoryController::class);
+            Route::patch('/categories/{id}/restore', [CategoryController::class, 'restore'])->name('categories.restore');
+            Route::delete('/categories/{id}/forceDelete', [CategoryController::class, 'forceDelete'])->name('categories.forceDelete');
 
-        Route::resource('riders', RiderController::class);
-        Route::patch('/riders/{id}/restore', [RiderController::class, 'restore'])->name('riders.restore');
-        Route::delete('/riders/{id}/forceDelete', [RiderController::class, 'forceDelete'])->name('riders.forceDelete');
+            Route::resource('products', ProductController::class);
+            Route::patch('/products/{id}/restore', [ProductController::class, 'restore'])->name('products.restore');
+            Route::delete('/products/{id}/forceDelete', [ProductController::class, 'forceDelete'])->name('products.forceDelete');
+
+            Route::post('/user/roles', [UserController::class, 'userSetRole'])->name('users.setRole');
+            Route::get('/users/roles', [UserController::class, 'userRolling'])->name('users.roles');
+            Route::get('/users/search', [UserController::class, 'search'])->name('users.search');
+            Route::get('/users/type/{type}', [UserController::class, 'index'])->name('users.byType');
+            Route::resource('users', UserController::class);
+            Route::patch('/users/{id}/restore', [UserController::class, 'restore'])->name('users.restore');
+            Route::delete('/users/{id}/forceDelete', [UserController::class, 'forceDelete'])->name('users.forceDelete');
+
+            Route::resource('riders', RiderController::class);
+            Route::patch('/riders/{id}/restore', [RiderController::class, 'restore'])->name('riders.restore');
+            Route::delete('/riders/{id}/forceDelete', [RiderController::class, 'forceDelete'])->name('riders.forceDelete');
 
 
-        Route::resource('customers', CustomerController::class);
-        Route::patch('/customers/{id}/restore', [CustomerController::class, 'restore'])->name('customers.restore');
-        Route::delete('/customers/{id}/forceDelete', [CustomerController::class, 'forceDelete'])->name('customers.forceDelete');
+            Route::resource('customers', CustomerController::class);
+            Route::patch('/customers/{id}/restore', [CustomerController::class, 'restore'])->name('customers.restore');
+            Route::delete('/customers/{id}/forceDelete', [CustomerController::class, 'forceDelete'])->name('customers.forceDelete');
 
-        Route::resource('batches', BatchController::class);
-        Route::patch('/batches/{id}/restore', [BatchController::class, 'restore'])->name('batches.restore');
-        Route::delete('/batches/{id}/forceDelete', [BatchController::class, 'forceDelete'])->name('batches.forceDelete');
-        Route::resource('/sales', SaleController::class);
-        Route::put('/deliveries/{id}/status', [DeliveryController::class, 'status'])->name('deliveries.status');
-        Route::get('/deliveries/details', [DeliveryController::class, 'details'])->name('deliveries.details');
+            Route::resource('batches', BatchController::class);
+            Route::patch('/batches/{id}/restore', [BatchController::class, 'restore'])->name('batches.restore');
+            Route::delete('/batches/{id}/forceDelete', [BatchController::class, 'forceDelete'])->name('batches.forceDelete');
+            Route::resource('/sales', SaleController::class);
+            Route::put('/deliveries/{id}/status', [DeliveryController::class, 'status'])->name('deliveries.status');
+            Route::get('/deliveries/details', [DeliveryController::class, 'details'])->name('deliveries.details');
 
-        Route::resource('/deliveries', DeliveryController::class);
-        Route::resource('/payments', PaymentController::class);
-        Route::resource('/transactions', TransactionController::class);
-        Route::get('/credits', [CreditController::class, 'index'])->name('credits.index');
-        Route::post('/credits', [CreditController::class, 'pay'])->name('credits.pay');
-        Route::get('/credits/{credit}/pay', [CreditController::class, 'pay'])->name('credit.pay');
-        Route::resource('/suppliers', SupplierController::class);
-        Route::patch('/suppliers/{id}/restore', [SupplierController::class, 'restore'])->name('suppliers.restore');
-        Route::delete('/suppliers/{id}/forceDelete', [SupplierController::class, 'forceDelete'])->name('suppliers.forceDelete');
+            Route::resource('/deliveries', DeliveryController::class);
+            Route::resource('/payments', PaymentController::class);
+            Route::resource('/transactions', TransactionController::class);
+            Route::get('/credits', [CreditController::class, 'index'])->name('credits.index');
+            Route::post('/credits', [CreditController::class, 'pay'])->name('credits.pay');
+            Route::get('/credits/{credit}/pay', [CreditController::class, 'pay'])->name('credit.pay');
+            Route::resource('/suppliers', SupplierController::class);
+            Route::patch('/suppliers/{id}/restore', [SupplierController::class, 'restore'])->name('suppliers.restore');
+            Route::delete('/suppliers/{id}/forceDelete', [SupplierController::class, 'forceDelete'])->name('suppliers.forceDelete');
+        });
     });
 });
 

@@ -1,6 +1,6 @@
 import AppLogoIcon from '@/components/app-logo-icon';
 import { Link } from '@inertiajs/react';
-import { Shield, Smartphone, Zap } from 'lucide-react';
+import { Shield, Zap } from 'lucide-react';
 import { type PropsWithChildren, useEffect, useState } from 'react';
 import { route } from 'ziggy-js';
 
@@ -58,7 +58,9 @@ export default function AuthSimpleLayout({ children, title, description }: Props
                                         <AppLogoIcon className="size-9 fill-current text-white" />
                                     </div>
                                     {/* Pulse animation */}
-                                    <div className="absolute inset-0 animate-pulse rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 opacity-20 group-hover:opacity-30"></div>
+                                    <div className="absolute inset-0 animate-pulse rounded-2xl bg-gradient-to-br from-green-900 via-green-600 to-green-500 opacity-20 group-hover:opacity-30">
+                                        {' '}
+                                    </div>
                                 </div>
                                 <span className="sr-only">{title}</span>
                             </Link>
@@ -91,8 +93,6 @@ export default function AuthSimpleLayout({ children, title, description }: Props
                             </div>
                         </div>
                     </div>
-
-                    
                 </div>
             </div>
 

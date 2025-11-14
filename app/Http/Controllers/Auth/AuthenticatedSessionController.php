@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Inertia\Response;
+use  Symfony\Component\HttpFoundation\Response as Resp;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -39,15 +40,13 @@ class AuthenticatedSessionController extends Controller
     /**
      * Destroy an authenticated session.
      */
-    public function destroy(Request $request): RedirectResponse
+    public function destroy(Request $request): Resp
     {
+        Auth::logout();
         Auth::guard('web')->logout();
-
         $request->session()->invalidate();
         $request->session()->regenerateToken();
 
-        return redirect('/');
-        return to_route('home')->with('status', __('auth.logged_out'));
-
+         return Inertia::location(url('/'));
     }
 }

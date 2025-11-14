@@ -1,4 +1,6 @@
 import AuthenticatedSessionController from '@/actions/App/Http/Controllers/Auth/AuthenticatedSessionController';
+import CustomToaster from '@/components/custom/custom-toaster';
+import LogInWithGoogleBtn from '@/components/custom/login-with-google-btn';
 import InputError from '@/components/input-error';
 import TextLink from '@/components/text-link';
 import { Button } from '@/components/ui/button';
@@ -8,8 +10,9 @@ import { Label } from '@/components/ui/label';
 import AuthLayout from '@/layouts/auth-layout';
 import { register } from '@/routes';
 import { request } from '@/routes/password';
-import { Form, Head } from '@inertiajs/react';
+import { Form, Head, Link, router, usePage } from '@inertiajs/react';
 import { LoaderCircle } from 'lucide-react';
+import { route } from 'ziggy-js';
 
 interface LoginProps {
     status?: string;
@@ -17,14 +20,17 @@ interface LoginProps {
 }
 
 export default function Login({ status, canResetPassword }: LoginProps) {
+    const flash = usePage().props.flash;
+
     return (
         <AuthLayout title="Log in to your account" description="Enter your phone number and password below to log in">
             <Head title="Log in" />
+            <CustomToaster flash={flash} />
 
             <Form {...AuthenticatedSessionController.store.form()} resetOnSuccess={['password']} className="flex flex-col gap-6">
                 {({ processing, errors }) => (
-                    <>
-                        <div className="grid gap-6">
+                    <div className='flex flex-col items-center justify-center gap-3 w-full '>
+                        <div className="grid gap-6 w-full">
                             <div className="grid gap-2">
                                 <Label htmlFor="phone">Phone</Label>
                                 <Input id="phone" name="phone"  autoFocus tabIndex={1} autoComplete="phone" placeholder="07345874" />
@@ -68,7 +74,11 @@ export default function Login({ status, canResetPassword }: LoginProps) {
                                 Sign up
                             </TextLink>
                         </div>
-                    </>
+                        <div className="text-center text-sm text-muted-foreground">
+                            OR
+                        </div>
+                        <LogInWithGoogleBtn/>
+                    </div>
                 )}
             </Form>
 

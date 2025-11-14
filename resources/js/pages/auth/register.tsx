@@ -9,6 +9,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import AuthLayout from '@/layouts/auth-layout';
+import LogInWithGoogleBtn from '@/components/custom/login-with-google-btn';
+import CustomSubmitButton from '@/components/custom/custom-submit-button';
 
 export default function Register() {
     return (
@@ -25,28 +27,13 @@ export default function Register() {
                         <div className="grid gap-6">
                             <div className="grid gap-2">
                                 <Label htmlFor="name">Name</Label>
-                                <Input
-                                    id="name"
-                                    type="text"
-                                    autoFocus
-                                    tabIndex={1}
-                                    autoComplete="name"
-                                    name="name"
-                                    placeholder="Full name"
-                                />
+                                <Input id="name" type="text" autoFocus tabIndex={1} autoComplete="name" name="name" placeholder="Full name" />
                                 <InputError message={errors.name} className="mt-2" />
                             </div>
 
                             <div className="grid gap-2">
                                 <Label htmlFor="email">Email address</Label>
-                                <Input
-                                    id="email"
-                                    type="email"
-                                    tabIndex={2}
-                                    autoComplete="email"
-                                    name="email"
-                                    placeholder="email@example.com"
-                                />
+                                <Input id="email" type="email" tabIndex={2} autoComplete="email" name="email" placeholder="email@example.com" />
                                 <InputError message={errors.email} />
                             </div>
 
@@ -76,10 +63,15 @@ export default function Register() {
                                 <InputError message={errors.password_confirmation} />
                             </div>
 
-                            <Button type="submit" className="mt-2 w-full" tabIndex={5}>
-                                {processing && <LoaderCircle className="h-4 w-4 animate-spin" />}
-                                Create account
-                            </Button>
+                          
+
+                            <CustomSubmitButton label="Create account" type="submit" disabled={processing} activeLabel='Creating account...' className="mt-2 w-full" />
+                        </div>
+                        <div className="flex justify-center space-y-6">
+                            Or
+                        </div>
+                        <div className="flex justify-center space-y-6">
+                            <LogInWithGoogleBtn />
                         </div>
 
                         <div className="text-center text-sm text-muted-foreground">

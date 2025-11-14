@@ -6,10 +6,10 @@ use App\Models\Setting;
 use App\Models\User;
 use Closure;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use PHPUnit\Event\Telemetry\System;
 use Symfony\Component\HttpFoundation\Response;
 
-class CheckSuperAdmin
+class CheckIfSystemIsWellConfigured
 {
     /**
      * Handle an incoming request.
@@ -18,9 +18,8 @@ class CheckSuperAdmin
      */
     public function handle(Request $request, Closure $next): Response
     {
-       
-        if (!Setting::latest()->first()->installed) {
-            return redirect()->route('super-admin.index');
+        if (Setting::first()->value('installed')) {
+            return redirect()->route('home');
         } 
         return $next($request);
     }

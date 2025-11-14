@@ -44,7 +44,7 @@ export function UserMenuContent({ user }: UserMenuContentProps) {
                     <LogOut className="mr-2" />
                     Log out
                 </Link> */}
-                <a href='/' onClick={handleLogout}  >log out</a>
+                <a href='/' onClick={handleLogout}  >LOGOUT</a>
             </DropdownMenuItem>
         </>
     );

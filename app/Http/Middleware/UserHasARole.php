@@ -2,13 +2,12 @@
 
 namespace App\Http\Middleware;
 
-use App\Models\Setting;
 use Closure;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
-use App\Models\User;
 
-class SuperAdminExists
+class UserHasARole
 {
     /**
      * Handle an incoming request.
@@ -17,8 +16,9 @@ class SuperAdminExists
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (Setting::latest()->first()->installed) {
-            return to_route('home')->with('warning', 'Admin Exists.');
+
+        if(!Auth::user()->hasAnyRole(['super-admin','admin','cashier','rider'])){
+            return redirect()->back()->with('error',"You can't access this page. No enough rights.");
         }
         return $next($request);
     }

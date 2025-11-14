@@ -5,7 +5,7 @@ import { router, usePage } from '@inertiajs/react';
 
 import { useAppearance } from '@/hooks/use-appearance';
 import { useIsMobile } from '@/hooks/use-mobile';
-import { Bell, MessageCircleMoreIcon, Monitor, Moon, Sun } from 'lucide-react';
+import { Bell, CirclePower, LogOut, MessageCircleMoreIcon, Monitor, Moon, Sun } from 'lucide-react';
 import CustomAppearanceToggleTab from './custom/custom-appearance-toggle-tab';
 import CustomAvatar from './custom/custom-avatar';
 import { CustomAvatarContainer } from './custom/custom-avatar-container';
@@ -19,12 +19,14 @@ import {
     DropdownMenuSeparator,
     DropdownMenuTrigger
 } from './ui/dropdown-menu';
+import { Button } from './ui/button';
 
 export function AppSidebarHeader({ breadcrumbs = [] }: { breadcrumbs?: BreadcrumbItemType[] }) {
     const { auth } = usePage<SharedData>().props;
     const logout = () => {
         router.post('/logout');
     };
+    
 
     const { appearance, updateAppearance } = useAppearance();
     const isMobile = useIsMobile();
@@ -78,21 +80,17 @@ export function AppSidebarHeader({ breadcrumbs = [] }: { breadcrumbs?: Breadcrum
                             <DropdownMenuContent className="rounded-xl border border-border/40 shadow-lg">
                                 <DropdownMenuLabel className="text-end font-semibold tracking-wide uppercase">Profile</DropdownMenuLabel>
                                 <DropdownMenuSeparator />
-                                <DropdownMenuItem>Profile</DropdownMenuItem>
-                                <DropdownMenuItem>Billing</DropdownMenuItem>
-                                <DropdownMenuItem>Team</DropdownMenuItem>
+                                
                                 <DropdownMenuItem>
-                                    {/* <Button
+                                    <Button
                                         size={'sm'}
                                         variant={'ghost'}
-                                        className="w-full justify-start transition-colors duration-200 hover:bg-accent/10"
+                                        className="w-full justify-start transition-colors duration-200 bg-red-500/40"
                                         onClick={() => logout()}
                                     >
-                                        Log out <LogOut className="ml-2 h-4 w-4" />
-                                    </Button> */}
-                                    <a href="/" onClick={() => logout()}>
-                                        logout
-                                    </a>
+                                        Log out <CirclePower className="ml-2 h-4 w-4 text-red-500" />
+                                    </Button>
+                                   
                                 </DropdownMenuItem>
                             </DropdownMenuContent>
                         </DropdownMenu>
